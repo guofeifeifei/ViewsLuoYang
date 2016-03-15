@@ -1,0 +1,142 @@
+{
+	appHost = "http://shouji.lyd.com.cn";
+	appList = {
+		1001 = {
+			"app_abbr" = wzcx;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/weizhang.png";
+			"app_id" = 1001;
+			"app_name" = "\U8fdd\U7ae0\U67e5\U8be2";
+			"New item" = "";
+			"app_path" = "http://shouji.lyd.com.cn/webapp/wzcx/index";
+			"New item - 2" = "";
+			"app_showdy" = 1;
+			"app_time" = "2015-10-08 16:20:00";
+			"app_vcode" = 5;
+		};
+		1021 = {
+			"app_abbr" = yundong;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/paobu.png";
+			"app_id" = 1021;
+			"app_name" = "\U8fd0\U52a8\U6307\U6570";
+			"app_path" = "http://shouji.lyd.com.cn/webapp/yundong/index";
+			"app_showdy" = 1;
+			"app_time" = "2015-11-06 10:00:00";
+			"app_vcode" = 7;
+		};
+		1022 = {
+			"app_abbr" = diaoyu;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/diaoyu.png";
+			"app_id" = 1022;
+			"app_name" = "\U9493\U9c7c\U6307\U6570";
+			"app_path" = "http://shouji.lyd.com.cn/webapp/diaoyu/index";
+			"app_showdy" = 1;
+			"app_time" = "2015-10-15 16:30:00";
+			"app_vcode" = 8;
+		};
+		1031 = {
+			"app_abbr" = rili;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/rili.png";
+			"app_id" = 1031;
+			"app_name" = "\U4e07\U5e74\U5386";
+			"app_path" = "http://shouji.lyd.com.cn/app/rili.html?v=5";
+			"app_showdy" = 1;
+			"app_time" = "2015-10-21 17:30:00";
+			"app_vcode" = 5;
+		};
+		1032 = {
+			"app_abbr" = kuaidi;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/kuaidi.png";
+			"app_id" = 1032;
+			"app_name" = "\U5feb\U9012\U67e5\U8be2";
+			"app_path" = "http://shouji.lyd.com.cn/app/kuaidi.html?v=4";
+			"app_showdy" = 1;
+			"app_time" = "2015-10-21 17:30:00";
+			"app_vcode" = 4;
+		};
+		1041 = {
+			"app_abbr" = huochepiao;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/huochepiao.png";
+			"app_id" = 1041;
+			"app_name" = "\U706b\U8f66\U7968";
+			"app_path" = "http://shouji.lyd.com.cn/app/huochepiao.html?v=5";
+			"app_showdy" = 1;
+			"app_time" = "2015-10-26 15:30:00";
+			"app_vcode" = 5;
+		};
+		1042 = {
+			"app_abbr" = qichepiao;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/qichepiao.png";
+			"app_id" = 1042;
+			"app_name" = "\U6c7d\U8f66\U7968";
+			"app_path" = "http://shouji.lyd.com.cn/app/qichepiao.html?v=9";
+			"app_showdy" = 1;
+			"app_time" = "2015-10-26 15:30:00";
+			"app_vcode" = 9;
+		};
+		1043 = {
+			"app_abbr" = flight;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/flight.png";
+			"app_id" = 1043;
+			"app_name" = "\U98de\U673a\U7968";
+			"app_path" = "http://shouji.lyd.com.cn/app/feijipiao.html?v=2";
+			"app_showdy" = 1;
+			"app_time" = "2015-11-09 15:00:00";
+			"app_vcode" = 2;
+		};
+		1051 = {
+			"app_abbr" = hotel;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/hotel.png";
+			"app_id" = 1051;
+			"app_name" = "\U9152\U5e97\U9884\U8ba2";
+			"app_path" = "http://shouji.lyd.com.cn/app/hotel.html?v=3";
+			"app_showdy" = 1;
+			"app_time" = "2015-10-29 17:00:00";
+			"app_vcode" = 3;
+		};
+		1060 = {
+			"app_abbr" = ele;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/ele.png";
+			"app_id" = 1060;
+			"app_name" = "\U7535\U8d39\U7f34\U8d39";
+			"app_path" = "http://shouji.lyd.com.cn/app/ele.html?v=1";
+			"app_showdy" = 1;
+			"app_time" = "2015-11-20 17:00:00";
+			"app_vcode" = 1;
+		};
+		1061 = {
+			"app_abbr" = gas;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/gas.png";
+			"app_id" = 1061;
+			"app_name" = "\U71c3\U6c14\U7f34\U8d39";
+			"app_path" = "http://shouji.lyd.com.cn/app/gas.html?v=1";
+			"app_showdy" = 1;
+			"app_time" = "2015-11-20 14:00:00";
+			"app_vcode" = 1;
+		};
+		1062 = {
+			"app_abbr" = oil;
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/oil.png";
+			"app_id" = 1062;
+			"app_name" = "\U6cb9\U4ef7\U67e5\U8be2";
+			"app_path" = "http://shouji.lyd.com.cn/webapp/oil/index";
+			"app_showdy" = 1;
+			"app_time" = "2015-11-20 16:30:00";
+			"app_vcode" = 1;
+		};
+		9999 = {
+			"app_abbr" = "";
+			"app_icon" = "http://shouji.lyd.com.cn/images/app/more.png";
+			"app_id" = 9999;
+			"app_name" = "";
+			"app_path" = "";
+			"app_showdy" = 1;
+			"app_time" = "2015-12-24 11:30:00";
+			"app_vcode" = 8;
+		};
+	};
+	appNum = 13;
+	appOld = ();
+	appTime = "2016-02-25 10:58:26";
+	appUser = 0;
+	appVer = 28;
+}

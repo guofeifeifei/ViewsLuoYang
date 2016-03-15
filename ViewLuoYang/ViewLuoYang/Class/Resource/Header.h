@@ -8,11 +8,11 @@
 
 #ifndef Header_h
 #define Header_h
-
+//电子报接口
 #define kNews @"http://shouji.lyd.com.cn/paper/service/getPeriods//2/1/12?_fs=2&_vc=58"
 
-
-
+//服务接口
+#define kService @"http://shouji.lyd.com.cn/tools/webapi/applist?v=1&_fs=2&_vc=58"
 
 
 

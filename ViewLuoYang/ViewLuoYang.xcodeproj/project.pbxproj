@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4055A81C9817490040895C /* ServicedidViewController.m */; };
 		7A5CFACC1C97C81C0002AF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACB1C97C81C0002AF99 /* main.m */; };
 		7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACE1C97C81C0002AF99 /* AppDelegate.m */; };
 		7A5CFAD11C97C81C0002AF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFAD01C97C81C0002AF99 /* Assets.xcassets */; };
@@ -19,11 +20,21 @@
 		7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFAF61C97C8C10002AF99 /* UIViewController+Common.m */; };
 		7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFAFA1C97C8C10002AF99 /* ServiceViewController.m */; };
 		7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFB001C97C8C10002AF99 /* ShowViewController.m */; };
+		7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
+		7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C391C97E1AC00FD6D15 /* Reachability.m */; };
+		7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3A1C97E1AC00FD6D15 /* README.md */; };
+		7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */; };
+		7AA00C421C97E87600FD6D15 /* service.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C411C97E87600FD6D15 /* service.plist */; };
+		7AA00C461C97F0A300FD6D15 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */; };
+		7AA00C471C97F0A300FD6D15 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */; };
+		7AA00C4A1C97F67100FD6D15 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C491C97F67100FD6D15 /* serviceModel.m */; };
 		9E8886EC3A4E95DD8B0F807E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4AB23D78D5404ABECD5147 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		343C6496E289605AF2800A0C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A4055A71C9817490040895C /* ServicedidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicedidViewController.h; sourceTree = "<group>"; };
+		7A4055A81C9817490040895C /* ServicedidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicedidViewController.m; sourceTree = "<group>"; };
 		7A5CFAC71C97C81C0002AF99 /* ViewLuoYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLuoYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5CFACB1C97C81C0002AF99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A5CFACD1C97C81C0002AF99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +59,18 @@
 		7A5CFAFA1C97C8C10002AF99 /* ServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceViewController.m; sourceTree = "<group>"; };
 		7A5CFAFF1C97C8C10002AF99 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
 		7A5CFB001C97C8C10002AF99 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
+		7AA00C381C97E1AC00FD6D15 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7AA00C391C97E1AC00FD6D15 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7AA00C3A1C97E1AC00FD6D15 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7AA00C3B1C97E1AC00FD6D15 /* ZMYNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMYNetManager.h; sourceTree = "<group>"; };
+		7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMYNetManager.m; sourceTree = "<group>"; };
+		7AA00C411C97E87600FD6D15 /* service.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = service.plist; sourceTree = "<group>"; };
+		7AA00C431C97F0A300FD6D15 /* ServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceCollectionViewCell.h; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceCollectionViewCell.m; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ServiceCollectionViewCell.xib; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		7AA00C481C97F67100FD6D15 /* serviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = serviceModel.h; path = ViewLuoYang/Class/Service/Controllers/serviceModel.h; sourceTree = SOURCE_ROOT; };
+		7AA00C491C97F67100FD6D15 /* serviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = serviceModel.m; path = ViewLuoYang/Class/Service/Controllers/serviceModel.m; sourceTree = SOURCE_ROOT; };
 		CA4AB23D78D5404ABECD5147 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFBA45722C735EF737B85187 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,10 +147,10 @@
 		7A5CFADB1C97C8C10002AF99 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				7A5CFAEC1C97C8C10002AF99 /* Resource */,
 				7A5CFADC1C97C8C10002AF99 /* Login */,
 				7A5CFAE01C97C8C10002AF99 /* Message */,
 				7A5CFAE61C97C8C10002AF99 /* News */,
-				7A5CFAEC1C97C8C10002AF99 /* Resource */,
 				7A5CFAF71C97C8C10002AF99 /* Service */,
 				7A5CFAFD1C97C8C10002AF99 /* Show */,
 			);
@@ -235,6 +258,7 @@
 		7A5CFAEC1C97C8C10002AF99 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7AA00C361C97E1AC00FD6D15 /* Reachability */,
 				7A5CFAED1C97C8C10002AF99 /* Header.h */,
 				7A5CFAEE1C97C8C10002AF99 /* HWTools.h */,
 				7A5CFAEF1C97C8C10002AF99 /* HWTools.m */,
@@ -271,6 +295,9 @@
 			children = (
 				7A5CFAF91C97C8C10002AF99 /* ServiceViewController.h */,
 				7A5CFAFA1C97C8C10002AF99 /* ServiceViewController.m */,
+				7A4055A71C9817490040895C /* ServicedidViewController.h */,
+				7A4055A81C9817490040895C /* ServicedidViewController.m */,
+				7AA00C411C97E87600FD6D15 /* service.plist */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +305,8 @@
 		7A5CFAFB1C97C8C10002AF99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7AA00C481C97F67100FD6D15 /* serviceModel.h */,
+				7AA00C491C97F67100FD6D15 /* serviceModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,6 +314,9 @@
 		7A5CFAFC1C97C8C10002AF99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7AA00C431C97F0A300FD6D15 /* ServiceCollectionViewCell.h */,
+				7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */,
+				7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +352,19 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7AA00C361C97E1AC00FD6D15 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */,
+				7AA00C381C97E1AC00FD6D15 /* Reachability.h */,
+				7AA00C391C97E1AC00FD6D15 /* Reachability.m */,
+				7AA00C3A1C97E1AC00FD6D15 /* README.md */,
+				7AA00C3B1C97E1AC00FD6D15 /* ZMYNetManager.h */,
+				7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,9 +427,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA00C471C97F0A300FD6D15 /* ServiceCollectionViewCell.xib in Resources */,
+				7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */,
 				7A5CFAD11C97C81C0002AF99 /* Assets.xcassets in Resources */,
 				7A5CFAD41C97C81C0002AF99 /* LaunchScreen.storyboard in Resources */,
 				7A5CFB061C97C8C10002AF99 /* ProgressHUD.bundle in Resources */,
+				7AA00C421C97E87600FD6D15 /* service.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,10 +495,16 @@
 				7A5CFB031C97C8C10002AF99 /* MessageViewController.m in Sources */,
 				7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */,
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
+				7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */,
 				7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */,
 				7A5CFACC1C97C81C0002AF99 /* main.m in Sources */,
+				7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */,
+				7AA00C4A1C97F67100FD6D15 /* serviceModel.m in Sources */,
 				7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */,
+				7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */,
+				7AA00C461C97F0A300FD6D15 /* ServiceCollectionViewCell.m in Sources */,
 				7A5CFB051C97C8C10002AF99 /* HWTools.m in Sources */,
+				7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */,
 				7A5CFB041C97C8C10002AF99 /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,7 +608,7 @@
 			baseConfigurationReference = FFBA45722C735EF737B85187 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/scjy/Desktop/ViewsLuoYang/ViewLuoYang/ViewLuoYang/Class/Resource/MySelf.pch;
+				GCC_PREFIX_HEADER = /Users/sdzy/Desktop/ViewsLuoYang/ViewLuoYang/ViewLuoYang/Class/Resource/MySelf.pch;
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -568,7 +622,7 @@
 			baseConfigurationReference = 343C6496E289605AF2800A0C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/scjy/Desktop/ViewsLuoYang/ViewLuoYang/ViewLuoYang/Class/Resource/MySelf.pch;
+				GCC_PREFIX_HEADER = /Users/sdzy/Desktop/ViewsLuoYang/ViewLuoYang/ViewLuoYang/Class/Resource/MySelf.pch;
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
