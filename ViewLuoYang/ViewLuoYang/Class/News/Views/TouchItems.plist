@@ -1,80 +1,80 @@
 {
-data =     {
-areamaplist =         (
-{
-amid = 64451;
-articleUrl = "http://shouji.lyd.com.cn/p/2/60374";
-coords = "2.420912%,12.527233%#37.766232%,12.527233%#37.766232%,52.287582%#2.420912%,52.287582%";
-importFlag = 1;
-importNum = 1;
-importTime = "2016-03-14 11:01:02";
-importUrl = "http://lywb.lyd.com.cn/html2/2016-03/14/content_60374.htm";
-ispub = 1;
-layoutId = 22611;
-nsid = 60374;
-paperId = 2;
-periodId = 7601;
-},
-{
-amid = 64452;
-articleUrl = "http://shouji.lyd.com.cn/p/2/60375";
-coords = "95.868126%,21.241830%#62.943719%,20.479303%#62.943719%,17.973856%#51.161946%,17.755991%#51.161946%,13.943355%#51.161946%,13.943355%#48.741034%,13.943355%#48.741034%,13.943355%#48.741034%,13.943355%#41.801085%,13.943355%#41.801085%,17.755991%#41.801085%,17.973856%#41.801085%,20.479303%#41.801085%,21.241830%#41.801085%,38.671024%#95.868126%,38.671024%";
-importFlag = 1;
-importNum = 1;
-importTime = "2016-03-14 11:01:02";
-importUrl = "http://lywb.lyd.com.cn/html2/2016-03/14/content_60375.htm";
-ispub = 1;
-layoutId = 22611;
-nsid = 60375;
-paperId = 2;
-periodId = 7601;
-},
-{
-amid = 64453;
-articleUrl = "http://shouji.lyd.com.cn/p/2/60376";
-coords = "97.159280%,44.117647%#48.418246%,43.028322%#48.418246%,41.721133%#40.994115%,41.721133%#40.994115%,43.028322%#40.994115%,44.117647%#40.994115%,52.287582%#97.159280%,52.287582%";
-importFlag = 1;
-importNum = 1;
-importTime = "2016-03-14 11:01:02";
-importUrl = "http://lywb.lyd.com.cn/html2/2016-03/14/content_60376.htm";
-ispub = 1;
-layoutId = 22611;
-nsid = 60376;
-paperId = 2;
-periodId = 7601;
-}
-);
-layoutInfo =         {
-LastMap = 60376;
-importFlag = 1;
-importNum = 1;
-importTime = "2016-03-14 11:01:02";
-importUrl = "http://lywb.lyd.com.cn/html2/2016-03/14/node_86.htm";
-layoutId = 22611;
-layoutImage = "http://shouji.lyd.com.cn/tools/res/images2/2/2016-03/14/A04/20160314A04_brief.jpg";
-layoutImageBig = "http://shouji.lyd.com.cn/tools/res/images2/2/2016-03/14/A04/20160314A04_brief.jpg";
-layoutImageIcon = "http://shouji.lyd.com.cn/tools/res/images2/2/2016-03/14/A04/icon_20160314A04_brief.jpg";
-lid = 23999;
-pageAddTime = "2016-03-14 06:31:53";
-pageDate = "2016-03-14";
-pageId = 86;
-pageImgHeight = 513;
-pageImgLink = "images2/2/2016-03/14/A04/20160314A04_brief.jpg";
-pageImgLocal = 2;
-pageImgWidth = 350;
-pageMaps = 3;
-pageName = "\U6cb3\U6d1b\U8bc4\U8c2d";
-pageNumber = A04;
-pagePdfLink = "images2/2/2016-03/14/A04/20160314A04_pdf.pdf";
-pagePdfSize = "";
-pageStatus = 2;
-paperId = 2;
-periodId = 7601;
-};
-pageId = 86;
-paperId = 2;
-periodDate = "2016-03-14";
-periodId = 7601;
-};
-result = success;
+	data = {
+		areamaplist = (
+			{
+				amid = 64451;
+				articleUrl = "http://shouji.lyd.com.cn/p/2/60374";
+				coords = "2.420912%,12.527233%#37.766232%,12.527233%#37.766232%,52.287582%#2.420912%,52.287582%";
+				importFlag = 1;
+				importTime = "2016-03-14 11:01:02";
+				importNum = 1;
+				importUrl = "http://lywb.lyd.com.cn/html2/2016-03/14/content_60374.htm";
+				ispub = 1;
+				layoutId = 22611;
+				nsid = 60374;
+				paperId = 2;
+				periodId = 7601;
+			},
+			{
+				amid = 64452;
+				articleUrl = "http://shouji.lyd.com.cn/p/2/60375";
+				coords = "95.868126%,21.241830%#62.943719%,20.479303%#62.943719%,17.973856%#51.161946%,17.755991%#51.161946%,13.943355%#51.161946%,13.943355%#48.741034%,13.943355%#48.741034%,13.943355%#48.741034%,13.943355%#41.801085%,13.943355%#41.801085%,17.755991%#41.801085%,17.973856%#41.801085%,20.479303%#41.801085%,21.241830%#41.801085%,38.671024%#95.868126%,38.671024%";
+				importFlag = 1;
+				importNum = 1;
+				importTime = "2016-03-14 11:01:02";
+				importUrl = "http://lywb.lyd.com.cn/html2/2016-03/14/content_60375.htm";
+				ispub = 1;
+				layoutId = 22611;
+				nsid = 60375;
+				paperId = 2;
+				periodId = 7601;
+			},
+			{
+				amid = 64453;
+				articleUrl = "http://shouji.lyd.com.cn/p/2/60376";
+				coords = "97.159280%,44.117647%#48.418246%,43.028322%#48.418246%,41.721133%#40.994115%,41.721133%#40.994115%,43.028322%#40.994115%,44.117647%#40.994115%,52.287582%#97.159280%,52.287582%";
+				importFlag = 1;
+				importNum = 1;
+				importTime = "2016-03-14 11:01:02";
+				importUrl = "http://lywb.lyd.com.cn/html2/2016-03/14/content_60376.htm";
+				ispub = 1;
+				layoutId = 22611;
+				nsid = 60376;
+				paperId = 2;
+				periodId = 7601;
+			},
+		);
+		layoutInfo = {
+			LastMap = 60376;
+			importFlag = 1;
+			importNum = 1;
+			importTime = "2016-03-14 11:01:02";
+			importUrl = "http://lywb.lyd.com.cn/html2/2016-03/14/node_86.htm";
+			layoutId = 22611;
+			layoutImage = "http://shouji.lyd.com.cn/tools/res/images2/2/2016-03/14/A04/20160314A04_brief.jpg";
+			layoutImageBig = "http://shouji.lyd.com.cn/tools/res/images2/2/2016-03/14/A04/20160314A04_brief.jpg";
+			layoutImageIcon = "http://shouji.lyd.com.cn/tools/res/images2/2/2016-03/14/A04/icon_20160314A04_brief.jpg";
+			lid = 23999;
+			pageAddTime = "2016-03-14 06:31:53";
+			pageDate = "2016-03-14";
+			pageId = 86;
+			pageImgHeight = 513;
+			pageImgLink = "images2/2/2016-03/14/A04/20160314A04_brief.jpg";
+			pageImgLocal = 2;
+			pageImgWidth = 350;
+			pageMaps = 3;
+			pageName = "\U6cb3\U6d1b\U8bc4\U8c2d";
+			pageNumber = A04;
+			pagePdfLink = "images2/2/2016-03/14/A04/20160314A04_pdf.pdf";
+			pagePdfSize = "";
+			pageStatus = 2;
+			paperId = 2;
+			periodId = 7601;
+		};
+		pageId = 86;
+		paperId = 2;
+		periodDate = "2016-03-14";
+		periodId = 7601;
+	};
+	result = success;
 }

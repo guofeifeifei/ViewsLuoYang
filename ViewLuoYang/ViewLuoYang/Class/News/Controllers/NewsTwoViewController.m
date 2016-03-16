@@ -11,9 +11,12 @@
 #import "NewsScondCollectionViewCell.h"
 static NSString *itemIntentfier = @"itemIdentifier";
 @interface NewsTwoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
 @property (nonatomic, retain) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *listArray;
-//@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, copy) NSString *pageId;//图片Id
+@property (nonatomic, copy) NSString *layoutImageBig;//图片
+
 
 @end
 
@@ -21,9 +24,8 @@ static NSString *itemIntentfier = @"itemIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ 
     // Do any additional setup after loading the view.
-//    self.view.backgroundColor = [UIColor yellowColor];
-    [self dataLoad];
     
 
     [self.view addSubview:self.collectionView];
@@ -35,13 +37,20 @@ static NSString *itemIntentfier = @"itemIdentifier";
 - (void)dataLoad{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [sessionManager GET:[NSString stringWithFormat:@"%@",ktouch] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [sessionManager GET:[NSString stringWithFormat:@"%@%@?_fs=2&_vc=58",ktouch,self.pageId] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         ZPFLog(@"downloadProgress = %@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZPFLog(@"responseObject = %@",responseObject);
         
+        NSDictionary *dic = responseObject;
+        NSDictionary *dataDic = dic[@"data"];
+        self.pageId = dataDic[@"pageId"];
         
+        NSDictionary *layoutInfoDic = dataDic[@"layoutInfo"];
+        self.layoutImageBig = layoutInfoDic[@"layoutImageBig"];
        
+        [self.collectionView reloadData];
+        
     
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -60,11 +69,10 @@ static NSString *itemIntentfier = @"itemIdentifier";
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
-
-
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     NewsScondCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
+    [cell.image sd_setImageWithURL:[NSURL URLWithString:self.layoutImageBig] placeholderImage:nil];
     
     return cell;
 }
@@ -89,7 +97,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
         //设置每个item的大小
         layout.itemSize = CGSizeMake(KScreenWidth,KScreenHeight);
         //通过一个layout布局来创建一个collectionView
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 44, KScreenWidth, KScreenHeight-44) collectionViewLayout:layout];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight) collectionViewLayout:layout];
         self.collectionView.backgroundColor = [UIColor lightGrayColor];
         //设置代理
         self.collectionView.delegate = self;
@@ -102,15 +110,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 
 
-//- (UIWebView *)webView{
-//    if (_webView == nil) {
-//        self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-//        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.xinli001.com/ceshi/"]];
-//        [self.webView loadRequest:request];
-//        
-//    }
-//    return _webView;
-//}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

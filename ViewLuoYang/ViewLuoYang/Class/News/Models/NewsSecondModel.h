@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NewsSecondModel : NSObject
-@property (nonatomic, copy) NSString *importUrl;
-
+@property (nonatomic, copy) NSString *layoutImageBig;//图片
+@property (nonatomic, strong) NSString *pageId;//图片地址
 @end

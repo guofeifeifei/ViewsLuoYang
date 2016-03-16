@@ -18,7 +18,7 @@
 @property(nonatomic, strong) NSString *resubImage;
 @property(nonatomic, strong) NSString *subImage;
 @property(nonatomic, strong) NSString *title;
-@property(nonatomic, strong) NSString *views;
+@property(nonatomic, strong) NSNumber *views;
 //------headView
 
 

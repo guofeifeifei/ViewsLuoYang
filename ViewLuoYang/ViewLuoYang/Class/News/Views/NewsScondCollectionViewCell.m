@@ -19,6 +19,8 @@
     return self;
 }
 -(void)customView{
+    self.image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [self addSubview:self.image];
     
 }
 
