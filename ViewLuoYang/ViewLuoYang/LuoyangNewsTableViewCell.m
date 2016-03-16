@@ -34,9 +34,17 @@
 
 - (void)setModel:(LuoyangNews *)model{
     
-    [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:model.resubImage] placeholderImage:nil];
+    if (model.resubImage.length<=0) {
+        self.leftImageView.image=[UIImage imageNamed:@"ic_launcher"];
+    }else{
+        
+        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:model.resubImage] placeholderImage:nil];
+        
+    }
     
-    self.wantchLabel.text= [NSString stringWithFormat:@"%@",model.views];
+
+    self.wantchLabel.text=[NSString stringWithFormat:@"%@", model.views];
+
     self.titleLabel.text=model.title;
     self.timeLabel.text=model.mtime;
     self.comeFromLabel.text=model.source;

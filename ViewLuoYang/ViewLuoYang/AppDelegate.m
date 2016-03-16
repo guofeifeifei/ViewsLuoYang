@@ -12,6 +12,7 @@
 #import "ServiceViewController.h"
 #import "MessageViewController.h"
 #import <AMapLocationKit/AMapLocationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
 @interface AppDelegate ()
 
 @end
@@ -23,8 +24,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    [AMapLocationServices sharedServices].apiKey = kLocationApk;
+    [AMapSearchServices sharedServices].apiKey = kLocationApk;
     
+    [AMapLocationServices sharedServices].apiKey = kLocationApk;
     
     UITabBarController *tabbar=[[UITabBarController alloc]init];
     //展示类
@@ -34,8 +36,8 @@
     
     //导航栏颜色
     showNav.navigationBar.barTintColor = barColor;
-    
-    showNav.tabBarItem.image=[UIImage imageNamed:@"huodong"];
+   
+    showNav.tabBarItem.image=[UIImage imageNamed:@"vpi__tab_unselected_focused_holo.9-1"];
     UIImage *image=[UIImage imageNamed:@"huodong_pre"];
     //按图片原来状态显示
     showNav.tabBarItem.selectedImage=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
