@@ -23,10 +23,10 @@
 }
 - (void)loadingView{
    
-    self.serviceImage = [[UIImageView alloc] initWithFrame:CGRectMake(50 / 2, 0, self.frame.size.width - 50,  self.frame.size.width - 50)];
+    self.serviceImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, self.frame.size.width - 20,  self.frame.size.width - 20)];
    
     [self addSubview:self.serviceImage];
-    self.serviceLable = [[UILabel alloc] initWithFrame:CGRectMake(20, self.frame.size.width - 40, self.frame.size.width - 20, 20)];
+    self.serviceLable = [[UILabel alloc] initWithFrame:CGRectMake(10, self.frame.size.width - 20, self.frame.size.width - 10, 20)];
     self.serviceLable.font = [UIFont systemFontOfSize:12.0];
        [self addSubview:self.serviceLable];
     

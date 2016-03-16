@@ -36,7 +36,7 @@
     
     [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:model.resubImage] placeholderImage:nil];
     
-    self.wantchLabel.text=model.views;
+    self.wantchLabel.text=[NSString stringWithFormat:@"%@", model.views];
     self.titleLabel.text=model.title;
     self.timeLabel.text=model.mtime;
     self.comeFromLabel.text=model.source;

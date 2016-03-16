@@ -12,6 +12,7 @@
 #import <MJRefresh.h>
 #import "ServicedidViewController.h"
 #import "ServiceCollectionViewCell.h"
+#import "LocationViewController.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 @interface ServiceViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>{
     BOOL _refresh;
@@ -126,19 +127,23 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
    
-    ServicedidViewController *servicedidVC = [[ServicedidViewController alloc] init];
+   
     if (indexPath.row > 0) {
         if (indexPath.row == self.serviceArray.count) {
-            servicedidVC.path = @"地图定位";
+            LocationViewController *loctionVC = [[LocationViewController alloc] init];
+            [self.navigationController pushViewController:loctionVC animated:YES];
+            NSLog(@"loction地图定位");
             
         } else{
+             ServicedidViewController *servicedidVC = [[ServicedidViewController alloc] init];
             serviceModel *model = [[serviceModel alloc] init];
             model = self.serviceArray[indexPath.row];
              servicedidVC.path = model.app_path;
+             [self.navigationController pushViewController:servicedidVC animated:YES];
         }
     }
    
-    [self.navigationController pushViewController:servicedidVC animated:YES];
+   
 }
 
 
@@ -173,6 +178,7 @@
     
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

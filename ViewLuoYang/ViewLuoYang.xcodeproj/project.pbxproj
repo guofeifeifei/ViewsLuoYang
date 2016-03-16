@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E430D1C99985B0078D4A3 /* serviceModel.m */; };
+		7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */; };
+		7A0E43141C99986C0078D4A3 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E43111C99986C0078D4A3 /* ServiceCollectionViewCell.xib */; };
 		7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4055A81C9817490040895C /* ServicedidViewController.m */; };
 		7A5CFACC1C97C81C0002AF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACB1C97C81C0002AF99 /* main.m */; };
 		7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACE1C97C81C0002AF99 /* AppDelegate.m */; };
@@ -25,15 +28,13 @@
 		7A5CFB121C980B4C0002AF99 /* NewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFB111C980B4C0002AF99 /* NewsCollectionViewCell.m */; };
 		7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFB171C9824190002AF99 /* NewsTwoViewController.m */; };
 		7A5CFB1A1C9845060002AF99 /* TouchItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFB191C9845060002AF99 /* TouchItems.plist */; };
+		7A7EDBA91C993AAC00DC6EDF /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EDBA81C993AAC00DC6EDF /* LocationViewController.m */; };
 		7A8F68F31C99037000375CF7 /* NewsSecondModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F68F21C99037000375CF7 /* NewsSecondModel.m */; };
 		7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
 		7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C391C97E1AC00FD6D15 /* Reachability.m */; };
 		7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3A1C97E1AC00FD6D15 /* README.md */; };
 		7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */; };
 		7AA00C421C97E87600FD6D15 /* service.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C411C97E87600FD6D15 /* service.plist */; };
-		7AA00C461C97F0A300FD6D15 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */; };
-		7AA00C471C97F0A300FD6D15 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */; };
-		7AA00C4A1C97F67100FD6D15 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C491C97F67100FD6D15 /* serviceModel.m */; };
 		7ABEE5BB1C990F2A0093912D /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BA1C990F2A0093912D /* AMapLocationKit.framework */; };
 		7ABEE5BD1C990F860093912D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BC1C990F860093912D /* CoreTelephony.framework */; };
 		7ABEE5BF1C990F940093912D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */; };
@@ -55,6 +56,11 @@
 
 /* Begin PBXFileReference section */
 		343C6496E289605AF2800A0C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A0E430D1C99985B0078D4A3 /* serviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serviceModel.m; sourceTree = "<group>"; };
+		7A0E430E1C99985B0078D4A3 /* serviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serviceModel.h; sourceTree = "<group>"; };
+		7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCollectionViewCell.m; sourceTree = "<group>"; };
+		7A0E43111C99986C0078D4A3 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
+		7A0E43121C99986C0078D4A3 /* ServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCollectionViewCell.h; sourceTree = "<group>"; };
 		7A4055A71C9817490040895C /* ServicedidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicedidViewController.h; sourceTree = "<group>"; };
 		7A4055A81C9817490040895C /* ServicedidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicedidViewController.m; sourceTree = "<group>"; };
 		7A5CFAC71C97C81C0002AF99 /* ViewLuoYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLuoYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +95,8 @@
 		7A5CFB161C9824190002AF99 /* NewsTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTwoViewController.h; sourceTree = "<group>"; };
 		7A5CFB171C9824190002AF99 /* NewsTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTwoViewController.m; sourceTree = "<group>"; };
 		7A5CFB191C9845060002AF99 /* TouchItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TouchItems.plist; sourceTree = "<group>"; };
+		7A7EDBA71C993AAC00DC6EDF /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		7A7EDBA81C993AAC00DC6EDF /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		7A8F68F11C99037000375CF7 /* NewsSecondModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSecondModel.h; sourceTree = "<group>"; };
 		7A8F68F21C99037000375CF7 /* NewsSecondModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSecondModel.m; sourceTree = "<group>"; };
 		7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
@@ -98,11 +106,6 @@
 		7AA00C3B1C97E1AC00FD6D15 /* ZMYNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMYNetManager.h; sourceTree = "<group>"; };
 		7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMYNetManager.m; sourceTree = "<group>"; };
 		7AA00C411C97E87600FD6D15 /* service.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = service.plist; sourceTree = "<group>"; };
-		7AA00C431C97F0A300FD6D15 /* ServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceCollectionViewCell.h; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceCollectionViewCell.m; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ServiceCollectionViewCell.xib; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
-		7AA00C481C97F67100FD6D15 /* serviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = serviceModel.h; path = ViewLuoYang/Class/Service/Controllers/serviceModel.h; sourceTree = SOURCE_ROOT; };
-		7AA00C491C97F67100FD6D15 /* serviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = serviceModel.m; path = ViewLuoYang/Class/Service/Controllers/serviceModel.m; sourceTree = SOURCE_ROOT; };
 		7ABEE5BA1C990F2A0093912D /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		7ABEE5BC1C990F860093912D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -382,8 +385,8 @@
 		7A5CFAFB1C97C8C10002AF99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7AA00C481C97F67100FD6D15 /* serviceModel.h */,
-				7AA00C491C97F67100FD6D15 /* serviceModel.m */,
+				7A0E430D1C99985B0078D4A3 /* serviceModel.m */,
+				7A0E430E1C99985B0078D4A3 /* serviceModel.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,9 +394,9 @@
 		7A5CFAFC1C97C8C10002AF99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7AA00C431C97F0A300FD6D15 /* ServiceCollectionViewCell.h */,
-				7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */,
-				7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */,
+				7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */,
+				7A0E43111C99986C0078D4A3 /* ServiceCollectionViewCell.xib */,
+				7A0E43121C99986C0078D4A3 /* ServiceCollectionViewCell.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -472,6 +475,8 @@
 		7ABEE5C51C99110C0093912D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7A7EDBA71C993AAC00DC6EDF /* LocationViewController.h */,
+				7A7EDBA81C993AAC00DC6EDF /* LocationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -524,6 +529,12 @@
 				TargetAttributes = {
 					7A5CFAC61C97C81C0002AF99 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8Z44W37ZT6;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -551,7 +562,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AEE4A111C97F9410081FBC6 /* LuoyangNewsTableViewCell.xib in Resources */,
-				7AA00C471C97F0A300FD6D15 /* ServiceCollectionViewCell.xib in Resources */,
 				7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */,
 				7A5CFAD11C97C81C0002AF99 /* Assets.xcassets in Resources */,
 				7A5CFB1A1C9845060002AF99 /* TouchItems.plist in Resources */,
@@ -563,6 +573,7 @@
 				7A5CFB061C97C8C10002AF99 /* ProgressHUD.bundle in Resources */,
 				7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */,
 				7AA00C421C97E87600FD6D15 /* service.plist in Resources */,
+				7A0E43141C99986C0078D4A3 /* ServiceCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,7 +633,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5CFB121C980B4C0002AF99 /* NewsCollectionViewCell.m in Sources */,
+				7A7EDBA91C993AAC00DC6EDF /* LocationViewController.m in Sources */,
 				7AF172251C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m in Sources */,
+				7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */,
 				7A5CFB0D1C97D8280002AF99 /* NewsModel.m in Sources */,
 				7A5CFB071C97C8C10002AF99 /* ProgressHUD.m in Sources */,
 				7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */,
@@ -633,16 +646,15 @@
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
 				7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */,
 				7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */,
+				7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */,
 				7A5CFACC1C97C81C0002AF99 /* main.m in Sources */,
 				7AEE4A101C97F9410081FBC6 /* LuoyangNewsTableViewCell.m in Sources */,
 				7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */,
 				7AEE4A1D1C9845090081FBC6 /* headPhotoModel.m in Sources */,
 				7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */,
-				7AA00C4A1C97F67100FD6D15 /* serviceModel.m in Sources */,
 				7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */,
 				7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */,
 				7A8F68F31C99037000375CF7 /* NewsSecondModel.m in Sources */,
-				7AA00C461C97F0A300FD6D15 /* ServiceCollectionViewCell.m in Sources */,
 				7A5CFB051C97C8C10002AF99 /* HWTools.m in Sources */,
 				7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */,
 				7A5CFB041C97C8C10002AF99 /* NewsViewController.m in Sources */,
@@ -749,6 +761,7 @@
 			baseConfigurationReference = FFBA45722C735EF737B85187 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",
@@ -767,6 +780,7 @@
 			baseConfigurationReference = 343C6496E289605AF2800A0C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",
