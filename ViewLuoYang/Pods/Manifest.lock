@@ -14,7 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - AMap2DMap (3.3.0)
   - AMapLocation (1.2.0)
+  - AMapSearch (3.3.0)
   - MJRefresh (3.1.0)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
@@ -22,13 +24,17 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
+  - AMap2DMap (~> 3.3.0)
   - AMapLocation (~> 1.2.0)
+  - AMapSearch (~> 3.3.0)
   - MJRefresh
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  AMap2DMap: e53461cdc345375e514579db17dbd721ff9ed9eb
   AMapLocation: 6d72a8f1c5f2a29a736fcaca3a85173ba3dc5f56
+  AMapSearch: cff4faf59c007f7d1f2bae2d7170c3912783981a
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 

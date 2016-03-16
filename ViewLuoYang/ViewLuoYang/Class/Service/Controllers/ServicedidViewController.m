@@ -22,7 +22,7 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.path]]];
     self.webView.delegate = self;
     [self.view addSubview:self.webView];
-    
+    [self showBarButtonWithImage:@"back_arrow"];
    
 }
    
