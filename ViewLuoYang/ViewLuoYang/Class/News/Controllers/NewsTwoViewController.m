@@ -24,10 +24,8 @@ static NSString *itemIntentfier = @"itemIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
+    [self dataLoad];
     // Do any additional setup after loading the view.
-    
-
     [self.view addSubview:self.collectionView];
     
 }
@@ -37,7 +35,11 @@ static NSString *itemIntentfier = @"itemIdentifier";
 - (void)dataLoad{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [sessionManager GET:[NSString stringWithFormat:@"%@%@?_fs=2&_vc=58",ktouch,self.pageId] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSString *b=[NSString stringWithFormat:@"%@%@?_fs=2&_vc=58",ktouch,@(86)];
+    
+    ZPFLog(@"%@",b);
+    
+    [sessionManager GET:b parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         ZPFLog(@"downloadProgress = %@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZPFLog(@"responseObject = %@",responseObject);
