@@ -1,0 +1,59 @@
+//
+//  MySelf.pch
+//  Happyholiday
+///Users/scjy/Desktop/AllViewOfLuoYang/LuoYang/AllViewOfLuoYang/AllViewOfLuoYang/Class/Resource/MySelf.pch
+//  Created by scjy on 16/1/6.
+//  Copyright © 2016年 scjy. All rights reserved.
+///Users/scjy/Desktop/iOS 项目程序/工程项目期/happyholiday/Happyholiday/MySelf.pch
+//Users/scjy/Desktop/C段项目/FullVewOfLuoyang/Luoyang/Luoyang/Class/Resource/MySelf.pch
+
+
+
+#ifndef MySelf_pch
+#define MySelf_pch
+#import "Header.h"
+
+//接口定义的头文件
+
+
+//网络请求和加载网络图片
+#import <AFNetworking/AFHTTPSessionManager.h>
+#import <UIImageView+WebCache.h>
+
+
+#import "UIViewController+Common.h"
+
+
+
+
+#define KScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//输出
+#ifdef DEBUG
+#	define ZPFLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#	define ZPFLog(...)
+#endif
+
+
+
+//颜色
+#define RGB(x,y,z) [UIColor colorWithRed:x/255.0 green:y/255.0 blue:z/255.0 alpha:1.0]
+
+#define barColor [UIColor colorWithRed:190/255.0f green:56/255.0f blue:71/255.0f alpha:1.0];
+
+
+//随机色
+
+#define randomColor   [UIColor colorWithRed:arc4random()%256/255.0f green:arc4random()%256/255.0f blue:arc4random()%256/255.0f alpha:1.0];
+
+
+
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MySelf_pch */
