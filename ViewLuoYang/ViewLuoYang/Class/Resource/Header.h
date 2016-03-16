@@ -12,11 +12,11 @@
 #define knightNews @"http://shouji.lyd.com.cn/paper/service/getPeriods//2/"
 
 //日报
-#define KdayNew @"http://shouji.lyd.com.cn/paper/service/getPeriods//1/1/12?_fs=2&_vc=58"
+#define KdayNew @"http://shouji.lyd.com.cn/paper/service/getPeriods//1/"
 //商报
-#define KbusinessNews @"http://shouji.lyd.com.cn/paper/service/getPeriods//3/1/12?_fs=2&_vc=58"
+#define KbusinessNews @"http://shouji.lyd.com.cn/paper/service/getPeriods//3/"
 //点击
-#define ktouch @"http://shouji.lyd.com.cn/paper/service/getLayout//2/20160314/86?_fs=2&_vc=58"
+#define ktouch @"http://shouji.lyd.com.cn/paper/service/getLayout//2/20160314/"
 
 
 
@@ -24,13 +24,13 @@
 //首界面 接口
 #define KheadView  @"http://shouji.lyd.com.cn/tools/client/focusimg/news/14?_fs=2&_vc=58"
 //洛阳新闻 http://shouji.lyd.com.cn/tools/service/getNewsList/news_luoyang/4/null/15?_fs=2&_vc=58
-#define KLuoyangNews @"http://shouji.lyd.com.cn/tools/service/getNewsList/news_luoyang/1/null/15?_fs=2&_vc=58"
+#define KLuoyangNews @"http://shouji.lyd.com.cn/tools/service/getNewsList/news_luoyang/"
 
-//热点http://shouji.lyd.com.cn/tools/service/getNewsList/news_hot/2/null/15?_fs=2&_vc=58
-#define KhotTalk @"http://shouji.lyd.com.cn/tools/service/getNewsList/news_society/1/null/15?_fs=2&_vc=58"
-//娱乐
-#define Kentertainment @"http://shouji.lyd.com.cn/tools/service/getNewsList/news_entertainment/1/null/15?_fs=2&_vc=58"
+//热点@"http://shouji.lyd.com.cn/tools/service/getNewsList/news_society/"
 
+#define KhotTalk @"http://shouji.lyd.com.cn/tools/service/getNewsList/news_hot/"
+//娱乐1/null/15?_fs=2&_vc=58
+#define Kentertainment @"http://shouji.lyd.com.cn/tools/service/getNewsList/news_entertainment/"
 
 
 //-----------------------

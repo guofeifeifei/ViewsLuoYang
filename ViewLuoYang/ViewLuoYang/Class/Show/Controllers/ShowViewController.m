@@ -10,6 +10,7 @@
 #import "LuoyangNews.h"
 #import "LuoyangNewsTableViewCell.h"
 #import "NewsDetailViewController.h"
+#import <MJRefresh/MJRefresh.h>
 
 //左边菜单
 #import "leftView.h"
@@ -22,11 +23,15 @@
 static NSString *str=@"cell";
 @interface ShowViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
+    
+    NSInteger _pageCount;
     //侧滑的三个属性
     UIPanGestureRecognizer *panGestureRecognizer;
     float centerX;
     float centerY;
- 
+    
+    int a;
+    
 }
 @property(nonatomic, strong) UIImageView *headImage;
 @property(nonatomic, strong) NSString *urlString;
@@ -36,6 +41,9 @@ static NSString *str=@"cell";
 @property(nonatomic, strong) leftView *leftMenuView;
 @property(nonatomic, strong) NSMutableArray *photoArr;
 @property(nonatomic, strong) NSMutableArray *photo;
+@property(nonatomic, strong) NSString *headurl;
+@property(nonatomic, strong) UIButton *btn;
+@property(nonatomic, assign) BOOL isRefren;
 @end
 
 @implementation ShowViewController
@@ -44,36 +52,91 @@ static NSString *str=@"cell";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.automaticallyAdjustsScrollViewInsets=NO;
     self.navigationItem.title=@"首页展示";
+    _pageCount=1;
     //先放入第一个左边的视图
     NSBundle *boundle=[NSBundle mainBundle];
     NSArray *obj=[boundle loadNibNamed:@"letfView" owner:self options:nil];
     
     self.leftMenuView=[obj lastObject];
-    self.leftMenuView.frame=CGRectMake(0, 100, KScreenWidth,KScreenHeight);
+    self.leftMenuView.frame=CGRectMake(0, 0, KScreenWidth,KScreenHeight);
     [self.view addSubview:self.leftMenuView];
+    
     [self.view addSubview:self.contenceView];
     [self customViewBtn];
-    
+    //默认加载洛阳
     self.urlString=KLuoyangNews;
     [self getNetData];
     [self getPhotoData];
+    //加载刷新
+    [self setupRefresh];
     
-  
+    
+    
     
 }
+
+//开始刷新自定义方法
+- (void)setupRefresh
+{
+    //下拉刷新
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
+        
+        
+        _pageCount=1;
+        self.isRefren=YES;
+        
+        [self.listArr removeAllObjects];
+        //         self.urlString=KLuoyangNews;
+        [self getNetData];
+        
+        
+        
+        
+        
+    }];
+    
+    
+    
+    //上拉加载
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
+        
+        self.isRefren=NO;
+        _pageCount+=1;
+        
+        [self getNetData];
+        
+        
+        
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
 
 #pragma mark ---自定义tableView的header
 
 - (UIImageView *)headImage{
     if (_headImage==nil) {
-        self.headImage=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 130)];
+        self.headImage=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 150)];
         self.photo=[[NSMutableArray alloc]init];
         for (LuoyangNews *model  in self.photoArr) {
-           [self.photo addObject:model.image];
-           
+            [self.photo addObject:model.image];
+            
         }
-        [NSTimer scheduledTimerWithTimeInterval:self.photo.count target:self selector:@selector(swichViewPhoto) userInfo:nil repeats:YES];
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(swichViewPhoto) userInfo:nil repeats:YES];
         
         self.headImage.userInteractionEnabled=YES;
         
@@ -92,8 +155,8 @@ static NSString *str=@"cell";
 }
 
 -(void)swichViewPhoto{
-   
-    int a=arc4random()%self.photo.count;
+    
+    a=arc4random()%self.photo.count;
     
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:self.photo[a]] placeholderImage:nil];
     
@@ -102,6 +165,9 @@ static NSString *str=@"cell";
 
 -(void)detailBtnView{
     NewsDetailViewController *new=[[NewsDetailViewController alloc]init];
+    
+    LuoyangNews *model=self.photoArr[a];
+    new.detailUrl=model.weburl;
     
     [self.navigationController pushViewController:new animated:YES];
     
@@ -126,7 +192,7 @@ static NSString *str=@"cell";
         btn.backgroundColor=barColor;
         
         [self.view addSubview:btn];
-
+        
     }
     
 }
@@ -135,28 +201,39 @@ static NSString *str=@"cell";
 -(void)swichViewBtn:(UIButton *)btn{
     switch (btn.tag) {
         case 1:
+            
+            
             //网络请求
             self.urlString=KLuoyangNews;
-            [self.listArr removeAllObjects];
+            
             [self getNetData];
-           
-            break;
-        case 2:
-           self.urlString=KhotTalk;
-             [self.listArr removeAllObjects];
-            [self getNetData];
+            [self getPhotoData];
+            [self.tableView reloadData];
             
             break;
-        case 3:
-            self.urlString=Kentertainment;
-             [self.listArr removeAllObjects];
+        case 2:
+            //
+            
+            
+            self.urlString=KhotTalk;
+            
+            
             [self getNetData];
-                break;
+            [self.tableView reloadData];
+            break;
+        case 3:
+            //
+            
+            self.urlString=Kentertainment;
+            
+            [self getNetData];
+            [self.tableView reloadData];
+            break;
             
         default:
             break;
     }
-
+    
     
     
 }
@@ -166,30 +243,30 @@ static NSString *str=@"cell";
 //第二个View
 - (UIView *)contenceView{
     if (_contenceView == nil) {
-        self.contenceView=[[UIView alloc]initWithFrame:CGRectMake(0, 100, screen.size.width, screen.size.height)];
+        self.contenceView=[[UIView alloc]initWithFrame:CGRectMake(0,100, screen.size.width, screen.size.height)];
         centerX = screen.size.width / 2;
-        centerY = screen.size.height / 2;
-        self.contenceView.backgroundColor = [UIColor greenColor];
+        centerY = (screen.size.height)/ 2+105;
+        //        self.contenceView.backgroundColor = [UIColor greenColor];
         panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
         [self.contenceView addGestureRecognizer:panGestureRecognizer];
-     }
+    }
     
     return _contenceView;
-
+    
 }
 
 - (UITableView *)tableView{
     
     if (_tableView==nil) {
-        self.tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 100, screen.size.width, screen.size.height) style:UITableViewStylePlain];
+        self.tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, screen.size.width, screen.size.height-77) style:UITableViewStylePlain];
         
         self.tableView.delegate=self;
         self.tableView.dataSource=self;
-        self.tableView.rowHeight=100;
+        self.tableView.rowHeight=80;
         
         [self.tableView registerNib:[UINib nibWithNibName:@"LuoyangNewsTableViewCell" bundle:nil] forCellReuseIdentifier:str];
         
- 
+        
     }
     
     return _tableView;
@@ -225,27 +302,27 @@ static NSString *str=@"cell";
     
     self.contenceView.center = CGPointMake(x, centerY);
     if (recognizer.state == UIGestureRecognizerStateEnded) {
-         [UIView animateWithDuration:0.2 animations:^(void){
-      if (x > BOUND_X) {
-         self.contenceView.center = CGPointMake(MAX_CENTER_X, centerY);
+        [UIView animateWithDuration:0.2 animations:^(void){
+            if (x > BOUND_X) {
+                self.contenceView.center = CGPointMake(MAX_CENTER_X, centerY);
             }else{
-        self.contenceView.center = CGPointMake(centerX, centerY);
+                self.contenceView.center = CGPointMake(centerX, centerY);
                 
             }
         }];
-
+        
     }
     [recognizer setTranslation:CGPointZero inView:self.contenceView];
-  
+    
 }
 - (void)buttonPressed:(UIButton *)button
 {
     
     [UIView animateWithDuration:0.2 animations:^(void){
-          if (self.contenceView.center.x == centerX) {
-     self.contenceView.center = CGPointMake(MAX_CENTER_X, centerY);
+        if (self.contenceView.center.x == centerX) {
+            self.contenceView.center = CGPointMake(MAX_CENTER_X, centerY);
         }else if (self.contenceView.center.x == MAX_CENTER_X){
-        self.contenceView.center = CGPointMake(centerX, centerY);
+            self.contenceView.center = CGPointMake(centerX, centerY);
             
         }
     }];
@@ -259,8 +336,8 @@ static NSString *str=@"cell";
     
     
     manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"text/html"];
-    
-    [manager GET:self.urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSLog(@"%ld",_pageCount);
+    [manager GET:[NSString stringWithFormat:@"%@%@/null/15?_fs=2&_vc=58",self.urlString,@(_pageCount)] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         ZPFLog(@"%lld",downloadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
@@ -271,6 +348,13 @@ static NSString *str=@"cell";
         
         NSArray *newsArr=dataDic[@"news_list"];
         
+        if (self.isRefren) {
+            if (self.listArr.count>0) {
+                [self.listArr removeAllObjects];
+            }
+        }
+        
+        
         for (NSDictionary *listDic in newsArr) {
             
             LuoyangNews *model=[[LuoyangNews alloc]init];
@@ -280,7 +364,12 @@ static NSString *str=@"cell";
             
         }
         
-        
+        //判断字符串，从而达到添加和移除tableHeaderView
+        if ([self.urlString isEqualToString:KhotTalk] ||[self.urlString isEqualToString:Kentertainment]) {
+            self.tableView.tableHeaderView=nil;
+        }
+        [self.tableView.mj_footer endRefreshing];
+        [self.tableView.mj_header endRefreshing];
         
         [self.contenceView addSubview:self.tableView];
         [self.tableView reloadData];
@@ -326,7 +415,7 @@ static NSString *str=@"cell";
         
         
         self.tableView.tableHeaderView=self.headImage;
-       
+        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
@@ -366,10 +455,19 @@ static NSString *str=@"cell";
         
     }
     
+    
+    if (indexPath.row>self.listArr.count) {
+        return cell;
+    }
+    
+    
     cell.model=self.listArr[indexPath.row];
+    
+    
+    
+    
+    
     return cell;
-    
-    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -403,13 +501,13 @@ static NSString *str=@"cell";
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

@@ -19,7 +19,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
     
 }
 
-
+@property(nonatomic, assign) BOOL isRefresh;
 @property (nonatomic, retain) UICollectionView *collectionView;
 @property(nonatomic, strong) NSString *urlString;
 @property (nonatomic, strong) UIButton *firstBtn;
@@ -33,11 +33,13 @@ static NSString *itemIntentfier = @"itemIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.navigationController.navigationBar.translucent = NO;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"newspaper_bg"]];
     // Do any additional setup after loading the view.
     self.title = @"电子报";
     //默认是晚报
     _pageCount=1;
-    self.urlString = [NSString stringWithFormat:@"%@%@/12?_fs=2&_vc=58",knightNews,@(_pageCount)];
+    self.urlString = knightNews;
     
     ZPFLog(@"%@",self.urlString);
     [self dataLoad];
@@ -51,6 +53,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
         [self.collectionView.mj_header beginRefreshing];
         //网络请求
         _pageCount=1;
+        self.isRefresh=YES;
         [self.allNewsArray removeAllObjects];
         [self dataLoad];
         [self.collectionView.mj_header endRefreshing];
@@ -62,15 +65,11 @@ static NSString *itemIntentfier = @"itemIdentifier";
         //请求网络
         
         _pageCount+=1;
+        self.isRefresh=NO;
         [self dataLoad];
         
         [self.collectionView.mj_footer endRefreshing];
     }];
-    
-    
-    
-    
-    
     
 }
 
@@ -78,36 +77,36 @@ static NSString *itemIntentfier = @"itemIdentifier";
 - (UIButton *)firstBtn{
     if (_firstBtn == nil) {
         self.firstBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.firstBtn.frame = CGRectMake(0, 64, KScreenWidth/3, 44);
+        self.firstBtn.frame = CGRectMake(0, 0, KScreenWidth/3, 44);
         [self.firstBtn setTitle:@"洛阳晚报" forState:UIControlStateNormal];
         [self.firstBtn addTarget:self action:@selector(threeBtn:) forControlEvents:UIControlEventTouchUpInside];
         self.firstBtn.tag = 1;
-        self.firstBtn.backgroundColor = [UIColor whiteColor];
-        [self.firstBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.secondBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.firstBtn.backgroundColor = barColor;
     }
     return _firstBtn;
 }
 - (UIButton *)secondBtn{
     if (_secondBtn == nil) {
         self.secondBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.secondBtn.frame = CGRectMake(KScreenWidth/3, 64, KScreenWidth/3, 44);
+        self.secondBtn.frame = CGRectMake(KScreenWidth/3, 0, KScreenWidth/3, 44);
         [self.secondBtn setTitle:@"洛阳日报" forState:UIControlStateNormal];
         [self.secondBtn addTarget:self action:@selector(threeBtn:) forControlEvents:UIControlEventTouchUpInside];
         self.secondBtn.tag = 2;
-        self.secondBtn.backgroundColor = [UIColor whiteColor];
-        [self.secondBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        self.secondBtn.backgroundColor = barColor;
+        [self.secondBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
     return _secondBtn;
 }
 - (UIButton *)thirdBtn{
     if (_thirdBtn == nil) {
         self.thirdBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.thirdBtn.frame = CGRectMake(KScreenWidth/3*2, 64, KScreenWidth/3, 44);
+        self.thirdBtn.frame = CGRectMake(KScreenWidth/3*2, 0, KScreenWidth/3, 44);
         [self.thirdBtn setTitle:@"洛阳商报" forState:UIControlStateNormal];
         [self.thirdBtn addTarget:self action:@selector(threeBtn:) forControlEvents:UIControlEventTouchUpInside];
         self.thirdBtn.tag = 3;
-        self.thirdBtn.backgroundColor = [UIColor whiteColor];
-        [self.thirdBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        self.thirdBtn.backgroundColor = barColor;
+        [self.thirdBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
     return _thirdBtn;
 }
@@ -116,9 +115,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
     switch (btn.tag) {
         case 1:
         {
-            
             [self.allNewsArray removeAllObjects];
-            self.urlString = [NSString stringWithFormat:@"%@%@/12?_fs=2&_vc=58",knightNews,@(_pageCount)];
             self.urlString=knightNews;
             
             [self dataLoad];
@@ -148,12 +145,16 @@ static NSString *itemIntentfier = @"itemIdentifier";
 - (void)dataLoad{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [sessionManager GET:self.urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [sessionManager GET:[NSString stringWithFormat:@"%@%@/12?_fs=2&_vc=58",self.urlString,@(_pageCount)] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         ZPFLog(@"downloadProgress = %@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZPFLog(@"responseObject = %@",responseObject);
-        
         NSDictionary *dic = responseObject;
+        if (self.isRefresh) {
+            if (self.allNewsArray.count>0) {
+                [self.allNewsArray removeAllObjects];
+            }
+        }
         NSDictionary *dataDic = dic[@"data"];
         NSArray *periodlistArray = dataDic[@"periodlist"];
         for (NSDictionary *dict in periodlistArray) {
@@ -179,18 +180,16 @@ static NSString *itemIntentfier = @"itemIdentifier";
     return 1;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+
     NewsModel *model = self.allNewsArray[indexPath.row];
     NewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
-    
     cell.titleLable.text=model.periodName;
     [cell.image sd_setImageWithURL:[NSURL URLWithString:model.periodImage] placeholderImage:nil];
-
     return cell;
-    
 }
 #pragma mark -------- 点击选择哪个图片
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
+       NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
     [self.navigationController pushViewController:newsTwoVC animated:YES];
 }
 #pragma mark ----------- lazy loading
@@ -201,21 +200,24 @@ static NSString *itemIntentfier = @"itemIdentifier";
         //设置布局方向（默认垂直方向）
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
         //设置每一行间距
-        layout.minimumLineSpacing = 5;
+        layout.minimumLineSpacing = 10;
         //设置item间距
         layout.minimumInteritemSpacing = 1;
         //section的间距 上，左，下，右
-        layout.sectionInset = UIEdgeInsetsMake(2, 2, 2, 2);
+        layout.sectionInset = UIEdgeInsetsMake(30, 15, 20, 15);
         //设置每个item的大小
         layout.itemSize = CGSizeMake(KScreenWidth/3-20,KScreenHeight/4);
         //通过一个layout布局来创建一个collectionView
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 108, KScreenWidth, KScreenHeight) collectionViewLayout:layout];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 44, KScreenWidth, KScreenHeight) collectionViewLayout:layout];
         self.collectionView.backgroundColor = [UIColor lightGrayColor];
         //设置代理
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
         //注册item类型
         [self.collectionView registerClass:[NewsCollectionViewCell class] forCellWithReuseIdentifier:@"itemIdentifier"];
+        self.collectionView.backgroundColor = [UIColor clearColor];
+        
+        
     }
     return _collectionView;
 }

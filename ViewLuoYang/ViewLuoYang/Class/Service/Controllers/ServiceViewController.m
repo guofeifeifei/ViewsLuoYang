@@ -13,7 +13,7 @@
 #import "ServicedidViewController.h"
 #import "ServiceCollectionViewCell.h"
 #import "LocationViewController.h"
-#import <AFNetworking/AFHTTPSessionManager.h>
+
 @interface ServiceViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>{
     BOOL _refresh;
 }
