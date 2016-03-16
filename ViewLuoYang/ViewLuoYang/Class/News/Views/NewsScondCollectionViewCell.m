@@ -10,4 +10,16 @@
 
 @implementation NewsScondCollectionViewCell
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self customView];
+    }
+    return self;
+}
+-(void)customView{
+    
+}
+
 @end

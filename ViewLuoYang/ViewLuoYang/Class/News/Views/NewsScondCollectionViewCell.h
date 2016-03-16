@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NewsScondCollectionViewCell : UICollectionViewCell
-
+@property (nonatomic, copy) NSString *importUrl;
 @end

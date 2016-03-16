@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NewsSecondModel : NSObject
+@property (nonatomic, copy) NSString *importUrl;
 
 @end
