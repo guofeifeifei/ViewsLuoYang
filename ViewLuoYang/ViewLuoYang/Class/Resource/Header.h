@@ -10,6 +10,7 @@
 #define Header_h
 
 
+
 //首界面 接口
 #define KheadView  @"http://shouji.lyd.com.cn/tools/client/focusimg/news/14?_fs=2&_vc=58"
 //洛阳新闻 http://shouji.lyd.com.cn/tools/service/getNewsList/news_luoyang/4/null/15?_fs=2&_vc=58
@@ -23,10 +24,13 @@
 
 
 //-----------------------
+
+//电子报接口
+
 #define kNews @"http://shouji.lyd.com.cn/paper/service/getPeriods//2/1/12?_fs=2&_vc=58"
 
-
-
+//服务接口
+#define kService @"http://shouji.lyd.com.cn/tools/webapi/applist?v=1&_fs=2&_vc=58"
 
 
 
