@@ -26,9 +26,9 @@
    
 }
    
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-      [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.getElementsByClassName('adpic')[0].style.display = 'none'"];
-}
+//- (void)webViewDidFinishLoad:(UIWebView *)webView{
+//      [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.getElementsByClassName('adpic')[0].style.display = 'none'"];
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

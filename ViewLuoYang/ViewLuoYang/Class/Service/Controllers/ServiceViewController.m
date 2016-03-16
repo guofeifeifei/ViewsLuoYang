@@ -88,12 +88,6 @@
                 [model setValuesForKeysWithDictionary:dict];
                 [self.serviceArray addObject:model];
             }
-//            for (int i = 0; i < keyArray.count; i++) {
-//                NSDictionary *dic = appListDic[keyArray[i]];
-//                serviceModel *model = [[serviceModel alloc] init];
-//                [model setValuesForKeysWithDictionary:dic];
-//                [self.serviceArray addObject:model];
-//            }
             
             [self.collectionView reloadData];
            
@@ -114,24 +108,36 @@
   
     ServiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
         if (self.serviceArray.count > 0) {
-        cell.model = self.serviceArray[indexPath.row];
-//            if (indexPath.row == self.serviceArray.count) {
-//                cell.serviceImage.image = [UIImage imageNamed:@"map"];
-//                cell.serviceLable.text = @"地图";
-            //}
+        
+            if (indexPath.row == self.serviceArray.count) {
+                cell.serviceImage.image = [UIImage imageNamed:@"map"];
+                cell.serviceLable.text = @"地图定位";
+            }else{
+                
+                cell.model = self.serviceArray[indexPath.row];
+            }
     }
    
     return cell;
     
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.serviceArray.count ;
+    return self.serviceArray.count + 1;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    serviceModel *model = [[serviceModel alloc] init];
-    model = self.serviceArray[indexPath.row];
+   
     ServicedidViewController *servicedidVC = [[ServicedidViewController alloc] init];
-    servicedidVC.path = model.app_path;
+    if (indexPath.row > 0) {
+        if (indexPath.row == self.serviceArray.count) {
+            servicedidVC.path = @"地图定位";
+            
+        } else{
+            serviceModel *model = [[serviceModel alloc] init];
+            model = self.serviceArray[indexPath.row];
+             servicedidVC.path = model.app_path;
+        }
+    }
+   
     [self.navigationController pushViewController:servicedidVC animated:YES];
 }
 
