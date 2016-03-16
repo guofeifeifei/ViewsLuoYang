@@ -1,0 +1,26 @@
+{
+data =     {
+imglist =         (
+{
+appurl = "";
+id = 104;
+image = "http://shouji.lyd.com.cn/tools/images/ad/201603/20160314115952_782.jpg";
+qid = "";
+title = "\U5e02\U6c11\U73b0\U91d1\U798f\U888b\U6d3b\U52a8\U7ec6\U5219\Uff08\U798f\U888b\U53e3\U4ee4\U9886\U53d6\U5165\U53e3\Uff09";
+weburl = "http://shouji.lyd.com.cn/tools/acti_newyear/";
+},
+{
+appurl = "zsly://n/448902";
+id = 101;
+image = "http://shouji.lyd.com.cn/tools/images/ad/201603/20160315093231_998.jpg";
+qid = "";
+title = "\U5e02\U7eff\U59d4\U529e\U516c\U5e03\U57ce\U5e02\U533a9\U5904\U690d\U6811\U70b9";
+weburl = "http://shouji.lyd.com.cn/n/448902";
+}
+);
+page = news;
+pos = 14;
+uid = 0;
+};
+result = success;
+}

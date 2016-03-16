@@ -41,7 +41,7 @@
 //颜色
 #define RGB(x,y,z) [UIColor colorWithRed:x/255.0 green:y/255.0 blue:z/255.0 alpha:1.0]
 
-#define barColor [UIColor colorWithRed:190/255.0f green:56/255.0f blue:71/255.0f alpha:1.0];
+#define barColor [UIColor colorWithRed:207/255.0f green:85/255.0f blue:99/255.0f alpha:1.0];
 
 
 //随机色

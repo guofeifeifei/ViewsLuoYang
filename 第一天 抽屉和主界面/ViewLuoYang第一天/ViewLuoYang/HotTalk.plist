@@ -1,0 +1,253 @@
+{
+data =     {
+cate = "news_society";
+cateId = 3;
+curpage = 1;
+"news_list" =         (
+{
+cateId = 3;
+detailUrl = "http://shouji.lyd.com.cn/n/448997";
+id = 448997;
+mtime = "3\U5c0f\U65f6\U524d";
+ptime = "2016-03-15 13:28:01";
+pubTime = 1458019681;
+replies = 0;
+resubImage = "http://shouji.lyd.com.cn/tools/images/201603/15/15132913_6084.jpg";
+"resubImage_p" = "http://p3.pstatp.com/list/37b0005824cb0acc4da";
+source = "\U51ef\U98ce\U7f51";
+subImage = "images/201603/15/15132913_6084.jpg";
+subTitle = "\U201c3\Uff0e15\U201d\U6cd5\U8f6e\U529f\U53d7\U5bb3\U8005\U8be5\U7ef4\U6743";
+title = "\U201c3\Uff0e15\U201d\U6cd5\U8f6e\U529f\U53d7\U5bb3\U8005\U8be5\U7ef4\U6743";
+views = 61;
+},
+{
+cateId = 3;
+detailUrl = "http://shouji.lyd.com.cn/n/448985";
+id = 448985;
+mtime = "4\U5c0f\U65f6\U524d";
+ptime = "2016-03-15 12:28:01";
+pubTime = 1458016081;
+replies = 0;
+resubImage = "";
+source = "\U4e2d\U56fd\U7f51";
+subImage = "<null>";
+    subTitle = "\U57ce\U7ba1\U66b4\U529b\U6267\U6cd5\U5fc5\U987b\U4f9d\U6cd5\U8ffd\U7a76";
+    title = "\U57ce\U7ba1\U66b4\U529b\U6267\U6cd5\U5fc5\U987b\U4f9d\U6cd5\U8ffd\U7a76";
+    views = 36;
+    },
+    {
+    cateId = 3;
+    detailUrl = "http://shouji.lyd.com.cn/n/448956";
+    id = 448956;
+    mtime = "5\U5c0f\U65f6\U524d";
+    ptime = "2016-03-15 11:28:02";
+    pubTime = 1458012482;
+    replies = 0;
+    resubImage = "http://shouji.lyd.com.cn/tools/images/201603/15/15112930_1219.jpg";
+    "resubImage_p" = "http://p2.pstatp.com/list/34d00090f792bb7da56";
+    source = "\U4e2d\U56fd\U7ecf\U6d4e\U7f51";
+    subImage = "images/201603/15/15112930_1219.jpg";
+    subTitle = "\U5b59\U6d01\Uff1a\U57fa\U672c\U517b\U8001\U4fdd\U9669\U96be\U4ee5\U89e3\U51b3\U8001\U4eba\U533b\U7597\U62a4\U7406\U7b49\U652f\U51fa";
+    title = "\U5b59\U6d01\Uff1a\U57fa\U672c\U517b\U8001\U4fdd\U9669\U96be\U4ee5\U89e3\U51b3\U8001\U4eba\U533b\U7597\U62a4\U7406\U7b49\U652f\U51fa";
+    views = 76;
+    },
+    {
+    cateId = 3;
+    detailUrl = "http://shouji.lyd.com.cn/n/448955";
+    id = 448955;
+    mtime = "5\U5c0f\U65f6\U524d";
+    ptime = "2016-03-15 11:28:02";
+    pubTime = 1458012482;
+    replies = 0;
+    resubImage = "";
+    source = "\U624b\U673a\U592e\U5e7f\U7f51";
+    subImage = "<null>";
+        subTitle = "\U6025\U8bca\U60a3\U8005\U7b49\U533b\U751f18\U5206\U949f\U9519\U8fc7\U6cbb\U7597\U65f6\U95f4 \U5012\U5730\U8eab\U4ea1";
+        title = "\U6025\U8bca\U60a3\U8005\U7b49\U533b\U751f18\U5206\U949f\U9519\U8fc7\U6cbb\U7597\U65f6\U95f4 \U5012\U5730\U8eab\U4ea1";
+        views = 50;
+        },
+        {
+        cateId = 3;
+        detailUrl = "http://shouji.lyd.com.cn/n/448868";
+        id = 448868;
+        mtime = "11\U5c0f\U65f6\U524d";
+        ptime = "2016-03-15 05:28:02";
+        pubTime = 1457990882;
+        replies = 0;
+        resubImage = "http://shouji.lyd.com.cn/tools/images/201603/15/15052917_1515.jpg";
+        "resubImage_p" = "http://p2.pstatp.com/list/357000bee1a3ca5e49c";
+        source = "\U89c2\U5bdf\U8005\U7f51";
+        subImage = "images/201603/15/15052917_1515.jpg";
+        subTitle = "\U5954\U9a70\U53d1\U52a8\U673a\U5185\U73b0\U767d\U7cd6 \U88ab\U4eba\U6076\U641e\U592a\U8fc7\U5206";
+        title = "\U5954\U9a70\U53d1\U52a8\U673a\U5185\U73b0\U767d\U7cd6 \U88ab\U4eba\U6076\U641e\U592a\U8fc7\U5206";
+        views = 162;
+        },
+        {
+        cateId = 3;
+        detailUrl = "http://shouji.lyd.com.cn/n/448827";
+        id = 448827;
+        mtime = "\U6628\U5929";
+        ptime = "2016-03-14 23:28:02";
+        pubTime = 1457969282;
+        replies = 0;
+        resubImage = "http://shouji.lyd.com.cn/tools/images/201603/14/14232923_1923.jpg";
+        "resubImage_p" = "http://p3.pstatp.com/list/35400052465a1694f98";
+        source = "\U5317\U4eac\U6668\U62a5";
+        subImage = "images/201603/14/14232923_1923.jpg";
+        subTitle = "\U5411\U8650\U7ae5\U8005\U4e0b\U8dea\U8ba9\U6cd5\U5f8b\U8499\U7f9e";
+        title = "\U5411\U8650\U7ae5\U8005\U4e0b\U8dea\U8ba9\U6cd5\U5f8b\U8499\U7f9e";
+        views = 75;
+        },
+        {
+        cateId = 3;
+        detailUrl = "http://shouji.lyd.com.cn/n/448763";
+        id = 448763;
+        mtime = "\U6628\U5929";
+        ptime = "2016-03-14 17:28:01";
+        pubTime = 1457947681;
+        replies = 0;
+        resubImage = "http://shouji.lyd.com.cn/tools/images/201603/14/14172933_6136.jpg";
+        "resubImage_p" = "http://p3.pstatp.com/list/357000780902aa2bacb";
+        source = "\U524d\U77bb\U7f51";
+        subImage = "images/201603/14/14172933_6136.jpg";
+        subTitle = "\U6b7b\U800c\U590d\U751f\Uff1f\U4ed6\U4eb2\U624b\U57cb\U846c\U4e86\U59bb\U5b50 \U5374\U57282\U5e74\U540e\U7684\U7535\U89c6\U8282\U76ee\U91cc\U770b\U5230\U5979";
+        title = "\U6b7b\U800c\U590d\U751f\Uff1f\U4ed6\U4eb2\U624b\U57cb\U846c\U4e86\U59bb\U5b50 \U5374\U57282\U5e74\U540e\U7684\U7535\U89c6\U8282\U76ee\U91cc\U770b\U5230\U5979";
+        views = 376;
+        },
+        {
+        cateId = 3;
+        detailUrl = "http://shouji.lyd.com.cn/n/448683";
+        id = 448683;
+        mtime = "\U6628\U5929";
+        ptime = "2016-03-14 10:28:01";
+        pubTime = 1457922481;
+        replies = 0;
+        resubImage = "http://shouji.lyd.com.cn/tools/images/201603/14/14102954_2805.jpg";
+        "resubImage_p" = "http://p3.pstatp.com/list/36b0006677c82893893";
+        source = "\U4e91\U5357\U4fe1\U606f\U62a5";
+        subImage = "images/201603/14/14102954_2805.jpg";
+        subTitle = "4\U4eba\U559d\U63896\U65a4\U9152\U540e1\U4eba\U4ea1 3\U540d\U559d\U9152\U8005\U8d54\U507f\U5bb6\U5c5e5\U4e07\U5143";
+        title = "4\U4eba\U559d\U63896\U65a4\U9152\U540e1\U4eba\U4ea1 3\U540d\U559d\U9152\U8005\U8d54\U507f\U5bb6\U5c5e5\U4e07\U5143";
+        views = 310;
+        },
+        {
+        cateId = 3;
+        detailUrl = "http://shouji.lyd.com.cn/n/448682";
+        id = 448682;
+        mtime = "\U6628\U5929";
+        ptime = "2016-03-14 10:28:01";
+        pubTime = 1457922481;
+        replies = 2;
+        resubImage = "http://shouji.lyd.com.cn/tools/images/201603/14/14102954_4168.jpg";
+        "resubImage_p" = "http://p3.pstatp.com/list/34d0005be2dc6892c5e";
+        source = "\U4e2d\U56fd\U7f51";
+        subImage = "images/201603/14/14102954_4168.jpg";
+        subTitle = "\U7537\U5b50\U7761\U53cb\U59bb\U79f0\U771f\U7231\U88ab\U6253\U660f\U8ff7\U4e0d\U9192 \U7f51\U53cb\Uff1a\U7761\U522b\U4eba\U8001\U5a46\U4f60\U8fd8\U6709\U7406\U4e86!";
+        title = "\U7537\U5b50\U7761\U53cb\U59bb\U79f0\U771f\U7231\U88ab\U6253\U660f\U8ff7\U4e0d\U9192 \U7f51\U53cb\Uff1a\U7761\U522b\U4eba\U8001\U5a46\U4f60\U8fd8\U6709\U7406\U4e86!";
+        views = 599;
+        },
+        {
+        cateId = 3;
+        detailUrl = "http://shouji.lyd.com.cn/n/448616";
+        id = 448616;
+        mtime = "\U6628\U5929";
+        ptime = "2016-03-14 08:28:01";
+        pubTime = 1457915281;
+        replies = 0;
+        resubImage = "http://shouji.lyd.com.cn/tools/images/201603/14/14082924_1819.jpg";
+        "resubImage_p" = "http://p1.pstatp.com/list/35400057a1d2fc8d6d3";
+        source = "\U6d59\U6c5f\U5728\U7ebf-\U94b1\U6c5f\U665a\U62a5";
+        subImage = "images/201603/14/14082924_1819.jpg";
+        subTitle = "\U7236\U4eb2\U5230\U4eba\U624d\U5e02\U573a\U62db\U513f\U5ab3:\U521d\U4e2d\U4ee5\U4e0a\U5b66\U5386 \U505a\U8001\U677f\U5a18";
+        title = "\U7236\U4eb2\U5230\U4eba\U624d\U5e02\U573a\U62db\U513f\U5ab3:\U521d\U4e2d\U4ee5\U4e0a\U5b66\U5386 \U505a\U8001\U677f\U5a18";
+        views = 430;
+        },
+        {
+        cateId = 3;
+        detailUrl = "http://shouji.lyd.com.cn/n/448585";
+        id = 448585;
+        mtime = "\U6628\U5929";
+        ptime = "2016-03-14 06:28:01";
+        pubTime = 1457908081;
+        replies = 0;
+        resubImage = "";
+        source = "\U534e\U5546\U62a5";
+        subImage = "<null>";
+            subTitle = "\U5c11\U5973\U5c38\U4f53\U6cb3\U4e2d\U88ab\U53d1\U73b0";
+            title = "\U5c11\U5973\U5c38\U4f53\U6cb3\U4e2d\U88ab\U53d1\U73b0";
+            views = 306;
+            },
+            {
+            cateId = 3;
+            detailUrl = "http://shouji.lyd.com.cn/n/448457";
+            id = 448457;
+            mtime = "2\U5929\U524d";
+            ptime = "2016-03-13 14:28:01";
+            pubTime = 1457850481;
+            replies = 2;
+            resubImage = "http://shouji.lyd.com.cn/tools/images/201603/13/13142928_2430.jpg";
+            "resubImage_p" = "http://p3.pstatp.com/list/355000a8f0dd55e39c9";
+            source = "\U5730\U9053\U65b0\U95fb";
+            subImage = "images/201603/13/13142928_2430.jpg";
+            subTitle = "\U65e0\U5978\U4e0d\U5546\Uff01\U745e\U5b89\U4e00\U6536\U5e9f\U54c1\U7684\U7adf\U7136\U5e72\U8fd9\U79cd\U7f3a\U5fb7\U4e8b\Uff01";
+            title = "\U65e0\U5978\U4e0d\U5546\Uff01\U745e\U5b89\U4e00\U6536\U5e9f\U54c1\U7684\U7adf\U7136\U5e72\U8fd9\U79cd\U7f3a\U5fb7\U4e8b\Uff01";
+            views = 771;
+            },
+            {
+            cateId = 3;
+            detailUrl = "http://shouji.lyd.com.cn/n/448411";
+            id = 448411;
+            mtime = "2\U5929\U524d";
+            ptime = "2016-03-13 09:28:01";
+            pubTime = 1457832481;
+            replies = 0;
+            resubImage = "http://shouji.lyd.com.cn/tools/images/201603/13/13093002_4574.jpg";
+            "resubImage_p" = "http://p3.pstatp.com/list/34c0006e729fa860402";
+            source = "\U65e5\U7167\U7f51";
+            subImage = "images/201603/13/13093002_4574.jpg";
+            subTitle = "\U4e0e\U65b0\U5a18\U540c\U5e8a \U53d1\U73b0\U7adf\U662f\U7537\U513f\U8eab";
+            title = "\U4e0e\U65b0\U5a18\U540c\U5e8a \U53d1\U73b0\U7adf\U662f\U7537\U513f\U8eab";
+            views = 907;
+            },
+            {
+            cateId = 3;
+            detailUrl = "http://shouji.lyd.com.cn/n/448410";
+            id = 448410;
+            mtime = "2\U5929\U524d";
+            ptime = "2016-03-13 09:28:01";
+            pubTime = 1457832481;
+            replies = 1;
+            resubImage = "http://shouji.lyd.com.cn/tools/images/201603/13/13093004_3361.jpg";
+            "resubImage_p" = "http://p2.pstatp.com/list/35800006a390427dabd";
+            source = "\U5149\U660e\U7f51";
+            subImage = "images/201603/13/13093004_3361.jpg";
+            subTitle = "\U519c\U6751\U6076\U4e60\U846c\U793c\U4e0a\U5927\U8df3\U8131\U8863\U821e\Uff01\U770b\U770b\U51cb\U655d\U7684\U6751\U5e84\Uff1a\U846c\U793c\U4e0a\U7684\U8273\U821e";
+            title = "\U519c\U6751\U6076\U4e60\U846c\U793c\U4e0a\U5927\U8df3\U8131\U8863\U821e\Uff01\U770b\U770b\U51cb\U655d\U7684\U6751\U5e84\Uff1a\U846c\U793c\U4e0a\U7684\U8273\U821e";
+            views = 1041;
+            },
+            {
+            cateId = 3;
+            detailUrl = "http://shouji.lyd.com.cn/n/448264";
+            id = 448264;
+            mtime = "3\U5929\U524d";
+            ptime = "2016-03-12 16:28:01";
+            pubTime = 1457771281;
+            replies = 0;
+            resubImage = "http://shouji.lyd.com.cn/tools/images/201603/12/12162936_5096.jpg";
+            "resubImage_p" = "http://p2.pstatp.com/list/34500028a67df3e2f3f";
+            source = "\U53c2\U8003\U6d88\U606f\U7f51";
+            subImage = "images/201603/12/12162936_5096.jpg";
+            subTitle = "\U592a\U75af\U72c2!\U4e00\U5973\U5b50\U7adf\U4ea7\U4e0b\U5341\U4e00\U80de\U80ce \U5f3a\U608d\Uff01\U8fd9\U751f\U5a03\U80fd\U529b\U771f\U6ca1\U8c01\U4e86";
+            title = "\U592a\U75af\U72c2!\U4e00\U5973\U5b50\U7adf\U4ea7\U4e0b\U5341\U4e00\U80de\U80ce \U5f3a\U608d\Uff01\U8fd9\U751f\U5a03\U80fd\U529b\U771f\U6ca1\U8c01\U4e86";
+            views = 1283;
+            }
+            );
+            pagesize = 15;
+            time = 1458030861;
+            "time_last" = "2016-03-15 16:30:00";
+            "time_stmp" = 1458030600;
+            uid = 0;
+            };
+            result = success;
+            }
+           

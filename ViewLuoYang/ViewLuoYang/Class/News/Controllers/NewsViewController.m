@@ -186,7 +186,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
     
     cell.titleLable.text=model.periodName;
     [cell.image sd_setImageWithURL:[NSURL URLWithString:model.periodImage] placeholderImage:nil];
-    
+
     return cell;
     
 }
@@ -196,6 +196,8 @@ static NSString *itemIntentfier = @"itemIdentifier";
     NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
     [self.navigationController pushViewController:newsTwoVC animated:YES];
     
+    NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
+    [self.navigationController pushViewController:newsTwoVC animated:YES];
 }
 #pragma mark ----------- lazy loading
 - (UICollectionView *)collectionView{
