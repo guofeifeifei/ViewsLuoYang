@@ -15,12 +15,7 @@
     
     
 }
-//- (instancetype)initWithDictionary:(NSDictionary *)dict{
-//    self.serviceImage = dict[@"app_icon"];
-//    self.serviceTitle = dict[@"app_name"];
-//    self.servicePath = dict[@"app_path"];
-//
-//}
+
 
 
 @end
