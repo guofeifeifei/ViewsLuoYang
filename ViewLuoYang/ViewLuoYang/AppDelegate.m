@@ -34,8 +34,8 @@
     
     //导航栏颜色
     showNav.navigationBar.barTintColor = barColor;
-    
-    showNav.tabBarItem.image=[UIImage imageNamed:@"huodong"];
+   
+    showNav.tabBarItem.image=[UIImage imageNamed:@"vpi__tab_unselected_focused_holo.9-1"];
     UIImage *image=[UIImage imageNamed:@"huodong_pre"];
     //按图片原来状态显示
     showNav.tabBarItem.selectedImage=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

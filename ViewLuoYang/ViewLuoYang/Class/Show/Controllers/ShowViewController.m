@@ -84,7 +84,7 @@ static NSString *str=@"cell";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 进入刷新状态后会自动调用这个block
         
-        NSLog(@"hahahhah....");
+        
         _pageCount=1;
         self.isRefren=YES;
         
