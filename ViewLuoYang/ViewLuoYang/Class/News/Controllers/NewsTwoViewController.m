@@ -10,13 +10,10 @@
 #import "NewsSecondModel.h"
 #import "NewsScondCollectionViewCell.h"
 static NSString *itemIntentfier = @"itemIdentifier";
-
-
 @interface NewsTwoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
-{
-    NSInteger _pageCount;
-}
 @property (nonatomic, retain) UICollectionView *collectionView;
+@property (nonatomic, strong) NSMutableArray *listArray;
+//@property (nonatomic, strong) UIWebView *webView;
 
 @end
 
@@ -27,8 +24,10 @@ static NSString *itemIntentfier = @"itemIdentifier";
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = [UIColor yellowColor];
     [self dataLoad];
-    [self.view addSubview:self.collectionView];
+    
 
+    [self.view addSubview:self.collectionView];
+    
 }
 
 
@@ -42,6 +41,8 @@ static NSString *itemIntentfier = @"itemIdentifier";
         ZPFLog(@"responseObject = %@",responseObject);
         
         
+       
+    
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZPFLog(@"error = %@",error);
@@ -64,6 +65,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     NewsScondCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
+    
     return cell;
 }
 #pragma mark ---------- 点击item实现的方法
@@ -100,7 +102,15 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 
 
-
+//- (UIWebView *)webView{
+//    if (_webView == nil) {
+//        self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+//        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.xinli001.com/ceshi/"]];
+//        [self.webView loadRequest:request];
+//        
+//    }
+//    return _webView;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -160,11 +160,9 @@ static NSString *itemIntentfier = @"itemIdentifier";
             NewsModel *newModel = [[NewsModel alloc] init];
             [newModel setValuesForKeysWithDictionary:dict];
             [self.allNewsArray addObject:newModel];
-            
         }
          [self.view addSubview:self.collectionView];
        [self.collectionView reloadData];
-        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZPFLog(@"error = %@",error);
@@ -192,7 +190,6 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 #pragma mark -------- 点击选择哪个图片
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
     NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
     [self.navigationController pushViewController:newsTwoVC animated:YES];
 }

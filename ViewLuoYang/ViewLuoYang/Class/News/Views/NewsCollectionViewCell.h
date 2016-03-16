@@ -12,6 +12,6 @@
 
 @property(nonatomic, strong) UIImageView *image;
 @property(nonatomic, strong) UILabel *titleLable;
-@property (nonatomic, copy) NSString *importUrl;
+
 
 @end
