@@ -25,12 +25,15 @@
 		7A5CFB121C980B4C0002AF99 /* NewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFB111C980B4C0002AF99 /* NewsCollectionViewCell.m */; };
 		7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFB171C9824190002AF99 /* NewsTwoViewController.m */; };
 		7A5CFB1A1C9845060002AF99 /* TouchItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFB191C9845060002AF99 /* TouchItems.plist */; };
-		7AF1721F1C98F70700AC94D1 /* NewsSecondModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1721E1C98F70700AC94D1 /* NewsSecondModel.m */; };
-		7AF172251C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF172241C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m */; };
-		7AF172191C98E12B00AC94D1 /* NewsSecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF172181C98E12B00AC94D1 /* NewsSecondTableViewCell.m */; };
-		7AF1721C1C98E14900AC94D1 /* NewsSecondModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1721B1C98E14900AC94D1 /* NewsSecondModel.m */; };
-
-
+		7A8F68F31C99037000375CF7 /* NewsSecondModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F68F21C99037000375CF7 /* NewsSecondModel.m */; };
+		7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
+		7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C391C97E1AC00FD6D15 /* Reachability.m */; };
+		7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3A1C97E1AC00FD6D15 /* README.md */; };
+		7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */; };
+		7AA00C421C97E87600FD6D15 /* service.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C411C97E87600FD6D15 /* service.plist */; };
+		7AA00C461C97F0A300FD6D15 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */; };
+		7AA00C471C97F0A300FD6D15 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */; };
+		7AA00C4A1C97F67100FD6D15 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C491C97F67100FD6D15 /* serviceModel.m */; };
 		7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE49FE1C97E60B0081FBC6 /* leftView.m */; };
 		7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4A041C97E6DE0081FBC6 /* letfView.xib */; };
 		7AEE4A091C97F55D0081FBC6 /* LuoyangNews.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4A081C97F55D0081FBC6 /* LuoyangNews.plist */; };
@@ -41,16 +44,7 @@
 		7AEE4A161C980ED40081FBC6 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE4A151C980ED40081FBC6 /* NewsDetailViewController.m */; };
 		7AEE4A1A1C9844AE0081FBC6 /* headView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4A191C9844AE0081FBC6 /* headView.plist */; };
 		7AEE4A1D1C9845090081FBC6 /* headPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE4A1C1C9845090081FBC6 /* headPhotoModel.m */; };
-
-		7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
-		7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C391C97E1AC00FD6D15 /* Reachability.m */; };
-		7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3A1C97E1AC00FD6D15 /* README.md */; };
-		7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */; };
-		7AA00C421C97E87600FD6D15 /* service.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C411C97E87600FD6D15 /* service.plist */; };
-		7AA00C461C97F0A300FD6D15 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */; };
-		7AA00C471C97F0A300FD6D15 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */; };
-		7AA00C4A1C97F67100FD6D15 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C491C97F67100FD6D15 /* serviceModel.m */; };
-
+		7AF172251C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF172241C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m */; };
 		9E8886EC3A4E95DD8B0F807E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4AB23D78D5404ABECD5147 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -90,15 +84,20 @@
 		7A5CFB161C9824190002AF99 /* NewsTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTwoViewController.h; sourceTree = "<group>"; };
 		7A5CFB171C9824190002AF99 /* NewsTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTwoViewController.m; sourceTree = "<group>"; };
 		7A5CFB191C9845060002AF99 /* TouchItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TouchItems.plist; sourceTree = "<group>"; };
-		7AF1721D1C98F70700AC94D1 /* NewsSecondModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSecondModel.h; sourceTree = "<group>"; };
-		7AF1721E1C98F70700AC94D1 /* NewsSecondModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSecondModel.m; sourceTree = "<group>"; };
-		7AF172231C98F9BA00AC94D1 /* NewsScondCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsScondCollectionViewCell.h; sourceTree = "<group>"; };
-		7AF172241C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsScondCollectionViewCell.m; sourceTree = "<group>"; };
-		7AF172171C98E12B00AC94D1 /* NewsSecondTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSecondTableViewCell.h; sourceTree = "<group>"; };
-		7AF172181C98E12B00AC94D1 /* NewsSecondTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSecondTableViewCell.m; sourceTree = "<group>"; };
-		7AF1721A1C98E14900AC94D1 /* NewsSecondModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSecondModel.h; sourceTree = "<group>"; };
-		7AF1721B1C98E14900AC94D1 /* NewsSecondModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSecondModel.m; sourceTree = "<group>"; };
-
+		7A8F68F11C99037000375CF7 /* NewsSecondModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSecondModel.h; sourceTree = "<group>"; };
+		7A8F68F21C99037000375CF7 /* NewsSecondModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSecondModel.m; sourceTree = "<group>"; };
+		7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
+		7AA00C381C97E1AC00FD6D15 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7AA00C391C97E1AC00FD6D15 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7AA00C3A1C97E1AC00FD6D15 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7AA00C3B1C97E1AC00FD6D15 /* ZMYNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMYNetManager.h; sourceTree = "<group>"; };
+		7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMYNetManager.m; sourceTree = "<group>"; };
+		7AA00C411C97E87600FD6D15 /* service.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = service.plist; sourceTree = "<group>"; };
+		7AA00C431C97F0A300FD6D15 /* ServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceCollectionViewCell.h; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceCollectionViewCell.m; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ServiceCollectionViewCell.xib; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		7AA00C481C97F67100FD6D15 /* serviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = serviceModel.h; path = ViewLuoYang/Class/Service/Controllers/serviceModel.h; sourceTree = SOURCE_ROOT; };
+		7AA00C491C97F67100FD6D15 /* serviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = serviceModel.m; path = ViewLuoYang/Class/Service/Controllers/serviceModel.m; sourceTree = SOURCE_ROOT; };
 		7AEE49FD1C97E60B0081FBC6 /* leftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = leftView.h; path = ViewLuoYang/leftView.h; sourceTree = SOURCE_ROOT; };
 		7AEE49FE1C97E60B0081FBC6 /* leftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = leftView.m; path = ViewLuoYang/leftView.m; sourceTree = SOURCE_ROOT; };
 		7AEE4A041C97E6DE0081FBC6 /* letfView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = letfView.xib; path = ViewLuoYang/letfView.xib; sourceTree = SOURCE_ROOT; };
@@ -114,20 +113,8 @@
 		7AEE4A191C9844AE0081FBC6 /* headView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = headView.plist; path = ViewLuoYang/headView.plist; sourceTree = SOURCE_ROOT; };
 		7AEE4A1B1C9845090081FBC6 /* headPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = headPhotoModel.h; path = ViewLuoYang/headPhotoModel.h; sourceTree = SOURCE_ROOT; };
 		7AEE4A1C1C9845090081FBC6 /* headPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = headPhotoModel.m; path = ViewLuoYang/headPhotoModel.m; sourceTree = SOURCE_ROOT; };
-
-		7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
-		7AA00C381C97E1AC00FD6D15 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		7AA00C391C97E1AC00FD6D15 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		7AA00C3A1C97E1AC00FD6D15 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		7AA00C3B1C97E1AC00FD6D15 /* ZMYNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMYNetManager.h; sourceTree = "<group>"; };
-		7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMYNetManager.m; sourceTree = "<group>"; };
-		7AA00C411C97E87600FD6D15 /* service.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = service.plist; sourceTree = "<group>"; };
-		7AA00C431C97F0A300FD6D15 /* ServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceCollectionViewCell.h; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		7AA00C441C97F0A300FD6D15 /* ServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceCollectionViewCell.m; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		7AA00C451C97F0A300FD6D15 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ServiceCollectionViewCell.xib; path = ViewLuoYang/Class/Service/Controllers/ServiceCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
-		7AA00C481C97F67100FD6D15 /* serviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = serviceModel.h; path = ViewLuoYang/Class/Service/Controllers/serviceModel.h; sourceTree = SOURCE_ROOT; };
-		7AA00C491C97F67100FD6D15 /* serviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = serviceModel.m; path = ViewLuoYang/Class/Service/Controllers/serviceModel.m; sourceTree = SOURCE_ROOT; };
-
+		7AF172231C98F9BA00AC94D1 /* NewsScondCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsScondCollectionViewCell.h; sourceTree = "<group>"; };
+		7AF172241C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsScondCollectionViewCell.m; sourceTree = "<group>"; };
 		CA4AB23D78D5404ABECD5147 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFBA45722C735EF737B85187 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -303,12 +290,10 @@
 		7A5CFAEA1C97C8C10002AF99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7A8F68F11C99037000375CF7 /* NewsSecondModel.h */,
+				7A8F68F21C99037000375CF7 /* NewsSecondModel.m */,
 				7A5CFB0B1C97D8280002AF99 /* NewsModel.h */,
 				7A5CFB0C1C97D8280002AF99 /* NewsModel.m */,
-				7AF1721D1C98F70700AC94D1 /* NewsSecondModel.h */,
-				7AF1721E1C98F70700AC94D1 /* NewsSecondModel.m */,
-				7AF1721A1C98E14900AC94D1 /* NewsSecondModel.h */,
-				7AF1721B1C98E14900AC94D1 /* NewsSecondModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,8 +301,6 @@
 		7A5CFAEB1C97C8C10002AF99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7AF172171C98E12B00AC94D1 /* NewsSecondTableViewCell.h */,
-				7AF172181C98E12B00AC94D1 /* NewsSecondTableViewCell.m */,
 				7A5CFB0E1C97DCA10002AF99 /* News.plist */,
 				7A5CFB101C980B4C0002AF99 /* NewsCollectionViewCell.h */,
 				7A5CFB111C980B4C0002AF99 /* NewsCollectionViewCell.m */,
@@ -515,12 +498,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				7AEE4A111C97F9410081FBC6 /* LuoyangNewsTableViewCell.xib in Resources */,
-
 				7AA00C471C97F0A300FD6D15 /* ServiceCollectionViewCell.xib in Resources */,
 				7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */,
-
 				7A5CFAD11C97C81C0002AF99 /* Assets.xcassets in Resources */,
 				7A5CFB1A1C9845060002AF99 /* TouchItems.plist in Resources */,
 				7A5CFB0F1C97DCA10002AF99 /* News.plist in Resources */,
@@ -530,9 +510,7 @@
 				7AEE4A1A1C9844AE0081FBC6 /* headView.plist in Resources */,
 				7A5CFB061C97C8C10002AF99 /* ProgressHUD.bundle in Resources */,
 				7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */,
-
 				7AA00C421C97E87600FD6D15 /* service.plist in Resources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,27 +575,22 @@
 				7A5CFB071C97C8C10002AF99 /* ProgressHUD.m in Sources */,
 				7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */,
 				7A5CFB031C97C8C10002AF99 /* MessageViewController.m in Sources */,
-				7AF1721C1C98E14900AC94D1 /* NewsSecondModel.m in Sources */,
 				7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */,
 				7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */,
 				7AEE4A0C1C97F6260081FBC6 /* LuoyangNews.m in Sources */,
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
-				7AF1721F1C98F70700AC94D1 /* NewsSecondModel.m in Sources */,
 				7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */,
 				7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */,
-				7AF172191C98E12B00AC94D1 /* NewsSecondTableViewCell.m in Sources */,
 				7A5CFACC1C97C81C0002AF99 /* main.m in Sources */,
-
 				7AEE4A101C97F9410081FBC6 /* LuoyangNewsTableViewCell.m in Sources */,
 				7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */,
 				7AEE4A1D1C9845090081FBC6 /* headPhotoModel.m in Sources */,
-
 				7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */,
 				7AA00C4A1C97F67100FD6D15 /* serviceModel.m in Sources */,
 				7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */,
 				7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */,
+				7A8F68F31C99037000375CF7 /* NewsSecondModel.m in Sources */,
 				7AA00C461C97F0A300FD6D15 /* ServiceCollectionViewCell.m in Sources */,
-
 				7A5CFB051C97C8C10002AF99 /* HWTools.m in Sources */,
 				7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */,
 				7A5CFB041C97C8C10002AF99 /* NewsViewController.m in Sources */,
@@ -725,7 +698,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ViewLuoYang/Class/Resource/MySelf.pch";
-				GCC_PREFIX_HEADER = /Users/sdzy/Desktop/ViewsLuoYang/ViewLuoYang/ViewLuoYang/Class/Resource/MySelf.pch;
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -740,7 +712,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ViewLuoYang/Class/Resource/MySelf.pch";
-				GCC_PREFIX_HEADER = /Users/sdzy/Desktop/ViewsLuoYang/ViewLuoYang/ViewLuoYang/Class/Resource/MySelf.pch;
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

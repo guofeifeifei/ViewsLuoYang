@@ -7,21 +7,16 @@
 //
 
 #import "NewsTwoViewController.h"
-<<<<<<< HEAD
 #import "NewsSecondModel.h"
 #import "NewsScondCollectionViewCell.h"
 static NSString *itemIntentfier = @"itemIdentifier";
+
+
 @interface NewsTwoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
     NSInteger _pageCount;
 }
 @property (nonatomic, retain) UICollectionView *collectionView;
-=======
-#import "NewsSecondTableViewCell.h"
-#import "NewsSecondModel.h"
-@interface NewsTwoViewController ()
-
->>>>>>> 7d77ca71ee5e969382dcd7686160fd6341b7dfa1
 
 @end
 
@@ -32,18 +27,11 @@ static NSString *itemIntentfier = @"itemIdentifier";
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = [UIColor yellowColor];
     [self dataLoad];
-<<<<<<< HEAD
     [self.view addSubview:self.collectionView];
 
 }
 
-=======
-    
-}
 
-
-
->>>>>>> 7d77ca71ee5e969382dcd7686160fd6341b7dfa1
 //解析数据
 - (void)dataLoad{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
@@ -60,7 +48,6 @@ static NSString *itemIntentfier = @"itemIdentifier";
     }];
 }
 
-<<<<<<< HEAD
 
 #pragma mark ---------- UICollectionViewDataSource
 //返回的是Item的个数
@@ -115,8 +102,6 @@ static NSString *itemIntentfier = @"itemIdentifier";
 
 
 
-=======
->>>>>>> 7d77ca71ee5e969382dcd7686160fd6341b7dfa1
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

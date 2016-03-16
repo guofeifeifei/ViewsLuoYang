@@ -195,9 +195,6 @@ static NSString *itemIntentfier = @"itemIdentifier";
     
     NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
     [self.navigationController pushViewController:newsTwoVC animated:YES];
-    
-    NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
-    [self.navigationController pushViewController:newsTwoVC animated:YES];
 }
 #pragma mark ----------- lazy loading
 - (UICollectionView *)collectionView{
