@@ -14,6 +14,10 @@
 @property (nonatomic, copy) NSString *periodImage;//图片
 @property (nonatomic, copy) NSString *periodName;//title
 
+@property (nonatomic, copy) NSString *curpage;
+
+
+
 
 
 
