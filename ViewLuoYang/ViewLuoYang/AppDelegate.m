@@ -11,6 +11,7 @@
 #import "NewsViewController.h"
 #import "ServiceViewController.h"
 #import "MessageViewController.h"
+#import <AMapLocationKit/AMapLocationKit.h>
 @interface AppDelegate ()
 
 @end
@@ -22,7 +23,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    
+    [AMapLocationServices sharedServices].apiKey = kLocationApk;
     
     
     UITabBarController *tabbar=[[UITabBarController alloc]init];
