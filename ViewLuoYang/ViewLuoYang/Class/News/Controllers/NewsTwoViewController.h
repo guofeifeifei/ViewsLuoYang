@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NewsTwoViewController : UIViewController
-
+@property (nonatomic, copy) NSString *image;
 @end

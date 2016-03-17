@@ -16,6 +16,7 @@
     
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame=CGRectMake(0, 0, 44, 44);
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
     [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(backButtonAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *legtbtn=[[UIBarButtonItem alloc]initWithCustomView:btn];
