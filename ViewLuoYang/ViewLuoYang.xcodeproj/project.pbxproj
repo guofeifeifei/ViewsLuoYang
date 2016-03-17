@@ -40,6 +40,9 @@
 		7ABEE5C11C990F9F0093912D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5C01C990F9F0093912D /* CoreLocation.framework */; };
 		7ABEE5C31C990FB20093912D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5C21C990FB20093912D /* libz.tbd */; };
 		7AD3DB5D1C9A449A001065DF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5C1C9A449A001065DF /* TitleViewController.m */; };
+		7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5F1C9A557D001065DF /* LoginViewController.m */; };
+		7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */; };
+		7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB691C9AC99A001065DF /* RegisterViewController.m */; };
 		7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE49FE1C97E60B0081FBC6 /* leftView.m */; };
 		7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4A041C97E6DE0081FBC6 /* letfView.xib */; };
 		7AEE4A091C97F55D0081FBC6 /* LuoyangNews.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4A081C97F55D0081FBC6 /* LuoyangNews.plist */; };
@@ -111,6 +114,11 @@
 		7ABEE5C21C990FB20093912D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		7AD3DB5B1C9A449A001065DF /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
 		7AD3DB5C1C9A449A001065DF /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
+		7AD3DB5E1C9A557D001065DF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7AD3DB5F1C9A557D001065DF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		7AD3DB681C9AC99A001065DF /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		7AD3DB691C9AC99A001065DF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		7AEE49FD1C97E60B0081FBC6 /* leftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = leftView.h; path = ViewLuoYang/leftView.h; sourceTree = SOURCE_ROOT; };
 		7AEE49FE1C97E60B0081FBC6 /* leftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = leftView.m; path = ViewLuoYang/leftView.m; sourceTree = SOURCE_ROOT; };
 		7AEE4A041C97E6DE0081FBC6 /* letfView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = letfView.xib; path = ViewLuoYang/letfView.xib; sourceTree = SOURCE_ROOT; };
@@ -238,6 +246,10 @@
 		7A5CFADD1C97C8C10002AF99 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7AD3DB5E1C9A557D001065DF /* LoginViewController.h */,
+				7AD3DB5F1C9A557D001065DF /* LoginViewController.m */,
+				7AD3DB681C9AC99A001065DF /* RegisterViewController.h */,
+				7AD3DB691C9AC99A001065DF /* RegisterViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +264,7 @@
 		7A5CFADF1C97C8C10002AF99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -572,6 +585,7 @@
 				7AEE4A1A1C9844AE0081FBC6 /* headView.plist in Resources */,
 				7A5CFB061C97C8C10002AF99 /* ProgressHUD.bundle in Resources */,
 				7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */,
+				7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */,
 				7AA00C421C97E87600FD6D15 /* service.plist in Resources */,
 				7A0E43141C99986C0078D4A3 /* ServiceCollectionViewCell.xib in Resources */,
 			);
@@ -636,12 +650,14 @@
 				7A7EDBA91C993AAC00DC6EDF /* LocationViewController.m in Sources */,
 				7AF172251C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m in Sources */,
 				7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */,
+				7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */,
 				7A5CFB0D1C97D8280002AF99 /* NewsModel.m in Sources */,
 				7A5CFB071C97C8C10002AF99 /* ProgressHUD.m in Sources */,
 				7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */,
 				7A5CFB031C97C8C10002AF99 /* MessageViewController.m in Sources */,
 				7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */,
 				7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */,
+				7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */,
 				7AEE4A0C1C97F6260081FBC6 /* LuoyangNews.m in Sources */,
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
 				7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */,

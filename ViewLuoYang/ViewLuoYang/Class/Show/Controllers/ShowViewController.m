@@ -51,9 +51,15 @@ static NSString *str=@"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationController.navigationBar.translucent = NO;
     self.automaticallyAdjustsScrollViewInsets=NO;
     self.navigationItem.title=@"首页展示";
+    //去掉navigationBar下的黑色线条
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor] , NSFontAttributeName:[UIFont systemFontOfSize:18.0f]}];
+    
     _pageCount=1;
     //先放入第一个左边的视图
     NSBundle *boundle=[NSBundle mainBundle];
@@ -183,7 +189,7 @@ static NSString *str=@"cell";
     NSArray *arr=@[@"洛阳",@"热点",@"娱乐"];
     for (int i=0; i<3; i++) {
         UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame=CGRectMake(screen.size.width/3*i, 64, screen.size.width/3, 44);
+        btn.frame=CGRectMake(screen.size.width/3*i, 0, screen.size.width/3, 44);
         
         [btn setTitle:arr[i] forState:UIControlStateNormal];
         btn.tag=i+1;
@@ -243,7 +249,7 @@ static NSString *str=@"cell";
 //第二个View
 - (UIView *)contenceView{
     if (_contenceView == nil) {
-        self.contenceView=[[UIView alloc]initWithFrame:CGRectMake(0,100, screen.size.width, screen.size.height)];
+        self.contenceView=[[UIView alloc]initWithFrame:CGRectMake(0,44, screen.size.width, screen.size.height)];
         centerX = screen.size.width / 2;
         centerY = (screen.size.height)/ 2+105;
         //        self.contenceView.backgroundColor = [UIColor greenColor];
