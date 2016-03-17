@@ -7,8 +7,8 @@
 //
 
 #import "NewsTwoViewController.h"
-#import "NewsSecondModel.h"
 #import "NewsScondCollectionViewCell.h"
+#import "TitleViewController.h"
 static NSString *itemIntentfier = @"itemIdentifier";
 @interface NewsTwoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -26,11 +26,10 @@ static NSString *itemIntentfier = @"itemIdentifier";
     [super viewDidLoad];
     [self dataLoad];
     // Do any additional setup after loading the view.
+    [self showBarButtonWithImage:@"back_arrow"];
     [self.view addSubview:self.collectionView];
     
 }
-
-
 //解析数据
 - (void)dataLoad{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
@@ -43,28 +42,21 @@ static NSString *itemIntentfier = @"itemIdentifier";
         ZPFLog(@"downloadProgress = %@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZPFLog(@"responseObject = %@",responseObject);
-        
         NSDictionary *dic = responseObject;
         NSDictionary *dataDic = dic[@"data"];
         self.pageId = dataDic[@"pageId"];
-        
         NSDictionary *layoutInfoDic = dataDic[@"layoutInfo"];
         self.layoutImageBig = layoutInfoDic[@"layoutImageBig"];
-       
         [self.collectionView reloadData];
-        
-    
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZPFLog(@"error = %@",error);
     }];
 }
 
-
 #pragma mark ---------- UICollectionViewDataSource
 //返回的是Item的个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return 1;
 }
 
 //返回一个分区
@@ -74,13 +66,13 @@ static NSString *itemIntentfier = @"itemIdentifier";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     NewsScondCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
-    [cell.image sd_setImageWithURL:[NSURL URLWithString:self.layoutImageBig] placeholderImage:nil];
-    
+    [cell.image sd_setImageWithURL:[NSURL URLWithString:self.image] placeholderImage:nil];
     return cell;
 }
 #pragma mark ---------- 点击item实现的方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    TitleViewController *titleVC = [[TitleViewController alloc] init];
+    [self.navigationController pushViewController:titleVC animated:YES];
     
 }
 #pragma mark ---------- lazy Loading
@@ -111,7 +103,11 @@ static NSString *itemIntentfier = @"itemIdentifier";
     return _collectionView;
 }
 
-
+//当页面将要出现的时候隐藏tabBar
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+}
 
 
 - (void)didReceiveMemoryWarning {

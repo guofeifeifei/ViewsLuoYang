@@ -172,7 +172,6 @@ static NSString *itemIntentfier = @"itemIdentifier";
 #pragma mark ---------- UICollectionViewDataSource
 //返回的是Item的个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    ZPFLog(@"------------=%lu",self.allNewsArray.count);
     return self.allNewsArray.count;
 }
 //返回1个分区
@@ -189,7 +188,13 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 #pragma mark -------- 点击选择哪个图片
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-       NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
+    
+    NewsModel *model = self.allNewsArray[indexPath.row];
+
+    NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
+    
+    newsTwoVC.image = model.periodImage;
+    
     [self.navigationController pushViewController:newsTwoVC animated:YES];
 }
 #pragma mark ----------- lazy loading
@@ -216,8 +221,6 @@ static NSString *itemIntentfier = @"itemIdentifier";
         //注册item类型
         [self.collectionView registerClass:[NewsCollectionViewCell class] forCellWithReuseIdentifier:@"itemIdentifier"];
         self.collectionView.backgroundColor = [UIColor clearColor];
-        
-        
     }
     return _collectionView;
 }
@@ -232,12 +235,11 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 
 
-
-
-
-
-
-
+//当页面将要出现的时候隐藏tabBar
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
