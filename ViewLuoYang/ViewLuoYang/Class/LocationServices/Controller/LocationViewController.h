@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LocationViewController : UIViewController
-
+@property(nonatomic, copy) NSString *typeTitle;
 @end

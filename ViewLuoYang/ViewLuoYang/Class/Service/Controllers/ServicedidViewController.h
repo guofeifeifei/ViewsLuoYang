@@ -10,4 +10,5 @@
 
 @interface ServicedidViewController : UIViewController
 @property(nonatomic, copy) NSString *path;
+@property(nonatomic, copy) NSString *typeTitle;
 @end

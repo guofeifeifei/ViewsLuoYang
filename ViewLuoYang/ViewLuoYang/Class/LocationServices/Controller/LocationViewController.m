@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = self.typeTitle;
     // Do any additional setup after loading the view.
     [self showBarButtonWithImage:@"back_arrow"];
    
