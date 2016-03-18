@@ -17,6 +17,12 @@
 @property (nonatomic, copy) NSString *curpage;
 
 
+@property (nonatomic, copy) NSString *periodId;//文章详情
+@property (nonatomic, copy) NSString *paperId;//报纸的类型
+@property (nonatomic, copy) NSString *lastLayout;//最后一个数字
+@property (nonatomic, copy) NSString *periodDate;
+
+
 
 
 

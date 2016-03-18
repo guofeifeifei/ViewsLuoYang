@@ -10,6 +10,7 @@
 		7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E430D1C99985B0078D4A3 /* serviceModel.m */; };
 		7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */; };
 		7A0E43141C99986C0078D4A3 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E43111C99986C0078D4A3 /* ServiceCollectionViewCell.xib */; };
+		7A26225A1C9B8D1100FC2DE9 /* TitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2622591C9B8D1100FC2DE9 /* TitleModel.m */; };
 		7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4055A81C9817490040895C /* ServicedidViewController.m */; };
 		7A5CFACC1C97C81C0002AF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACB1C97C81C0002AF99 /* main.m */; };
 		7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACE1C97C81C0002AF99 /* AppDelegate.m */; };
@@ -64,6 +65,8 @@
 		7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCollectionViewCell.m; sourceTree = "<group>"; };
 		7A0E43111C99986C0078D4A3 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
 		7A0E43121C99986C0078D4A3 /* ServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCollectionViewCell.h; sourceTree = "<group>"; };
+		7A2622581C9B8D1100FC2DE9 /* TitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleModel.h; sourceTree = "<group>"; };
+		7A2622591C9B8D1100FC2DE9 /* TitleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleModel.m; sourceTree = "<group>"; };
 		7A4055A71C9817490040895C /* ServicedidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicedidViewController.h; sourceTree = "<group>"; };
 		7A4055A81C9817490040895C /* ServicedidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicedidViewController.m; sourceTree = "<group>"; };
 		7A5CFAC71C97C81C0002AF99 /* ViewLuoYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLuoYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -330,6 +333,8 @@
 			children = (
 				7A5CFB0B1C97D8280002AF99 /* NewsModel.h */,
 				7A5CFB0C1C97D8280002AF99 /* NewsModel.m */,
+				7A2622581C9B8D1100FC2DE9 /* TitleModel.h */,
+				7A2622591C9B8D1100FC2DE9 /* TitleModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -542,7 +547,7 @@
 				TargetAttributes = {
 					7A5CFAC61C97C81C0002AF99 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 8Z44W37ZT6;
+						DevelopmentTeam = CCQ5LLLX4L;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -664,6 +669,7 @@
 				7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */,
 				7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */,
 				7A5CFACC1C97C81C0002AF99 /* main.m in Sources */,
+				7A26225A1C9B8D1100FC2DE9 /* TitleModel.m in Sources */,
 				7AEE4A101C97F9410081FBC6 /* LuoyangNewsTableViewCell.m in Sources */,
 				7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */,
 				7AEE4A1D1C9845090081FBC6 /* headPhotoModel.m in Sources */,
@@ -784,7 +790,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ViewLuoYang/Class/Resource/MySelf.pch";
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -803,7 +809,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ViewLuoYang/Class/Resource/MySelf.pch";
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
 				PRODUCT_NAME = "$(TARGET_NAME)";

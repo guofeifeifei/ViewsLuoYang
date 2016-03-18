@@ -16,7 +16,8 @@
 //商报
 #define KbusinessNews @"http://shouji.lyd.com.cn/paper/service/getPeriods//3/"
 //点击
-#define ktouch @"http://shouji.lyd.com.cn/paper/service/getLayout//2/20160314/"
+#define ktouch @"http://shouji.lyd.com.cn/paper/service/getLayout//"
+ #define kArticle @"http://shouji.lyd.com.cn/p/"
 
 
 
