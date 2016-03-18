@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <MAMapKit/MAMapKit.h>
-#import <AMapLocationKit/AMapLocationKit.h>
+
 #import <AMapSearchKit/AMapSearchKit.h>
+
+
 @interface NearViewController : UIViewController
 @property(nonatomic, strong) CLLocation *currentLocation;
+@property(nonatomic, copy) NSString *titleCty;
+@property(nonatomic, copy) NSString *address;
 @end
