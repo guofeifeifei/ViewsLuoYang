@@ -36,6 +36,11 @@ static NSString *itemIntentfier = @"itemIdentifier";
      self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"newspaper_bg"]];
     // Do any additional setup after loading the view.
+    //去掉navigation下一条黑色的线条
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+   //设置文字
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor] , NSFontAttributeName:[UIFont systemFontOfSize:18.0f]}];
     self.title = @"电子报";
     //默认是晚报
     _pageCount=1;

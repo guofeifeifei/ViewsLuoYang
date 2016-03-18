@@ -1,40 +1,55 @@
 //
-//  NewsDetailViewController.m
+//  LoginViewController.m
 //  ViewLuoYang
 //
-//  Created by scjy on 16/3/15.
+//  Created by scjy on 16/3/17.
 //  Copyright © 2016年 秦俊珍. All rights reserved.
 //
 
-#import "NewsDetailViewController.h"
+#import "LoginViewController.h"
 
-@interface NewsDetailViewController ()
-@property(nonatomic, strong) UIWebView *webView;
+@interface LoginViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTF;
+
+@property (weak, nonatomic) IBOutlet UITextField *passwordTF;
+
+
+
 @end
 
-@implementation NewsDetailViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self showBarButtonWithImage:@"back_arrow"];
-    [self.view addSubview:self.webView];
 }
-
-- (UIWebView *)webView{
-
-    if (_webView==nil) {
-        self.webView=[[UIWebView alloc]initWithFrame:self.view.frame];
-        
-        NSURLRequest *request=[[NSURLRequest alloc]initWithURL:[NSURL URLWithString:self.detailUrl]];
-        
-        [self.webView loadRequest:request];
-    }
+//登录
+- (IBAction)loginAction:(id)sender {
     
     
-    return _webView;
+    
+}
+//立即注册
+- (IBAction)registerAction:(id)sender {
+    
+    
+    
 }
 
+//忘记密码
+- (IBAction)lostPasswordActiom:(id)sender {
+    
+    
+}
+
+//微信登录
+- (IBAction)weixinAction:(id)sender {
+    
+    
+    
+}
 
 
 
