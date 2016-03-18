@@ -7,7 +7,7 @@
 //
 
 #import "ServicedidViewController.h"
-#import "ProgressHUD.h"
+
 @interface ServicedidViewController ()<UIWebViewDelegate>
 @property(nonatomic, strong) UIWebView *webView;
 @property(nonatomic, strong) UIActivityIndicatorView *activity;

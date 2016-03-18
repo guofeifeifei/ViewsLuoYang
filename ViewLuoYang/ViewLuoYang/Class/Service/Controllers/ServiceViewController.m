@@ -31,9 +31,7 @@
     [self.view addSubview:self.collectionView];
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
-    
-//    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+
          [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor] , NSFontAttributeName:[UIFont systemFontOfSize:18.0f]}];
     self.navigationController.navigationBar.translucent = NO;
     UIImageView *headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0,  KScreenWidth , KScreenHeight - KScreenWidth - 100)];
@@ -133,7 +131,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
    
    
-    if (indexPath.row > 0) {
+    if (self.serviceArray.count > 0) {
         if (indexPath.row == self.serviceArray.count) {
             LocationViewController *loctionVC = [[LocationViewController alloc] init];
             [self.navigationController pushViewController:loctionVC animated:YES];
