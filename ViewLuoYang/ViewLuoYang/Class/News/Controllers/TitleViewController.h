@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface TitleViewController : UIViewController
+@property (nonatomic, copy) NSString *periodId;
+@property (nonatomic, copy) NSString *paperId;
+@property (nonatomic, copy) NSString *nsid;
 
 @end

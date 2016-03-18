@@ -10,4 +10,8 @@
 
 @interface NewsTwoViewController : UIViewController
 @property (nonatomic, copy) NSString *image;
+@property (nonatomic, copy) NSString *periodId;
+@property (nonatomic, copy) NSString *paperId;
+@property (nonatomic, copy) NSString *lastLayout;//最后一个数字
+@property (nonatomic, copy) NSString *periodDate;//日期
 @end

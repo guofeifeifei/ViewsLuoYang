@@ -9,7 +9,6 @@
         <!--登录-->
         <scene sceneID="XxG-yl-r4l">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3mY-zP-gqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="loginVC" id="vQq-HJ-GpI" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sNd-g6-VyH"/>
@@ -159,6 +158,7 @@
                         <outlet property="passwordTF" destination="mMh-5k-C7p" id="dUS-Td-hDM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mY-zP-gqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="870.5" y="366.5"/>
         </scene>

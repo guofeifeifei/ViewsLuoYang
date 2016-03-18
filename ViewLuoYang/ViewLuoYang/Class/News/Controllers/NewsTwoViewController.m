@@ -9,14 +9,13 @@
 #import "NewsTwoViewController.h"
 #import "NewsScondCollectionViewCell.h"
 #import "TitleViewController.h"
+#import "TitleModel.h"
 static NSString *itemIntentfier = @"itemIdentifier";
 @interface NewsTwoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, retain) UICollectionView *collectionView;
-@property (nonatomic, strong) NSMutableArray *listArray;
-@property (nonatomic, copy) NSString *pageId;//图片Id
-@property (nonatomic, copy) NSString *layoutImageBig;//图片
-
+@property (nonatomic, strong) NSMutableArray *nsidArray;//图片Id
+@property (nonatomic, copy) NSString *all;
 
 @end
 
@@ -24,39 +23,64 @@ static NSString *itemIntentfier = @"itemIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self dataLoad];
     // Do any additional setup after loading the view.
+    [self loadData];
     [self showBarButtonWithImage:@"back_arrow"];
-    [self.view addSubview:self.collectionView];
     
 }
-//解析数据
-- (void)dataLoad{
+
+- (void)loadData{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    NSString *b=[NSString stringWithFormat:@"%@%@?_fs=2&_vc=58",ktouch,@(86)];
+    NSLog(@"%@",self.periodDate);//2016-03-16
     
-    ZPFLog(@"%@",b);
+    NSString *a = self.periodDate;
+    //去年份
+    NSString *b = [a substringToIndex:4];
+    //取日期
+    NSString *c = [a substringFromIndex:8];
+    //取月份
+    NSString *d = [a substringToIndex:7];
+    ZPFLog(@"%@",d);
+    NSString *e = [d substringFromIndex:5];
+    ZPFLog(@"%@",e);
+    //拼加成一个字符串
+    self.all = [NSString stringWithFormat:@"%@%@%@",b,e,c];
+    ZPFLog(@"%@",self.all);
     
-    [sessionManager GET:b parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [sessionManager GET:[NSString stringWithFormat:@"%@%@/%@/%@?_fs=2&_vc=58",ktouch,self.paperId,self.all,self.lastLayout] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         ZPFLog(@"downloadProgress = %@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZPFLog(@"responseObject = %@",responseObject);
+        
+        
+//      解析数据拿到属性nsid，传到下一个页面。
         NSDictionary *dic = responseObject;
         NSDictionary *dataDic = dic[@"data"];
-        self.pageId = dataDic[@"pageId"];
-        NSDictionary *layoutInfoDic = dataDic[@"layoutInfo"];
-        self.layoutImageBig = layoutInfoDic[@"layoutImageBig"];
+        NSArray *areamaplistArray = dataDic[@"areamaplist"];
+        
+        
+        
+        
+        for (NSDictionary *dict in areamaplistArray) {
+            
+            [self.nsidArray addObject:dict[@"nsid"]];
+    
+        }
+        [self.view addSubview:self.collectionView];
         [self.collectionView reloadData];
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZPFLog(@"error = %@",error);
     }];
 }
 
+
+
 #pragma mark ---------- UICollectionViewDataSource
 //返回的是Item的个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 1;
+    return self.nsidArray.count;
 }
 
 //返回一个分区
@@ -71,9 +95,15 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 #pragma mark ---------- 点击item实现的方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    TitleViewController *titleVC = [[TitleViewController alloc] init];
-    [self.navigationController pushViewController:titleVC animated:YES];
     
+    TitleViewController *titleVC = [[TitleViewController alloc] init];
+    //往第三页面传值
+    titleVC.periodId = self.periodId;
+    titleVC.paperId = self.paperId;
+    
+    titleVC.nsid = self.nsidArray[indexPath.row];
+    
+    [self.navigationController pushViewController:titleVC animated:YES];
 }
 #pragma mark ---------- lazy Loading
 - (UICollectionView *)collectionView{
@@ -101,6 +131,13 @@ static NSString *itemIntentfier = @"itemIdentifier";
         
     }
     return _collectionView;
+}
+
+- (NSMutableArray *)nsidArray{
+    if (_nsidArray == nil) {
+        self.nsidArray = [NSMutableArray new];
+    }
+    return _nsidArray;
 }
 
 //当页面将要出现的时候隐藏tabBar

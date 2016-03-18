@@ -25,20 +25,15 @@
 }
 
 
-
-
-
-
 - (UIWebView *)webView{
     if (_webView == nil) {
         self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://shouji.lyd.com.cn/p/2/60374"]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@/%@",kArticle,self.paperId,self.nsid]]];
         [self.webView loadRequest:request];
     }
     return _webView;
+    
 }
-
-
 
 
 - (void)didReceiveMemoryWarning {

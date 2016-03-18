@@ -199,6 +199,10 @@ static NSString *itemIntentfier = @"itemIdentifier";
     NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
     
     newsTwoVC.image = model.periodImage;
+    newsTwoVC.periodId = model.periodId;
+    newsTwoVC.paperId = model.paperId;
+    newsTwoVC.periodDate = model.periodDate;
+    newsTwoVC.lastLayout = model.lastLayout;
     
     [self.navigationController pushViewController:newsTwoVC animated:YES];
 }
