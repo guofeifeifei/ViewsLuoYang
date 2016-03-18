@@ -32,7 +32,7 @@
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
 
-         [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor] , NSFontAttributeName:[UIFont systemFontOfSize:18.0f]}];
+         [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor] , NSFontAttributeName:[UIFont systemFontOfSize:22.0f]}];
     self.navigationController.navigationBar.translucent = NO;
     UIImageView *headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0,  KScreenWidth , KScreenHeight - KScreenWidth - 100)];
     headImageView.image = [UIImage imageNamed:@"bm_bg"];

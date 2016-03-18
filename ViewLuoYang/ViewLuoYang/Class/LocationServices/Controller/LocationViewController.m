@@ -11,7 +11,7 @@
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "NearViewController.h"
-@interface LocationViewController ()<AMapSearchDelegate, MAMapViewDelegate>
+@interface LocationViewController ()<AMapSearchDelegate, MAMapViewDelegate, UISearchBarDelegate>
 {
     MAMapView *_mapView;
     AMapSearchAPI *_search;
@@ -19,12 +19,16 @@
     
     
 }
+@property(nonatomic, copy)  NSString *titles;
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *pois;
 @property(nonatomic, strong) NSMutableArray *anotations;
 @property(nonatomic, strong) UISearchBar *searchBar;
-@property(nonatomic, strong) UISegmentedControl *segment;
+
 @property(nonatomic, strong) NSArray *array;
+
+
+@property(nonatomic, strong) NSMutableArray *annotations;
 @end
 
 @implementation LocationViewController
@@ -47,13 +51,14 @@
     //构造AMapInputTipsSearchRequest对象，设置请求参数
     AMapInputTipsSearchRequest *tipsRequest = [[AMapInputTipsSearchRequest alloc] init];
     tipsRequest.keywords = @"肯德基";
-    tipsRequest.city = @"北京";
+    tipsRequest.city = self.titles;
     
     //发起输入提示搜索
     [_search AMapInputTipsSearch: tipsRequest];
 
     
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.typeTitle;
@@ -61,36 +66,95 @@
     [self showBarButtonWithImage:@"back_arrow"];
     [self initMapView];
     [self initSearch];
+    [self initBtn];
     
     
-    [self.view addSubview:self.segment];
+    
+    
     [self.view addSubview:self.searchBar];
     
     
     
 }//实现输入提示的回调函数
+- (void)initBtn{
+    
+    for (NSInteger i = 0; i < 4; i++) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect ];
+        btn.frame = CGRectMake(i * KScreenWidth / 4, KScreenHeight - KScreenHeight / 4, KScreenWidth / 4, 30);
+        
+        [btn setTitle:self.array[i] forState:UIControlStateNormal];
+       
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        
+        btn.tag = i + 100;
+        [btn addTarget:self action:@selector(btnAcion:) forControlEvents:UIControlEventTouchUpInside];
+        [_mapView addSubview:btn];
+        
+    }
+    
+        
+        
+    }
 -(void)onInputTipsSearchDone:(AMapInputTipsSearchRequest*)request response:(AMapInputTipsSearchResponse *)response
 {
     if(response.tips.count == 0)
     {
         return;
     }
-    
-    //通过AMapInputTipsSearchResponse对象处理搜索结果
-    NSString *strCount = [NSString stringWithFormat:@"count: %ld", response.count];
-    NSString *strtips = @"";
-    for (AMapTip *p in response.tips) {
-        strtips = [NSString stringWithFormat:@"%@\nTip: %@", strtips, p.description];
-    }
-    NSString *result = [NSString stringWithFormat:@"%@ \n %@", strCount, strtips];
-    NSLog(@"InputTips: %@", result);
+    self.pois = response.tips;
+    ZPFLog(@"self.pois  ******************    %@", self.pois);
+    [_mapView removeAnnotations:_annotations];
+    [_annotations removeAllObjects];
+//    //通过AMapInputTipsSearchResponse对象处理搜索结果
+//    NSString *strCount = [NSString stringWithFormat:@"count: %ld", response.count];
+//    NSString *strtips = @"";
+//    for (AMapTip *p in response.tips) {
+//        strtips = [NSString stringWithFormat:@"%@\nTip: %@", strtips, p.description];
+//    }
+//    NSString *result = [NSString stringWithFormat:@"%@ \n %@", strCount, strtips];
+//    NSLog(@"InputTips: %@", result);
 }
-
-
+//出现大头针
+//- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation{
+//    if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
+//        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
+//        MAPinAnnotationView *annotationView = (MAPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+//        if (annotationView == nil) {
+//            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
+//        }
+//        annotationView.canShowCallout = YES;
+//       
+//        
+//        
+//        return annotationView;
+//        
+//        
+//        
+//        
+//        
+//    }
+//    return nil;
+//    
+//    
+//    
+//}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    ZPFLog(@"点击方法");
+//    for (NSUInteger *i; i < [self.pois count ]; i++) {
+//        AMapPOI *poi = _pois[i];
+//        MAPointAnnotation *annotation = [[MAPointAnnotation alloc] init];
+//        annotation.coordinate = CLLocationCoordinate2DMake(poi.location.latitude, poi.location.longitude);
+//    }
+   
+    
+    
+    
+}
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation
 {
            //取出当前位置的坐标
-    NSLog(@"userLocation:%@", userLocation.location);
+    NSLog(@"userLocation:%@", userLocation.location)
+  
     _currentLocation = [userLocation.location copy];
 }
 //地理编码
@@ -109,13 +173,13 @@
 - (void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest *)request response:(AMapReGeocodeSearchResponse *)response{
     ZPFLog(@"response:%@", response);
     //城市地址
-    NSString *title = response.regeocode.addressComponent.city;
-    if (title.length == 0) {
+    self.titles = response.regeocode.addressComponent.city;
+    if (self.titles.length == 0) {
         //详细地址
-        title = response.regeocode.addressComponent.province;
+        self.titles = response.regeocode.addressComponent.province;
     }
     
-    _mapView.userLocation.title = title;
+    _mapView.userLocation.title = self.titles;
     _mapView.userLocation.subtitle = response.regeocode.formattedAddress;
     
     
@@ -134,28 +198,18 @@
     if (_searchBar == nil) {
         self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(KScreenWidth/15, KScreenHeight / 15, KScreenWidth - 2*(KScreenWidth / 12), 44)];
         [self.searchBar setPlaceholder:@"搜索"];
-        [self.searchBar setShowsCancelButton:YES];
+     
+        self.searchBar.delegate = self;
        
         [self.searchBar setTintColor:[UIColor whiteColor]];
 
     }
     return _searchBar;
 }
-- (UISegmentedControl *)segment{
-    if (_segment == nil) {
-        self.segment = [[UISegmentedControl alloc] initWithItems:self.array];
-        self.segment.frame = CGRectMake(KScreenWidth/15, KScreenWidth + KScreenWidth / 3, KScreenWidth - 2 * (KScreenWidth / 12), 44);
-        self.segment.tintColor = barColor;
-        [self.segment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-       
-         
-    }
-    return _segment;
-    
-}
-- (void)segmentAction:(UISegmentedControl *)seg{
-    NSInteger index = seg.selectedSegmentIndex;
-    switch (index) {
+
+- (void)btnAcion:(UIButton *)btn{
+   
+    switch (btn.tag - 100) {
         case 0:{
             
             
@@ -214,6 +268,15 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     self.tabBarController.tabBar.hidden = YES;
+}
+- (NSMutableArray *)annotations{
+    if (_annotations == nil) {
+        self.annotations = [NSMutableArray new];
+    }
+    return _annotations;
+    
+    
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

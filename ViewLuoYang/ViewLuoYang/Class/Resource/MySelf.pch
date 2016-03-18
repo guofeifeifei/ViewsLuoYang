@@ -36,6 +36,12 @@
 #	define ZPFLog(...)
 #endif
 
+//在调试的时候，会输出（格式：文件名:行号）日志。在Release正式版本的时候，会关闭日志输出。
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT,建议使用这个) nil
+#endif
 
 
 //颜色
