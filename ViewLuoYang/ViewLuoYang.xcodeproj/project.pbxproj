@@ -11,7 +11,6 @@
 		7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E430D1C99985B0078D4A3 /* serviceModel.m */; };
 		7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */; };
 		7A0E43141C99986C0078D4A3 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E43111C99986C0078D4A3 /* ServiceCollectionViewCell.xib */; };
-		7A26225A1C9B8D1100FC2DE9 /* TitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2622591C9B8D1100FC2DE9 /* TitleModel.m */; };
 		7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4055A81C9817490040895C /* ServicedidViewController.m */; };
 		7A5CFACC1C97C81C0002AF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACB1C97C81C0002AF99 /* main.m */; };
 		7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACE1C97C81C0002AF99 /* AppDelegate.m */; };
@@ -30,7 +29,9 @@
 		7A5CFB121C980B4C0002AF99 /* NewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFB111C980B4C0002AF99 /* NewsCollectionViewCell.m */; };
 		7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFB171C9824190002AF99 /* NewsTwoViewController.m */; };
 		7A5CFB1A1C9845060002AF99 /* TouchItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFB191C9845060002AF99 /* TouchItems.plist */; };
+		7A7073C21C9CF3CE00D13F7B /* DiscussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7073C11C9CF3CE00D13F7B /* DiscussViewController.m */; };
 		7A7EDBA91C993AAC00DC6EDF /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EDBA81C993AAC00DC6EDF /* LocationViewController.m */; };
+		7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */; };
 		7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
 		7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C391C97E1AC00FD6D15 /* Reachability.m */; };
 		7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3A1C97E1AC00FD6D15 /* README.md */; };
@@ -41,6 +42,7 @@
 		7ABEE5BF1C990F940093912D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */; };
 		7ABEE5C11C990F9F0093912D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5C01C990F9F0093912D /* CoreLocation.framework */; };
 		7ABEE5C31C990FB20093912D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5C21C990FB20093912D /* libz.tbd */; };
+		7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */; };
 		7AD3DB5D1C9A449A001065DF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5C1C9A449A001065DF /* TitleViewController.m */; };
 		7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5F1C9A557D001065DF /* LoginViewController.m */; };
 		7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */; };
@@ -68,8 +70,6 @@
 		7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCollectionViewCell.m; sourceTree = "<group>"; };
 		7A0E43111C99986C0078D4A3 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
 		7A0E43121C99986C0078D4A3 /* ServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCollectionViewCell.h; sourceTree = "<group>"; };
-		7A2622581C9B8D1100FC2DE9 /* TitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleModel.h; sourceTree = "<group>"; };
-		7A2622591C9B8D1100FC2DE9 /* TitleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleModel.m; sourceTree = "<group>"; };
 		7A4055A71C9817490040895C /* ServicedidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicedidViewController.h; sourceTree = "<group>"; };
 		7A4055A81C9817490040895C /* ServicedidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicedidViewController.m; sourceTree = "<group>"; };
 		7A5CFAC71C97C81C0002AF99 /* ViewLuoYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLuoYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,8 +104,12 @@
 		7A5CFB161C9824190002AF99 /* NewsTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTwoViewController.h; sourceTree = "<group>"; };
 		7A5CFB171C9824190002AF99 /* NewsTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTwoViewController.m; sourceTree = "<group>"; };
 		7A5CFB191C9845060002AF99 /* TouchItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TouchItems.plist; sourceTree = "<group>"; };
+		7A7073C01C9CF3CE00D13F7B /* DiscussViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscussViewController.h; sourceTree = "<group>"; };
+		7A7073C11C9CF3CE00D13F7B /* DiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussViewController.m; sourceTree = "<group>"; };
 		7A7EDBA71C993AAC00DC6EDF /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		7A7EDBA81C993AAC00DC6EDF /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		7A93966B1C9D5BAE0008DC18 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
+		7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
 		7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
 		7AA00C381C97E1AC00FD6D15 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7AA00C391C97E1AC00FD6D15 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 		7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7ABEE5C01C990F9F0093912D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7ABEE5C21C990FB20093912D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7AD16D3E1C9BFE9100DC275C /* ForgetThePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetThePasswordViewController.h; sourceTree = "<group>"; };
+		7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetThePasswordViewController.m; sourceTree = "<group>"; };
 		7AD3DB5B1C9A449A001065DF /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
 		7AD3DB5C1C9A449A001065DF /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		7AD3DB5E1C9A557D001065DF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -256,6 +262,8 @@
 				7AD3DB5F1C9A557D001065DF /* LoginViewController.m */,
 				7AD3DB681C9AC99A001065DF /* RegisterViewController.h */,
 				7AD3DB691C9AC99A001065DF /* RegisterViewController.m */,
+				7AD16D3E1C9BFE9100DC275C /* ForgetThePasswordViewController.h */,
+				7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,6 +335,10 @@
 				7A5CFB171C9824190002AF99 /* NewsTwoViewController.m */,
 				7AD3DB5B1C9A449A001065DF /* TitleViewController.h */,
 				7AD3DB5C1C9A449A001065DF /* TitleViewController.m */,
+				7A7073C01C9CF3CE00D13F7B /* DiscussViewController.h */,
+				7A7073C11C9CF3CE00D13F7B /* DiscussViewController.m */,
+				7A93966B1C9D5BAE0008DC18 /* CollectViewController.h */,
+				7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,8 +348,6 @@
 			children = (
 				7A5CFB0B1C97D8280002AF99 /* NewsModel.h */,
 				7A5CFB0C1C97D8280002AF99 /* NewsModel.m */,
-				7A2622581C9B8D1100FC2DE9 /* TitleModel.h */,
-				7A2622591C9B8D1100FC2DE9 /* TitleModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -552,7 +562,7 @@
 				TargetAttributes = {
 					7A5CFAC61C97C81C0002AF99 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = CCQ5LLLX4L;
+						DevelopmentTeam = FZ67V9UY55;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -667,15 +677,17 @@
 				7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */,
 				7A5CFB031C97C8C10002AF99 /* MessageViewController.m in Sources */,
 				7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */,
+				7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */,
 				7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */,
 				7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */,
 				7AEE4A0C1C97F6260081FBC6 /* LuoyangNews.m in Sources */,
+				7A7073C21C9CF3CE00D13F7B /* DiscussViewController.m in Sources */,
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
 				7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */,
 				7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */,
+				7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */,
 				7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */,
 				7A5CFACC1C97C81C0002AF99 /* main.m in Sources */,
-				7A26225A1C9B8D1100FC2DE9 /* TitleModel.m in Sources */,
 				7AEE4A101C97F9410081FBC6 /* LuoyangNewsTableViewCell.m in Sources */,
 				7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */,
 				7AEE4A1D1C9845090081FBC6 /* headPhotoModel.m in Sources */,
@@ -740,7 +752,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -777,7 +789,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -798,7 +810,7 @@
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -817,7 +829,7 @@
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
