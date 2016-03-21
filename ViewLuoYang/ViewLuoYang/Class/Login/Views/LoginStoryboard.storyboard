@@ -27,21 +27,14 @@
                                     <outlet property="delegate" destination="vQq-HJ-GpI" id="aOR-H7-Zbq"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyU-5p-ZK1">
-                                <rect key="frame" x="16" y="305" width="74" height="30"/>
-                                <state key="normal" title="立即注册"/>
-                                <connections>
-                                    <action selector="registerAction:" destination="vQq-HJ-GpI" eventType="touchUpInside" id="4iA-G9-pl5"/>
-                                    <segue destination="8SA-cj-d6W" kind="push" id="fXG-e4-x4A"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhL-tb-wL5">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhL-tb-wL5">
                                 <rect key="frame" x="285" y="305" width="74" height="30"/>
                                 <state key="normal" title="忘记密码">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="lostPasswordActiom:" destination="vQq-HJ-GpI" eventType="touchUpInside" id="FmA-i0-wVV"/>
+                                    <segue destination="50F-BV-ky0" kind="push" id="ESq-KK-i4w"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用第三方账号登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkU-wl-GPt">
@@ -64,7 +57,7 @@
                                     <action selector="weixinAction:" destination="vQq-HJ-GpI" eventType="touchUpInside" id="TEy-2k-UhX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weixin_press" translatesAutoresizingMaskIntoConstraints="NO" id="cFJ-XK-9ra">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weixin_nomal" translatesAutoresizingMaskIntoConstraints="NO" id="cFJ-XK-9ra">
                                 <rect key="frame" x="157" y="462" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bCE-OJ-u6c"/>
@@ -118,6 +111,16 @@
                                     <action selector="loginAction:" destination="vQq-HJ-GpI" eventType="touchUpInside" id="hYK-oS-6cS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyU-5p-ZK1">
+                                <rect key="frame" x="16" y="305" width="74" height="30"/>
+                                <state key="normal" title="立即注册">
+                                    <color key="titleColor" red="0.46666666666666667" green="0.77254901960784317" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerAction:" destination="vQq-HJ-GpI" eventType="touchUpInside" id="4iA-G9-pl5"/>
+                                    <segue destination="8SA-cj-d6W" kind="push" id="fXG-e4-x4A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -126,28 +129,27 @@
                             <constraint firstItem="mMh-5k-C7p" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="114" id="3VU-Vd-fxK"/>
                             <constraint firstItem="UZ3-iZ-Zb8" firstAttribute="centerX" secondItem="s6H-8v-wPo" secondAttribute="centerX" id="4e4-YE-6Hn"/>
                             <constraint firstItem="VrH-3b-Z9Q" firstAttribute="centerX" secondItem="s6H-8v-wPo" secondAttribute="centerX" id="963-FG-Vmq"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="NyU-5p-ZK1" secondAttribute="leading" id="9kl-ie-PJx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NyU-5p-ZK1" secondAttribute="trailing" constant="269" id="9mm-3L-9rr"/>
                             <constraint firstItem="qWh-As-rK9" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="114" id="DSs-UA-hNp"/>
-                            <constraint firstItem="NyU-5p-ZK1" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="241" id="FlG-dY-Nb2"/>
-                            <constraint firstItem="IhL-tb-wL5" firstAttribute="height" secondItem="NyU-5p-ZK1" secondAttribute="height" id="HGk-ST-ei3"/>
                             <constraint firstItem="qWh-As-rK9" firstAttribute="leading" secondItem="s6H-8v-wPo" secondAttribute="leadingMargin" constant="-20" id="HzE-84-fvO"/>
+                            <constraint firstItem="NyU-5p-ZK1" firstAttribute="leading" secondItem="s6H-8v-wPo" secondAttribute="leadingMargin" constant="-4" id="Mt6-h8-Zno"/>
                             <constraint firstItem="mMh-5k-C7p" firstAttribute="height" secondItem="qWh-As-rK9" secondAttribute="height" id="N4z-3R-EUp"/>
                             <constraint firstItem="cFJ-XK-9ra" firstAttribute="centerX" secondItem="s6H-8v-wPo" secondAttribute="centerX" id="O9G-sL-5Bu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IhL-tb-wL5" secondAttribute="trailing" id="Qil-3l-uGQ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="UZ3-iZ-Zb8" secondAttribute="leading" id="SdC-Pv-Uwk"/>
-                            <constraint firstItem="IhL-tb-wL5" firstAttribute="width" secondItem="NyU-5p-ZK1" secondAttribute="width" id="U1m-Aq-5Wv"/>
+                            <constraint firstItem="NyU-5p-ZK1" firstAttribute="height" secondItem="UZ3-iZ-Zb8" secondAttribute="height" id="XjC-Cx-2Ii"/>
                             <constraint firstItem="hyk-s2-goh" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="69" id="Zpx-Kc-e4j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q0j-WQ-E88" secondAttribute="trailing" constant="-20" id="bYV-E9-4ly"/>
+                            <constraint firstItem="IhL-tb-wL5" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="241" id="c6C-KN-J5g"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mMh-5k-C7p" secondAttribute="trailing" constant="-20" id="eBR-QT-PEK"/>
-                            <constraint firstItem="IhL-tb-wL5" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="241" id="g7I-3J-F98"/>
                             <constraint firstItem="q0j-WQ-E88" firstAttribute="height" secondItem="hyk-s2-goh" secondAttribute="height" id="gPd-ue-yUN"/>
                             <constraint firstItem="UZ3-iZ-Zb8" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="178" id="gd4-wx-1IY"/>
                             <constraint firstItem="cFJ-XK-9ra" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="398" id="juN-Z5-dLB"/>
                             <constraint firstItem="mMh-5k-C7p" firstAttribute="leading" secondItem="s6H-8v-wPo" secondAttribute="leadingMargin" constant="19" id="kEv-lY-fCV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IhL-tb-wL5" secondAttribute="trailing" constant="-4" id="mWt-hn-xxv"/>
                             <constraint firstItem="VrH-3b-Z9Q" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="398" id="oDW-lx-cia"/>
                             <constraint firstItem="kkU-wl-GPt" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="368" id="opo-Pq-Pex"/>
+                            <constraint firstItem="IhL-tb-wL5" firstAttribute="height" secondItem="NyU-5p-ZK1" secondAttribute="height" id="rgT-nZ-yp5"/>
                             <constraint firstItem="hyk-s2-goh" firstAttribute="leading" secondItem="s6H-8v-wPo" secondAttribute="leadingMargin" constant="-20" id="teA-58-A5c"/>
+                            <constraint firstItem="NyU-5p-ZK1" firstAttribute="top" secondItem="sNd-g6-VyH" secondAttribute="bottom" constant="241" id="wJP-ZY-yDr"/>
                             <constraint firstItem="q0j-WQ-E88" firstAttribute="leading" secondItem="s6H-8v-wPo" secondAttribute="leadingMargin" constant="19" id="wx9-z4-fpK"/>
                         </constraints>
                     </view>
@@ -161,6 +163,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mY-zP-gqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="870.5" y="366.5"/>
+        </scene>
+        <!--找回密码-->
+        <scene sceneID="lgo-EU-Rkq">
+            <objects>
+                <viewController id="50F-BV-ky0" customClass="ForgetThePasswordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xLn-JE-TfV"/>
+                        <viewControllerLayoutGuide type="bottom" id="PJv-Xb-UuP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UwD-sH-Tz5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="找回密码" id="0wX-bw-DmW"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdx-zc-bld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984.5" y="1148.5"/>
         </scene>
         <!--注册-->
         <scene sceneID="NvN-ga-31C">
@@ -302,6 +324,6 @@
         <image name="ic_password_off" width="15" height="15"/>
         <image name="ic_regist_phone" width="15" height="15"/>
         <image name="ic_regist_username" width="15" height="15"/>
-        <image name="weixin_press" width="99" height="99"/>
+        <image name="weixin_nomal" width="66" height="66"/>
     </resources>
 </document>

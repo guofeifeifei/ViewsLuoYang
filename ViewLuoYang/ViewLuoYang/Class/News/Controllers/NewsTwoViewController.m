@@ -9,16 +9,12 @@
 #import "NewsTwoViewController.h"
 #import "NewsScondCollectionViewCell.h"
 #import "TitleViewController.h"
-#import "TitleModel.h"
 static NSString *itemIntentfier = @"itemIdentifier";
 @interface NewsTwoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
-
 @property (nonatomic, retain) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *nsidArray;//图片Id
-@property (nonatomic, copy) NSString *all;
-
+@property (nonatomic, copy) NSString *all;//拼接生成一个字符串
 @end
-
 @implementation NewsTwoViewController
 
 - (void)viewDidLoad {
@@ -58,24 +54,15 @@ static NSString *itemIntentfier = @"itemIdentifier";
         NSDictionary *dic = responseObject;
         NSDictionary *dataDic = dic[@"data"];
         NSArray *areamaplistArray = dataDic[@"areamaplist"];
-        
-        
-        
-        
         for (NSDictionary *dict in areamaplistArray) {
-            
             [self.nsidArray addObject:dict[@"nsid"]];
-    
         }
         [self.view addSubview:self.collectionView];
         [self.collectionView reloadData];
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZPFLog(@"error = %@",error);
     }];
 }
-
-
 
 #pragma mark ---------- UICollectionViewDataSource
 //返回的是Item的个数
@@ -100,9 +87,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
     //往第三页面传值
     titleVC.periodId = self.periodId;
     titleVC.paperId = self.paperId;
-    
     titleVC.nsid = self.nsidArray[indexPath.row];
-    
     [self.navigationController pushViewController:titleVC animated:YES];
 }
 #pragma mark ---------- lazy Loading
@@ -121,7 +106,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
         //设置每个item的大小
         layout.itemSize = CGSizeMake(KScreenWidth,KScreenHeight);
         //通过一个layout布局来创建一个collectionView
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight) collectionViewLayout:layout];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight-64) collectionViewLayout:layout];
         self.collectionView.backgroundColor = [UIColor lightGrayColor];
         //设置代理
         self.collectionView.delegate = self;

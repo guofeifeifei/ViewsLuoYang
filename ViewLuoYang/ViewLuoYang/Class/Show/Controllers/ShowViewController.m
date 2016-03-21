@@ -251,7 +251,7 @@ static NSString *str=@"cell";
     if (_contenceView == nil) {
         self.contenceView=[[UIView alloc]initWithFrame:CGRectMake(0,44, screen.size.width, screen.size.height)];
         centerX = screen.size.width / 2;
-        centerY = (screen.size.height)/ 2+105;
+        centerY = (screen.size.height)/ 2+44;
         //        self.contenceView.backgroundColor = [UIColor greenColor];
         panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
         [self.contenceView addGestureRecognizer:panGestureRecognizer];
