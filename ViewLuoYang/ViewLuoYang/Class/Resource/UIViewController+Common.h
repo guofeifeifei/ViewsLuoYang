@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface UIViewController (Common)
+#import "QRCodeReaderDelegate.h"
+@interface UIViewController (Common)<QRCodeReaderDelegate>
 
 - (void)showBarButtonWithImage:(NSString *)imageName;
-
+- (void)showBarButtonWithcode;
 - (void)showRightBarButtonWithTitle:(NSString *)title;
 
 

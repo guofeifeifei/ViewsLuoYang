@@ -13,7 +13,7 @@
 #import "ServicedidViewController.h"
 #import "ServiceCollectionViewCell.h"
 #import "LocationViewController.h"
-
+#import "ViewController.h"
 @interface ServiceViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>{
     BOOL _refresh;
 }
@@ -24,7 +24,7 @@
 @implementation ServiceViewController
 
 - (void)viewDidLoad {
-    
+    [self showBarButtonWithcode];
     [super viewDidLoad];
     self.title = @"服务";
     // 修改title字体颜色
@@ -137,6 +137,11 @@
             [self.navigationController pushViewController:loctionVC animated:YES];
             
             loctionVC.typeTitle = @"地图定位";
+//            ViewController *loctionVC = [[ViewController alloc] init];
+//                      [self.navigationController pushViewController:loctionVC animated:YES];
+//            
+//                       loctionVC.typeTitle = @"地图定位";
+//
             
         } else{
              ServicedidViewController *servicedidVC = [[ServicedidViewController alloc] init];

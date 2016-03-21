@@ -27,6 +27,7 @@
 		7A1A66171C9E859200A48CD9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A66161C9E859200A48CD9 /* libsqlite3.0.tbd */; };
 		7A1A66191C9E85AA00A48CD9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A66181C9E85AA00A48CD9 /* libc++.tbd */; };
 		7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4055A81C9817490040895C /* ServicedidViewController.m */; };
+		7A43EC5A1C9EAB5B00F880EF /* SYTCodeScanerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A43EC591C9EAB5B00F880EF /* SYTCodeScanerViewController.m */; };
 		7A5CFACC1C97C81C0002AF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACB1C97C81C0002AF99 /* main.m */; };
 		7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACE1C97C81C0002AF99 /* AppDelegate.m */; };
 		7A5CFAD11C97C81C0002AF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFAD01C97C81C0002AF99 /* Assets.xcassets */; };
@@ -49,17 +50,38 @@
 		7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */; };
 		7A94AC201C9F792700E676E7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A65F61C9E4A8A00A48CD9 /* libsqlite3.tbd */; };
 		7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
+7A8131AC1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8131AB1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m */; };
+		7A9F19271C9E4C3B0009758B /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F19261C9E4C3B0009758B /* CustomAnnotationView.m */; };
+		7A9F192A1C9E4C6F0009758B /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F19291C9E4C6F0009758B /* CustomCalloutView.m */; };
+
+7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */; };
+
+7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
 		7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C391C97E1AC00FD6D15 /* Reachability.m */; };
 		7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3A1C97E1AC00FD6D15 /* README.md */; };
 		7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */; };
 		7AA00C421C97E87600FD6D15 /* service.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C411C97E87600FD6D15 /* service.plist */; };
+		7AACECDB1C9C208000A34CC1 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AACECDA1C9C208000A34CC1 /* WeatherViewController.m */; };
+		7AACECDD1C9C34D200A34CC1 /* WeatherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AACECDC1C9C34D200A34CC1 /* WeatherStoryboard.storyboard */; };
 		7ABEE5BB1C990F2A0093912D /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BA1C990F2A0093912D /* AMapLocationKit.framework */; };
 		7ABEE5BD1C990F860093912D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BC1C990F860093912D /* CoreTelephony.framework */; };
 		7ABEE5BF1C990F940093912D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */; };
 		7ABEE5C11C990F9F0093912D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5C01C990F9F0093912D /* CoreLocation.framework */; };
 		7ABEE5C31C990FB20093912D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5C21C990FB20093912D /* libz.tbd */; };
-		7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */; };
-		7AD3DB5D1C9A449A001065DF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5C1C9A449A001065DF /* TitleViewController.m */; };
+7AD2D52C1C9E6B2200298043 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D52B1C9E6B2200298043 /* QRCodeViewController.m */; };
+		7AD2D52E1C9E6C9C00298043 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D52D1C9E6C9C00298043 /* AVFoundation.framework */; };
+		7AD2D5311C9E6DEF00298043 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D5301C9E6DEF00298043 /* ViewController.m */; };
+		7AD2D5341C9E799600298043 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5321C9E799600298043 /* AMapLocationKit.framework */; };
+		7AD2D5371C9E883100298043 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5361C9E883100298043 /* libstdc++.6.0.9.tbd */; };
+		7AD2D5391C9E884900298043 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5381C9E884900298043 /* Security.framework */; };
+		7AD2D53C1C9E8A3D00298043 /* RoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D53B1C9E8A3D00298043 /* RoadViewController.m */; };
+		7AD2D5451C9E910900298043 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D53F1C9E910900298043 /* QRCameraSwitchButton.m */; };
+		7AD2D5461C9E910900298043 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D5421C9E910900298043 /* QRCodeReaderView.m */; };
+		7AD2D5471C9E910900298043 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D5441C9E910900298043 /* QRCodeReaderViewController.m */; };
+
+7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */; };
+
+7AD3DB5D1C9A449A001065DF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5C1C9A449A001065DF /* TitleViewController.m */; };
 		7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5F1C9A557D001065DF /* LoginViewController.m */; };
 		7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */; };
 		7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB691C9AC99A001065DF /* RegisterViewController.m */; };
@@ -119,6 +141,8 @@
 		7A1A66181C9E85AA00A48CD9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		7A4055A71C9817490040895C /* ServicedidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicedidViewController.h; sourceTree = "<group>"; };
 		7A4055A81C9817490040895C /* ServicedidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicedidViewController.m; sourceTree = "<group>"; };
+		7A43EC581C9EAB5B00F880EF /* SYTCodeScanerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTCodeScanerViewController.h; sourceTree = "<group>"; };
+		7A43EC591C9EAB5B00F880EF /* SYTCodeScanerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTCodeScanerViewController.m; sourceTree = "<group>"; };
 		7A5CFAC71C97C81C0002AF99 /* ViewLuoYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLuoYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5CFACB1C97C81C0002AF99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A5CFACD1C97C81C0002AF99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -155,23 +179,55 @@
 		7A7073C11C9CF3CE00D13F7B /* DiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussViewController.m; sourceTree = "<group>"; };
 		7A7EDBA71C993AAC00DC6EDF /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		7A7EDBA81C993AAC00DC6EDF /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
-		7A93966B1C9D5BAE0008DC18 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
+
+7A8131AA1C9BFF4100114348 /* UIView+YSTextInputKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSTextInputKeyboard.h"; sourceTree = "<group>"; };
+		7A8131AB1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSTextInputKeyboard.m"; sourceTree = "<group>"; };
+		7A9F19251C9E4C3B0009758B /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		7A9F19261C9E4C3B0009758B /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		7A9F19281C9E4C6F0009758B /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		7A9F19291C9E4C6F0009758B /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+
+7A93966B1C9D5BAE0008DC18 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
 		7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
-		7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
+
+7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
 		7AA00C381C97E1AC00FD6D15 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7AA00C391C97E1AC00FD6D15 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7AA00C3A1C97E1AC00FD6D15 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7AA00C3B1C97E1AC00FD6D15 /* ZMYNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMYNetManager.h; sourceTree = "<group>"; };
 		7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMYNetManager.m; sourceTree = "<group>"; };
 		7AA00C411C97E87600FD6D15 /* service.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = service.plist; sourceTree = "<group>"; };
+		7AACECD91C9C207F00A34CC1 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		7AACECDA1C9C208000A34CC1 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		7AACECDC1C9C34D200A34CC1 /* WeatherStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeatherStoryboard.storyboard; sourceTree = "<group>"; };
 		7ABEE5BA1C990F2A0093912D /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		7ABEE5BC1C990F860093912D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7ABEE5C01C990F9F0093912D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7ABEE5C21C990FB20093912D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		7AD16D3E1C9BFE9100DC275C /* ForgetThePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetThePasswordViewController.h; sourceTree = "<group>"; };
+
+7AD2D52A1C9E6B2200298043 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		7AD2D52B1C9E6B2200298043 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		7AD2D52D1C9E6C9C00298043 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7AD2D52F1C9E6DEF00298043 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7AD2D5301C9E6DEF00298043 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7AD2D5321C9E799600298043 /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
+		7AD2D5361C9E883100298043 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		7AD2D5381C9E884900298043 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7AD2D53A1C9E8A3D00298043 /* RoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadViewController.h; sourceTree = "<group>"; };
+		7AD2D53B1C9E8A3D00298043 /* RoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadViewController.m; sourceTree = "<group>"; };
+		7AD2D53E1C9E910900298043 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		7AD2D53F1C9E910900298043 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
+		7AD2D5401C9E910900298043 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderDelegate.h; sourceTree = "<group>"; };
+		7AD2D5411C9E910900298043 /* QRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderView.h; sourceTree = "<group>"; };
+		7AD2D5421C9E910900298043 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
+		7AD2D5431C9E910900298043 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
+		7AD2D5441C9E910900298043 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
+
+7AD16D3E1C9BFE9100DC275C /* ForgetThePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetThePasswordViewController.h; sourceTree = "<group>"; };
 		7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetThePasswordViewController.m; sourceTree = "<group>"; };
-		7AD3DB5B1C9A449A001065DF /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+
+7AD3DB5B1C9A449A001065DF /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
 		7AD3DB5C1C9A449A001065DF /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		7AD3DB5E1C9A557D001065DF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7AD3DB5F1C9A557D001065DF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -207,6 +263,9 @@
 				7A94AC201C9F792700E676E7 /* libsqlite3.tbd in Frameworks */,
 				7A1A66191C9E85AA00A48CD9 /* libc++.tbd in Frameworks */,
 				7A1A66171C9E859200A48CD9 /* libsqlite3.0.tbd in Frameworks */,
+				7AD2D5391C9E884900298043 /* Security.framework in Frameworks */,
+				7AD2D5371C9E883100298043 /* libstdc++.6.0.9.tbd in Frameworks */,
+				7AD2D52E1C9E6C9C00298043 /* AVFoundation.framework in Frameworks */,
 				7ABEE5C31C990FB20093912D /* libz.tbd in Frameworks */,
 				7ABEE5BF1C990F940093912D /* SystemConfiguration.framework in Frameworks */,
 				7A1A66141C9E84A800A48CD9 /* libWeChatSDK.a in Frameworks */,
@@ -220,6 +279,7 @@
 				7A1A66061C9E4E0400A48CD9 /* libWeiboSDK.a in Frameworks */,
 				7A1A65E91C9E49F400A48CD9 /* QuartzCore.framework in Frameworks */,
 				7ABEE5C11C990F9F0093912D /* CoreLocation.framework in Frameworks */,
+				7AD2D5341C9E799600298043 /* AMapLocationKit.framework in Frameworks */,
 				9E8886EC3A4E95DD8B0F807E /* libPods.a in Frameworks */,
 				7ABEE5BB1C990F2A0093912D /* AMapLocationKit.framework in Frameworks */,
 			);
@@ -241,6 +301,9 @@
 				7A1A65EC1C9E4A1F00A48CD9 /* Security.framework */,
 				7A1A65EA1C9E4A0000A48CD9 /* ImageIO.framework */,
 				7A1A65E81C9E49F400A48CD9 /* QuartzCore.framework */,
+				7AD2D5381C9E884900298043 /* Security.framework */,
+				7AD2D5361C9E883100298043 /* libstdc++.6.0.9.tbd */,
+				7AD2D52D1C9E6C9C00298043 /* AVFoundation.framework */,
 				7ABEE5C21C990FB20093912D /* libz.tbd */,
 				7ABEE5C01C990F9F0093912D /* CoreLocation.framework */,
 				7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */,
@@ -482,6 +545,9 @@
 		7A5CFAEC1C97C8C10002AF99 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7AD2D5321C9E799600298043 /* AMapLocationKit.framework */,
+				7A8131AA1C9BFF4100114348 /* UIView+YSTextInputKeyboard.h */,
+				7A8131AB1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m */,
 				7ABEE5BA1C990F2A0093912D /* AMapLocationKit.framework */,
 				7AA00C361C97E1AC00FD6D15 /* Reachability */,
 				7A5CFAED1C97C8C10002AF99 /* Header.h */,
@@ -518,10 +584,15 @@
 		7A5CFAF81C97C8C10002AF99 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7AD2D53D1C9E910900298043 /* QRCodeReaderViewController */,
 				7A5CFAF91C97C8C10002AF99 /* ServiceViewController.h */,
 				7A5CFAFA1C97C8C10002AF99 /* ServiceViewController.m */,
 				7A4055A71C9817490040895C /* ServicedidViewController.h */,
 				7A4055A81C9817490040895C /* ServicedidViewController.m */,
+				7AD2D52A1C9E6B2200298043 /* QRCodeViewController.h */,
+				7AD2D52B1C9E6B2200298043 /* QRCodeViewController.m */,
+				7A43EC581C9EAB5B00F880EF /* SYTCodeScanerViewController.h */,
+				7A43EC591C9EAB5B00F880EF /* SYTCodeScanerViewController.m */,
 				7AA00C411C97E87600FD6D15 /* service.plist */,
 			);
 			path = Controllers;
@@ -620,10 +691,21 @@
 		7ABEE5C51C99110C0093912D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7AD2D52F1C9E6DEF00298043 /* ViewController.h */,
+				7AD2D5301C9E6DEF00298043 /* ViewController.m */,
+				7A9F19281C9E4C6F0009758B /* CustomCalloutView.h */,
+				7A9F19291C9E4C6F0009758B /* CustomCalloutView.m */,
+				7A9F19251C9E4C3B0009758B /* CustomAnnotationView.h */,
+				7A9F19261C9E4C3B0009758B /* CustomAnnotationView.m */,
 				7A7EDBA71C993AAC00DC6EDF /* LocationViewController.h */,
 				7A7EDBA81C993AAC00DC6EDF /* LocationViewController.m */,
 				7A07F7A21C9AC750008532DE /* NearViewController.h */,
 				7A07F7A31C9AC750008532DE /* NearViewController.m */,
+				7AD2D53A1C9E8A3D00298043 /* RoadViewController.h */,
+				7AD2D53B1C9E8A3D00298043 /* RoadViewController.m */,
+				7AACECD91C9C207F00A34CC1 /* WeatherViewController.h */,
+				7AACECDA1C9C208000A34CC1 /* WeatherViewController.m */,
+				7AACECDC1C9C34D200A34CC1 /* WeatherStoryboard.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -640,6 +722,20 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7AD2D53D1C9E910900298043 /* QRCodeReaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2D53E1C9E910900298043 /* QRCameraSwitchButton.h */,
+				7AD2D53F1C9E910900298043 /* QRCameraSwitchButton.m */,
+				7AD2D5401C9E910900298043 /* QRCodeReaderDelegate.h */,
+				7AD2D5411C9E910900298043 /* QRCodeReaderView.h */,
+				7AD2D5421C9E910900298043 /* QRCodeReaderView.m */,
+				7AD2D5431C9E910900298043 /* QRCodeReaderViewController.h */,
+				7AD2D5441C9E910900298043 /* QRCodeReaderViewController.m */,
+			);
+			path = QRCodeReaderViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -722,6 +818,7 @@
 				7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */,
 				7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */,
 				7AA00C421C97E87600FD6D15 /* service.plist in Resources */,
+				7AACECDD1C9C34D200A34CC1 /* WeatherStoryboard.storyboard in Resources */,
 				7A0E43141C99986C0078D4A3 /* ServiceCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,10 +879,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A07F7A41C9AC750008532DE /* NearViewController.m in Sources */,
+				7A9F192A1C9E4C6F0009758B /* CustomCalloutView.m in Sources */,
 				7A5CFB121C980B4C0002AF99 /* NewsCollectionViewCell.m in Sources */,
 				7A7EDBA91C993AAC00DC6EDF /* LocationViewController.m in Sources */,
 				7AF172251C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m in Sources */,
+				7AACECDB1C9C208000A34CC1 /* WeatherViewController.m in Sources */,
 				7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */,
+				7AD2D5451C9E910900298043 /* QRCameraSwitchButton.m in Sources */,
+				7A9F19271C9E4C3B0009758B /* CustomAnnotationView.m in Sources */,
 				7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */,
 				7A5CFB0D1C97D8280002AF99 /* NewsModel.m in Sources */,
 				7A5CFB071C97C8C10002AF99 /* ProgressHUD.m in Sources */,
@@ -794,13 +895,22 @@
 				7A1A660D1C9E557100A48CD9 /* UIView+Extension.m in Sources */,
 				7A1A660A1C9E523200A48CD9 /* ShareView.m in Sources */,
 				7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */,
-				7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */,
-				7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */,
+
+7AD2D52C1C9E6B2200298043 /* QRCodeViewController.m in Sources */,
+				7AD2D5471C9E910900298043 /* QRCodeReaderViewController.m in Sources */,
+
+7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */,
+
+7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */,
+				7AD2D5461C9E910900298043 /* QRCodeReaderView.m in Sources */,
 				7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */,
+				7A8131AC1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m in Sources */,
+				7AD2D5311C9E6DEF00298043 /* ViewController.m in Sources */,
 				7AEE4A0C1C97F6260081FBC6 /* LuoyangNews.m in Sources */,
 				7A7073C21C9CF3CE00D13F7B /* DiscussViewController.m in Sources */,
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
 				7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */,
+				7AD2D53C1C9E8A3D00298043 /* RoadViewController.m in Sources */,
 				7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */,
 				7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */,
 				7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */,
@@ -813,6 +923,7 @@
 				7AD3DB5D1C9A449A001065DF /* TitleViewController.m in Sources */,
 				7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */,
 				7A5CFB051C97C8C10002AF99 /* HWTools.m in Sources */,
+				7A43EC5A1C9EAB5B00F880EF /* SYTCodeScanerViewController.m in Sources */,
 				7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */,
 				7A5CFB041C97C8C10002AF99 /* NewsViewController.m in Sources */,
 				7AEE4A161C980ED40081FBC6 /* NewsDetailViewController.m in Sources */,

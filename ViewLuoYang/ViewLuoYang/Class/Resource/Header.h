@@ -48,7 +48,9 @@
 
 
 
-
+#define kDefaultLocationZoomLevel       16.1
+#define kDefaultControlMargin           22
+#define kDefaultCalloutViewMargin       -8
 
 //新浪微博
 #define kAppKey @"975231233"
