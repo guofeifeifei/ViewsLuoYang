@@ -59,10 +59,14 @@ install_resource()
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "AMap2DMap/MAMapKit.framework/AMap.bundle"
+  install_resource "AMapNavi/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMap.bundle"
+  install_resource "AMapNavi/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMapNavi.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "AMap2DMap/MAMapKit.framework/AMap.bundle"
+  install_resource "AMapNavi/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMap.bundle"
+  install_resource "AMapNavi/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMapNavi.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
 fi
 
