@@ -24,6 +24,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+    //新浪微博分享
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:kAppKey];
+    [WXApi registerApp:kWeixinAppSecret];
+    
+    
+    
     [AMapSearchServices sharedServices].apiKey = kLocationApk;
     
     [AMapLocationServices sharedServices].apiKey = kLocationApk;
@@ -111,6 +118,27 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+
+
+
+#pragma mark ------- shareWeibo
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
+    BOOL isSuc = [WXApi handleOpenURL:url delegate:self];
+    NSLog(@"url %@ isSuc %d",url,isSuc == YES ? 1 : 0);
+    return  isSuc;
+    
+    return [WeiboSDK handleOpenURL:url delegate:self];
+    
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
