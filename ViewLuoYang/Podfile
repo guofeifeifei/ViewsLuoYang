@@ -5,4 +5,3 @@ pod 'MJRefresh'
 pod 'AMapLocation', '~> 1.2.0'
 pod 'AMap2DMap', '~> 3.3.0'
 pod 'AMapSearch', '~> 3.3.0'
-

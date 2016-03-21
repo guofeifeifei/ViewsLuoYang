@@ -32,13 +32,11 @@
 		7A5CFB1A1C9845060002AF99 /* TouchItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFB191C9845060002AF99 /* TouchItems.plist */; };
 		7A7073C21C9CF3CE00D13F7B /* DiscussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7073C11C9CF3CE00D13F7B /* DiscussViewController.m */; };
 		7A7EDBA91C993AAC00DC6EDF /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EDBA81C993AAC00DC6EDF /* LocationViewController.m */; };
-7A8131AC1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8131AB1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m */; };
+		7A8131AC1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8131AB1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m */; };
+		7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */; };
 		7A9F19271C9E4C3B0009758B /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F19261C9E4C3B0009758B /* CustomAnnotationView.m */; };
 		7A9F192A1C9E4C6F0009758B /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F19291C9E4C6F0009758B /* CustomCalloutView.m */; };
-
-7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */; };
-
-7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
+		7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
 		7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C391C97E1AC00FD6D15 /* Reachability.m */; };
 		7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3A1C97E1AC00FD6D15 /* README.md */; };
 		7AA00C401C97E1AC00FD6D15 /* ZMYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA00C3C1C97E1AC00FD6D15 /* ZMYNetManager.m */; };
@@ -50,9 +48,9 @@
 		7ABEE5BF1C990F940093912D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */; };
 		7ABEE5C11C990F9F0093912D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5C01C990F9F0093912D /* CoreLocation.framework */; };
 		7ABEE5C31C990FB20093912D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5C21C990FB20093912D /* libz.tbd */; };
-7AD2D52C1C9E6B2200298043 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D52B1C9E6B2200298043 /* QRCodeViewController.m */; };
+		7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */; };
+		7AD2D52C1C9E6B2200298043 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D52B1C9E6B2200298043 /* QRCodeViewController.m */; };
 		7AD2D52E1C9E6C9C00298043 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D52D1C9E6C9C00298043 /* AVFoundation.framework */; };
-		7AD2D5311C9E6DEF00298043 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D5301C9E6DEF00298043 /* ViewController.m */; };
 		7AD2D5341C9E799600298043 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5321C9E799600298043 /* AMapLocationKit.framework */; };
 		7AD2D5371C9E883100298043 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5361C9E883100298043 /* libstdc++.6.0.9.tbd */; };
 		7AD2D5391C9E884900298043 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5381C9E884900298043 /* Security.framework */; };
@@ -60,10 +58,7 @@
 		7AD2D5451C9E910900298043 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D53F1C9E910900298043 /* QRCameraSwitchButton.m */; };
 		7AD2D5461C9E910900298043 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D5421C9E910900298043 /* QRCodeReaderView.m */; };
 		7AD2D5471C9E910900298043 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D5441C9E910900298043 /* QRCodeReaderViewController.m */; };
-
-7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */; };
-
-7AD3DB5D1C9A449A001065DF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5C1C9A449A001065DF /* TitleViewController.m */; };
+		7AD3DB5D1C9A449A001065DF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5C1C9A449A001065DF /* TitleViewController.m */; };
 		7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5F1C9A557D001065DF /* LoginViewController.m */; };
 		7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */; };
 		7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB691C9AC99A001065DF /* RegisterViewController.m */; };
@@ -130,18 +125,15 @@
 		7A7073C11C9CF3CE00D13F7B /* DiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussViewController.m; sourceTree = "<group>"; };
 		7A7EDBA71C993AAC00DC6EDF /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		7A7EDBA81C993AAC00DC6EDF /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
-
-7A8131AA1C9BFF4100114348 /* UIView+YSTextInputKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSTextInputKeyboard.h"; sourceTree = "<group>"; };
+		7A8131AA1C9BFF4100114348 /* UIView+YSTextInputKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSTextInputKeyboard.h"; sourceTree = "<group>"; };
 		7A8131AB1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSTextInputKeyboard.m"; sourceTree = "<group>"; };
+		7A93966B1C9D5BAE0008DC18 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
+		7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
 		7A9F19251C9E4C3B0009758B /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
 		7A9F19261C9E4C3B0009758B /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
 		7A9F19281C9E4C6F0009758B /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
 		7A9F19291C9E4C6F0009758B /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
-
-7A93966B1C9D5BAE0008DC18 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
-		7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
-
-7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
+		7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
 		7AA00C381C97E1AC00FD6D15 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7AA00C391C97E1AC00FD6D15 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7AA00C3A1C97E1AC00FD6D15 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -156,12 +148,11 @@
 		7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7ABEE5C01C990F9F0093912D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7ABEE5C21C990FB20093912D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-
-7AD2D52A1C9E6B2200298043 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		7AD16D3E1C9BFE9100DC275C /* ForgetThePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetThePasswordViewController.h; sourceTree = "<group>"; };
+		7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetThePasswordViewController.m; sourceTree = "<group>"; };
+		7AD2D52A1C9E6B2200298043 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		7AD2D52B1C9E6B2200298043 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		7AD2D52D1C9E6C9C00298043 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		7AD2D52F1C9E6DEF00298043 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7AD2D5301C9E6DEF00298043 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7AD2D5321C9E799600298043 /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		7AD2D5361C9E883100298043 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		7AD2D5381C9E884900298043 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -174,11 +165,7 @@
 		7AD2D5421C9E910900298043 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
 		7AD2D5431C9E910900298043 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
 		7AD2D5441C9E910900298043 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
-
-7AD16D3E1C9BFE9100DC275C /* ForgetThePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetThePasswordViewController.h; sourceTree = "<group>"; };
-		7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetThePasswordViewController.m; sourceTree = "<group>"; };
-
-7AD3DB5B1C9A449A001065DF /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		7AD3DB5B1C9A449A001065DF /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
 		7AD3DB5C1C9A449A001065DF /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		7AD3DB5E1C9A557D001065DF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7AD3DB5F1C9A557D001065DF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -575,8 +562,6 @@
 		7ABEE5C51C99110C0093912D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7AD2D52F1C9E6DEF00298043 /* ViewController.h */,
-				7AD2D5301C9E6DEF00298043 /* ViewController.m */,
 				7A9F19281C9E4C6F0009758B /* CustomCalloutView.h */,
 				7A9F19291C9E4C6F0009758B /* CustomCalloutView.m */,
 				7A9F19251C9E4C3B0009758B /* CustomAnnotationView.h */,
@@ -775,17 +760,13 @@
 				7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */,
 				7A5CFB031C97C8C10002AF99 /* MessageViewController.m in Sources */,
 				7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */,
-
-7AD2D52C1C9E6B2200298043 /* QRCodeViewController.m in Sources */,
+				7AD2D52C1C9E6B2200298043 /* QRCodeViewController.m in Sources */,
 				7AD2D5471C9E910900298043 /* QRCodeReaderViewController.m in Sources */,
-
-7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */,
-
-7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */,
+				7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */,
+				7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */,
 				7AD2D5461C9E910900298043 /* QRCodeReaderView.m in Sources */,
 				7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */,
 				7A8131AC1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m in Sources */,
-				7AD2D5311C9E6DEF00298043 /* ViewController.m in Sources */,
 				7AEE4A0C1C97F6260081FBC6 /* LuoyangNews.m in Sources */,
 				7A7073C21C9CF3CE00D13F7B /* DiscussViewController.m in Sources */,
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
@@ -918,7 +899,7 @@
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -937,7 +918,7 @@
 				INFOPLIST_FILE = ViewLuoYang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
