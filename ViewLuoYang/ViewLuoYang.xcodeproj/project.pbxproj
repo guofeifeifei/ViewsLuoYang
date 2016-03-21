@@ -68,7 +68,6 @@
 		7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */; };
 		7AD2D52C1C9E6B2200298043 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D52B1C9E6B2200298043 /* QRCodeViewController.m */; };
 		7AD2D52E1C9E6C9C00298043 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D52D1C9E6C9C00298043 /* AVFoundation.framework */; };
-		7AD2D5311C9E6DEF00298043 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D5301C9E6DEF00298043 /* ViewController.m */; };
 		7AD2D5341C9E799600298043 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5321C9E799600298043 /* AMapLocationKit.framework */; };
 		7AD2D5371C9E883100298043 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5361C9E883100298043 /* libstdc++.6.0.9.tbd */; };
 		7AD2D5391C9E884900298043 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5381C9E884900298043 /* Security.framework */; };
@@ -204,8 +203,6 @@
 		7AD2D52A1C9E6B2200298043 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		7AD2D52B1C9E6B2200298043 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		7AD2D52D1C9E6C9C00298043 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		7AD2D52F1C9E6DEF00298043 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7AD2D5301C9E6DEF00298043 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7AD2D5321C9E799600298043 /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		7AD2D5361C9E883100298043 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		7AD2D5381C9E884900298043 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -684,8 +681,6 @@
 		7ABEE5C51C99110C0093912D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7AD2D52F1C9E6DEF00298043 /* ViewController.h */,
-				7AD2D5301C9E6DEF00298043 /* ViewController.m */,
 				7A9F19281C9E4C6F0009758B /* CustomCalloutView.h */,
 				7A9F19291C9E4C6F0009758B /* CustomCalloutView.m */,
 				7A9F19251C9E4C3B0009758B /* CustomAnnotationView.h */,
@@ -895,7 +890,6 @@
 				7AD2D5461C9E910900298043 /* QRCodeReaderView.m in Sources */,
 				7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */,
 				7A8131AC1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m in Sources */,
-				7AD2D5311C9E6DEF00298043 /* ViewController.m in Sources */,
 				7AEE4A0C1C97F6260081FBC6 /* LuoyangNews.m in Sources */,
 				7A7073C21C9CF3CE00D13F7B /* DiscussViewController.m in Sources */,
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
@@ -1066,7 +1060,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1122,7 +1116,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

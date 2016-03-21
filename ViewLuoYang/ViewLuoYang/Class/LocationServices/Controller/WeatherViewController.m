@@ -13,7 +13,7 @@
     AMapSearchAPI *_search;
 }
 
-@property(nonatomic, strong) UILongPressGestureRecognizer *longPressGesture;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *cityLable;
 @property (weak, nonatomic) IBOutlet UILabel *wearthLable;
@@ -38,23 +38,6 @@
 @end
 
 @implementation WeatherViewController
-- (UILongPressGestureRecognizer *)longPressGesture{
-    if (_longPressGesture == nil) {
-        NSLog(@"长按手势");
-        self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(hanleLongPress:)];
-        self.longPressGesture.delegate = self;
-        self.longPressGesture.minimumPressDuration = 1;
-        self.longPressGesture.numberOfTouchesRequired = 1;
-        
-        //  _mapView.userInteractionEnabled = YES;
-    }
-    return _longPressGesture;
-    
-    
-}
-- (void)hanleLongPress:(UILongPressGestureRecognizer *)ges{
-    NSLog(@"长按手势成功");
-}
 - (void)initWeather{
     //构造AMapWeatherSearchRequest对象，配置查询参数
     AMapWeatherSearchRequest *request = [[AMapWeatherSearchRequest alloc] init];
@@ -84,7 +67,6 @@
     _search = [[AMapSearchAPI alloc] init];
     _search.delegate = self;
     
-    [self.view addGestureRecognizer:self.longPressGesture];
     
     
     if (self.currentLocation) {
@@ -305,7 +287,7 @@
             break;
         }
     }
-    return week;
+    return nil;
 }
 
 - (void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest *)request response:(AMapReGeocodeSearchResponse *)response{
