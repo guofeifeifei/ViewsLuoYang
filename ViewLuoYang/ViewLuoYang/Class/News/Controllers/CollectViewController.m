@@ -7,8 +7,11 @@
 //
 
 #import "CollectViewController.h"
+#import "CollectTableViewCell.h"
+@interface CollectViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@interface CollectViewController ()
+@property (nonatomic, strong) UITableView *tableView;
+
 
 @end
 
@@ -19,8 +22,64 @@
     // Do any additional setup after loading the view.
     [self showBarButtonWithImage:@"back_arrow"];
     self.title = @"我的收藏";
-    self.view.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:self.tableView];
+    
+    
+    
+    
+    
+    
 }
+
+
+#pragma mark ------------ UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    static NSString *cellIndentifiter = @"cellIndentifiter";
+    CollectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifiter];
+    if (cell == nil) {
+        cell = [[CollectTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIndentifiter];
+        
+        cell.backgroundColor = [UIColor cyanColor];
+        
+        
+    }
+    
+    return cell;
+}
+
+#pragma mark ------------- UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    
+    
+}
+
+
+
+
+
+#pragma mark --------------- lazt Loading
+- (UITableView *)tableView{
+    if (_tableView == nil) {
+        self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+        self.tableView.rowHeight = 120;
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        
+    }
+    return _tableView;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

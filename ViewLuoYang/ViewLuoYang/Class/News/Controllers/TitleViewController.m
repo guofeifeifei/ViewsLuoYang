@@ -12,6 +12,9 @@
 #import "CollectViewController.h"
 #import "ShareView.h"
 @interface TitleViewController ()<UIWebViewDelegate>
+{
+    NSInteger i ;
+}
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIButton *discussBtn;//评论
@@ -55,7 +58,7 @@
     if (_activity == nil) {
         //刷新
         self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        self.activity.backgroundColor = barColor;
+//        self.activity.backgroundColor = barColor;
         //显示位置
         self.activity.center = self.scrollView.center;
 
@@ -147,13 +150,24 @@
              点击收藏是的接口：http://shouji.lyd.com.cn/tools/user/addFavorite
              打开收藏页面接口：http://hm.baidu.com/hm.gif?cc=0&ck=1&cl=32-bit&ds=320x570&ep=124629%2C124630&et=3&ja=1&ln=zh-CN&lo=0&lt=1458353341&nv=0&rnd=317449245&si=22a1fd52d71d27a688f488ceb244d3f8&st=4&v=1.1.26&lv=2
 */
-            
-            
-            //收藏
-            [self.collectBtn setImage:[UIImage imageNamed:@"people_star"] forState:UIControlStateNormal];
-            
-            [ProgressHUD showSuccess:@"收藏成功"];
-            
+        //收藏
+            i +=1;
+            if (i % 2 == 0) {
+                [self.collectBtn setImage:[UIImage imageNamed:@"recom_collection_02n"] forState:UIControlStateNormal];
+                [ProgressHUD showSuccess:@"取消收藏"];
+                
+                
+                
+                
+                
+            }else{
+                [self.collectBtn setImage:[UIImage imageNamed:@"people_star"] forState:UIControlStateNormal];
+                [ProgressHUD showSuccess:@"收藏成功"];
+                
+                
+    
+            }
+    
         }
             
             break;
@@ -182,6 +196,7 @@
 
 - (void)share{
     UIWindow *window = [[UIApplication sharedApplication ].delegate window];
+    
     
     ShareView *shareView = [[ShareView alloc] init];
     //属性传值，把需要分享用到的url传到下一页
