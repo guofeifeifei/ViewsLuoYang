@@ -10,13 +10,17 @@
 #import "DiscussViewController.h"
 #import "ProgressHUD.h"
 #import "CollectViewController.h"
-@interface TitleViewController ()
+#import "ShareView.h"
+@interface TitleViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIButton *discussBtn;//评论
 @property (nonatomic, strong) UIButton *collectBtn;//收藏
 @property (nonatomic, strong) UIButton *shareBtn;//分享
 @property (nonatomic, strong) UIButton *rightBtn;
+@property(nonatomic, strong) UIActivityIndicatorView *activity;//刷新图标
+
+@property (nonatomic, copy) NSString *url;//传网址
 
 @end
 
@@ -29,12 +33,12 @@
     self.title = @"电子报";
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.webView];
+    [self.scrollView addSubview:self.activity];
     [self.view addSubview:self.discussBtn];
     [self.view addSubview:self.collectBtn];
     [self.view addSubview:self.shareBtn];
     
-    
-    
+  
     self.rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.rightBtn.frame = CGRectMake(0, 0, 60, 44);
     [self.rightBtn setTitle:@"已收藏" forState:UIControlStateNormal];
@@ -44,11 +48,20 @@
     UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
     rightBarBtn.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightBarBtn;
-    
-
 }
 
 #pragma mark -------- lazyLoading
+- (UIActivityIndicatorView *)activity{
+    if (_activity == nil) {
+        //刷新
+        self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        self.activity.backgroundColor = barColor;
+        //显示位置
+        self.activity.center = self.scrollView.center;
+
+    }
+    return _activity;
+}
 
 - (UIScrollView *)scrollView{
     if (_scrollView == nil) {
@@ -61,7 +74,9 @@
 - (UIWebView *)webView{
     if (_webView == nil) {
         self.webView = [[UIWebView alloc] initWithFrame:self.scrollView.frame];
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@/%@",kArticle,self.paperId,self.nsid]]];
+        self.url = [NSString stringWithFormat:@"%@/%@/%@",kArticle,self.paperId,self.nsid];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
+        self.webView.delegate = self;
         [self.webView loadRequest:request];
         
     }
@@ -139,9 +154,6 @@
             
             [ProgressHUD showSuccess:@"收藏成功"];
             
-            
-            
-            
         }
             
             break;
@@ -169,13 +181,27 @@
 }
 
 - (void)share{
+    UIWindow *window = [[UIApplication sharedApplication ].delegate window];
     
+    ShareView *shareView = [[ShareView alloc] init];
+    //属性传值，把需要分享用到的url传到下一页
+    shareView.url = self.url;
     
+    [window addSubview:shareView];
+    return;
     
-    }
+}
 
-    
-    
+
+//刷新方法：
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    [self.activity startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [self.activity stopAnimating];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
