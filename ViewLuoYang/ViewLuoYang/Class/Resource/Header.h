@@ -48,6 +48,8 @@
 
 
 
-
+#define kDefaultLocationZoomLevel       16.1
+#define kDefaultControlMargin           22
+#define kDefaultCalloutViewMargin       -8
 
 #endif /* Header_h */
