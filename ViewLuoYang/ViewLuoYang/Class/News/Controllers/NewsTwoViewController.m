@@ -12,7 +12,8 @@
 static NSString *itemIntentfier = @"itemIdentifier";
 @interface NewsTwoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, retain) UICollectionView *collectionView;
-@property (nonatomic, strong) NSMutableArray *nsidArray;//图片Id
+
+@property (nonatomic, copy) NSString *nsid;
 @property (nonatomic, copy) NSString *all;//拼接生成一个字符串
 @end
 @implementation NewsTwoViewController
@@ -54,11 +55,16 @@ static NSString *itemIntentfier = @"itemIdentifier";
         NSDictionary *dic = responseObject;
         NSDictionary *dataDic = dic[@"data"];
         NSArray *areamaplistArray = dataDic[@"areamaplist"];
-        for (NSDictionary *dict in areamaplistArray) {
-            [self.nsidArray addObject:dict[@"nsid"]];
+        if (areamaplistArray.count >= 1) {
+            NSDictionary *dict = areamaplistArray[0];
+            self.nsid = dict[@"nsid"];
         }
+ 
         [self.view addSubview:self.collectionView];
         [self.collectionView reloadData];
+        
+        
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZPFLog(@"error = %@",error);
     }];
@@ -67,7 +73,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
 #pragma mark ---------- UICollectionViewDataSource
 //返回的是Item的个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.nsidArray.count;
+    return 1;
 }
 
 //返回一个分区
@@ -76,7 +82,6 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     NewsScondCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
     [cell.image sd_setImageWithURL:[NSURL URLWithString:self.image] placeholderImage:nil];
     return cell;
 }
@@ -87,7 +92,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
     //往第三页面传值
     titleVC.periodId = self.periodId;
     titleVC.paperId = self.paperId;
-    titleVC.nsid = self.nsidArray[indexPath.row];
+    titleVC.nsid = self.nsid;
     [self.navigationController pushViewController:titleVC animated:YES];
 }
 #pragma mark ---------- lazy Loading
@@ -118,12 +123,6 @@ static NSString *itemIntentfier = @"itemIdentifier";
     return _collectionView;
 }
 
-- (NSMutableArray *)nsidArray{
-    if (_nsidArray == nil) {
-        self.nsidArray = [NSMutableArray new];
-    }
-    return _nsidArray;
-}
 
 //当页面将要出现的时候隐藏tabBar
 - (void)viewWillAppear:(BOOL)animated{

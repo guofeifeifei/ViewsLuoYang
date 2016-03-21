@@ -35,7 +35,7 @@
     UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithCustomView:self.sendBtn];
     rightBarBtn.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightBarBtn;
-    
+
 }
 
 #pragma mark ------------- lazy Loading

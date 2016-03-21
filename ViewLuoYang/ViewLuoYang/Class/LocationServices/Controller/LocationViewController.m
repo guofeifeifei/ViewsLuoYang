@@ -44,12 +44,11 @@
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight)];
     _mapView.delegate = self;
   self.titles = @"洛阳";
-   // _mapView.showsUserLocation = YES;
+
     _mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
     _mapView.compassOrigin = CGPointMake(_mapView.compassOrigin.x, 22);
     _mapView.scaleOrigin = CGPointMake(_mapView.scaleOrigin.x, 22);
         [self.view addSubview:_mapView];
-
 
     
 }
@@ -188,12 +187,6 @@
           
              [self.searchBar resignFirstResponder];
    
-    
-    
-    
-    
-
-    
     
     
 }
