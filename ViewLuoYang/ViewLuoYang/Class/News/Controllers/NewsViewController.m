@@ -185,19 +185,31 @@ static NSString *itemIntentfier = @"itemIdentifier";
     return 1;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NewsModel *model = self.allNewsArray[indexPath.row];
+
     NewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
-    cell.titleLable.text=model.periodName;
-    [cell.image sd_setImageWithURL:[NSURL URLWithString:model.periodImage] placeholderImage:nil];
+    
+    if (self.allNewsArray.count > 0) {
+        NewsModel *model = self.allNewsArray[indexPath.row];
+        
+        
+        //当是第一个item的时候，出现最新
+        if (indexPath.row == 0) {
+            cell.titleLable.text = @"最新";
+        }else{
+            cell.titleLable.text=model.periodName;
+        }
+        
+        [cell.image sd_setImageWithURL:[NSURL URLWithString:model.periodImage] placeholderImage:nil];
+    }
+    
     return cell;
 }
 #pragma mark -------- 点击选择哪个图片
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    NewsModel *model = self.allNewsArray[indexPath.row];
-
     NewsTwoViewController *newsTwoVC = [[NewsTwoViewController alloc] init];
+    
+    NewsModel *model = self.allNewsArray[indexPath.row];
     
     newsTwoVC.image = model.periodImage;
     newsTwoVC.periodId = model.periodId;
