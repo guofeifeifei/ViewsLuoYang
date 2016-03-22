@@ -10,10 +10,12 @@
 #import <MAMapKit/MAMapKit.h>
 
 #import <AMapSearchKit/AMapSearchKit.h>
-
-
+@protocol AnnotationValeDelegate <NSObject>
+- (void)AMapPOIValeDelegate:(AMapPOI *) poi;
+@end
 @interface NearViewController : UIViewController
 @property(nonatomic, strong) CLLocation *currentLocation;
 @property(nonatomic, copy) NSString *titleCty;
 @property(nonatomic, copy) NSString *address;
+@property(nonatomic, assign) id<AnnotationValeDelegate> delegate;
 @end

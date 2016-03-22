@@ -11,6 +11,7 @@
 #import "NewsModel.h"
 #import <MJRefresh/MJRefresh.h>
 #import "NewsTwoViewController.h"
+#import "ZMYNetManager.h"
 static NSString *itemIntentfier = @"itemIdentifier";
 @interface NewsViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
@@ -34,7 +35,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self showBarButtonWithcode];
     self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"newspaper_bg"]];
     //去掉navigation下一条黑色的线条
@@ -60,9 +61,8 @@ static NSString *itemIntentfier = @"itemIdentifier";
         //网络请求
         _pageCount=1;
         self.isRefresh=YES;
-        [self.allNewsArray removeAllObjects];
         [self dataLoad];
-        [self.collectionView.mj_header endRefreshing];
+        
     }];
     
     //上拉加载
@@ -73,8 +73,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
         _pageCount+=1;
         self.isRefresh=NO;
         [self dataLoad];
-        
-        [self.collectionView.mj_footer endRefreshing];
+
     }];
     
 }
@@ -149,6 +148,25 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 //解析数据
 - (void)dataLoad{
+    
+    if (![ZMYNetManager shareZMYNetManager].isZMYNetWorkRunning) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您的网络有问题，请检查网络" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            ZPFLog(@"确定");
+        }];
+        UIAlertAction *quxiao = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            ZPFLog(@"取消");
+        }];
+        //
+        [alert addAction:action];
+        [alert addAction:quxiao];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    
+    
+    
+    
+    
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [sessionManager GET:[NSString stringWithFormat:@"%@%@/12?_fs=2&_vc=58",self.urlString,@(_pageCount)] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -168,8 +186,10 @@ static NSString *itemIntentfier = @"itemIdentifier";
             [newModel setValuesForKeysWithDictionary:dict];
             [self.allNewsArray addObject:newModel];
         }
-         [self.view addSubview:self.collectionView];
-       [self.collectionView reloadData];
+        [self.view addSubview:self.collectionView];
+        [self.collectionView reloadData];
+        [self.collectionView.mj_header endRefreshing];
+        [self.collectionView.mj_footer endRefreshing];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZPFLog(@"error = %@",error);

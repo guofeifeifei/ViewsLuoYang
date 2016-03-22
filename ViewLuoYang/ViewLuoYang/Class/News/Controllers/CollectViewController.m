@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UITableView *tableView;
 //@property (nonatomic, strong) UIButton *button;//清除收藏按钮
 
+
 @end
 
 @implementation CollectViewController
@@ -58,6 +59,7 @@
 //        
 //        [self.tableView.mj_footer endRefreshing];
 //    }];
+    [self.view addSubview:self.tableView];
     
 }
 
@@ -73,22 +75,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
     static NSString *cellIndentifiter = @"cellIndentifiter";
     CollectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifiter];
     if (cell == nil) {
         cell = [[CollectTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIndentifiter];
-        
-//        cell.backgroundColor = [UIColor yellowColor];
-        //赋值
-        
         cell.detailTextLabel.text = self.urlArray[indexPath.row];
-        
-    
-        
     }
-    
     return cell;
 }
 
@@ -106,12 +98,11 @@
 
 
 
-
-
 #pragma mark --------------- lazt Loading
 - (UITableView *)tableView{
     if (_tableView == nil) {
         self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - 125)];
+
         self.tableView.rowHeight = 120;
         self.tableView.delegate = self;
         self.tableView.dataSource = self;

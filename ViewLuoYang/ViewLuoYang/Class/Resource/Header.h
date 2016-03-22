@@ -44,9 +44,26 @@
 #define kService @"http://shouji.lyd.com.cn/tools/webapi/applist?v=1&_fs=2&_vc=58"
 //地图apk
 #define kLocationApk @"915e846f3b554a833db84b2cc492d5eb"
+#define kYouMengAppkey @"56efd66ce0f55acc290023d2"
 
 
 
+#define kDefaultLocationZoomLevel       16.1
+#define kDefaultControlMargin           22
+#define kDefaultCalloutViewMargin       -8
+
+//新浪微博
+#define kAppKey @"975231233"
+#define kAppSecret @"    a66bf4566ab4d9e80e836cb9ea97e34f"
+#define kRedirectURL @"https://api.weibo.com/oauth2/default.html"
+
+
+//微信分享
+#define kWeixinAppID @"wxe708257a8ab89351"
+#define kWeixinAppSecret @"8f7611e414bc24a57d99e5abd438e7aa"
+#define kWeixinRedirectURL
+////bmob
+//#define kBmobAppKey @""
 
 
 

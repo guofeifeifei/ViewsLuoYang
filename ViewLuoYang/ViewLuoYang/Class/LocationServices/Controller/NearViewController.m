@@ -31,6 +31,7 @@
     [self.view addSubview:self.tableView];
     [self headView];
     [self initSearch];
+    [self showBarButtonWithImage:@"back_arrow"];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellInder = @"cell";
@@ -42,7 +43,7 @@
     NSLog(@"%@", poi);
     cell.textLabel.text = poi.name;
     cell.detailTextLabel.text = poi.name;
-    cell.backgroundColor = [UIColor orangeColor];
+    cell.backgroundColor = barColor;
     cell.backgroundColor = [UIColor cyanColor];
     return cell;
     
@@ -51,6 +52,18 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.pois.count;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+       AMapPOI *poi = _pois[indexPath.row];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(AMapPOIValeDelegate:)]) {
+        [self.delegate AMapPOIValeDelegate:poi];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+
+    
+}
+
 - (UITableView *)tableView{
     if (_tableView == nil) {
         self.tableView  = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight) style:UITableViewStylePlain];
@@ -116,7 +129,7 @@
     // 汽车服务|汽车销售|汽车维修|摩托车服务|餐饮服务|购物服务|生活服务|体育休闲服务|
     // 医疗保健服务|住宿服务|风景名胜|商务住宅|政府机构及社会团体|科教文化服务|
     // 交通设施服务|金融保险服务|公司企业|道路附属设施|地名地址信息|公共设施
-   request.types = @"餐饮服务|生活服务";
+  // request.types = @"餐饮服务|生活服务";
     request.sortrule = 0;
     request.requireExtension = YES;
     
@@ -139,7 +152,7 @@
         // [_mapView removeAnnotations:_annottaions];
         [_annotations removeAllObjects];
         
-        
+     
     }
     
 

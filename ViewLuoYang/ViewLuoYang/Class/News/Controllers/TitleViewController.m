@@ -11,7 +11,6 @@
 #import "ProgressHUD.h"
 #import "CollectViewController.h"
 #import "ShareView.h"
-
 #import "Collect.h"
 #import "DataBaseManger.h"
 
@@ -74,6 +73,7 @@
         //刷新
         self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         self.activity.backgroundColor = barColor;
+
         //显示位置
         self.activity.center = self.scrollView.center;
 
@@ -164,34 +164,33 @@
             break;
         case 2:
         {
-            /*
-             点击收藏是的接口：http://shouji.lyd.com.cn/tools/user/addFavorite
-             打开收藏页面接口：http://hm.baidu.com/hm.gif?cc=0&ck=1&cl=32-bit&ds=320x570&ep=124629%2C124630&et=3&ja=1&ln=zh-CN&lo=0&lt=1458353341&nv=0&rnd=317449245&si=22a1fd52d71d27a688f488ceb244d3f8&st=4&v=1.1.26&lv=2
-*/
-            
-            
-            //收藏
+                    //收藏
             i +=1;
             if (i % 2 == 0) {
                 [self.collectBtn setImage:[UIImage imageNamed:@"recom_collection_02n"] forState:UIControlStateNormal];
                 [ProgressHUD showSuccess:@"取消收藏"];
+                
                 //删除url
+                
                 [dbManger deleteLinkManWithUrl:self.url];
                 
                 
             }else{
                 [self.collectBtn setImage:[UIImage imageNamed:@"people_star"] forState:UIControlStateNormal];
                 [ProgressHUD showSuccess:@"收藏成功"];
-                
                 Collect *shoucang = [Collect collectWithUrl:self.url];
                 //添加url
                 [dbManger insertIntoNewUrl:shoucang];
                 
            
             
+   
+    
+            }
+    
+
         }
-        }
-            
+
             break;
         case 3:
         {

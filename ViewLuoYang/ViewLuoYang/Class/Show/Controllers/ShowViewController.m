@@ -50,6 +50,7 @@ static NSString *str=@"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self showBarButtonWithcode];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
     self.automaticallyAdjustsScrollViewInsets=NO;
@@ -59,15 +60,17 @@ static NSString *str=@"cell";
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor] , NSFontAttributeName:[UIFont systemFontOfSize:18.0f]}];
-    
+   
     _pageCount=1;
     //先放入第一个左边的视图
-    NSBundle *boundle=[NSBundle mainBundle];
-    NSArray *obj=[boundle loadNibNamed:@"letfView" owner:self options:nil];
-    
-    self.leftMenuView=[obj lastObject];
-    self.leftMenuView.frame=CGRectMake(0, 0, KScreenWidth,KScreenHeight);
-    [self.view addSubview:self.leftMenuView];
+//    NSBundle *boundle=[NSBundle mainBundle];
+//    NSArray *obj=[boundle loadNibNamed:@"letfView" owner:self options:nil];
+//    
+//    self.leftMenuView=[obj lastObject];
+//    self.leftMenuView.frame=CGRectMake(-100, 0, KScreenWidth,KScreenHeight);
+//    [self.view addSubview:self.leftMenuView];
+//    [self.navigationController.view.superview addSubview:self.leftMenuView];
+//    [self.navigationController.view.superview sendSubviewToBack:self.leftMenuView];
     
     [self.view addSubview:self.contenceView];
     [self customViewBtn];
@@ -77,6 +80,16 @@ static NSString *str=@"cell";
     [self getPhotoData];
     //加载刷新
     [self setupRefresh];
+    
+    
+    //左侧按钮
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 25, 25);
+    [leftBtn setImage:[UIImage imageNamed:@"ic_select_phost_lz_on"] forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = leftBar;
+    
     
     
     
@@ -252,9 +265,10 @@ static NSString *str=@"cell";
         self.contenceView=[[UIView alloc]initWithFrame:CGRectMake(0,44, screen.size.width, screen.size.height)];
         centerX = screen.size.width / 2;
         centerY = (screen.size.height)/ 2+44;
-        //        self.contenceView.backgroundColor = [UIColor greenColor];
-        panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-        [self.contenceView addGestureRecognizer:panGestureRecognizer];
+//                self.contenceView.backgroundColor = [UIColor greenColor];
+//        panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+//        [self.contenceView addGestureRecognizer:panGestureRecognizer];
+        
     }
     
     return _contenceView;
@@ -493,6 +507,12 @@ static NSString *str=@"cell";
 
 
 
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    
+//    self.tabBarController.tabBar.hidden = NO;
+//}
 
 
 
