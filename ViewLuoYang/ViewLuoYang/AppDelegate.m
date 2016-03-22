@@ -48,26 +48,13 @@
     //导航栏颜色
     showNav.navigationBar.barTintColor = barColor;
    
-
-    
-  
-    
-    RESideMenu *sideMenuViewConttroller = [[RESideMenu alloc] initWithContentViewController:showNav leftMenuViewController:leftVC rightMenuViewController:nil];
-    
-    sideMenuViewConttroller.backgroundImage = [UIImage imageNamed:@"Stars"];
-    sideMenuViewConttroller.menuPreferredStatusBarStyle = 1;
-    sideMenuViewConttroller.delegate = self;
-    sideMenuViewConttroller.contentViewShadowColor = [UIColor blackColor];
-    sideMenuViewConttroller.contentViewShadowOffset = CGSizeMake(0, 0);
-    sideMenuViewConttroller.contentViewShadowOpacity = 0.6;
-    sideMenuViewConttroller.contentViewShadowRadius = 12;
-    sideMenuViewConttroller.contentViewShadowEnabled = YES;
-    sideMenuViewConttroller.tabBarItem.image=[UIImage imageNamed:@"vpi__tab_unselected_focused_holo.9-1"];
+    showNav.tabBarItem.image=[UIImage imageNamed:@"vpi__tab_unselected_focused_holo.9-1"];
     UIImage *image=[UIImage imageNamed:@"huodong_pre"];
     //按图片原来状态显示
-    sideMenuViewConttroller.tabBarItem.selectedImage=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-      sideMenuViewConttroller.tabBarItem.title=@"主页";
+    showNav.tabBarItem.selectedImage=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    showNav.tabBarItem.title=@"主页";
     
+
     
     
     NewsViewController *news=[[NewsViewController alloc]init];
@@ -119,8 +106,20 @@
     
     tabbar.tabBar.tintColor=[UIColor redColor];
     
-    tabbar.viewControllers=@[sideMenuViewConttroller,newNav,messageNav,serviceNav];
-    self.window.rootViewController=tabbar;
+    tabbar.viewControllers=@[showNav,newNav,messageNav,serviceNav];
+    
+    RESideMenu *sideMenuViewConttroller = [[RESideMenu alloc] initWithContentViewController:tabbar leftMenuViewController:leftVC rightMenuViewController:nil];
+    
+    sideMenuViewConttroller.backgroundImage = [UIImage imageNamed:@"Stars"];
+    sideMenuViewConttroller.menuPreferredStatusBarStyle = 1;
+    sideMenuViewConttroller.delegate = self;
+    sideMenuViewConttroller.contentViewShadowColor = [UIColor blackColor];
+    sideMenuViewConttroller.contentViewShadowOffset = CGSizeMake(0, 0);
+    sideMenuViewConttroller.contentViewShadowOpacity = 0.6;
+    sideMenuViewConttroller.contentViewShadowRadius = 12;
+    sideMenuViewConttroller.contentViewShadowEnabled = YES;
+
+    self.window.rootViewController=sideMenuViewConttroller;
     
     
     

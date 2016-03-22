@@ -7,7 +7,7 @@
 //
 
 #import "SettingViewController.h"
-#import "LeftViewController.h"
+#import "ShowViewController.h"
 @interface SettingViewController ()
 
 @end
@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)backShow:(id)sender {
+    ShowViewController *showVC = [[ShowViewController alloc] init];
+    [self presentViewController:showVC animated:NO completion:nil];
+    
 }
 
 - (IBAction)cleanCPU:(id)sender {

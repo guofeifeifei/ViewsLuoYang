@@ -60,6 +60,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self showBarButtonWithImage:@"back_arrow"];
     //配置用户Key
     [AMapSearchServices sharedServices].apiKey = kLocationApk;
     

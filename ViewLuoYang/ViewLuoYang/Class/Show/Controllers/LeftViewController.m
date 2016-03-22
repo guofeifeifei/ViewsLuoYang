@@ -7,7 +7,7 @@
 //
 
 #import "LeftViewController.h"
-
+#import "ShowViewController.h"
 @interface LeftViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *seting;
 
@@ -17,27 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    self.seting.layer.borderColor = [UIColor grayColor].CGColor;
-//    self.seting.layer.borderWidth = 1;
+ 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-      self.tabBarController.tabBar.hidden = YES;
-}
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = NO;
-}
 
 /*
 #pragma mark - Navigation

@@ -31,6 +31,7 @@
     [self.view addSubview:self.tableView];
     [self headView];
     [self initSearch];
+    [self showBarButtonWithImage:@"back_arrow"];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellInder = @"cell";

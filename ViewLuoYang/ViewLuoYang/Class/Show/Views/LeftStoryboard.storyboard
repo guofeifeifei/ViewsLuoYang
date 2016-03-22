@@ -117,10 +117,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="teo-GZ-m3c" firstAttribute="top" secondItem="jau-4o-yBw" secondAttribute="bottom" id="LNI-dc-Y8w"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jau-4o-yBw" secondAttribute="trailing" constant="-20" id="QK7-tp-BSh"/>
-                            <constraint firstItem="jau-4o-yBw" firstAttribute="leading" secondItem="MHj-qi-hhp" secondAttribute="leadingMargin" constant="-20" id="nSo-qU-ck1"/>
-                            <constraint firstItem="jau-4o-yBw" firstAttribute="top" secondItem="W7i-81-mxi" secondAttribute="bottom" constant="-20" id="t6G-cH-fre"/>
+                            <constraint firstItem="jau-4o-yBw" firstAttribute="top" secondItem="W7i-81-mxi" secondAttribute="bottom" constant="-20" id="3FB-nj-Voc"/>
+                            <constraint firstItem="jau-4o-yBw" firstAttribute="leading" secondItem="MHj-qi-hhp" secondAttribute="leadingMargin" constant="-20" id="7zP-hr-fhA"/>
+                            <constraint firstItem="teo-GZ-m3c" firstAttribute="top" secondItem="jau-4o-yBw" secondAttribute="bottom" id="9dm-er-nVu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jau-4o-yBw" secondAttribute="trailing" constant="-20" id="E4O-TF-tWH"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -209,7 +209,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="back_arrow" id="KDg-R1-Jze">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="hja-rv-l62" kind="show" animates="NO" action="showDetailViewController:sender:" id="nTb-58-m88"/>
+                                                <action selector="backShow:" destination="f5r-vT-4HD" id="y6d-EE-k46"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -248,10 +248,10 @@
                                 <color key="barTintColor" red="0.81176470590000005" green="0.33333333329999998" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <items>
                                     <navigationItem title="全景洛阳" id="LFe-FI-SoU">
-                                        <barButtonItem key="leftBarButtonItem" enabled="NO" image="back_arrow" id="Avs-4c-ZqN">
-                                            <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <barButtonItem key="leftBarButtonItem" image="back_arrow" id="Avs-4c-ZqN">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="f5r-vT-4HD" kind="show" animates="NO" id="zyU-12-HND"/>
+                                                <segue destination="f5r-vT-4HD" kind="show" animates="NO" id="t6z-6h-yEo"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -311,6 +311,6 @@
         <image name="tiezi" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zyU-12-HND"/>
+        <segue reference="jJh-Uc-g0s"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -60,7 +60,7 @@ static NSString *str=@"cell";
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor] , NSFontAttributeName:[UIFont systemFontOfSize:18.0f]}];
-    
+   
     _pageCount=1;
     //先放入第一个左边的视图
 //    NSBundle *boundle=[NSBundle mainBundle];
@@ -507,6 +507,12 @@ static NSString *str=@"cell";
 
 
 
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    
+//    self.tabBarController.tabBar.hidden = NO;
+//}
 
 
 

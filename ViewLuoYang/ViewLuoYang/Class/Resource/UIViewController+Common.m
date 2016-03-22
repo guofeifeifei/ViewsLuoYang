@@ -113,7 +113,10 @@
 
 - (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result{
     
-    
+    [self dismissViewControllerAnimated:YES completion:^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }];
     QRCodeViewController *qrCodeVC = [[QRCodeViewController alloc] init];
     qrCodeVC.resultStr = result;
     [self presentViewController:qrCodeVC animated:YES completion:nil];

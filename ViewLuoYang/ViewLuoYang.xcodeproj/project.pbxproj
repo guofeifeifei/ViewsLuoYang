@@ -30,6 +30,9 @@
 		7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4055A81C9817490040895C /* ServicedidViewController.m */; };
 		7A43EC5A1C9EAB5B00F880EF /* SYTCodeScanerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A43EC591C9EAB5B00F880EF /* SYTCodeScanerViewController.m */; };
 		7A4649281CA12F6F00E4DBD4 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4649271CA12F6F00E4DBD4 /* SettingViewController.m */; };
+		7A4649311CA14FD000E4DBD4 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A46492B1CA14FD000E4DBD4 /* QRCameraSwitchButton.m */; };
+		7A4649321CA14FD000E4DBD4 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A46492E1CA14FD000E4DBD4 /* QRCodeReaderView.m */; };
+		7A4649331CA14FD000E4DBD4 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4649301CA14FD000E4DBD4 /* QRCodeReaderViewController.m */; };
 		7A5CFACC1C97C81C0002AF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACB1C97C81C0002AF99 /* main.m */; };
 		7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACE1C97C81C0002AF99 /* AppDelegate.m */; };
 		7A5CFAD11C97C81C0002AF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFAD01C97C81C0002AF99 /* Assets.xcassets */; };
@@ -80,9 +83,6 @@
 		7AD2D5371C9E883100298043 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5361C9E883100298043 /* libstdc++.6.0.9.tbd */; };
 		7AD2D5391C9E884900298043 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5381C9E884900298043 /* Security.framework */; };
 		7AD2D53C1C9E8A3D00298043 /* RoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D53B1C9E8A3D00298043 /* RoadViewController.m */; };
-		7AD2D5451C9E910900298043 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D53F1C9E910900298043 /* QRCameraSwitchButton.m */; };
-		7AD2D5461C9E910900298043 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D5421C9E910900298043 /* QRCodeReaderView.m */; };
-		7AD2D5471C9E910900298043 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D5441C9E910900298043 /* QRCodeReaderViewController.m */; };
 		7AD3DB5D1C9A449A001065DF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5C1C9A449A001065DF /* TitleViewController.m */; };
 		7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5F1C9A557D001065DF /* LoginViewController.m */; };
 		7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */; };
@@ -149,6 +149,13 @@
 		7A43EC591C9EAB5B00F880EF /* SYTCodeScanerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTCodeScanerViewController.m; sourceTree = "<group>"; };
 		7A4649261CA12F6F00E4DBD4 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		7A4649271CA12F6F00E4DBD4 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		7A46492A1CA14FD000E4DBD4 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		7A46492B1CA14FD000E4DBD4 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
+		7A46492C1CA14FD000E4DBD4 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderDelegate.h; sourceTree = "<group>"; };
+		7A46492D1CA14FD000E4DBD4 /* QRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderView.h; sourceTree = "<group>"; };
+		7A46492E1CA14FD000E4DBD4 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
+		7A46492F1CA14FD000E4DBD4 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
+		7A4649301CA14FD000E4DBD4 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
 		7A5CFAC71C97C81C0002AF99 /* ViewLuoYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLuoYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5CFACB1C97C81C0002AF99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A5CFACD1C97C81C0002AF99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -229,13 +236,6 @@
 		7AD2D5381C9E884900298043 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7AD2D53A1C9E8A3D00298043 /* RoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadViewController.h; sourceTree = "<group>"; };
 		7AD2D53B1C9E8A3D00298043 /* RoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadViewController.m; sourceTree = "<group>"; };
-		7AD2D53E1C9E910900298043 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
-		7AD2D53F1C9E910900298043 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
-		7AD2D5401C9E910900298043 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderDelegate.h; sourceTree = "<group>"; };
-		7AD2D5411C9E910900298043 /* QRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderView.h; sourceTree = "<group>"; };
-		7AD2D5421C9E910900298043 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
-		7AD2D5431C9E910900298043 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
-		7AD2D5441C9E910900298043 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
 		7AD3DB5B1C9A449A001065DF /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
 		7AD3DB5C1C9A449A001065DF /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		7AD3DB5E1C9A557D001065DF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -371,6 +371,20 @@
 				7A1A66131C9E84A800A48CD9 /* WXApiObject.h */,
 			);
 			path = SDK1.6.2;
+			sourceTree = "<group>";
+		};
+		7A4649291CA14FD000E4DBD4 /* QRCodeReaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7A46492A1CA14FD000E4DBD4 /* QRCameraSwitchButton.h */,
+				7A46492B1CA14FD000E4DBD4 /* QRCameraSwitchButton.m */,
+				7A46492C1CA14FD000E4DBD4 /* QRCodeReaderDelegate.h */,
+				7A46492D1CA14FD000E4DBD4 /* QRCodeReaderView.h */,
+				7A46492E1CA14FD000E4DBD4 /* QRCodeReaderView.m */,
+				7A46492F1CA14FD000E4DBD4 /* QRCodeReaderViewController.h */,
+				7A4649301CA14FD000E4DBD4 /* QRCodeReaderViewController.m */,
+			);
+			path = QRCodeReaderViewController;
 			sourceTree = "<group>";
 		};
 		7A5CFABE1C97C81C0002AF99 = {
@@ -556,6 +570,7 @@
 		7A5CFAEC1C97C8C10002AF99 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7A4649291CA14FD000E4DBD4 /* QRCodeReaderViewController */,
 				7AD2D5321C9E799600298043 /* AMapLocationKit.framework */,
 				7A8131AA1C9BFF4100114348 /* UIView+YSTextInputKeyboard.h */,
 				7A8131AB1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m */,
@@ -595,7 +610,6 @@
 		7A5CFAF81C97C8C10002AF99 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7AD2D53D1C9E910900298043 /* QRCodeReaderViewController */,
 				7A5CFAF91C97C8C10002AF99 /* ServiceViewController.h */,
 				7A5CFAFA1C97C8C10002AF99 /* ServiceViewController.m */,
 				7A4055A71C9817490040895C /* ServicedidViewController.h */,
@@ -754,20 +768,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		7AD2D53D1C9E910900298043 /* QRCodeReaderViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7AD2D53E1C9E910900298043 /* QRCameraSwitchButton.h */,
-				7AD2D53F1C9E910900298043 /* QRCameraSwitchButton.m */,
-				7AD2D5401C9E910900298043 /* QRCodeReaderDelegate.h */,
-				7AD2D5411C9E910900298043 /* QRCodeReaderView.h */,
-				7AD2D5421C9E910900298043 /* QRCodeReaderView.m */,
-				7AD2D5431C9E910900298043 /* QRCodeReaderViewController.h */,
-				7AD2D5441C9E910900298043 /* QRCodeReaderViewController.m */,
-			);
-			path = QRCodeReaderViewController;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -919,7 +919,6 @@
 				7AF172251C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m in Sources */,
 				7AACECDB1C9C208000A34CC1 /* WeatherViewController.m in Sources */,
 				7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */,
-				7AD2D5451C9E910900298043 /* QRCameraSwitchButton.m in Sources */,
 				7A9F19271C9E4C3B0009758B /* CustomAnnotationView.m in Sources */,
 				7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */,
 				7A5CFB0D1C97D8280002AF99 /* NewsModel.m in Sources */,
@@ -932,10 +931,9 @@
 				7A1A660A1C9E523200A48CD9 /* ShareView.m in Sources */,
 				7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */,
 				7AD2D52C1C9E6B2200298043 /* QRCodeViewController.m in Sources */,
-				7AD2D5471C9E910900298043 /* QRCodeReaderViewController.m in Sources */,
 				7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */,
 				7A5CFB0A1C97C8C10002AF99 /* ShowViewController.m in Sources */,
-				7AD2D5461C9E910900298043 /* QRCodeReaderView.m in Sources */,
+				7A4649331CA14FD000E4DBD4 /* QRCodeReaderViewController.m in Sources */,
 				7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */,
 				7A8131AC1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m in Sources */,
 				7AEE4A0C1C97F6260081FBC6 /* LuoyangNews.m in Sources */,
@@ -947,6 +945,7 @@
 				7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */,
 				7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */,
 				7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */,
+				7A4649311CA14FD000E4DBD4 /* QRCameraSwitchButton.m in Sources */,
 				7A5CFACC1C97C81C0002AF99 /* main.m in Sources */,
 				7AEE4A101C97F9410081FBC6 /* LuoyangNewsTableViewCell.m in Sources */,
 				7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */,
@@ -960,6 +959,7 @@
 				7A5CFB051C97C8C10002AF99 /* HWTools.m in Sources */,
 				7A43EC5A1C9EAB5B00F880EF /* SYTCodeScanerViewController.m in Sources */,
 				7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */,
+				7A4649321CA14FD000E4DBD4 /* QRCodeReaderView.m in Sources */,
 				7A5CFB041C97C8C10002AF99 /* NewsViewController.m in Sources */,
 				7AEE4A161C980ED40081FBC6 /* NewsDetailViewController.m in Sources */,
 			);
@@ -1110,7 +1110,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.QinJunzhen.ViewLuoYang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1166,7 +1166,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.QinJunzhen.ViewLuoYang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
