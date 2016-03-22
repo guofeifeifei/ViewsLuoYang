@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A04DAA91C9FF210004A54F9 /* CollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04DAA81C9FF20F004A54F9 /* CollectTableViewCell.m */; };
 		7A07F7A41C9AC750008532DE /* NearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A07F7A31C9AC750008532DE /* NearViewController.m */; };
 		7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E430D1C99985B0078D4A3 /* serviceModel.m */; };
 		7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */; };
@@ -102,6 +103,8 @@
 
 /* Begin PBXFileReference section */
 		343C6496E289605AF2800A0C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A04DAA71C9FF20F004A54F9 /* CollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewCell.h; sourceTree = "<group>"; };
+		7A04DAA81C9FF20F004A54F9 /* CollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewCell.m; sourceTree = "<group>"; };
 		7A07F7A21C9AC750008532DE /* NearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearViewController.h; sourceTree = "<group>"; };
 		7A07F7A31C9AC750008532DE /* NearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearViewController.m; sourceTree = "<group>"; };
 		7A0E430D1C99985B0078D4A3 /* serviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serviceModel.m; sourceTree = "<group>"; };
@@ -544,6 +547,8 @@
 				7A5CFB191C9845060002AF99 /* TouchItems.plist */,
 				7AF172231C98F9BA00AC94D1 /* NewsScondCollectionViewCell.h */,
 				7AF172241C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m */,
+				7A04DAA71C9FF20F004A54F9 /* CollectTableViewCell.h */,
+				7A04DAA81C9FF20F004A54F9 /* CollectTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -937,6 +942,7 @@
 				7A7073C21C9CF3CE00D13F7B /* DiscussViewController.m in Sources */,
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
 				7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */,
+				7A04DAA91C9FF210004A54F9 /* CollectTableViewCell.m in Sources */,
 				7AD2D53C1C9E8A3D00298043 /* RoadViewController.m in Sources */,
 				7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */,
 				7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */,
