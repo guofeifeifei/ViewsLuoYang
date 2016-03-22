@@ -76,15 +76,17 @@
     
 }//实现输入提示的回调函数
 - (void)initBtn{
+//    NSArray *imageArray = @[@"bus_details_location_icon", @"fengchao_shuidi", @"ic_home_launcher", @"btn_day_press"];
     if (self.array.count > 0) {
         
     
     for (NSInteger i = 0; i < 4; i++) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect ];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom ];
         btn.frame = CGRectMake(i * KScreenWidth / 4, KScreenHeight - KScreenHeight / 4, KScreenWidth / 4, 30);
         
         [btn setTitle:self.array[i] forState:UIControlStateNormal];
-       
+//        [btn setImage:[UIImage imageNamed:imageArray[i]] forState:UIControlStateNormal];
+//        [btn setImageEdgeInsets:UIEdgeInsetsMake(0, i * KScreenWidth / 4- 100, 0, 0)];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         btn.tag = i + 100;

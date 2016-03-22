@@ -34,7 +34,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self showBarButtonWithcode];
     self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"newspaper_bg"]];
     //去掉navigation下一条黑色的线条

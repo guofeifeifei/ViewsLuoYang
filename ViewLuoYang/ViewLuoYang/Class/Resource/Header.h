@@ -44,7 +44,7 @@
 #define kService @"http://shouji.lyd.com.cn/tools/webapi/applist?v=1&_fs=2&_vc=58"
 //地图apk
 #define kLocationApk @"915e846f3b554a833db84b2cc492d5eb"
-
+#define kYouMengAppkey @"56efd66ce0f55acc290023d2"
 
 
 

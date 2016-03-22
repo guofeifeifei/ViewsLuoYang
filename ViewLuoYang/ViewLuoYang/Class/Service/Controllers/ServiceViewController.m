@@ -24,8 +24,9 @@
 @implementation ServiceViewController
 
 - (void)viewDidLoad {
-    [self showBarButtonWithcode];
+    
     [super viewDidLoad];
+    [self showBarButtonWithcode];
     self.title = @"服务";
     // 修改title字体颜色
     [self.view addSubview:self.collectionView];

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "WeiboSDK.h"
 #import "WXApi.h"
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate,WXApiDelegate>
+#import "RESideMenu.h"
+@interface AppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate,WXApiDelegate, RESideMenuDelegate>
 {
     NSString* wbCurrentUserID;
     

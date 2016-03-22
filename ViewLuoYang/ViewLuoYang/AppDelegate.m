@@ -11,6 +11,7 @@
 #import "NewsViewController.h"
 #import "ServiceViewController.h"
 #import "MessageViewController.h"
+#import "LeftViewController.h"
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 @interface AppDelegate ()
@@ -40,18 +41,32 @@
     ShowViewController *show=[[ShowViewController alloc]init];
     
     UINavigationController *showNav=[[UINavigationController alloc]initWithRootViewController:show];
+    UIStoryboard *leftStoryboard = [UIStoryboard storyboardWithName:@"LeftStoryboard" bundle:nil];
     
+    
+    LeftViewController *leftVC = [leftStoryboard instantiateViewControllerWithIdentifier:@"leftVC"];
     //导航栏颜色
     showNav.navigationBar.barTintColor = barColor;
    
-    showNav.tabBarItem.image=[UIImage imageNamed:@"vpi__tab_unselected_focused_holo.9-1"];
+
+    
+  
+    
+    RESideMenu *sideMenuViewConttroller = [[RESideMenu alloc] initWithContentViewController:showNav leftMenuViewController:leftVC rightMenuViewController:nil];
+    
+    sideMenuViewConttroller.backgroundImage = [UIImage imageNamed:@"Stars"];
+    sideMenuViewConttroller.menuPreferredStatusBarStyle = 1;
+    sideMenuViewConttroller.delegate = self;
+    sideMenuViewConttroller.contentViewShadowColor = [UIColor blackColor];
+    sideMenuViewConttroller.contentViewShadowOffset = CGSizeMake(0, 0);
+    sideMenuViewConttroller.contentViewShadowOpacity = 0.6;
+    sideMenuViewConttroller.contentViewShadowRadius = 12;
+    sideMenuViewConttroller.contentViewShadowEnabled = YES;
+    sideMenuViewConttroller.tabBarItem.image=[UIImage imageNamed:@"vpi__tab_unselected_focused_holo.9-1"];
     UIImage *image=[UIImage imageNamed:@"huodong_pre"];
     //按图片原来状态显示
-    showNav.tabBarItem.selectedImage=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    showNav.tabBarItem.title=@"主页";
-    
-    
+    sideMenuViewConttroller.tabBarItem.selectedImage=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+      sideMenuViewConttroller.tabBarItem.title=@"主页";
     
     
     
@@ -104,7 +119,7 @@
     
     tabbar.tabBar.tintColor=[UIColor redColor];
     
-    tabbar.viewControllers=@[showNav,newNav,messageNav,serviceNav];
+    tabbar.viewControllers=@[sideMenuViewConttroller,newNav,messageNav,serviceNav];
     self.window.rootViewController=tabbar;
     
     
@@ -137,8 +152,27 @@
     return [WeiboSDK handleOpenURL:url delegate:self];
     
 }
+#pragma mark RESideMenu Delegate
 
+- (void)sideMenu:(RESideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
+}
 
+- (void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"didShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
+}
+
+- (void)sideMenu:(RESideMenu *)sideMenu willHideMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"willHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
+}
+
+- (void)sideMenu:(RESideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"didHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
