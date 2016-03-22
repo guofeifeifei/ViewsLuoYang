@@ -96,7 +96,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSH-3m-XSt">
-                                <rect key="frame" x="15" y="549" width="90" height="37"/>
+                                <rect key="frame" x="10" y="549" width="90" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="         设置">
@@ -109,9 +109,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="f5r-vT-4HD" kind="popoverPresentation" popoverAnchorView="aSH-3m-XSt" id="jJh-Uc-g0s">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="f5r-vT-4HD" kind="show" id="50j-YA-hiL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -311,6 +309,6 @@
         <image name="tiezi" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jJh-Uc-g0s"/>
+        <segue reference="50j-YA-hiL"/>
     </inferredMetricsTieBreakers>
 </document>

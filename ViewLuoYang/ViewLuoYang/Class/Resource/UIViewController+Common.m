@@ -92,6 +92,7 @@
 }
 
 - (void)scanAction{
+    NSLog(@"调用系统相机");
     
     
     static QRCodeReaderViewController *reader = nil;
@@ -113,11 +114,7 @@
 
 - (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result{
     
-    [self dismissViewControllerAnimated:YES completion:^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    }];
-    QRCodeViewController *qrCodeVC = [[QRCodeViewController alloc] init];
+        QRCodeViewController *qrCodeVC = [[QRCodeViewController alloc] init];
     qrCodeVC.resultStr = result;
     [self presentViewController:qrCodeVC animated:YES completion:nil];
     
@@ -136,7 +133,16 @@
 
 
 
+- (void)showMeButton{
+    //左侧按钮
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 25, 25);
+    [leftBtn setImage:[UIImage imageNamed:@"ic_select_phost_lz_on"] forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = leftBar;
 
+}
 
 
 

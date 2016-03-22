@@ -34,8 +34,8 @@
 
 - (void)setModel:(LuoyangNews *)model{
     
-    if (model.resubImage.length<=0) {
-        self.leftImageView.image=[UIImage imageNamed:@"ic_launcher"];
+    if (![model.resubImage hasPrefix:@"http://"]) {
+        self.leftImageView.image=[UIImage imageNamed:@"defaultImage.jpg"];
     }else{
         
         [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:model.resubImage] placeholderImage:nil];

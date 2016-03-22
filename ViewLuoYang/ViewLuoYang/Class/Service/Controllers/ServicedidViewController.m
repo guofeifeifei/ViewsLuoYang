@@ -27,7 +27,7 @@
     self.webView.delegate = self;
     [self.view addSubview:self.webView];
     
-    
+   
   self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     self.activity.backgroundColor = barColor;
     //显示位置

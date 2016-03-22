@@ -33,6 +33,7 @@
 		7A4649311CA14FD000E4DBD4 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A46492B1CA14FD000E4DBD4 /* QRCameraSwitchButton.m */; };
 		7A4649321CA14FD000E4DBD4 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A46492E1CA14FD000E4DBD4 /* QRCodeReaderView.m */; };
 		7A4649331CA14FD000E4DBD4 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4649301CA14FD000E4DBD4 /* QRCodeReaderViewController.m */; };
+		7A4649351CA1737A00E4DBD4 /* defaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A4649341CA1737A00E4DBD4 /* defaultImage.jpg */; };
 		7A5CFACC1C97C81C0002AF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACB1C97C81C0002AF99 /* main.m */; };
 		7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACE1C97C81C0002AF99 /* AppDelegate.m */; };
 		7A5CFAD11C97C81C0002AF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFAD01C97C81C0002AF99 /* Assets.xcassets */; };
@@ -156,6 +157,7 @@
 		7A46492E1CA14FD000E4DBD4 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
 		7A46492F1CA14FD000E4DBD4 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
 		7A4649301CA14FD000E4DBD4 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
+		7A4649341CA1737A00E4DBD4 /* defaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpg; sourceTree = "<group>"; };
 		7A5CFAC71C97C81C0002AF99 /* ViewLuoYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLuoYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5CFACB1C97C81C0002AF99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A5CFACD1C97C81C0002AF99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -699,6 +701,7 @@
 		7AA00C361C97E1AC00FD6D15 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
+				7A4649341CA1737A00E4DBD4 /* defaultImage.jpg */,
 				7A6254011CA034C1002CA7E1 /* image2.jpg */,
 				7A6253FF1CA0344A002CA7E1 /* image1.jpg */,
 				7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */,
@@ -845,6 +848,7 @@
 				7AEE4A131C98002D0081FBC6 /* HotTalk.plist in Resources */,
 				7AEE4A091C97F55D0081FBC6 /* LuoyangNews.plist in Resources */,
 				7AEE4A1A1C9844AE0081FBC6 /* headView.plist in Resources */,
+				7A4649351CA1737A00E4DBD4 /* defaultImage.jpg in Resources */,
 				7A5CFB061C97C8C10002AF99 /* ProgressHUD.bundle in Resources */,
 				7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */,
 				7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */,
