@@ -28,7 +28,8 @@
     //新浪微博分享
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
-    [WXApi registerApp:kWeixinAppSecret];
+    
+    [WXApi registerApp:kWeixinAppID];
     
     
     

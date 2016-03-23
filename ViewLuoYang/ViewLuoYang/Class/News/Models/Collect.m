@@ -10,18 +10,20 @@
 
 @implementation Collect
 
-- (instancetype)initWithCollectWithUrl:(NSString *)url{
+- (instancetype)initWithCollectWithUrl:(NSString *)url image:(NSString *)image{
     self = [super init];
     if (self) {
         self.url = url;
+        self.image = image;
     }
     return self;
 }
 
 
 
-+ (instancetype)collectWithUrl:(NSString *)url{
-    Collect *collect = [[Collect alloc] initWithCollectWithUrl:url];
++ (instancetype)collectWithUrl:(NSString *)url image:(NSString *)image{
+    
+    Collect *collect = [[Collect alloc] initWithCollectWithUrl:url image:image];
     return collect;
 }
 

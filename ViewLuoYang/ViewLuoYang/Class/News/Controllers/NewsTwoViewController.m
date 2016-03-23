@@ -93,6 +93,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
     titleVC.periodId = self.periodId;
     titleVC.paperId = self.paperId;
     titleVC.nsid = self.nsid;
+    titleVC.image = self.image;
     [self.navigationController pushViewController:titleVC animated:YES];
 }
 #pragma mark ---------- lazy Loading

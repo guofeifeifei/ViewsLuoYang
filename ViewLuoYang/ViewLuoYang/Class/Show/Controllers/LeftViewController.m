@@ -8,8 +8,14 @@
 
 #import "LeftViewController.h"
 #import "ShowViewController.h"
+#import "CollectViewController.h"
 @interface LeftViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *seting;
+
+//收藏按钮
+@property (weak, nonatomic) IBOutlet UIButton *collectBtn;
+
+
 
 @end
 
@@ -19,6 +25,18 @@
     [super viewDidLoad];
  
 }
+
+
+- (IBAction)collectAction:(id)sender {
+    
+//    CollectViewController *collectVC = [[CollectViewController alloc] init];
+//    [self presentViewController:collectVC animated:YES completion:nil];
+    
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
