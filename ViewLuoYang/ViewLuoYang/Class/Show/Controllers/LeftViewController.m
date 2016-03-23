@@ -3,7 +3,7 @@
 //  ViewLuoYang
 //
 //  Created by scjy on 16/3/22.
-//  Copyright © 2016年 秦俊珍. All rights reserved.
+//  Copyright © 2016年 郭飞飞. All rights reserved.
 //
 
 #import "LeftViewController.h"

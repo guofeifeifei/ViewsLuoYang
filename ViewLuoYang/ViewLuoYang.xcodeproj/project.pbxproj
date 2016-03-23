@@ -26,6 +26,11 @@
 		7A1A66151C9E84A800A48CD9 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A1A66101C9E84A800A48CD9 /* read_me.txt */; };
 		7A1A66171C9E859200A48CD9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A66161C9E859200A48CD9 /* libsqlite3.0.tbd */; };
 		7A1A66191C9E85AA00A48CD9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A66181C9E85AA00A48CD9 /* libc++.tbd */; };
+		7A2DDEAD1CA230120082F3CB /* jpush-ios-2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2DDEAB1CA230120082F3CB /* jpush-ios-2.1.0.a */; };
+		7A2DDEAF1CA230750082F3CB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2DDEAE1CA230750082F3CB /* CFNetwork.framework */; };
+		7A2DDEB11CA230BD0082F3CB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2DDEB01CA230BD0082F3CB /* CoreFoundation.framework */; };
+		7A2DDEB31CA232920082F3CB /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A2DDEB21CA232920082F3CB /* PushConfig.plist */; };
+		7A2DDEB61CA246B10082F3CB /* aboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DDEB51CA246B10082F3CB /* aboutViewController.m */; };
 		7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4055A81C9817490040895C /* ServicedidViewController.m */; };
 		7A43EC5A1C9EAB5B00F880EF /* SYTCodeScanerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A43EC591C9EAB5B00F880EF /* SYTCodeScanerViewController.m */; };
 		7A4649281CA12F6F00E4DBD4 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4649271CA12F6F00E4DBD4 /* SettingViewController.m */; };
@@ -143,6 +148,13 @@
 		7A1A66131C9E84A800A48CD9 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		7A1A66161C9E859200A48CD9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		7A1A66181C9E85AA00A48CD9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		7A2DDEAB1CA230120082F3CB /* jpush-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.0.a"; sourceTree = "<group>"; };
+		7A2DDEAC1CA230120082F3CB /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		7A2DDEAE1CA230750082F3CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7A2DDEB01CA230BD0082F3CB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		7A2DDEB21CA232920082F3CB /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		7A2DDEB41CA246B10082F3CB /* aboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutViewController.h; sourceTree = "<group>"; };
+		7A2DDEB51CA246B10082F3CB /* aboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutViewController.m; sourceTree = "<group>"; };
 		7A4055A71C9817490040895C /* ServicedidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicedidViewController.h; sourceTree = "<group>"; };
 		7A4055A81C9817490040895C /* ServicedidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicedidViewController.m; sourceTree = "<group>"; };
 		7A43EC581C9EAB5B00F880EF /* SYTCodeScanerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTCodeScanerViewController.h; sourceTree = "<group>"; };
@@ -278,6 +290,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2DDEB11CA230BD0082F3CB /* CoreFoundation.framework in Frameworks */,
+				7A2DDEAF1CA230750082F3CB /* CFNetwork.framework in Frameworks */,
+				7A2DDEAD1CA230120082F3CB /* jpush-ios-2.1.0.a in Frameworks */,
 				7A94AC201C9F792700E676E7 /* libsqlite3.tbd in Frameworks */,
 				7A1A66191C9E85AA00A48CD9 /* libc++.tbd in Frameworks */,
 				7A1A66171C9E859200A48CD9 /* libsqlite3.0.tbd in Frameworks */,
@@ -307,6 +322,8 @@
 		4180C759D1F1043503F22CEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A2DDEB01CA230BD0082F3CB /* CoreFoundation.framework */,
+				7A2DDEAE1CA230750082F3CB /* CFNetwork.framework */,
 				7A1A66181C9E85AA00A48CD9 /* libc++.tbd */,
 				7A1A66161C9E859200A48CD9 /* libsqlite3.0.tbd */,
 				7A1A65F61C9E4A8A00A48CD9 /* libsqlite3.tbd */,
@@ -345,6 +362,7 @@
 				7A1A660B1C9E557100A48CD9 /* UIView+Extension.h */,
 				7A1A660C1C9E557100A48CD9 /* UIView+Extension.m */,
 				7A1A65F91C9E4E0400A48CD9 /* libWeiboSDK */,
+				7A2DDEB21CA232920082F3CB /* PushConfig.plist */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -378,6 +396,15 @@
 				7A1A66131C9E84A800A48CD9 /* WXApiObject.h */,
 			);
 			path = SDK1.6.2;
+			sourceTree = "<group>";
+		};
+		7A2DDEAA1CA230120082F3CB /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7A2DDEAB1CA230120082F3CB /* jpush-ios-2.1.0.a */,
+				7A2DDEAC1CA230120082F3CB /* JPUSHService.h */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		7A4649291CA14FD000E4DBD4 /* QRCodeReaderViewController */ = {
@@ -583,6 +610,7 @@
 		7A5CFAEC1C97C8C10002AF99 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7A2DDEAA1CA230120082F3CB /* lib */,
 				7A4649291CA14FD000E4DBD4 /* QRCodeReaderViewController */,
 				7AD2D5321C9E799600298043 /* AMapLocationKit.framework */,
 				7A8131AA1C9BFF4100114348 /* UIView+YSTextInputKeyboard.h */,
@@ -677,6 +705,8 @@
 				7AABFFA11CA0E6CA005CB2BA /* LeftViewController.m */,
 				7A4649261CA12F6F00E4DBD4 /* SettingViewController.h */,
 				7A4649271CA12F6F00E4DBD4 /* SettingViewController.m */,
+				7A2DDEB41CA246B10082F3CB /* aboutViewController.h */,
+				7A2DDEB51CA246B10082F3CB /* aboutViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -863,6 +893,7 @@
 				7A5CFB061C97C8C10002AF99 /* ProgressHUD.bundle in Resources */,
 				7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */,
 				7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */,
+				7A2DDEB31CA232920082F3CB /* PushConfig.plist in Resources */,
 				7AA00C421C97E87600FD6D15 /* service.plist in Resources */,
 				7AACECDD1C9C34D200A34CC1 /* WeatherStoryboard.storyboard in Resources */,
 				7A0E43141C99986C0078D4A3 /* ServiceCollectionViewCell.xib in Resources */,
@@ -929,6 +960,7 @@
 				7A07F7A41C9AC750008532DE /* NearViewController.m in Sources */,
 				7A9F192A1C9E4C6F0009758B /* CustomCalloutView.m in Sources */,
 				7AABFFAA1CA0E73A005CB2BA /* RECommonFunctions.m in Sources */,
+				7A2DDEB61CA246B10082F3CB /* aboutViewController.m in Sources */,
 				7A5CFB121C980B4C0002AF99 /* NewsCollectionViewCell.m in Sources */,
 				7A7EDBA91C993AAC00DC6EDF /* LocationViewController.m in Sources */,
 				7AF172251C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m in Sources */,
@@ -1096,6 +1128,8 @@
 					"$(PROJECT_DIR)/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/SDK1.6.2",
+					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",
+					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource/lib",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1152,6 +1186,8 @@
 					"$(PROJECT_DIR)/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/SDK1.6.2",
+					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",
+					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource/lib",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
