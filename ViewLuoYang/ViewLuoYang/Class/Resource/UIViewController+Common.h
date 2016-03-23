@@ -12,6 +12,7 @@
 
 - (void)showBarButtonWithImage:(NSString *)imageName;
 - (void)showBarButtonWithcode;
+- (void)showMeButton;
 - (void)showRightBarButtonWithTitle:(NSString *)title;
 
 

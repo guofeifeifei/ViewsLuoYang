@@ -34,6 +34,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self showMeButton];
     // Do any additional setup after loading the view.
     [self showBarButtonWithcode];
     self.navigationController.navigationBar.translucent = NO;

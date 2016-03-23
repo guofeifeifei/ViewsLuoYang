@@ -27,6 +27,7 @@
     
     [super viewDidLoad];
     [self showBarButtonWithcode];
+    [self showMeButton];
     self.title = @"服务";
     // 修改title字体颜色
     [self.view addSubview:self.collectionView];

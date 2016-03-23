@@ -10,6 +10,7 @@
 
 @interface NewsDetailViewController ()
 @property(nonatomic, strong) UIWebView *webView;
+@property(nonatomic, strong) UIActivityIndicatorView *activity;
 @end
 
 @implementation NewsDetailViewController
@@ -19,6 +20,8 @@
     // Do any additional setup after loading the view.
     [self showBarButtonWithImage:@"back_arrow"];
     [self.view addSubview:self.webView];
+    [self.view addSubview:self.activity];
+
 }
 
 - (UIWebView *)webView{
@@ -35,6 +38,41 @@
     return _webView;
 }
 
+
+
+- (UIActivityIndicatorView *)activity{
+    if (_activity == nil) {
+        self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        self.activity.backgroundColor = barColor;
+        //显示位置
+        self.activity.center = self.view.center;
+        //
+        // [self.activity startAnimating];
+
+    }
+
+    return _activity;
+}
+
+
+
+
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    [self.activity startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [self.activity stopAnimating];
+    
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    self.tabBarController.tabBar.hidden = NO;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.tabBarController.tabBar.hidden = YES;
+}
 
 
 
