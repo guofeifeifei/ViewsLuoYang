@@ -11,9 +11,12 @@
 #import "ProgressHUD.h"
 #import "CollectViewController.h"
 #import "ShareView.h"
+#import "Collect.h"
+#import "DataBaseManger.h"
+
 @interface TitleViewController ()<UIWebViewDelegate>
 {
-    NSInteger i ;
+    NSInteger i;
 }
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -45,12 +48,23 @@
     self.rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.rightBtn.frame = CGRectMake(0, 0, 60, 44);
     [self.rightBtn setTitle:@"已收藏" forState:UIControlStateNormal];
+    [self.rightBtn addTarget:self action:@selector(threeBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.rightBtn.tag = 4;
     //调整btn标题所在的位置，距离btn顶部，左边，底部，右边的距离
     [self.rightBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [self.rightBtn addTarget:self action:@selector(rightBtnAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
     rightBarBtn.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightBarBtn;
+    
+    
+    //创建数据库管理对象
+    DataBaseManger *dbManger = [DataBaseManger shareInstance];
+    //打开数据库
+    [dbManger openDataBase];
+    
+    
+    
+    
 }
 
 #pragma mark -------- lazyLoading
@@ -58,7 +72,8 @@
     if (_activity == nil) {
         //刷新
         self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-//        self.activity.backgroundColor = barColor;
+        self.activity.backgroundColor = barColor;
+
         //显示位置
         self.activity.center = self.scrollView.center;
 
@@ -134,6 +149,9 @@
 #pragma mark -------- 3个按钮点击方法
 
 - (void)threeBtnAction:(UIButton *)btn{
+    
+    DataBaseManger *dbManger = [DataBaseManger shareInstance];
+    
     switch (btn.tag) {
         case 1:
         {
@@ -146,30 +164,33 @@
             break;
         case 2:
         {
-            /*
-             点击收藏是的接口：http://shouji.lyd.com.cn/tools/user/addFavorite
-             打开收藏页面接口：http://hm.baidu.com/hm.gif?cc=0&ck=1&cl=32-bit&ds=320x570&ep=124629%2C124630&et=3&ja=1&ln=zh-CN&lo=0&lt=1458353341&nv=0&rnd=317449245&si=22a1fd52d71d27a688f488ceb244d3f8&st=4&v=1.1.26&lv=2
-*/
-        //收藏
+                    //收藏
             i +=1;
             if (i % 2 == 0) {
                 [self.collectBtn setImage:[UIImage imageNamed:@"recom_collection_02n"] forState:UIControlStateNormal];
                 [ProgressHUD showSuccess:@"取消收藏"];
                 
+                //删除url
                 
-                
+                [dbManger deleteLinkManWithUrl:self.url];
                 
                 
             }else{
                 [self.collectBtn setImage:[UIImage imageNamed:@"people_star"] forState:UIControlStateNormal];
                 [ProgressHUD showSuccess:@"收藏成功"];
+                Collect *shoucang = [Collect collectWithUrl:self.url];
+                //添加url
+                [dbManger insertIntoNewUrl:shoucang];
                 
-                
+           
+            
+   
     
             }
     
+
         }
-            
+
             break;
         case 3:
         {
@@ -179,6 +200,21 @@
             
         }
             break;
+        case 4:
+        {
+            //已收藏
+            CollectViewController *collectVC = [[CollectViewController alloc] init];
+            
+            [self.navigationController pushViewController:collectVC animated:YES];
+            
+            //查看所有url
+            [dbManger selectAllUrl];
+            
+            
+            
+            
+            
+        }
             
         default:
             break;
@@ -187,16 +223,9 @@
 }
 
 
-
-#pragma  mark ----------- rightBtn点击方法
-- (void)rightBtnAction{
-    CollectViewController *collectVC = [[CollectViewController alloc] init];
-    [self.navigationController pushViewController:collectVC animated:YES];
-}
-
+//分享
 - (void)share{
     UIWindow *window = [[UIApplication sharedApplication ].delegate window];
-    
     
     ShareView *shareView = [[ShareView alloc] init];
     //属性传值，把需要分享用到的url传到下一页

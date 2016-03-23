@@ -206,19 +206,23 @@ static NSString *itemIntentfier = @"itemIdentifier";
     return 1;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-    
-    NewsModel *model = self.allNewsArray[indexPath.row];
+
     NewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
-    //当是第一个item的时候，出现最新
-    if (indexPath.row == 0) {
-        cell.titleLable.text = @"最新";
-    }else{
-        cell.titleLable.text=model.periodName;
+    
+    if (self.allNewsArray.count > 0) {
+        NewsModel *model = self.allNewsArray[indexPath.row];
+        
+        
+        //当是第一个item的时候，出现最新
+        if (indexPath.row == 0) {
+            cell.titleLable.text = @"最新";
+        }else{
+            cell.titleLable.text=model.periodName;
+        }
+        
+        [cell.image sd_setImageWithURL:[NSURL URLWithString:model.periodImage] placeholderImage:nil];
     }
     
-    [cell.image sd_setImageWithURL:[NSURL URLWithString:model.periodImage] placeholderImage:nil];
     return cell;
 }
 #pragma mark -------- 点击选择哪个图片

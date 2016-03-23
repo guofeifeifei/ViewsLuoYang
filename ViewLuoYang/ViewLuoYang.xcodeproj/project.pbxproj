@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A04DAA91C9FF210004A54F9 /* CollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04DAA81C9FF20F004A54F9 /* CollectTableViewCell.m */; };
 		7A07F7A41C9AC750008532DE /* NearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A07F7A31C9AC750008532DE /* NearViewController.m */; };
 		7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E430D1C99985B0078D4A3 /* serviceModel.m */; };
 		7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */; };
@@ -58,6 +57,8 @@
 		7A8131AC1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8131AB1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m */; };
 		7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */; };
 		7A94AC201C9F792700E676E7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A65F61C9E4A8A00A48CD9 /* libsqlite3.tbd */; };
+		7A98C2E51CA02A2E00EC4C74 /* Collect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A98C2E41CA02A2E00EC4C74 /* Collect.m */; };
+		7A98C2E81CA02C4400EC4C74 /* DataBaseManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A98C2E71CA02C4400EC4C74 /* DataBaseManger.m */; };
 		7A9F19271C9E4C3B0009758B /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F19261C9E4C3B0009758B /* CustomAnnotationView.m */; };
 		7A9F192A1C9E4C6F0009758B /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F19291C9E4C6F0009758B /* CustomCalloutView.m */; };
 		7AA00C3D1C97E1AC00FD6D15 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */; };
@@ -80,14 +81,14 @@
 		7AD16D401C9BFE9100DC275C /* ForgetThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD16D3F1C9BFE9100DC275C /* ForgetThePasswordViewController.m */; };
 		7AD2D52C1C9E6B2200298043 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D52B1C9E6B2200298043 /* QRCodeViewController.m */; };
 		7AD2D52E1C9E6C9C00298043 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D52D1C9E6C9C00298043 /* AVFoundation.framework */; };
-		7AD2D5341C9E799600298043 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5321C9E799600298043 /* AMapLocationKit.framework */; };
 		7AD2D5371C9E883100298043 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5361C9E883100298043 /* libstdc++.6.0.9.tbd */; };
-		7AD2D5391C9E884900298043 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD2D5381C9E884900298043 /* Security.framework */; };
 		7AD2D53C1C9E8A3D00298043 /* RoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2D53B1C9E8A3D00298043 /* RoadViewController.m */; };
 		7AD3DB5D1C9A449A001065DF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5C1C9A449A001065DF /* TitleViewController.m */; };
 		7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5F1C9A557D001065DF /* LoginViewController.m */; };
 		7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */; };
 		7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB691C9AC99A001065DF /* RegisterViewController.m */; };
+		7AE42B5E1CA0CC9300C83BF7 /* CollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE42B5D1CA0CC9300C83BF7 /* CollectTableViewCell.m */; };
+		7AE42B7C1CA0EC7400C83BF7 /* CollectResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE42B7B1CA0EC7400C83BF7 /* CollectResultViewController.m */; };
 		7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE49FE1C97E60B0081FBC6 /* leftView.m */; };
 		7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4A041C97E6DE0081FBC6 /* letfView.xib */; };
 		7AEE4A091C97F55D0081FBC6 /* LuoyangNews.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4A081C97F55D0081FBC6 /* LuoyangNews.plist */; };
@@ -104,8 +105,6 @@
 
 /* Begin PBXFileReference section */
 		343C6496E289605AF2800A0C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		7A04DAA71C9FF20F004A54F9 /* CollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewCell.h; sourceTree = "<group>"; };
-		7A04DAA81C9FF20F004A54F9 /* CollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewCell.m; sourceTree = "<group>"; };
 		7A07F7A21C9AC750008532DE /* NearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearViewController.h; sourceTree = "<group>"; };
 		7A07F7A31C9AC750008532DE /* NearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearViewController.m; sourceTree = "<group>"; };
 		7A0E430D1C99985B0078D4A3 /* serviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serviceModel.m; sourceTree = "<group>"; };
@@ -200,6 +199,10 @@
 		7A8131AB1C9BFF4100114348 /* UIView+YSTextInputKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSTextInputKeyboard.m"; sourceTree = "<group>"; };
 		7A93966B1C9D5BAE0008DC18 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
 		7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
+		7A98C2E31CA02A2E00EC4C74 /* Collect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collect.h; sourceTree = "<group>"; };
+		7A98C2E41CA02A2E00EC4C74 /* Collect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collect.m; sourceTree = "<group>"; };
+		7A98C2E61CA02C4400EC4C74 /* DataBaseManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManger.h; sourceTree = "<group>"; };
+		7A98C2E71CA02C4400EC4C74 /* DataBaseManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManger.m; sourceTree = "<group>"; };
 		7A9F19251C9E4C3B0009758B /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
 		7A9F19261C9E4C3B0009758B /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
 		7A9F19281C9E4C6F0009758B /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
@@ -245,6 +248,10 @@
 		7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		7AD3DB681C9AC99A001065DF /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		7AD3DB691C9AC99A001065DF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		7AE42B5C1CA0CC9300C83BF7 /* CollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewCell.h; sourceTree = "<group>"; };
+		7AE42B5D1CA0CC9300C83BF7 /* CollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewCell.m; sourceTree = "<group>"; };
+		7AE42B7A1CA0EC7400C83BF7 /* CollectResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectResultViewController.h; sourceTree = "<group>"; };
+		7AE42B7B1CA0EC7400C83BF7 /* CollectResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectResultViewController.m; sourceTree = "<group>"; };
 		7AEE49FD1C97E60B0081FBC6 /* leftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = leftView.h; path = ViewLuoYang/leftView.h; sourceTree = SOURCE_ROOT; };
 		7AEE49FE1C97E60B0081FBC6 /* leftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = leftView.m; path = ViewLuoYang/leftView.m; sourceTree = SOURCE_ROOT; };
 		7AEE4A041C97E6DE0081FBC6 /* letfView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = letfView.xib; path = ViewLuoYang/letfView.xib; sourceTree = SOURCE_ROOT; };
@@ -274,7 +281,6 @@
 				7A94AC201C9F792700E676E7 /* libsqlite3.tbd in Frameworks */,
 				7A1A66191C9E85AA00A48CD9 /* libc++.tbd in Frameworks */,
 				7A1A66171C9E859200A48CD9 /* libsqlite3.0.tbd in Frameworks */,
-				7AD2D5391C9E884900298043 /* Security.framework in Frameworks */,
 				7AD2D5371C9E883100298043 /* libstdc++.6.0.9.tbd in Frameworks */,
 				7AD2D52E1C9E6C9C00298043 /* AVFoundation.framework in Frameworks */,
 				7ABEE5C31C990FB20093912D /* libz.tbd in Frameworks */,
@@ -290,7 +296,6 @@
 				7A1A66061C9E4E0400A48CD9 /* libWeiboSDK.a in Frameworks */,
 				7A1A65E91C9E49F400A48CD9 /* QuartzCore.framework in Frameworks */,
 				7ABEE5C11C990F9F0093912D /* CoreLocation.framework in Frameworks */,
-				7AD2D5341C9E799600298043 /* AMapLocationKit.framework in Frameworks */,
 				9E8886EC3A4E95DD8B0F807E /* libPods.a in Frameworks */,
 				7ABEE5BB1C990F2A0093912D /* AMapLocationKit.framework in Frameworks */,
 			);
@@ -541,6 +546,8 @@
 				7A7073C11C9CF3CE00D13F7B /* DiscussViewController.m */,
 				7A93966B1C9D5BAE0008DC18 /* CollectViewController.h */,
 				7A93966C1C9D5BAE0008DC18 /* CollectViewController.m */,
+				7AE42B7A1CA0EC7400C83BF7 /* CollectResultViewController.h */,
+				7AE42B7B1CA0EC7400C83BF7 /* CollectResultViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -550,6 +557,10 @@
 			children = (
 				7A5CFB0B1C97D8280002AF99 /* NewsModel.h */,
 				7A5CFB0C1C97D8280002AF99 /* NewsModel.m */,
+				7A98C2E31CA02A2E00EC4C74 /* Collect.h */,
+				7A98C2E41CA02A2E00EC4C74 /* Collect.m */,
+				7A98C2E61CA02C4400EC4C74 /* DataBaseManger.h */,
+				7A98C2E71CA02C4400EC4C74 /* DataBaseManger.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -557,14 +568,14 @@
 		7A5CFAEB1C97C8C10002AF99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7AE42B5C1CA0CC9300C83BF7 /* CollectTableViewCell.h */,
+				7AE42B5D1CA0CC9300C83BF7 /* CollectTableViewCell.m */,
 				7A5CFB0E1C97DCA10002AF99 /* News.plist */,
 				7A5CFB101C980B4C0002AF99 /* NewsCollectionViewCell.h */,
 				7A5CFB111C980B4C0002AF99 /* NewsCollectionViewCell.m */,
 				7A5CFB191C9845060002AF99 /* TouchItems.plist */,
 				7AF172231C98F9BA00AC94D1 /* NewsScondCollectionViewCell.h */,
 				7AF172241C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m */,
-				7A04DAA71C9FF20F004A54F9 /* CollectTableViewCell.h */,
-				7A04DAA81C9FF20F004A54F9 /* CollectTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -923,6 +934,7 @@
 				7AF172251C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m in Sources */,
 				7AACECDB1C9C208000A34CC1 /* WeatherViewController.m in Sources */,
 				7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */,
+				7AE42B7C1CA0EC7400C83BF7 /* CollectResultViewController.m in Sources */,
 				7A9F19271C9E4C3B0009758B /* CustomAnnotationView.m in Sources */,
 				7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */,
 				7A5CFB0D1C97D8280002AF99 /* NewsModel.m in Sources */,
@@ -931,6 +943,7 @@
 				7A5CFB071C97C8C10002AF99 /* ProgressHUD.m in Sources */,
 				7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */,
 				7A5CFB031C97C8C10002AF99 /* MessageViewController.m in Sources */,
+				7A98C2E81CA02C4400EC4C74 /* DataBaseManger.m in Sources */,
 				7A1A660D1C9E557100A48CD9 /* UIView+Extension.m in Sources */,
 				7A1A660A1C9E523200A48CD9 /* ShareView.m in Sources */,
 				7A5CFB181C9824190002AF99 /* NewsTwoViewController.m in Sources */,
@@ -944,7 +957,6 @@
 				7A7073C21C9CF3CE00D13F7B /* DiscussViewController.m in Sources */,
 				7A5CFB091C97C8C10002AF99 /* ServiceViewController.m in Sources */,
 				7AA00C3E1C97E1AC00FD6D15 /* Reachability.m in Sources */,
-				7A04DAA91C9FF210004A54F9 /* CollectTableViewCell.m in Sources */,
 				7AD2D53C1C9E8A3D00298043 /* RoadViewController.m in Sources */,
 				7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */,
 				7A93966D1C9D5BAE0008DC18 /* CollectViewController.m in Sources */,
@@ -952,6 +964,7 @@
 				7A4649311CA14FD000E4DBD4 /* QRCameraSwitchButton.m in Sources */,
 				7A5CFACC1C97C81C0002AF99 /* main.m in Sources */,
 				7AEE4A101C97F9410081FBC6 /* LuoyangNewsTableViewCell.m in Sources */,
+				7AE42B5E1CA0CC9300C83BF7 /* CollectTableViewCell.m in Sources */,
 				7A5CFB081C97C8C10002AF99 /* UIViewController+Common.m in Sources */,
 				7AEE4A1D1C9845090081FBC6 /* headPhotoModel.m in Sources */,
 				7A4649281CA12F6F00E4DBD4 /* SettingViewController.m in Sources */,
@@ -965,6 +978,7 @@
 				7AA00C3F1C97E1AC00FD6D15 /* README.md in Sources */,
 				7A4649321CA14FD000E4DBD4 /* QRCodeReaderView.m in Sources */,
 				7A5CFB041C97C8C10002AF99 /* NewsViewController.m in Sources */,
+				7A98C2E51CA02A2E00EC4C74 /* Collect.m in Sources */,
 				7AEE4A161C980ED40081FBC6 /* NewsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1114,7 +1128,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.QinJunzhen.ViewLuoYang;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1170,7 +1184,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.QinJunzhen.ViewLuoYang;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

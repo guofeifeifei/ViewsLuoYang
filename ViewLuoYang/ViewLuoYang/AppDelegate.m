@@ -151,6 +151,7 @@
     return [WeiboSDK handleOpenURL:url delegate:self];
     
 }
+
 #pragma mark RESideMenu Delegate
 
 - (void)sideMenu:(RESideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
