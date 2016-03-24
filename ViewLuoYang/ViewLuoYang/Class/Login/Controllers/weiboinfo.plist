@@ -1,0 +1,93 @@
+{
+"allow_all_act_msg" = 0;
+"allow_all_comment" = 1;
+"avatar_hd" = "http://tva3.sinaimg.cn/crop.0.0.330.330.1024/e4311920jw8ezxlmjwfk6j209a096mxv.jpg";
+"avatar_large" = "http://tp1.sinaimg.cn/3828422944/180/5747614823/1";
+"bi_followers_count" = 7;
+"block_app" = 0;
+"block_word" = 0;
+city = 3;
+class = 1;
+"cover_image_phone" = "http://ww1.sinaimg.cn/crop.0.0.640.640.640/549d0121tw1egm1kjly3jj20hs0hsq4f.jpg";
+"created_at" = "Thu Oct 03 17:13:42 +0800 2013";
+"credit_score" = 80;
+description = "";
+domain = "";
+"favourites_count" = 1;
+"follow_me" = 0;
+"followers_count" = 14;
+following = 0;
+"friends_count" = 39;
+gender = m;
+"geo_enabled" = 1;
+id = 3828422944;
+idstr = 3828422944;
+lang = "zh-cn";
+location = "\U6cb3\U5357 \U6d1b\U9633";
+mbrank = 0;
+mbtype = 0;
+name = "iOS_\U5f20\U5f20\U5f20";
+"online_status" = 0;
+"pagefriends_count" = 0;
+"profile_image_url" = "http://tp1.sinaimg.cn/3828422944/50/5747614823/1";
+"profile_url" = "u/3828422944";
+province = 41;
+ptype = 0;
+remark = "";
+"screen_name" = "iOS_\U5f20\U5f20\U5f20";
+star = 0;
+status =     {
+"attitudes_count" = 0;
+"biz_feature" = 0;
+"bmiddle_pic" = "http://ww3.sinaimg.cn/bmiddle/8b05b8efjw1f24him5g5ej20mx0o0n1u.jpg";
+"comments_count" = 0;
+"created_at" = "Mon Mar 21 14:49:45 +0800 2016";
+"darwin_tags" =         (
+);
+favorited = 0;
+geo = "<null>";
+    "hot_weibo_tags" =         (
+    );
+    id = 3955478327412100;
+    idstr = 3955478327412100;
+    "in_reply_to_screen_name" = "";
+    "in_reply_to_status_id" = "";
+    "in_reply_to_user_id" = "";
+    isLongText = 0;
+    mid = 3955478327412100;
+    mlevel = 0;
+    "original_pic" = "http://ww3.sinaimg.cn/large/8b05b8efjw1f24him5g5ej20mx0o0n1u.jpg";
+    "pic_urls" =         (
+    {
+    "thumbnail_pic" = "http://ww3.sinaimg.cn/thumbnail/8b05b8efjw1f24him5g5ej20mx0o0n1u.jpg";
+    }
+    );
+    "reposts_count" = 0;
+    source = "<a href=\"http://app.weibo.com/t/feed/4bgLcg\" rel=\"nofollow\">\U9a91\U8f66\U53bb\U65c5\U884c</a>";
+    "source_allowclick" = 0;
+    "source_type" = 1;
+    text = Dasdh;
+    textLength = 5;
+    "text_tag_tips" =         (
+    );
+    "thumbnail_pic" = "http://ww3.sinaimg.cn/thumbnail/8b05b8efjw1f24him5g5ej20mx0o0n1u.jpg";
+    truncated = 0;
+    userType = 0;
+    visible =         {
+    "list_id" = 0;
+    type = 0;
+    };
+    };
+    "statuses_count" = 25;
+    urank = 8;
+    url = "";
+    "user_ability" = 0;
+    verified = 0;
+    "verified_reason" = "";
+    "verified_reason_url" = "";
+    "verified_source" = "";
+    "verified_source_url" = "";
+    "verified_trade" = "";
+    "verified_type" = "-1";
+    weihao = "";
+}

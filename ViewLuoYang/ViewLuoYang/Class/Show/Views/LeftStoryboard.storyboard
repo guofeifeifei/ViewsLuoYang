@@ -123,7 +123,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="nikcLabel" destination="KPJ-Df-xyN" id="6OO-Xr-rTu"/>
+                        <outlet property="ofenWords" destination="fbO-NI-EFO" id="D1T-kh-yh3"/>
                         <outlet property="seting" destination="aSH-3m-XSt" id="CK4-0O-5f8"/>
+                        <outlet property="userImageView" destination="jx5-mH-8Gu" id="veG-i0-YqO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Dz-FF-ufD" userLabel="First Responder" sceneMemberID="firstResponder"/>

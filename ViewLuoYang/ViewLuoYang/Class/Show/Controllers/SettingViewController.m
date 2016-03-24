@@ -19,8 +19,9 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)backShow:(id)sender {
-    ShowViewController *showVC = [[ShowViewController alloc] init];
-    [self presentViewController:showVC animated:NO completion:nil];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
     
 }
 

@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+//为注册添加代理
+@protocol RegisterViewControllerDelegate <NSObject>
 
+@optional
+- (void)registDidComplete:(NSString *)account password:(NSString *)password;
+
+@end
 @interface RegisterViewController : UIViewController
+//代理属性
+@property (nonatomic, weak) id<RegisterViewControllerDelegate> delegate;
+
 
 @end

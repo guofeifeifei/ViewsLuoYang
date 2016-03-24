@@ -60,10 +60,12 @@ install_resource()
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "AMap2DMap/MAMapKit.framework/AMap.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "AMap2DMap/MAMapKit.framework/AMap.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
