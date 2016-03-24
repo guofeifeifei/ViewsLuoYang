@@ -21,8 +21,13 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)backShow:(id)sender {
+
     
-     [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+
+    
+    
 }
 
 - (IBAction)cleanCPU:(id)sender {

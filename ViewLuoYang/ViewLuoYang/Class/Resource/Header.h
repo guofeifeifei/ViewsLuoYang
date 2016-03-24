@@ -54,7 +54,7 @@
 
 //新浪微博
 #define kAppKey @"975231233"
-#define kAppSecret @"    a66bf4566ab4d9e80e836cb9ea97e34f"
+#define kAppSecret @"a66bf4566ab4d9e80e836cb9ea97e34f"
 #define kRedirectURL @"https://api.weibo.com/oauth2/default.html"
 
 
@@ -62,6 +62,5 @@
 #define kWeixinAppID @"wxe708257a8ab89351"
 #define kWeixinAppSecret @"8f7611e414bc24a57d99e5abd438e7aa"
 #define kWeixinRedirectURL
-
 
 #endif /* Header_h */
