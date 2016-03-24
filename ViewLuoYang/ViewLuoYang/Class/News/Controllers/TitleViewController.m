@@ -180,8 +180,13 @@
                 [self.collectBtn setImage:[UIImage imageNamed:@"people_star"] forState:UIControlStateNormal];
                 [ProgressHUD showSuccess:@"收藏成功"];
                 Collect *shoucang = [Collect collectWithUrl:self.url image:self.image];
+                
                 //添加url
                 [dbManger insertIntoNewUrl:shoucang];
+                if (shoucang) {
+                    [self.collectBtn setImage:[UIImage imageNamed:@"people_star"] forState:UIControlStateNormal];
+                }
+                
                 
            
             

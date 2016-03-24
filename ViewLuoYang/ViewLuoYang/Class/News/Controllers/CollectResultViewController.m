@@ -27,7 +27,6 @@
     [webView loadRequest:request];
     [self.view addSubview:webView];
     
-    
     self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     self.activity.backgroundColor = barColor;
     //显示位置
@@ -35,6 +34,7 @@
     [self.view addSubview:self.activity];
 }
 
+//刷新
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     [self.activity startAnimating];
 }
@@ -43,7 +43,6 @@
     [self.activity stopAnimating];
     
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

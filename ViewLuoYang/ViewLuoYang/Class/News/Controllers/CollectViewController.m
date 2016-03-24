@@ -51,14 +51,7 @@
         [self.tableView.mj_header endRefreshing];
     }];
     
-//    //上拉加载
-//    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-//        [self.tableView.mj_footer beginRefreshing];
-//        _pageCount+=1;
-//        self.isRefresh=NO;
-//        
-//        [self.tableView.mj_footer endRefreshing];
-//    }];
+
     [self.view addSubview:self.tableView];
     
 }
@@ -84,6 +77,7 @@
         
         cell.detailTextLabel.text = collect.url;
         cell.detailTextLabel.textColor = barColor;
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:15.0f];
         [cell.imageView sd_setImageWithURL:[NSURL URLWithString:collect.image] placeholderImage:nil];
         
     }
