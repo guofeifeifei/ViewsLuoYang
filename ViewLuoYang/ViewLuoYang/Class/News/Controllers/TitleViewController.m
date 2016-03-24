@@ -28,6 +28,7 @@
 
 @property (nonatomic, copy) NSString *url;//传网址
 
+
 @end
 
 @implementation TitleViewController
@@ -172,13 +173,13 @@
                 
                 //删除url
                 
-                [dbManger deleteLinkManWithUrl:self.url];
+                [dbManger deleteColectWithUrl:self.url];
                 
                 
             }else{
                 [self.collectBtn setImage:[UIImage imageNamed:@"people_star"] forState:UIControlStateNormal];
                 [ProgressHUD showSuccess:@"收藏成功"];
-                Collect *shoucang = [Collect collectWithUrl:self.url];
+                Collect *shoucang = [Collect collectWithUrl:self.url image:self.image];
                 //添加url
                 [dbManger insertIntoNewUrl:shoucang];
                 

@@ -3,7 +3,7 @@
 //  ViewLuoYang
 //
 //  Created by scjy on 16/3/15.
-//  Copyright © 2016年 秦俊珍. All rights reserved.
+//  Copyright © 2016年 郭飞飞. All rights reserved.
 //
 
 #import "ServicedidViewController.h"
@@ -27,7 +27,7 @@
     self.webView.delegate = self;
     [self.view addSubview:self.webView];
     
-    
+   
   self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     self.activity.backgroundColor = barColor;
     //显示位置

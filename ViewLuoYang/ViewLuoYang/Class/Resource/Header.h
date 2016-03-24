@@ -63,6 +63,4 @@
 #define kWeixinAppSecret @"8f7611e414bc24a57d99e5abd438e7aa"
 #define kWeixinRedirectURL
 
-
-
 #endif /* Header_h */

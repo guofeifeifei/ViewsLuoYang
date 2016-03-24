@@ -27,7 +27,7 @@
 - (void)insertIntoNewUrl:(Collect *)url;
 
 //删
-- (void)deleteLinkManWithUrl:(NSString *)url;
+- (void)deleteColectWithUrl:(NSString *)url;
 
 
 //查

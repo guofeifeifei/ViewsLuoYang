@@ -60,6 +60,7 @@ static NSString *str=@"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self showBarButtonWithcode];
+    [self showMeButton];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
     self.automaticallyAdjustsScrollViewInsets=NO;
@@ -91,13 +92,6 @@ static NSString *str=@"cell";
     [self setupRefresh];
     
     
-    //左侧按钮
-    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftBtn.frame = CGRectMake(0, 0, 25, 25);
-    [leftBtn setImage:[UIImage imageNamed:@"ic_select_phost_lz_on"] forState:UIControlStateNormal];
-    [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
-    self.navigationItem.leftBarButtonItem = leftBar;
     
     
     
@@ -492,7 +486,7 @@ static NSString *str=@"cell";
     
     cell.model=self.listArr[indexPath.row];
     
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     
     

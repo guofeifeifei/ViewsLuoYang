@@ -96,7 +96,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSH-3m-XSt">
-                                <rect key="frame" x="15" y="549" width="90" height="37"/>
+                                <rect key="frame" x="10" y="549" width="90" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="         设置">
@@ -108,9 +108,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="f5r-vT-4HD" kind="show" id="H7K-vd-4GK"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,7 +122,6 @@
                     <connections>
                         <outlet property="nikcLabel" destination="KPJ-Df-xyN" id="6OO-Xr-rTu"/>
                         <outlet property="ofenWords" destination="fbO-NI-EFO" id="D1T-kh-yh3"/>
-                        <outlet property="seting" destination="aSH-3m-XSt" id="CK4-0O-5f8"/>
                         <outlet property="userImageView" destination="jx5-mH-8Gu" id="veG-i0-YqO"/>
                     </connections>
                 </viewController>
@@ -232,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="680.5" y="1351.5"/>
         </scene>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="jg1-GD-Px6">
             <objects>
-                <viewController id="fcm-eq-X1a" sceneMemberID="viewController">
+                <viewController id="fcm-eq-X1a" customClass="aboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u97-z7-KQe"/>
                         <viewControllerLayoutGuide type="bottom" id="KOD-SX-YTx"/>
@@ -252,7 +248,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="back_arrow" id="Avs-4c-ZqN">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="f5r-vT-4HD" kind="show" animates="NO" id="t6z-6h-yEo"/>
+                                                <action selector="back:" destination="fcm-eq-X1a" id="WaY-rj-Mpb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -282,23 +278,6 @@
             </objects>
             <point key="canvasLocation" x="1377.5" y="1178.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="eb6-Hh-xoX">
-            <objects>
-                <viewController id="fEe-jV-T5k" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="c5c-Ty-fia"/>
-                        <viewControllerLayoutGuide type="bottom" id="D1Q-4e-tPJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pxG-cs-wyJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hSQ-TP-L6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="Stars" width="320" height="568"/>
@@ -311,7 +290,4 @@
         <image name="setting_left_uncheck" width="44" height="44"/>
         <image name="tiezi" width="60" height="60"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="H7K-vd-4GK"/>
-    </inferredMetricsTieBreakers>
 </document>

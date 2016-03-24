@@ -26,12 +26,18 @@
 		7A1A66151C9E84A800A48CD9 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A1A66101C9E84A800A48CD9 /* read_me.txt */; };
 		7A1A66171C9E859200A48CD9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A66161C9E859200A48CD9 /* libsqlite3.0.tbd */; };
 		7A1A66191C9E85AA00A48CD9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A66181C9E85AA00A48CD9 /* libc++.tbd */; };
+		7A2DDEAD1CA230120082F3CB /* jpush-ios-2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2DDEAB1CA230120082F3CB /* jpush-ios-2.1.0.a */; };
+		7A2DDEAF1CA230750082F3CB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2DDEAE1CA230750082F3CB /* CFNetwork.framework */; };
+		7A2DDEB11CA230BD0082F3CB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2DDEB01CA230BD0082F3CB /* CoreFoundation.framework */; };
+		7A2DDEB31CA232920082F3CB /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A2DDEB21CA232920082F3CB /* PushConfig.plist */; };
+		7A2DDEB61CA246B10082F3CB /* aboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DDEB51CA246B10082F3CB /* aboutViewController.m */; };
 		7A4055A91C9817490040895C /* ServicedidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4055A81C9817490040895C /* ServicedidViewController.m */; };
 		7A43EC5A1C9EAB5B00F880EF /* SYTCodeScanerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A43EC591C9EAB5B00F880EF /* SYTCodeScanerViewController.m */; };
 		7A4649281CA12F6F00E4DBD4 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4649271CA12F6F00E4DBD4 /* SettingViewController.m */; };
 		7A4649311CA14FD000E4DBD4 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A46492B1CA14FD000E4DBD4 /* QRCameraSwitchButton.m */; };
 		7A4649321CA14FD000E4DBD4 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A46492E1CA14FD000E4DBD4 /* QRCodeReaderView.m */; };
 		7A4649331CA14FD000E4DBD4 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4649301CA14FD000E4DBD4 /* QRCodeReaderViewController.m */; };
+		7A4649351CA1737A00E4DBD4 /* defaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A4649341CA1737A00E4DBD4 /* defaultImage.jpg */; };
 		7A5CFACC1C97C81C0002AF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACB1C97C81C0002AF99 /* main.m */; };
 		7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACE1C97C81C0002AF99 /* AppDelegate.m */; };
 		7A5CFAD11C97C81C0002AF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFAD01C97C81C0002AF99 /* Assets.xcassets */; };
@@ -444,6 +450,13 @@
 		7A1A66131C9E84A800A48CD9 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		7A1A66161C9E859200A48CD9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		7A1A66181C9E85AA00A48CD9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		7A2DDEAB1CA230120082F3CB /* jpush-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.0.a"; sourceTree = "<group>"; };
+		7A2DDEAC1CA230120082F3CB /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		7A2DDEAE1CA230750082F3CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7A2DDEB01CA230BD0082F3CB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		7A2DDEB21CA232920082F3CB /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		7A2DDEB41CA246B10082F3CB /* aboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutViewController.h; sourceTree = "<group>"; };
+		7A2DDEB51CA246B10082F3CB /* aboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutViewController.m; sourceTree = "<group>"; };
 		7A4055A71C9817490040895C /* ServicedidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicedidViewController.h; sourceTree = "<group>"; };
 		7A4055A81C9817490040895C /* ServicedidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicedidViewController.m; sourceTree = "<group>"; };
 		7A43EC581C9EAB5B00F880EF /* SYTCodeScanerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTCodeScanerViewController.h; sourceTree = "<group>"; };
@@ -457,6 +470,7 @@
 		7A46492E1CA14FD000E4DBD4 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
 		7A46492F1CA14FD000E4DBD4 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
 		7A4649301CA14FD000E4DBD4 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
+		7A4649341CA1737A00E4DBD4 /* defaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpg; sourceTree = "<group>"; };
 		7A5CFAC71C97C81C0002AF99 /* ViewLuoYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLuoYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5CFACB1C97C81C0002AF99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A5CFACD1C97C81C0002AF99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1214,7 +1228,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				7ABEE5C31C990FB20093912D /* libz.tbd in Frameworks */,
+
+				7A2DDEB11CA230BD0082F3CB /* CoreFoundation.framework in Frameworks */,
+				7A2DDEAF1CA230750082F3CB /* CFNetwork.framework in Frameworks */,
+				7A2DDEAD1CA230120082F3CB /* jpush-ios-2.1.0.a in Frameworks */,
+				7A94AC201C9F792700E676E7 /* libsqlite3.tbd in Frameworks */,
+				7A1A66191C9E85AA00A48CD9 /* libc++.tbd in Frameworks */,
+
 				7A1A66171C9E859200A48CD9 /* libsqlite3.0.tbd in Frameworks */,
 				7AD2D5371C9E883100298043 /* libstdc++.6.0.9.tbd in Frameworks */,
 				7A94C11C1CA173D300EBDB3F /* AudioToolbox.framework in Frameworks */,
@@ -1250,6 +1272,10 @@
 				7A94C11B1CA173D300EBDB3F /* AudioToolbox.framework */,
 				7A94C1191CA173C100EBDB3F /* CoreMedia.framework */,
 				7A94C1171CA1739E00EBDB3F /* MobileCoreServices.framework */,
+
+				7A2DDEB01CA230BD0082F3CB /* CoreFoundation.framework */,
+				7A2DDEAE1CA230750082F3CB /* CFNetwork.framework */,
+
 				7A1A66181C9E85AA00A48CD9 /* libc++.tbd */,
 				7A1A66161C9E859200A48CD9 /* libsqlite3.0.tbd */,
 				7A1A65F61C9E4A8A00A48CD9 /* libsqlite3.tbd */,
@@ -1288,6 +1314,7 @@
 				7A1A660B1C9E557100A48CD9 /* UIView+Extension.h */,
 				7A1A660C1C9E557100A48CD9 /* UIView+Extension.m */,
 				7A1A65F91C9E4E0400A48CD9 /* libWeiboSDK */,
+				7A2DDEB21CA232920082F3CB /* PushConfig.plist */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -1321,6 +1348,15 @@
 				7A1A66131C9E84A800A48CD9 /* WXApiObject.h */,
 			);
 			path = SDK1.6.2;
+			sourceTree = "<group>";
+		};
+		7A2DDEAA1CA230120082F3CB /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7A2DDEAB1CA230120082F3CB /* jpush-ios-2.1.0.a */,
+				7A2DDEAC1CA230120082F3CB /* JPUSHService.h */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		7A4649291CA14FD000E4DBD4 /* QRCodeReaderViewController */ = {
@@ -1533,6 +1569,7 @@
 		7A5CFAEC1C97C8C10002AF99 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7A2DDEAA1CA230120082F3CB /* lib */,
 				7A4649291CA14FD000E4DBD4 /* QRCodeReaderViewController */,
 				7AD2D5321C9E799600298043 /* AMapLocationKit.framework */,
 				7A8131AA1C9BFF4100114348 /* UIView+YSTextInputKeyboard.h */,
@@ -1627,6 +1664,8 @@
 				7AABFFA11CA0E6CA005CB2BA /* LeftViewController.m */,
 				7A4649261CA12F6F00E4DBD4 /* SettingViewController.h */,
 				7A4649271CA12F6F00E4DBD4 /* SettingViewController.m */,
+				7A2DDEB41CA246B10082F3CB /* aboutViewController.h */,
+				7A2DDEB51CA246B10082F3CB /* aboutViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3096,6 +3135,7 @@
 		7AA00C361C97E1AC00FD6D15 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
+				7A4649341CA1737A00E4DBD4 /* defaultImage.jpg */,
 				7A6254011CA034C1002CA7E1 /* image2.jpg */,
 				7A6253FF1CA0344A002CA7E1 /* image1.jpg */,
 				7AA00C371C97E1AC00FD6D15 /* LICENCE.txt */,
@@ -3254,10 +3294,13 @@
 				7AEE4A131C98002D0081FBC6 /* HotTalk.plist in Resources */,
 				7AEE4A091C97F55D0081FBC6 /* LuoyangNews.plist in Resources */,
 				7AEE4A1A1C9844AE0081FBC6 /* headView.plist in Resources */,
+
 				7A94C4A81CA1761600EBDB3F /* NTESNoDisturbSettingViewController.xib in Resources */,
 				7A94C2971CA175D600EBDB3F /* NIMKitResouce.bundle in Resources */,
 				7A94C2901CA175BA00EBDB3F /* video_chat_tip_onTimer.aac in Resources */,
 				7A94C46E1CA1761600EBDB3F /* NTESSystemNotificationViewController.xib in Resources */,
+		7A4649351CA1737A00E4DBD4 /* defaultImage.jpg in Resources */,
+
 				7A5CFB061C97C8C10002AF99 /* ProgressHUD.bundle in Resources */,
 				7A94C4661CA1761600EBDB3F /* NTESContactViewController.xib in Resources */,
 				7A94C49A1CA1761600EBDB3F /* NTESAudioChatViewController.xib in Resources */,
@@ -3268,6 +3311,7 @@
 				7A94C4711CA1761600EBDB3F /* NTESLoginViewController.xib in Resources */,
 				7A94C4AC1CA1761600EBDB3F /* NTESAboutViewController.xib in Resources */,
 				7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */,
+				7A2DDEB31CA232920082F3CB /* PushConfig.plist in Resources */,
 				7AA00C421C97E87600FD6D15 /* service.plist in Resources */,
 				7A94C4731CA1761600EBDB3F /* NTESRegisterViewController.xib in Resources */,
 				7AACECDD1C9C34D200A34CC1 /* WeatherStoryboard.storyboard in Resources */,
@@ -3376,7 +3420,11 @@
 				7A94C4A91CA1761600EBDB3F /* NTESNoDisturbTimeCell.m in Sources */,
 				7A94C46B1CA1761600EBDB3F /* NTESSystemNotificationCell.m in Sources */,
 				7AABFFAA1CA0E73A005CB2BA /* RECommonFunctions.m in Sources */,
+
 				7A94C4861CA1761600EBDB3F /* NTESAudio2TextViewController.m in Sources */,
+
+				7A2DDEB61CA246B10082F3CB /* aboutViewController.m in Sources */,
+
 				7A5CFB121C980B4C0002AF99 /* NewsCollectionViewCell.m in Sources */,
 				7A7EDBA91C993AAC00DC6EDF /* LocationViewController.m in Sources */,
 				7A94C24B1CA175AB00EBDB3F /* NIMKitEvent.m in Sources */,
@@ -3778,6 +3826,10 @@
 					"$(PROJECT_DIR)/ViewLuoYang/Library/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/SDK1.6.2",
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Message/Resource/NIMSDK",
+
+					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",
+					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource/lib",
+
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -3835,7 +3887,12 @@
 					"$(PROJECT_DIR)/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/SDK1.6.2",
+
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Message/Resource/NIMSDK",
+
+					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",
+					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource/lib",
+
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

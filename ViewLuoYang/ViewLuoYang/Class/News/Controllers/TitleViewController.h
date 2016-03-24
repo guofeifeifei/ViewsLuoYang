@@ -12,5 +12,6 @@
 @property (nonatomic, copy) NSString *periodId;
 @property (nonatomic, copy) NSString *paperId;
 @property (nonatomic, copy) NSString *nsid;
+@property (nonatomic, copy) NSString *image;
 
 @end

@@ -16,6 +16,7 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 
 
+
 #import "LinkMan.h"
 #import "DateBaseUserManager.h"
 
@@ -42,6 +43,12 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
 @property(nonatomic, strong)UITabBarController *tabbar;
 
 @property(nonatomic, strong)RESideMenu *sideMenuViewConttroller;
+
+#import "JPUSHService.h"
+@interface AppDelegate (){
+    
+}
+
 
 @end
 
@@ -95,12 +102,13 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
 }
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
+    
+    // Required
+    [JPUSHService registerDeviceToken:deviceToken];
     [[NIMSDK sharedSDK] updateApnsToken:deviceToken];
+    
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
-    DDLogInfo(@"receive remote notification:  %@", userInfo);
-}
 
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
@@ -140,15 +148,33 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     //新浪微博分享
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
-    [WXApi registerApp:kWeixinAppSecret];
+    
+    [WXApi registerApp:kWeixinAppID];
     
     
-    
+    //地图
     [AMapSearchServices sharedServices].apiKey = kLocationApk;
     
     [AMapLocationServices sharedServices].apiKey = kLocationApk;
     
+
     self.tabbar=[[UITabBarController alloc]init];
+
+    
+    //推送
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        
+        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil];
+    
+    }else{
+        NSLog(@"失败");
+    }
+    [JPUSHService setupWithOption:launchOptions appKey:appKey  channel:channel apsForProduction:isProduction
+     ];
+    
+    
+    
+  
     //展示类
     ShowViewController *show=[[ShowViewController alloc]init];
     
@@ -234,6 +260,7 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     self.sideMenuViewConttroller.contentViewShadowEnabled = YES;
 
     self.window.rootViewController=self.sideMenuViewConttroller;
+
     
     
     
@@ -243,7 +270,9 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     
     
     self.window.backgroundColor = [UIColor whiteColor];
+    
     [self.window makeKeyAndVisible];
+  
     return YES;
 }
 
@@ -331,6 +360,68 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     }];
  
     
+}
+
+
+
+
+//监听方法
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
+//    
+//    // Required
+//    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+//        //可以添加自定义categories
+//        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+//                                                          UIUserNotificationTypeSound |
+//                                                          UIUserNotificationTypeAlert)
+//                                              categories:nil];
+//    } else {
+//        //categories 必须为nil
+//        [JPUSHService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+//                                                          UIRemoteNotificationTypeSound |
+//                                                          UIRemoteNotificationTypeAlert)
+//                                              categories:nil];
+//    }
+//    
+//    // Required
+//    //如需兼容旧版本的方式，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化和同时使用pushConfig.plist文件声明appKey等配置内容。
+//    [JPUSHService setupWithOption:launchOptions appKey:appKey channel:channel apsForProduction:isProduction];
+//    return YES;
+//}
+
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    // Required,For systems with less than or equal to iOS6
+    [JPUSHService handleRemoteNotification:userInfo];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    // IOS 7 Support Required
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [application setApplicationIconBadgeNumber:0];
+    [application cancelAllLocalNotifications];
 }
 
 

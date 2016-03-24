@@ -3,7 +3,7 @@
 //  ViewLuoYang
 //
 //  Created by scjy on 16/3/22.
-//  Copyright © 2016年 秦俊珍. All rights reserved.
+//  Copyright © 2016年 郭飞飞. All rights reserved.
 //
 
 #import "LeftViewController.h"
@@ -30,9 +30,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *ofenWords;
 
-
-
-
 @end
 
 @implementation LeftViewController
@@ -46,11 +43,9 @@
  
 }
 
-
-
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self a];
+//    [self a];
     
 }
 
@@ -73,7 +68,7 @@
         self.ofenWords.text=@"女";
     }
 
-    
+
 }
 
 

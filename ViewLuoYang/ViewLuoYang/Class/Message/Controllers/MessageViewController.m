@@ -31,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"消息";
+    [self showMeButton];
     [self showBarButtonWithcode];
 //    //去掉navigationBar下的黑色线条
 //    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];

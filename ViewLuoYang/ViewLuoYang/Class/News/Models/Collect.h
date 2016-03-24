@@ -11,8 +11,9 @@
 @interface Collect : NSObject
 
 @property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *image;
 
 //创建便利构造器创建收藏内容
-+ (instancetype)collectWithUrl:(NSString *)url;
++ (instancetype)collectWithUrl:(NSString *)url image:(NSString *)image;
 
 @end
