@@ -23,6 +23,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
     // Do any additional setup after loading the view.
     [self loadData];
     [self showBarButtonWithImage:@"back_arrow"];
+    self.tabBarController.tabBar.hidden = YES;
     
 }
 
@@ -125,11 +126,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 
 
-//当页面将要出现的时候隐藏tabBar
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = YES;
-}
+
 
 
 - (void)didReceiveMemoryWarning {

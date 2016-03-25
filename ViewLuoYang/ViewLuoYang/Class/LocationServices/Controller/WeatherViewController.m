@@ -149,7 +149,7 @@
             
             AMapLocalDayWeatherForecast *one = forecasts.casts[0];
                 NSLog(@"%@", one.week);
-                 NSLog(@"%ld", [one.week integerValue]);
+                 NSLog(@"%ld", (long)[one.week integerValue]);
                 switch ([one.week integerValue]) {
                 case 0:
                     self.oneDay.text = @"周一";

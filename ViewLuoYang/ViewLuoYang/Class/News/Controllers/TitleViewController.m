@@ -37,6 +37,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self showBarButtonWithImage:@"back_arrow"];
+    self.tabBarController.tabBar.hidden = YES;
     self.title = @"电子报";
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.webView];

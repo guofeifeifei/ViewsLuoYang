@@ -380,6 +380,7 @@
 		7AABFFAE1CA0EDAC005CB2BA /* LeftStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AABFFAD1CA0EDAC005CB2BA /* LeftStoryboard.storyboard */; };
 		7AACECDB1C9C208000A34CC1 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AACECDA1C9C208000A34CC1 /* WeatherViewController.m */; };
 		7AACECDD1C9C34D200A34CC1 /* WeatherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AACECDC1C9C34D200A34CC1 /* WeatherStoryboard.storyboard */; };
+		7AB8B5431CA4EE20006C22EF /* NewsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AB8B5421CA4EE20006C22EF /* NewsStoryboard.storyboard */; };
 		7ABEE5BB1C990F2A0093912D /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BA1C990F2A0093912D /* AMapLocationKit.framework */; };
 		7ABEE5BD1C990F860093912D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BC1C990F860093912D /* CoreTelephony.framework */; };
 		7ABEE5BF1C990F940093912D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */; };
@@ -1176,6 +1177,7 @@
 		7AACECD91C9C207F00A34CC1 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		7AACECDA1C9C208000A34CC1 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		7AACECDC1C9C34D200A34CC1 /* WeatherStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeatherStoryboard.storyboard; sourceTree = "<group>"; };
+		7AB8B5421CA4EE20006C22EF /* NewsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsStoryboard.storyboard; sourceTree = "<group>"; };
 		7ABEE5BA1C990F2A0093912D /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		7ABEE5BC1C990F860093912D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7ABEE5BE1C990F940093912D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1228,15 +1230,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				7ABEE5C31C990FB20093912D /* libz.tbd in Frameworks */,
-
 				7A2DDEB11CA230BD0082F3CB /* CoreFoundation.framework in Frameworks */,
 				7A2DDEAF1CA230750082F3CB /* CFNetwork.framework in Frameworks */,
 				7A2DDEAD1CA230120082F3CB /* jpush-ios-2.1.0.a in Frameworks */,
 				7A94AC201C9F792700E676E7 /* libsqlite3.tbd in Frameworks */,
 				7A1A66191C9E85AA00A48CD9 /* libc++.tbd in Frameworks */,
-
 				7A1A66171C9E859200A48CD9 /* libsqlite3.0.tbd in Frameworks */,
 				7AD2D5371C9E883100298043 /* libstdc++.6.0.9.tbd in Frameworks */,
 				7A94C11C1CA173D300EBDB3F /* AudioToolbox.framework in Frameworks */,
@@ -1272,10 +1271,8 @@
 				7A94C11B1CA173D300EBDB3F /* AudioToolbox.framework */,
 				7A94C1191CA173C100EBDB3F /* CoreMedia.framework */,
 				7A94C1171CA1739E00EBDB3F /* MobileCoreServices.framework */,
-
 				7A2DDEB01CA230BD0082F3CB /* CoreFoundation.framework */,
 				7A2DDEAE1CA230750082F3CB /* CFNetwork.framework */,
-
 				7A1A66181C9E85AA00A48CD9 /* libc++.tbd */,
 				7A1A66161C9E859200A48CD9 /* libsqlite3.0.tbd */,
 				7A1A65F61C9E4A8A00A48CD9 /* libsqlite3.tbd */,
@@ -1562,6 +1559,7 @@
 				7A5CFB191C9845060002AF99 /* TouchItems.plist */,
 				7AF172231C98F9BA00AC94D1 /* NewsScondCollectionViewCell.h */,
 				7AF172241C98F9BA00AC94D1 /* NewsScondCollectionViewCell.m */,
+				7AB8B5421CA4EE20006C22EF /* NewsStoryboard.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3239,6 +3237,7 @@
 				TargetAttributes = {
 					7A5CFAC61C97C81C0002AF99 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = FZ67V9UY55;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -3294,14 +3293,13 @@
 				7AEE4A131C98002D0081FBC6 /* HotTalk.plist in Resources */,
 				7AEE4A091C97F55D0081FBC6 /* LuoyangNews.plist in Resources */,
 				7AEE4A1A1C9844AE0081FBC6 /* headView.plist in Resources */,
-
 				7A94C4A81CA1761600EBDB3F /* NTESNoDisturbSettingViewController.xib in Resources */,
 				7A94C2971CA175D600EBDB3F /* NIMKitResouce.bundle in Resources */,
 				7A94C2901CA175BA00EBDB3F /* video_chat_tip_onTimer.aac in Resources */,
 				7A94C46E1CA1761600EBDB3F /* NTESSystemNotificationViewController.xib in Resources */,
-		7A4649351CA1737A00E4DBD4 /* defaultImage.jpg in Resources */,
-
+				7A4649351CA1737A00E4DBD4 /* defaultImage.jpg in Resources */,
 				7A5CFB061C97C8C10002AF99 /* ProgressHUD.bundle in Resources */,
+				7AB8B5431CA4EE20006C22EF /* NewsStoryboard.storyboard in Resources */,
 				7A94C4661CA1761600EBDB3F /* NTESContactViewController.xib in Resources */,
 				7A94C49A1CA1761600EBDB3F /* NTESAudioChatViewController.xib in Resources */,
 				7A94C4971CA1761600EBDB3F /* NTESVideoViewController.xib in Resources */,
@@ -3420,11 +3418,8 @@
 				7A94C4A91CA1761600EBDB3F /* NTESNoDisturbTimeCell.m in Sources */,
 				7A94C46B1CA1761600EBDB3F /* NTESSystemNotificationCell.m in Sources */,
 				7AABFFAA1CA0E73A005CB2BA /* RECommonFunctions.m in Sources */,
-
 				7A94C4861CA1761600EBDB3F /* NTESAudio2TextViewController.m in Sources */,
-
 				7A2DDEB61CA246B10082F3CB /* aboutViewController.m in Sources */,
-
 				7A5CFB121C980B4C0002AF99 /* NewsCollectionViewCell.m in Sources */,
 				7A7EDBA91C993AAC00DC6EDF /* LocationViewController.m in Sources */,
 				7A94C24B1CA175AB00EBDB3F /* NIMKitEvent.m in Sources */,
@@ -3826,10 +3821,8 @@
 					"$(PROJECT_DIR)/ViewLuoYang/Library/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/SDK1.6.2",
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Message/Resource/NIMSDK",
-
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource/lib",
-
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -3862,7 +3855,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -3887,12 +3880,9 @@
 					"$(PROJECT_DIR)/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/libWeiboSDK",
 					"$(PROJECT_DIR)/ViewLuoYang/Library/SDK1.6.2",
-
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Message/Resource/NIMSDK",
-
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource/lib",
-
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -3925,7 +3915,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangs;
+				PRODUCT_BUNDLE_IDENTIFIER = QinJunzhen.ViewLuoYangss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

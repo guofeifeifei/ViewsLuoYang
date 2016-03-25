@@ -196,14 +196,16 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     
 
     
-    
-    NewsViewController *news=[[NewsViewController alloc]init];
+    UIStoryboard *newsStoryboard = [UIStoryboard storyboardWithName:@"NewsStoryboard" bundle:nil];
+    NewsViewController *news=[newsStoryboard instantiateViewControllerWithIdentifier:@"newsVC"];
     
     UINavigationController *newNav=[[UINavigationController alloc]initWithRootViewController:news];
     
     
     //导航栏颜色
     newNav.navigationBar.barTintColor = barColor;
+    
+    
     
     
     newNav.tabBarItem.image=[UIImage imageNamed:@"bottom_newspaper"];

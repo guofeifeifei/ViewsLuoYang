@@ -8,7 +8,7 @@
 
 #import "NewsDetailViewController.h"
 
-@interface NewsDetailViewController ()
+@interface NewsDetailViewController ()<UIWebViewDelegate>
 @property(nonatomic, strong) UIWebView *webView;
 @property(nonatomic, strong) UIActivityIndicatorView *activity;
 @end
@@ -40,6 +40,16 @@
 
 
 
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+
+}
+
+
+
+
+
+
 - (UIActivityIndicatorView *)activity{
     if (_activity == nil) {
         self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -61,10 +71,7 @@
     [self.activity startAnimating];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    [self.activity stopAnimating];
-    
-}
+
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:YES];
     self.tabBarController.tabBar.hidden = NO;
