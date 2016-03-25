@@ -10,4 +10,5 @@
 
 @interface CollectResultViewController : UIViewController
 @property (nonatomic, copy) NSString *url;
+
 @end

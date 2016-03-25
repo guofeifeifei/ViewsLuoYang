@@ -20,13 +20,13 @@
     // Do any additional setup after loading the view.
     
     self.title = @"已经收藏";
+    self.tabBarController.tabBar.hidden = YES;
     
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
     webView.delegate = self;
     [webView loadRequest:request];
     [self.view addSubview:webView];
-    
     
     self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     self.activity.backgroundColor = barColor;
@@ -35,6 +35,7 @@
     [self.view addSubview:self.activity];
 }
 
+//刷新
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     [self.activity startAnimating];
 }
@@ -43,7 +44,6 @@
     [self.activity stopAnimating];
     
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

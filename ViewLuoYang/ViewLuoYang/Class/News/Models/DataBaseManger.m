@@ -63,7 +63,7 @@ static sqlite3 *dataBase = nil;
 }
 //创建数据库表
 - (void)createDataBaseTable{
-    NSString *sql = @"CREATE TABLE Collect (number INTEGER PRIMARY KEY AUTOINCREMENT, url TEXT NOT NULL)";
+    NSString *sql = @"CREATE TABLE Collect (number INTEGER PRIMARY KEY AUTOINCREMENT, url TEXT NOT NULL, image TEXT NOT NULL)";
     char *error = nil;
     sqlite3_exec(dataBase, [sql UTF8String], NULL, NULL, &error);
     
@@ -90,17 +90,21 @@ static sqlite3 *dataBase = nil;
     [self openDataBase];
     //第二步：定义一个sqlite3_stmt(简单的理解为它里边就是sql语句)
     sqlite3_stmt *stmt = nil;
-    NSString *sql = @"INSERT INTO Collect (url) values (?)";
+    NSString *sql = @"INSERT INTO Collect (url, image) values (?, ?)";
     
     int result = sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &stmt, NULL);
     if (result == SQLITE_OK) {
         //绑定？ ---- url
         sqlite3_bind_text(stmt, 1, [url.url UTF8String], -1, NULL);
         ZPFLog(@"添加语句通过");
+        //绑定？ ---- image
+        sqlite3_bind_text(stmt, 2, [url.image UTF8String], -1, NULL);
+        
         
      //执行
     sqlite3_step(stmt);
-        }else{
+        }
+    else{
     ZPFLog(@"sql语句有问题");
 }
     //删除释放掉
@@ -110,7 +114,7 @@ static sqlite3 *dataBase = nil;
 
 
 //删
-- (void)deleteLinkManWithUrl:(NSString *)url{
+- (void)deleteColectWithUrl:(NSString *)url{
     //1.打开数据库
     [self openDataBase];
     //2.定义一个sqlite3_stmt（简单的理解为它里边就是sql语句）
@@ -144,7 +148,7 @@ static sqlite3 *dataBase = nil;
         //创建sql语句的指针变量
         sqlite3_stmt *stmt = nil;
         //sql语句
-        NSString *sql = @"SELECT url FROM Collect";
+        NSString *sql = @"SELECT url, image FROM Collect";
         int result = sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &stmt, NULL);
         
         self.allUrlArray = [NSMutableArray new];
@@ -153,7 +157,10 @@ static sqlite3 *dataBase = nil;
             //while循环添加查询出来的数据
             while (sqlite3_step(stmt) == SQLITE_ROW) {
                 NSString *url = [NSString stringWithUTF8String:(const char *) sqlite3_column_text(stmt, 0)];
-                [self.allUrlArray addObject:url];
+                NSString *image = [NSString stringWithUTF8String:(const char *) sqlite3_column_text(stmt, 1)];
+                
+                Collect *collect = [Collect collectWithUrl:url image:image];
+                [self.allUrlArray addObject:collect];
                 
             }
             

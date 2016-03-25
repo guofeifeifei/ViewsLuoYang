@@ -17,25 +17,43 @@ PODS:
   - AMap2DMap (3.3.0)
   - AMapLocation (1.2.0)
   - AMapSearch (3.3.0)
+  - CocoaLumberjack (2.0.3):
+    - CocoaLumberjack/Default (= 2.0.3)
+    - CocoaLumberjack/Extensions (= 2.0.3)
+  - CocoaLumberjack/Core (2.0.3)
+  - CocoaLumberjack/Default (2.0.3):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.3):
+    - CocoaLumberjack/Default
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - MJRefresh (3.1.0)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
   - AMap2DMap (~> 3.3.0)
   - AMapLocation (~> 1.2.0)
   - AMapSearch (~> 3.3.0)
+  - CocoaLumberjack (~> 2.0.0-rc2)
+  - FMDB (~> 2.5)
   - MJRefresh
   - SDWebImage
+  - SVProgressHUD (~> 1.1.2)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   AMap2DMap: e53461cdc345375e514579db17dbd721ff9ed9eb
   AMapLocation: 6d72a8f1c5f2a29a736fcaca3a85173ba3dc5f56
   AMapSearch: cff4faf59c007f7d1f2bae2d7170c3912783981a
+  CocoaLumberjack: f58d8a19629f4d8379ae14bb3534def24161430e
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
 COCOAPODS: 0.39.0

@@ -8,6 +8,16 @@
 
 #import "MessageViewController.h"
 #import "LoginViewController.h"
+
+
+
+//判断是否有缓存账号
+#import "NTESSessionViewController.h"
+#import "NTESMainTabController.h"
+#import "NTESLoginManager.h"
+#import "NTESNotificationCenter.h"
+
+
 @interface MessageViewController ()
 @property (nonatomic, strong) UIImageView *imageView;//图片
 @property (nonatomic, strong) UILabel *lable;
@@ -31,10 +41,53 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self.view addSubview:self.imageView];
-    [self.view addSubview:self.lable];
-    [self.view addSubview:self.loginBtn];
     
+    //查看数据库，如果有缓存的用户，就直接登陆，没有就去登陆
+    [self setupMainViewController];
+    
+       
+}
+
+
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    self.navigationController.tabBarController.tabBar.hidden=NO;
+    [self setupMainViewController];
+    
+}
+
+
+
+//查看数据库，如果有缓存的用户，就不用登陆
+
+- (void)setupMainViewController
+{
+    LoginData *data = [[NTESLoginManager sharedManager] currentLoginData];
+    NSString *account = [data account];
+    NSString *token = [data token];
+    
+    //如果有缓存用户名密码推荐使用自动登录
+    if ([account length] && [token length])
+    {
+        [[[NIMSDK sharedSDK] loginManager] autoLogin:account
+                                               token:token];
+        [[NTESServiceManager sharedManager] start];
+        NTESMainTabController *mainTab = [[NTESMainTabController alloc] initWithNibName:nil bundle:nil];
+        
+        [self.navigationController pushViewController:mainTab animated:YES];
+        
+    }else{
+        
+        [self.view addSubview:self.imageView];
+        [self.view addSubview:self.lable];
+        [self.view addSubview:self.loginBtn];
+        
+        
+    }
+  
 }
 
 #pragma mark ------- lazyLoading

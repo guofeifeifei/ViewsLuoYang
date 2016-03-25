@@ -48,6 +48,15 @@ static NSString *str=@"cell";
 
 @implementation ShowViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.tabBarController.tabBar.hidden=NO;
+    
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self showBarButtonWithcode];
@@ -350,7 +359,7 @@ static NSString *str=@"cell";
     
     
     manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"text/html"];
-    NSLog(@"%ld",_pageCount);
+    NSLog(@"%ld",(long)_pageCount);
     [manager GET:[NSString stringWithFormat:@"%@%@/null/15?_fs=2&_vc=58",self.urlString,@(_pageCount)] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         ZPFLog(@"%lld",downloadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

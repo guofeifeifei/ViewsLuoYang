@@ -11,6 +11,8 @@
 
 #define JPUSH_VERSION_NUMBER 2.1.0
 
+
+@end
 #import <Foundation/Foundation.h>
 
 @class CLRegion;

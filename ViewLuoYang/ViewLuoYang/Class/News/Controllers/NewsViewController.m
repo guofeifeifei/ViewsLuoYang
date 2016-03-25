@@ -38,7 +38,6 @@ static NSString *itemIntentfier = @"itemIdentifier";
     // Do any additional setup after loading the view.
     [self showBarButtonWithcode];
     self.navigationController.navigationBar.translucent = NO;
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"newspaper_bg"]];
     //去掉navigation下一条黑色的线条
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
@@ -54,6 +53,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
     [self.view addSubview:self.firstBtn];
     [self.view addSubview:self.secondBtn];
     [self.view addSubview:self.thirdBtn];
+
     
     //下拉刷新
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -77,6 +77,12 @@ static NSString *itemIntentfier = @"itemIdentifier";
 
     }];
     
+}
+
+//当页面将要出现的时候隐藏tabBar
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 #pragma mark ------------ lazyLoading
@@ -252,11 +258,11 @@ static NSString *itemIntentfier = @"itemIdentifier";
         //设置item间距
         layout.minimumInteritemSpacing = 1;
         //section的间距 上，左，下，右
-        layout.sectionInset = UIEdgeInsetsMake(30, 15, 20, 15);
+        layout.sectionInset = UIEdgeInsetsMake(0, 15, 20, 15);
         //设置每个item的大小
         layout.itemSize = CGSizeMake(KScreenWidth/3-20,KScreenHeight/4);
         //通过一个layout布局来创建一个collectionView
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 44, KScreenWidth, KScreenHeight) collectionViewLayout:layout];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 70, KScreenWidth, KScreenHeight) collectionViewLayout:layout];
         self.collectionView.backgroundColor = [UIColor lightGrayColor];
         //设置代理
         self.collectionView.delegate = self;
@@ -278,11 +284,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
 }
 
 
-//当页面将要出现的时候隐藏tabBar
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = NO;
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
