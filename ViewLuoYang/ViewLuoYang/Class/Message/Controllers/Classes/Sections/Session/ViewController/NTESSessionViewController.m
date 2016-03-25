@@ -73,8 +73,16 @@ NIMContactSelectDelegate>
 
 @implementation NTESSessionViewController
 
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    
     
     //返回到NTESSessionListViewController回话列表，否则通话容易返回到空白，出先bug
     

@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     
     self.title = @"已经收藏";
-    self.tabBarController.tabBar.hidden = YES;
+   
     
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];

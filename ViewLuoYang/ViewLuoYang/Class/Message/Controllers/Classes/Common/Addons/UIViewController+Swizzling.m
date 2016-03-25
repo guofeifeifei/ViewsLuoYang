@@ -32,7 +32,7 @@
 - (instancetype)swizzling_initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     id instance = [self swizzling_initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (instance) {
-        self.hidesBottomBarWhenPushed = YES;
+       // self.hidesBottomBarWhenPushed = YES;
     }
     return instance;
 }

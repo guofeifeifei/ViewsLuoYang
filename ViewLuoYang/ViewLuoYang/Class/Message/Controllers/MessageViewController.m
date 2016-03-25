@@ -33,10 +33,10 @@
     self.title = @"消息";
     [self showMeButton];
     [self showBarButtonWithcode];
-//    //去掉navigationBar下的黑色线条
-//    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-//    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
-//
+    //去掉navigationBar下的黑色线条
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor] , NSFontAttributeName:[UIFont systemFontOfSize:18.0f]}];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -45,7 +45,7 @@
     //查看数据库，如果有缓存的用户，就直接登陆，没有就去登陆
     [self setupMainViewController];
     
-       
+    
 }
 
 

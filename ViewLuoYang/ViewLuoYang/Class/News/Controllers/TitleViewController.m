@@ -37,7 +37,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self showBarButtonWithImage:@"back_arrow"];
-    self.tabBarController.tabBar.hidden = YES;
+    
     self.title = @"电子报";
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.webView];
@@ -243,7 +243,14 @@
     
 }
 
-
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    self.tabBarController.tabBar.hidden = NO;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.tabBarController.tabBar.hidden = YES;
+}
 //刷新方法：
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     [self.activity startAnimating];

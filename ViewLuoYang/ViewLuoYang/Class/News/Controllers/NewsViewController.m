@@ -79,11 +79,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
     
 }
 
-//当页面将要出现的时候隐藏tabBar
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = NO;
-}
+
 
 #pragma mark ------------ lazyLoading
 - (UIButton *)firstBtn{
