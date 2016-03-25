@@ -15,6 +15,8 @@
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "JPUSHService.h"
+#import <BmobPay/BmobPay.h>
+#import <AlipaySDK/AlipaySDK.h>
 @interface AppDelegate (){
     
 }
@@ -23,11 +25,11 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+   
     //新浪微博分享
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
@@ -39,19 +41,46 @@
     
     [AMapLocationServices sharedServices].apiKey = kLocationApk;
     
+    //bmob支付
+    [BmobPaySDK registerWithAppKey:kBmobPay];
     
-    
-    //推送
+    //推送//监听方法
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
         
         [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil];
     
     }else{
-        NSLog(@"失败");
+//        [JPUSHService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+//                                                          UIRemoteNotificationTypeSound |
+//                                                          UIRemoteNotificationTypeAlert)
+//                                              categories:nil];
     }
     [JPUSHService setupWithOption:launchOptions appKey:appKey  channel:channel apsForProduction:isProduction
      ];
     
+//    NSLog(@"kJPFNetworkDidSetupNotification = %@", kJPFNetworkDidSetupNotification);
+//    
+//     NSLog(@"kJPFNetworkDidCloseNotification = %@", kJPFNetworkDidCloseNotification);
+//     NSLog(@"kJPFNetworkDidRegisterNotification = %@", kJPFNetworkDidRegisterNotification);
+//     NSLog(@"kJPFNetworkDidLoginNotification = %@", kJPFNetworkDidLoginNotification);
+    
+    UILocalNotification *localNotification =  [JPUSHService setLocalNotification:[NSDate dateWithTimeIntervalSinceNow:100]
+                          alertBody:@"全景洛阳有新消息"
+                              badge:1
+                        alertAction:nil
+                      identifierKey:@"identifierKey"
+                           userInfo:nil
+                          soundName:nil];
+   
+    //前台显示
+    [JPUSHService showLocalNotificationAtFront:localNotification  identifierKey:nil];
+    
+    NSDictionary *remoteNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    
+    
+    NSLog(@"remoteNotification = %@", remoteNotification);
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
     
     
     UITabBarController *tabbar=[[UITabBarController alloc]init];
@@ -123,7 +152,7 @@
     serviceNav.tabBarItem.title=@"服务";
     
     tabbar.tabBar.tintColor=[UIColor redColor];
-    
+    tabbar.tabBar.backgroundColor = [UIColor whiteColor];
     tabbar.viewControllers=@[showNav,newNav,messageNav,serviceNav];
     
     RESideMenu *sideMenuViewConttroller = [[RESideMenu alloc] initWithContentViewController:tabbar leftMenuViewController:leftVC rightMenuViewController:nil];
@@ -164,9 +193,18 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
     
+    if ([url.host isEqualToString:@"safepay"]) {
+                [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+                    NSLog(@"result  = %@", resultDic);
+                }];
+                return YES;
+            }
+
+    
     BOOL isSuc = [WXApi handleOpenURL:url delegate:self];
     NSLog(@"url %@ isSuc %d",url,isSuc == YES ? 1 : 0);
     return  isSuc;
+    
     
     return [WeiboSDK handleOpenURL:url delegate:self];
     
@@ -196,43 +234,34 @@
 
 
 
-//监听方法
-//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
-//    
-//    // Required
-//    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-//        //可以添加自定义categories
-//        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
-//                                                          UIUserNotificationTypeSound |
-//                                                          UIUserNotificationTypeAlert)
-//                                              categories:nil];
-//    } else {
-//        //categories 必须为nil
-//        [JPUSHService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-//                                                          UIRemoteNotificationTypeSound |
-//                                                          UIRemoteNotificationTypeAlert)
-//                                              categories:nil];
-//    }
-//    
-//    // Required
-//    //如需兼容旧版本的方式，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化和同时使用pushConfig.plist文件声明appKey等配置内容。
-//    [JPUSHService setupWithOption:launchOptions appKey:appKey channel:channel apsForProduction:isProduction];
-//    return YES;
-//}
+
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
   
     // Required
     [JPUSHService registerDeviceToken:deviceToken];
+    
+    
+    
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     
+    NSDictionary *aps = [userInfo valueForKey:@"aps"];
+    NSString *content = [aps valueForKey:@"alert"];//推送内容显示
+    NSInteger badge = [[aps valueForKey:@"badge"]integerValue];//bade数量
+    NSString *sound = [aps valueForKey:@"sound"];//播放音乐
+    
+    //取得Extras字段内容
+    NSString *customizeField1 = [userInfo valueForKey:@"customizeExtras"];
+    NSLog(@"content =[%@], badge=[%ld], sound=[%@], customize field  =[%@]",content,badge,sound,customizeField1);
     // Required,For systems with less than or equal to iOS6
     [JPUSHService handleRemoteNotification:userInfo];
+    
+    
+    
+    
+    
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
@@ -271,5 +300,20 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+- (void)networkDidReceiveMessage:(NSNotification *)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    NSString *content = [userInfo valueForKey:@"content"];
+    NSDictionary *extras = [userInfo valueForKey:@"extras"];
+    NSString *customizeField1 = [extras valueForKey:@"customizeField1"]; //自定义参数，key是自己定义的
+    
+    UILocalNotification *localNotification =  [JPUSHService setLocalNotification:[NSDate dateWithTimeIntervalSinceNow:100] alertBody:@"家母喊你回洛阳呢？" badge:1 alertAction:customizeField1 identifierKey:@"identifierKey" userInfo:userInfo soundName:nil region:nil regionTriggersOnce:nil category:nil];
+    
+    //前台显示
+    [JPUSHService showLocalNotificationAtFront:localNotification  identifierKey:nil];
+    
+
+    
+}
+
 
 @end
