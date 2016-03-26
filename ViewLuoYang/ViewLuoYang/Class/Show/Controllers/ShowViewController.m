@@ -48,13 +48,6 @@ static NSString *str=@"cell";
 
 @implementation ShowViewController
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    self.tabBarController.tabBar.hidden=NO;
-    
-}
-
 
 
 - (void)viewDidLoad {
@@ -91,13 +84,16 @@ static NSString *str=@"cell";
     //加载刷新
     [self setupRefresh];
     
-    
-    
-    
-    
-    
-    
+
 }
+
+
+//当页面将要出现的时候隐藏tabBar
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
 
 //开始刷新自定义方法
 - (void)setupRefresh

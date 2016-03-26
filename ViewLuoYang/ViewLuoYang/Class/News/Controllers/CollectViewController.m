@@ -7,7 +7,7 @@
 //
 
 #import "CollectViewController.h"
-#import "CollectTableViewCell.h"
+//#import "CollectTableViewCell.h"
 #import "DataBaseManger.h"
 #import "CollectResultViewController.h"
 #import <MJRefresh/MJRefresh.h>
@@ -36,6 +36,7 @@
     
     
     self.urlArray=[manager selectAllUrl];
+
     
     [self.view addSubview:self.tableView];
 //    [self.view addSubview:self.button];
@@ -69,17 +70,17 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *cellIndentifiter = @"cellIndentifiter";
-    CollectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifiter];
-    if (cell == nil) {
-        cell = [[CollectTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIndentifiter];
     
+    static NSString *cellIndentifiter = @"cellIndentifiter";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifiter];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIndentifiter];
         Collect *collect = self.urlArray[indexPath.row];
-        
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:collect.image] placeholderImage:nil];
         cell.detailTextLabel.text = collect.url;
         cell.detailTextLabel.textColor = barColor;
         cell.detailTextLabel.font = [UIFont systemFontOfSize:15.0f];
-        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:collect.image] placeholderImage:nil];
+        
         
     }
     return cell;

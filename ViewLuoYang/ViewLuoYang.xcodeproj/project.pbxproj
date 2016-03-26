@@ -395,7 +395,6 @@
 		7AD3DB601C9A557D001065DF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB5F1C9A557D001065DF /* LoginViewController.m */; };
 		7AD3DB671C9A8A73001065DF /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */; };
 		7AD3DB6A1C9AC99A001065DF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DB691C9AC99A001065DF /* RegisterViewController.m */; };
-		7AE42B5E1CA0CC9300C83BF7 /* CollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE42B5D1CA0CC9300C83BF7 /* CollectTableViewCell.m */; };
 		7AE42B7C1CA0EC7400C83BF7 /* CollectResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE42B7B1CA0EC7400C83BF7 /* CollectResultViewController.m */; };
 		7AEE49FF1C97E60B0081FBC6 /* leftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE49FE1C97E60B0081FBC6 /* leftView.m */; };
 		7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4A041C97E6DE0081FBC6 /* letfView.xib */; };
@@ -1200,8 +1199,6 @@
 		7AD3DB661C9A8A73001065DF /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		7AD3DB681C9AC99A001065DF /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		7AD3DB691C9AC99A001065DF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		7AE42B5C1CA0CC9300C83BF7 /* CollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewCell.h; sourceTree = "<group>"; };
-		7AE42B5D1CA0CC9300C83BF7 /* CollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewCell.m; sourceTree = "<group>"; };
 		7AE42B7A1CA0EC7400C83BF7 /* CollectResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectResultViewController.h; sourceTree = "<group>"; };
 		7AE42B7B1CA0EC7400C83BF7 /* CollectResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectResultViewController.m; sourceTree = "<group>"; };
 		7AEE49FD1C97E60B0081FBC6 /* leftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = leftView.h; path = ViewLuoYang/leftView.h; sourceTree = SOURCE_ROOT; };
@@ -1551,8 +1548,6 @@
 		7A5CFAEB1C97C8C10002AF99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7AE42B5C1CA0CC9300C83BF7 /* CollectTableViewCell.h */,
-				7AE42B5D1CA0CC9300C83BF7 /* CollectTableViewCell.m */,
 				7A5CFB0E1C97DCA10002AF99 /* News.plist */,
 				7A5CFB101C980B4C0002AF99 /* NewsCollectionViewCell.h */,
 				7A5CFB111C980B4C0002AF99 /* NewsCollectionViewCell.m */,
@@ -3612,7 +3607,6 @@
 				7A94C1571CA1756F00EBDB3F /* NSData+NIMImageContentType.m in Sources */,
 				7A94C4361CA1761600EBDB3F /* NTESFPSLabel.m in Sources */,
 				7A94C4421CA1761600EBDB3F /* NTESPersonalCardViewController.m in Sources */,
-				7AE42B5E1CA0CC9300C83BF7 /* CollectTableViewCell.m in Sources */,
 				7A94C43C1CA1761600EBDB3F /* NTESMainTabController.m in Sources */,
 				7A94C4CC1CA1761600EBDB3F /* NTESSpellingCenter.m in Sources */,
 				7A94C4721CA1761600EBDB3F /* NTESRegisterViewController.m in Sources */,
