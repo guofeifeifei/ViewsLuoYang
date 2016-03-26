@@ -29,7 +29,7 @@
     // Do any additional setup after loading the view.
     [self showBarButtonWithImage:@"back_arrow"];
     self.title = @"我的收藏";
-    self.tabBarController.tabBar.hidden = YES;
+   
     
     DataBaseManger *manager=[DataBaseManger shareInstance];
     [manager openDataBase];

@@ -48,6 +48,8 @@ NSString *Identifier = @"client_cell";
 }
 
 - (void)viewDidLayoutSubviews{
+    
+    
     NTESClientsTableHeader *header = [[NTESClientsTableHeader alloc] initWithFrame:CGRectZero];
     CGSize size = [header sizeThatFits:self.view.size];
     header.size = size;

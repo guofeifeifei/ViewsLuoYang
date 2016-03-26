@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view.
     self.title = @"评论";
     [self showBarButtonWithImage:@"back_arrow"];
-    self.tabBarController.tabBar.hidden = YES;
+   
     self.view.backgroundColor = [UIColor colorWithRed:232/255.0 green:233/255.0 blue:232/255.0 alpha:1.0];
     [self.view addSubview:self.discussView];
     

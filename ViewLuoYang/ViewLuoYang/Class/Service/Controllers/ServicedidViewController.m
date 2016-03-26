@@ -23,10 +23,12 @@
       self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.path]]];
-    
+    self.webView.backgroundColor = [UIColor whiteColor];
+    self.webView.opaque = NO;
     self.webView.delegate = self;
+ 
     [self.view addSubview:self.webView];
-    
+    NSLog(@"self.pathm = %@", self.path);
    
   self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     self.activity.backgroundColor = barColor;
@@ -46,20 +48,21 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     [self.activity stopAnimating];
+//     [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.getElementsByClassName('ad')[0].style.display = 'none'"];
     
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:YES];
     self.tabBarController.tabBar.hidden = NO;
+    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+    
     self.tabBarController.tabBar.hidden = YES;
 }
-   
-//- (void)webViewDidFinishLoad:(UIWebView *)webView{
-//      [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.getElementsByClassName('adpic')[0].style.display = 'none'"];
-//}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

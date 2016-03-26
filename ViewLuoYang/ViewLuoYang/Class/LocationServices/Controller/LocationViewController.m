@@ -348,16 +348,7 @@
     }
     return nil;
 }
-//- (MAOverlayView *)mapView:(MAMapView *)mapView viewForOverlay:(id<MAOverlay>)overlay{
-//    if ([overlay isKindOfClass:[MAPolyline class]]) {
-//        MAPolylineView *polylineView = [[MAPolylineView alloc] initWithPolyline:overlay];
-//        
-//        polylineView.lineWidth = 4;
-//        polylineView.strokeColor = barColor;
-//        return polylineView;
-//    }
-//    return nil;
-//}
+
 #pragma mark --------- 字符串解析
 
 - (CLLocationCoordinate2D *)coordinatesForString:(NSString *)string
@@ -530,14 +521,7 @@
     
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:YES];
-    self.tabBarController.tabBar.hidden = NO;
-}
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:YES];
-    self.tabBarController.tabBar.hidden = YES;
-}
+
 - (NSMutableArray *)annotations{
     if (_annotations == nil) {
         self.annotations = [NSMutableArray array];

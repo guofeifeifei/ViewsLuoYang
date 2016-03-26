@@ -48,13 +48,7 @@
 }
 
 
-- (void)viewWillAppear:(BOOL)animated{
-    
-    
-    [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden=NO;
-    
-}
+
 
 
 //点击注册回传值
@@ -150,7 +144,15 @@
     
 }
 
-
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    self.tabBarController.tabBar.hidden = NO;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+     [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

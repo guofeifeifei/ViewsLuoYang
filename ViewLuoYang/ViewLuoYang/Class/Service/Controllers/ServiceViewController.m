@@ -13,12 +13,17 @@
 #import "ServicedidViewController.h"
 #import "ServiceCollectionViewCell.h"
 #import "LocationViewController.h"
+#import "MoveViewController.h"
 
 @interface ServiceViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>{
     BOOL _refresh;
+     NSInteger i;
 }
 @property(nonatomic, strong) UICollectionView *collectionView;
 @property(nonatomic, strong) NSMutableArray *serviceArray;
+@property(nonatomic, strong) NSMutableArray *icoverArray;
+@property(nonatomic, strong) NSMutableArray *ititleArray;
+@property(nonatomic, strong) NSMutableArray *ipathArray;
 @end
 
 @implementation ServiceViewController
@@ -26,6 +31,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    i = 0;
     [self showBarButtonWithcode];
     [self showMeButton];
     self.title = @"服务";
@@ -43,10 +49,12 @@
     [self.collectionView.mj_header beginRefreshing];
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self loadData];
+       
         [self.collectionView reloadData];
         [self.collectionView.mj_header endRefreshing];
         _refresh = YES;
     } ];
+   // [self loadData2];
     
 }
 - (void)loadData{
@@ -67,6 +75,7 @@
         
         AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
         sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+        
         [sessionManager GET:kService parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             NSLog(@"%@", downloadProgress);
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -103,21 +112,30 @@
         }];
         
         
+       
+        
+        
+        
     }
-
+    
 }
+
 
 
 
 #pragma mark -------------UICollectionViewDataSource
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-  
+    NSLog(@"%ld", self.icoverArray.count);
+   
     ServiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
-        if (self.serviceArray.count > 0) {
+        if (indexPath.row < self.serviceArray.count + 2 ) {
         
             if (indexPath.row == self.serviceArray.count) {
                 cell.serviceImage.image = [UIImage imageNamed:@"map"];
                 cell.serviceLable.text = @"地图定位";
+            }else if (indexPath.row == self.serviceArray.count + 1) {
+                cell.serviceImage.image = [UIImage imageNamed:@"Money.jpg"];
+                cell.serviceLable.text = @"万紫千红";
             }else{
                 
                 cell.model = self.serviceArray[indexPath.row];
@@ -128,19 +146,28 @@
     
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.serviceArray.count + 1;
+    return self.serviceArray.count + 2 ;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
    
    
-    if (self.serviceArray.count > 0) {
+    if (indexPath.row < self.serviceArray.count + 2 ) {
         if (indexPath.row == self.serviceArray.count) {
             LocationViewController *loctionVC = [[LocationViewController alloc] init];
             [self.navigationController pushViewController:loctionVC animated:YES];
             
             loctionVC.typeTitle = @"地图定位";
             
-        } else{
+        } else if  (indexPath.row == self.serviceArray.count + 1) {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"moveStoryboard" bundle:nil];
+            
+            MoveViewController *loctionVC = [storyboard instantiateViewControllerWithIdentifier:@"moveID"];
+            [self.navigationController pushViewController:loctionVC animated:YES];
+            
+            loctionVC.typeTitle = @"支付电影";
+            
+    
+        }else{
              ServicedidViewController *servicedidVC = [[ServicedidViewController alloc] init];
             serviceModel *model = [[serviceModel alloc] init];
             model = self.serviceArray[indexPath.row];
@@ -150,8 +177,8 @@
         }
     }
    
-   
 }
+
 
 
 #pragma mark -------------UICollectionViewDelegate
@@ -185,7 +212,26 @@
     
     
 }
-
+- (NSMutableArray *)icoverArray{
+    if (_icoverArray == nil) {
+        _icoverArray = [NSMutableArray new];
+    }
+    return _icoverArray;
+}
+- (NSMutableArray *)ititleArray{
+    if (_ititleArray == nil) {
+        self.ititleArray = [NSMutableArray new];
+    }
+    return _ititleArray;
+}
+- (NSMutableArray *)ipathArray{
+    if (_ipathArray == nil) {
+        self.ipathArray = [NSMutableArray new];
+    }
+    return _ipathArray;
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

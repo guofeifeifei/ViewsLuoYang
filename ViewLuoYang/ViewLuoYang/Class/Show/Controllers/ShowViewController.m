@@ -50,6 +50,7 @@ static NSString *str=@"cell";
 
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self showBarButtonWithcode];
@@ -500,23 +501,6 @@ static NSString *str=@"cell";
     
     
 }
-
-
-
-
-
-
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    
-//    self.tabBarController.tabBar.hidden = NO;
-//}
-
-
-
-
-
 
 
 
