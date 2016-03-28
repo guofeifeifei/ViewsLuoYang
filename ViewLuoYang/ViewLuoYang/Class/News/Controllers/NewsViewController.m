@@ -215,7 +215,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
         NewsModel *model = self.allNewsArray[indexPath.row];
         
         
-        //当是第一个item的时候，出现最新
+        //当是第一个item的时候，出现"最新"
         if (indexPath.row == 0) {
             cell.titleLable.text = @"最新";
         }else{
