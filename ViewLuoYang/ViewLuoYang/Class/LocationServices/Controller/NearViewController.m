@@ -182,6 +182,16 @@
     
     
 }
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    self.tabBarController.tabBar.hidden = NO;
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    
+    self.tabBarController.tabBar.hidden = YES;
+}
 - (NSArray *)pois{
     if (_pois == nil) {
         _pois = [NSArray new];

@@ -24,7 +24,7 @@
 //iluoyang
 #define kLoveLuoyang @"http://iluoyang.qianfanapi.com/v1_4/site/discover"
 //Movie
-#define kmovie @"http://yodmv.yod.cn/v3interface/MovieDetail.do?s=2.0&movieId=1806&imei=869609020289003&token=b67e1114fa28ba47&userId=389350&cId=316&m=HUAWEI%20TIT-AL00&pId=1&h=1184&w=720"
+#define kmovie @"http://yodmv.yod.cn/v3interface/MovieDetail.do?s=2.0&movieId=5936&imei=869609020289003&token=b67e1114fa28ba47&userId=389350&cId=316&m=%48%55%41%57%45%49%20%54%49%54%2D%41%4C%30%30&pId=1&h=1184&w=720"
 //首界面 接口
 #define KheadView  @"http://shouji.lyd.com.cn/tools/client/focusimg/news/14?_fs=2&_vc=58"
 //洛阳新闻 http://shouji.lyd.com.cn/tools/service/getNewsList/news_luoyang/4/null/15?_fs=2&_vc=58

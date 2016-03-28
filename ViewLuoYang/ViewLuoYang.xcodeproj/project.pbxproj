@@ -17,6 +17,9 @@
 		7A04D8CC1CA2A00F008A58EA /* AiLuoyang.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04D8CB1CA2A00F008A58EA /* AiLuoyang.m */; };
 		7A04D8CE1CA2A37A008A58EA /* ailuoyang.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A04D8CD1CA2A37A008A58EA /* ailuoyang.plist */; };
 		7A07F7A41C9AC750008532DE /* NearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A07F7A31C9AC750008532DE /* NearViewController.m */; };
+		7A0B54111CA78D52003D4B4F /* applepay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B54101CA78D52003D4B4F /* applepay.jpg */; };
+		7A0B54181CA7C5BF003D4B4F /* BmobPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B54171CA7C5BF003D4B4F /* BmobPayViewController.m */; };
+		7A0B541B1CA7C9F7003D4B4F /* MoveStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B541A1CA7C9F7003D4B4F /* MoveStartViewController.m */; };
 		7A0E430F1C99985B0078D4A3 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E430D1C99985B0078D4A3 /* serviceModel.m */; };
 		7A0E43131C99986C0078D4A3 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */; };
 		7A0E43141C99986C0078D4A3 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E43111C99986C0078D4A3 /* ServiceCollectionViewCell.xib */; };
@@ -48,6 +51,7 @@
 		7A4649321CA14FD000E4DBD4 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A46492E1CA14FD000E4DBD4 /* QRCodeReaderView.m */; };
 		7A4649331CA14FD000E4DBD4 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4649301CA14FD000E4DBD4 /* QRCodeReaderViewController.m */; };
 		7A4649351CA1737A00E4DBD4 /* defaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A4649341CA1737A00E4DBD4 /* defaultImage.jpg */; };
+		7A55AB9D1CA67B650082DC97 /* zhifubao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A55AB9C1CA67B640082DC97 /* zhifubao.jpg */; };
 		7A5CFACC1C97C81C0002AF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACB1C97C81C0002AF99 /* main.m */; };
 		7A5CFACF1C97C81C0002AF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CFACE1C97C81C0002AF99 /* AppDelegate.m */; };
 		7A5CFAD11C97C81C0002AF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CFAD01C97C81C0002AF99 /* Assets.xcassets */; };
@@ -439,6 +443,11 @@
 		7A04D8CD1CA2A37A008A58EA /* ailuoyang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ailuoyang.plist; sourceTree = "<group>"; };
 		7A07F7A21C9AC750008532DE /* NearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearViewController.h; sourceTree = "<group>"; };
 		7A07F7A31C9AC750008532DE /* NearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearViewController.m; sourceTree = "<group>"; };
+		7A0B54101CA78D52003D4B4F /* applepay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applepay.jpg; sourceTree = "<group>"; };
+		7A0B54161CA7C5BF003D4B4F /* BmobPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BmobPayViewController.h; sourceTree = "<group>"; };
+		7A0B54171CA7C5BF003D4B4F /* BmobPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BmobPayViewController.m; sourceTree = "<group>"; };
+		7A0B54191CA7C9F7003D4B4F /* MoveStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveStartViewController.h; sourceTree = "<group>"; };
+		7A0B541A1CA7C9F7003D4B4F /* MoveStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveStartViewController.m; sourceTree = "<group>"; };
 		7A0E430D1C99985B0078D4A3 /* serviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serviceModel.m; sourceTree = "<group>"; };
 		7A0E430E1C99985B0078D4A3 /* serviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serviceModel.h; sourceTree = "<group>"; };
 		7A0E43101C99986C0078D4A3 /* ServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCollectionViewCell.m; sourceTree = "<group>"; };
@@ -497,6 +506,7 @@
 		7A46492F1CA14FD000E4DBD4 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
 		7A4649301CA14FD000E4DBD4 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
 		7A4649341CA1737A00E4DBD4 /* defaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpg; sourceTree = "<group>"; };
+		7A55AB9C1CA67B640082DC97 /* zhifubao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhifubao.jpg; sourceTree = "<group>"; };
 		7A5CFAC71C97C81C0002AF99 /* ViewLuoYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLuoYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5CFACB1C97C81C0002AF99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A5CFACD1C97C81C0002AF99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1347,6 +1357,48 @@
 			path = BmobPay_V1.0.5;
 			sourceTree = "<group>";
 		};
+		7A0B54121CA7C5B1003D4B4F /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				7A0B54131CA7C5B1003D4B4F /* controller */,
+				7A0B54141CA7C5B1003D4B4F /* Model */,
+				7A0B54151CA7C5B1003D4B4F /* Views */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
+		7A0B54131CA7C5B1003D4B4F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A0B54161CA7C5BF003D4B4F /* BmobPayViewController.h */,
+				7A0B54171CA7C5BF003D4B4F /* BmobPayViewController.m */,
+				7A0B54191CA7C9F7003D4B4F /* MoveStartViewController.h */,
+				7A0B541A1CA7C9F7003D4B4F /* MoveStartViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		7A0B54141CA7C5B1003D4B4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A0B54151CA7C5B1003D4B4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A0B541E1CA7F7AD003D4B4F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		7A1A65F81C9E4E0400A48CD9 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -1461,6 +1513,7 @@
 		7A5CFADB1C97C8C10002AF99 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				7A0B54121CA7C5B1003D4B4F /* Pay */,
 				7A5CFAEC1C97C8C10002AF99 /* Resource */,
 				7A5CFADC1C97C8C10002AF99 /* Login */,
 				7A5CFAE01C97C8C10002AF99 /* Message */,
@@ -1625,6 +1678,8 @@
 				7A5CFAF11C97C8C10002AF99 /* ProgressHUD */,
 				7A5CFAF51C97C8C10002AF99 /* UIViewController+Common.h */,
 				7A5CFAF61C97C8C10002AF99 /* UIViewController+Common.m */,
+				7A55AB9C1CA67B640082DC97 /* zhifubao.jpg */,
+				7A0B54101CA78D52003D4B4F /* applepay.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1665,6 +1720,7 @@
 				7A04D8C81CA29D7A008A58EA /* MoveViewController.m */,
 				7A182BF71CA426B100E99485 /* moveStoryboard.storyboard */,
 				7AA00C411C97E87600FD6D15 /* service.plist */,
+				7A0B541E1CA7F7AD003D4B4F /* New Group */,
 				7A04D8C51CA29C1C008A58EA /* Money.jpg */,
 			);
 			path = Controllers;
@@ -3341,6 +3397,7 @@
 				7A94C4AE1CA1761600EBDB3F /* NTESSettingViewController.xib in Resources */,
 				7A94C48D1CA1761600EBDB3F /* NTESGalleryViewController.xib in Resources */,
 				7AABFFAE1CA0EDAC005CB2BA /* LeftStoryboard.storyboard in Resources */,
+				7A55AB9D1CA67B650082DC97 /* zhifubao.jpg in Resources */,
 				7A94C4471CA1761600EBDB3F /* NTESTeamListViewController.xib in Resources */,
 				7A94C49D1CA1761600EBDB3F /* NTESVideoChatViewController.xib in Resources */,
 				7A94C2931CA175BA00EBDB3F /* video_connect_chat_tip_sender.aac in Resources */,
@@ -3362,6 +3419,7 @@
 				7A94C4891CA1761600EBDB3F /* NTESFilePreViewController.xib in Resources */,
 				7A74CAC91CA249D1002AE82A /* weiboinfo.plist in Resources */,
 				7AEE4A051C97E6DE0081FBC6 /* letfView.xib in Resources */,
+				7A0B54111CA78D52003D4B4F /* applepay.jpg in Resources */,
 				7A04D8C11CA28B9E008A58EA /* AlipaySDK.bundle in Resources */,
 				7A94C4711CA1761600EBDB3F /* NTESLoginViewController.xib in Resources */,
 				7A94C4AC1CA1761600EBDB3F /* NTESAboutViewController.xib in Resources */,
@@ -3652,6 +3710,7 @@
 				7A94C44C1CA1761600EBDB3F /* NIMChatroomMessageDataProvider.m in Sources */,
 				7A94C49C1CA1761600EBDB3F /* NTESVideoChatViewController.m in Sources */,
 				7A94C4481CA1761600EBDB3F /* NTESChatroomCellLayoutConfig.m in Sources */,
+				7A0B54181CA7C5BF003D4B4F /* BmobPayViewController.m in Sources */,
 				7A94C4491CA1761600EBDB3F /* NTESChatroomConfig.m in Sources */,
 				7A94C24F1CA175AB00EBDB3F /* NIMAudioContentConfig.m in Sources */,
 				7A94C4BC1CA1761600EBDB3F /* NTESBundleSetting.m in Sources */,
@@ -3670,6 +3729,7 @@
 				7A94C4C91CA1761600EBDB3F /* NTESTimerHolder.m in Sources */,
 				7A94C1571CA1756F00EBDB3F /* NSData+NIMImageContentType.m in Sources */,
 				7A94C4361CA1761600EBDB3F /* NTESFPSLabel.m in Sources */,
+				7A0B541B1CA7C9F7003D4B4F /* MoveStartViewController.m in Sources */,
 				7A94C4421CA1761600EBDB3F /* NTESPersonalCardViewController.m in Sources */,
 				7AE42B5E1CA0CC9300C83BF7 /* CollectTableViewCell.m in Sources */,
 				7A94C43C1CA1761600EBDB3F /* NTESMainTabController.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MoveViewController : UIViewController
+#import <AVFoundation/AVFoundation.h>
+@interface MoveViewController : UIViewController<AVAudioPlayerDelegate>
 @property(nonatomic, copy) NSString *typeTitle;
 @end

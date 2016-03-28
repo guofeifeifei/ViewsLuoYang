@@ -1,142 +1,441 @@
 {
-	appHost = "http://shouji.lyd.com.cn";
-	appList = {
-		1001 = {
-			"app_abbr" = wzcx;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/weizhang.png";
-			"app_id" = 1001;
-			"app_name" = "\U8fdd\U7ae0\U67e5\U8be2";
-			"New item" = "";
-			"app_path" = "http://shouji.lyd.com.cn/webapp/wzcx/index";
-			"New item - 2" = "";
-			"app_showdy" = 1;
-			"app_time" = "2015-10-08 16:20:00";
-			"app_vcode" = 5;
-		};
-		1021 = {
-			"app_abbr" = yundong;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/paobu.png";
-			"app_id" = 1021;
-			"app_name" = "\U8fd0\U52a8\U6307\U6570";
-			"app_path" = "http://shouji.lyd.com.cn/webapp/yundong/index";
-			"app_showdy" = 1;
-			"app_time" = "2015-11-06 10:00:00";
-			"app_vcode" = 7;
-		};
-		1022 = {
-			"app_abbr" = diaoyu;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/diaoyu.png";
-			"app_id" = 1022;
-			"app_name" = "\U9493\U9c7c\U6307\U6570";
-			"app_path" = "http://shouji.lyd.com.cn/webapp/diaoyu/index";
-			"app_showdy" = 1;
-			"app_time" = "2015-10-15 16:30:00";
-			"app_vcode" = 8;
-		};
-		1031 = {
-			"app_abbr" = rili;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/rili.png";
-			"app_id" = 1031;
-			"app_name" = "\U4e07\U5e74\U5386";
-			"app_path" = "http://shouji.lyd.com.cn/app/rili.html?v=5";
-			"app_showdy" = 1;
-			"app_time" = "2015-10-21 17:30:00";
-			"app_vcode" = 5;
-		};
-		1032 = {
-			"app_abbr" = kuaidi;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/kuaidi.png";
-			"app_id" = 1032;
-			"app_name" = "\U5feb\U9012\U67e5\U8be2";
-			"app_path" = "http://shouji.lyd.com.cn/app/kuaidi.html?v=4";
-			"app_showdy" = 1;
-			"app_time" = "2015-10-21 17:30:00";
-			"app_vcode" = 4;
-		};
-		1041 = {
-			"app_abbr" = huochepiao;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/huochepiao.png";
-			"app_id" = 1041;
-			"app_name" = "\U706b\U8f66\U7968";
-			"app_path" = "http://shouji.lyd.com.cn/app/huochepiao.html?v=5";
-			"app_showdy" = 1;
-			"app_time" = "2015-10-26 15:30:00";
-			"app_vcode" = 5;
-		};
-		1042 = {
-			"app_abbr" = qichepiao;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/qichepiao.png";
-			"app_id" = 1042;
-			"app_name" = "\U6c7d\U8f66\U7968";
-			"app_path" = "http://shouji.lyd.com.cn/app/qichepiao.html?v=9";
-			"app_showdy" = 1;
-			"app_time" = "2015-10-26 15:30:00";
-			"app_vcode" = 9;
-		};
-		1043 = {
-			"app_abbr" = flight;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/flight.png";
-			"app_id" = 1043;
-			"app_name" = "\U98de\U673a\U7968";
-			"app_path" = "http://shouji.lyd.com.cn/app/feijipiao.html?v=2";
-			"app_showdy" = 1;
-			"app_time" = "2015-11-09 15:00:00";
-			"app_vcode" = 2;
-		};
-		1051 = {
-			"app_abbr" = hotel;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/hotel.png";
-			"app_id" = 1051;
-			"app_name" = "\U9152\U5e97\U9884\U8ba2";
-			"app_path" = "http://shouji.lyd.com.cn/app/hotel.html?v=3";
-			"app_showdy" = 1;
-			"app_time" = "2015-10-29 17:00:00";
-			"app_vcode" = 3;
-		};
-		1060 = {
-			"app_abbr" = ele;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/ele.png";
-			"app_id" = 1060;
-			"app_name" = "\U7535\U8d39\U7f34\U8d39";
-			"app_path" = "http://shouji.lyd.com.cn/app/ele.html?v=1";
-			"app_showdy" = 1;
-			"app_time" = "2015-11-20 17:00:00";
-			"app_vcode" = 1;
-		};
-		1061 = {
-			"app_abbr" = gas;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/gas.png";
-			"app_id" = 1061;
-			"app_name" = "\U71c3\U6c14\U7f34\U8d39";
-			"app_path" = "http://shouji.lyd.com.cn/app/gas.html?v=1";
-			"app_showdy" = 1;
-			"app_time" = "2015-11-20 14:00:00";
-			"app_vcode" = 1;
-		};
-		1062 = {
-			"app_abbr" = oil;
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/oil.png";
-			"app_id" = 1062;
-			"app_name" = "\U6cb9\U4ef7\U67e5\U8be2";
-			"app_path" = "http://shouji.lyd.com.cn/webapp/oil/index";
-			"app_showdy" = 1;
-			"app_time" = "2015-11-20 16:30:00";
-			"app_vcode" = 1;
-		};
-		9999 = {
-			"app_abbr" = "";
-			"app_icon" = "http://shouji.lyd.com.cn/images/app/more.png";
-			"app_id" = 9999;
-			"app_name" = "";
-			"app_path" = "";
-			"app_showdy" = 1;
-			"app_time" = "2015-12-24 11:30:00";
-			"app_vcode" = 8;
-		};
-	};
-	appNum = 13;
-	appOld = ();
-	appTime = "2016-02-25 10:58:26";
-	appUser = 0;
-	appVer = 28;
+charge =     {
+chargemonth = 0;
+chargeweek = 0;
+couponExcahangeStatus = 0;
+couponNum = 0;
+free = 1;
+pointprice = "";
+score = 0;
+specialpointprice = "";
+userType = 0;
+};
+couponExcahangeStatus = "-1";
+couponNum = 0;
+error =     {
+};
+lastTime = 0;
+mvobj =     {
+actorlines =         {
+list =             (
+{
+cnLine = "\U6211\U4e00\U76f4\U76f8\U4fe1\U6570\U5b57\Uff0c\U4e0d\U7ba1\U662f\U65b9\U7a0b\U5f0f\U6216\U903b\U8f91\U5b66 \U90fd\U5f15\U5bfc\U6211\U4eec\U53bb\U601d\U8003\Uff0c\U4f46\U7ecf\U8fc7\U7ec8\U751f\U7684\U8ffd\U6c42\Uff0c\U6211\U95ee\U81ea\U5df1\Uff0c\U903b\U8f91\U5230\U5e95\U662f\U4ec0\U4e48\Uff0c\U8c01\U53bb\U51b3\U5b9a\U539f\U7531\Uff0c\U6211\U7684\U63a2\U7d22\Uff0c\U8ba9\U6211\U4ece\U5f62\U800c\U4e0b\U5230\U5f62\U800c\U4e0a\Uff0c\U6700\U540e\U5230\U4e86\U5984\U60f3\U75c7\Uff0c\U5c31\U8fd9\U6837\U6765\U56de\U8d70\U4e86\U4e00\U8d9f\Uff0c\U5728\U4e8b\U4e1a\U4e0a\U6211\U6709\U4e86\U6700\U91cd\U5927\U7684\U7a81\U7834\Uff0c\U5728\U751f\U547d\U4e2d \U6211\U4e5f\U627e\U5230\U4e86\U6700\U91cd\U8981\U7684\U4eba\Uff0c\U53ea\U6709\U5728\U8fd9\U795e\U79d8\U7684\U7231\U60c5\U65b9\U7a0b\U5f0f\U4e2d\Uff0c\U624d\U80fd\U627e\U5230\U903b\U8f91\U6216\U539f\U7531\U6765\Uff0c\U4eca\U665a\U6211\U80fd\U7ad9\U5728\U8fd9\U91cc\Uff0c\U5168\U662f\U4f60\U7684\U529f\U52b3\Uff0c\U4f60\U662f\U6211\U6210\U529f\U7684\U56e0\U7d20\Uff0c\U4e5f\U662f\U552f\U4e00\U7684\U56e0\U7d20\Uff0c\U8c22\U8c22\U4f60\U3002";
+content = "";
+enLine = "I've always believed in numbers. In the equations and logics that lead to reason. But after a lifetime of such pursuits. I ask, what truly is logic. Who decides reason? My quest has taken me. through the physical the metaphysical. the delusional. and back. And I have made the most important discovery of my career. The most important discovery of my life. It is only in the mysterious equations of love. that any logical reasons can be found. I'm only here tonight because of you. You are the reason I am. You are all my reasons, Thank you.";
+endPoint = 7296;
+id = 989;
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/1030371_1292918190584_2m.jpg";
+startPoint = 7222;
+}
+);
+title = "\U7ecf\U5178\U53f0\U8bcd";
+total = 1;
+};
+area = "United States";
+awards =         {
+list =             (
+);
+title = "\U83b7\U5956\U8bb0\U5f55";
+total = 0;
+};
+backReport =         {
+list =             (
+{
+id = 1181;
+movieUrl = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201512171450338215686_25_11.mp4";
+name = "A_Beautiful_Mind_pmt_extra1_MEZZ.mp4";
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292914905919_15_2m.jpg";
+}
+);
+title = "\U82b1\U7d6e\U62a5\U9053";
+total = 1;
+};
+beanScore = "8.9";
+bgImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292917209725_15_m.jpg";
+bgmusic = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292916799817_15.mp3";
+boxOffice = 313542341;
+cnTitle = "\U7f8e\U4e3d\U5fc3\U7075";
+createTime = "2012-08-14 03:24:40 000";
+employees =         {
+list =             (
+{
+id = 12729;
+name = "\U7f57\U7d20\U00b7\U514b\U52b3";
+personCode = a08E000000fqk8bIAA;
+posterImg = "http://fastwebcache.yod.cn/a08E000000fqk8bIAA/20158261440559699955_16_m.jpg";
+role = "\U4e3b\U6f14";
+},
+{
+id = 12731;
+name = "\U8a79\U59ae\U5f17\U00b7\U5eb7\U7eb3\U5229";
+personCode = a08E000000fqjLxIAI;
+posterImg = "http://fastwebcache.yod.cn/a08E000000fqjLxIAI/201012211292917765711_15_m.jpg";
+role = "\U4e3b\U6f14";
+},
+{
+id = 12733;
+name = "\U7231\U5fb7\U00b7\U54c8\U91cc\U65af";
+personCode = a08E000000Zh4U9IAJ;
+posterImg = "http://fastwebcache.yod.cn/a08E000000Zh4U9IAJ/2015781436336946276_16_m.jpg";
+role = "\U4e3b\U6f14";
+},
+{
+id = 12735;
+name = "\U514b\U91cc\U65af\U6258\U5f17\U00b7\U666e\U5362\U9ed8";
+personCode = a08E000000fqjC9IAI;
+posterImg = "http://fastwebcache.yod.cn/a08E000000fqjC9IAI/201012211292917938867_15_m.jpg";
+role = "\U4e3b\U6f14";
+}
+);
+title = "\U6f14\U804c\U4eba\U5458";
+total = 4;
+};
+enTitle = "A Beautiful Mind";
+endTime = "2016-03-31 00:00:00 000";
+examineStatus = "Fully approved (no paperwork)";
+exams =         {
+examsUrl = "";
+num = 10;
+totalScore = 30;
+};
+expressions =         {
+list =             (
+{
+id = 127025;
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292914932224_15_m.gif";
+}
+);
+title = "\U5fae\U8868\U60c5";
+total = 1;
+};
+fontColor = "#ffffff";
+genre = "\U4f20\U8bb0/\U5267\U60c5";
+highlight =         {
+list =             (
+{
+content = "";
+endPoint = 3844;
+id = 4931;
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/1030371_1292919371324_2m.jpg";
+startPoint = 3656;
+title = "\U7eb3\U4ec0\U7cbe\U795e\U75c5\U4eba\U53d1\U4f5c \U6570\U5b66\U5929\U624d\U88ab\U6293\U8d70";
+}
+);
+title = "\U7cbe\U5f69\U7247\U6bb5";
+total = 1;
+};
+id = 5936;
+imdbScore = "8.2";
+imdbid = tt0268978;
+interest =         {
+list =             (
+{
+content = "\U4fdd\U7f57\U00b7\U8d1d\U5766\U5c3c\U548c\U8a79\U59ae\U5f17\U00b7\U5eb7\U7eb3\U5229\U56e0\U4e3a\U672c\U7247\U7ed3\U7f18\U3002";
+endPoint = 2279;
+id = 4929;
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/1030371_1292918114113_2m.jpg";
+startPoint = 2271;
+title = "\U5a92\U4eba\U7535\U5f71";
+},
+{
+content = "\U73b0\U5b9e\U751f\U6d3b\U4e2d\U7684\U7ea6\U7ff0\U00b7\U7eb3\U4ec0\U592b\U5987\U5df2\U4e8e2015\U5e745\U670823\U65e5\U56e0\U8f66\U7978\U5728\U65b0\U6cfd\U897f\U5dde\U53bb\U4e16\U3002";
+endPoint = 7377;
+id = 4927;
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/1030371_1292918088581_2m.jpg";
+startPoint = 7369;
+title = "\U7ea6\U7ff0\U00b7\U7eb3\U4ec0\U592b\U5987\U7684\U906d\U9047";
+}
+);
+title = "\U8da3\U5473\U77e5\U8bc6";
+total = 2;
+};
+keywords = "\U4f20\U8bb0;\U60ca\U609a;\U5267\U60c5;\U60ac\U7591;\U5965\U65af\U5361";
+movies =         (
+{
+movieId = 1775;
+movieUrl = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/20151271449474449571_14_13_12.mp4";
+rate = 1200k;
+},
+{
+movieId = 1777;
+movieUrl = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/20151271449474449571_14_13_11.mp4";
+rate = 850k;
+},
+{
+movieId = 1779;
+movieUrl = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/20151271449474449571_14_13_10.mp4";
+rate = 450k;
+}
+);
+mvReleased = "2001-12-21 00:00:00 000";
+mvStatus = 3;
+mvtype = SVOD;
+nativeOn = 0;
+officialPosters =         {
+list =             (
+{
+id = 126927;
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292917107949_15_s.jpg";
+}
+);
+title = "\U5b98\U65b9\U6d77\U62a5";
+total = 2;
+};
+oneLine = "\U4f20\U5947\U6570\U5b66\U5bb6\U7ea6\U7ff0\U00b7\U7eb3\U4ec0\U75af\U72c2\U7684\U4e00\U58f0\U3002";
+packageId = a00E0000003pYMHIA2;
+packageName = "\U7f8e\U4e3d\U5fc3\U7075 A Beautiful Mind";
+peiSe = "#202020";
+professioncom =         {
+longList =             (
+{
+author = FadeFlame;
+comment = "\U770b\U8fd9\U4e2a\U7535\U5f71\U7684\U65f6\U5019\U6211\U5904\U4e8e\U60c5\U7eea\U5468\U671f\U4e2d\U51e0\U4e4e\U6700\U4f4e\U8c37\U7684\U4e00\U6bb5\Uff0c\U78d5\U78d5\U7eca\U7eca\U65ad\U65ad\U7eed\U7eed\U7684\U770b\U5b8c\U4e86\U8fd9\U4e2a\U7247\U5b50\Uff0c\U611f\U52a8\U96be\U8a00\U3002";
+faceImg = "";
+id = 2133;
+magazine = "\U8c46\U74e3\U7f51";
+resource = "http://details.yod.cn/v/q/e/chang_content_6863.html";
+title = "\U4e0e\U5176\U865a\U6784\U4e16\U754c\Uff0c\U4e0d\U5982\U72ec\U81ea\U9762\U5bf9";
+type = 1;
+}
+);
+shortList =             (
+{
+author = "";
+comment = "\U5f88\U9057\U61be\Uff0c\U970d\U534e\U5fb7\U5728\U5f71\U7247\U7684\U540e\U4e09\U5206\U4e4b\U4e00\U58a8\U5b88\U6210\U89c4\Uff0c\U7528\U4e86\U8001\U5f0f\U7684\U7ed3\U6784\U548c\U50ac\U6cea\U624b\U6cd5\U628a\U4e00\U4e2a\U771f\U5b9e\U4e14\U6709\U56bc\U52b2\U7684\U6545\U4e8b\U6bc1\U5f97\U901a\U4fd7\U6613\U61c2\U3002\U5728\U6b64\U4e4b\U524d\Uff0c\U4f60\U4f1a\U76ee\U4e0d\U8f6c\U775b\U7684\U3002";
+faceImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292915628020_15_m.jpg";
+id = 2125;
+magazine = "\U534e\U76db\U987f\U90ae\U62a5";
+resource = "";
+title = "";
+type = 0;
+},
+{
+author = "";
+comment = "\U59cb\U7ec8\U5982\U4e00\U7684\U5f15\U4eba\U5165\U80dc\Uff0c\U8fd9\U6b63\U56e0\U4e3a\U8fd9\U90e8\U5f71\U7247\U5bf9\U4e0d\U5bfb\U5e38\U7684\U4e2a\U6027\U7684\U63a2\U8ba8\Uff0c\U6e38\U8d70\U4e8e\U667a\U6167\U548c\U75af\U72c2\U4e4b\U95f4\Uff1b\U7f57\U7d20\U00b7\U514b\U6d1b\U7684\U7edd\U5999\U8868\U6f14\U6210\U5c31\U4e86\U8fd9\U90e8\U4e25\U8083\U53c8\U751f\U52a8\U7684\U5f71\U7247\U3002";
+faceImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292915678550_15_m.jpg";
+id = 2127;
+magazine = "\U4eca\U65e5\U7f8e\U56fd";
+resource = "";
+title = "";
+type = 0;
+},
+{
+author = "";
+comment = "\U6717\U00b7\U970d\U534e\U5fb7\U548c\U7f16\U5267\U963f\U9f50\U74e6\U00b7\U9ad8\U65af\U66fc\Uff0c\U4ed6\U4eec\U91c7\U7528\U4e86\U539f\U8457\U5c0f\U8bf4\U4e2d\U98d8\U5ffd\U4e0d\U5b9a\U7684\U795e\U79d8\U60ca\U609a\U60c5\U8282\Uff0c\U5e76\U8d4b\U4e88\U4e86\U5b83\U4e9b\U8bb8\U597d\U83b1\U575e\U5f0f\U7684\U611f\U4f24\U3002";
+faceImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292915706660_15_m.jpg";
+id = 2129;
+magazine = "\U534e\U5c14\U8857\U65e5\U62a5";
+resource = "";
+title = "";
+type = 0;
+},
+{
+author = "";
+comment = "\U5bf9\U300a\U7f8e\U4e3d\U5fc3\U7075\U300b\U8fd9\U90e8\U5f71\U7247\Uff0c\U603b\U6709\U8d85\U51fa\U4f60\U53ef\U80fd\U731c\U60f3\U5230\U7684\U79f0\U8d5e\U548c\U94a6\U4f69\Uff0c\U4f46\U90fd\U672a\U8d85\U8fc7\U5176\U521b\U4f5c\U8005\U6240\U76f8\U4fe1\U7684\U3002\U5f53\U5f71\U7247\U786e\U5b9e\U53d6\U5f97\U6210\U529f\U65f6\Uff0c\U5c3d\U7ba1\U5b83\U672c\U8eab\U53ef\U80fd\U4e0d\U600e\U4e48\U6837\Uff0c\U4f46\U4eba\U4eec\U603b\U662f\U4f1a\U8fd9\U6837\U505a\U3002";
+faceImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292915746506_15_m.jpg";
+id = 2131;
+magazine = "\U6d1b\U6749\U77f6\U65f6\U62a5";
+resource = "";
+title = "";
+type = 0;
+}
+);
+title = "\U4e13\U4e1a\U5f71\U8bc4";
+total = 5;
+};
+provider = "\U6d3e\U62c9\U8499";
+providerId = a02E00000028oQkIAI;
+runTime = 129;
+shortSummary = "\U5c0f\U7ea6\U7ff0\U2022\U798f\U5e03\U65af-\U7eb3\U4ec0\U5728\U5ff5\U7814\U7a76\U751f\U65f6\Uff0c\U4fbf\U53d1\U8868\U4e86\U8457\U540d\U7684\U535a\U5f08\U7406\U8bba\Uff0c\U8be5\U7406\U8bba\U867d\U53ea\U6709\U77ed\U77ed26\U9875\Uff0c\U5374\U5728\U7ecf\U6d4e\U3001\U519b\U4e8b\U7b49\U9886\U57df\U4ea7\U751f\U4e86\U6df1\U8fdc\U7684\U5f71\U54cd\U3002\U4f46\U5c31\U5728\U7eb3\U4ec0\U871a\U58f0\U56fd\U9645\U65f6\Uff0c\U4ed6\U7684\U51fa\U4f17\U76f4\U89c9\U56e0\U4e3a\U7cbe\U795e\U5206\U88c2\U75c7\U53d7\U5230\U56f0\U6270\Uff0c\U53d8\U5f97\U7591\U795e\U7591\U9b3c\Uff0c\U884c\U4e3a\U8be1\U5f02\U3002\U7136\U800c\U8fd9\U5e76\U6ca1\U963b\U6b62\U4ed6\U5411\U5b66\U672f\U4e0a\U7684\U6700\U9ad8\U5c42\U8fdb\U519b\U7684\U6b65\U4f10\Uff0c\U5728\U6df1\U7231\U4ed6\U7684\U59bb\U5b50\U827e\U4e3d\U897f\U4e9a\U7684\U9f13\U52b1\U548c\U5e2e\U52a9\U4e0b\Uff0c\U4ed6\U8d70\U5f97\U867d\U7136\U8270\U7f13\Uff0c\U5374\U59cb\U7ec8\U6ca1\U6709\U505c\U6b65\Uff0c\U800c\U6700\U7ec8\Uff0c\U51ed\U501f\U5341\U51e0\U5e74\U7684\U4e0d\U61c8\U52aa\U529b\U548c\U987d\U5f3a\U610f\U5fd7\Uff0c\U4ed6\U5982\U613f\U4ee5\U507f\U3002";
+shortmv = 68;
+stagePhotoes =         {
+list =             (
+{
+id = 126891;
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292917172406_15_2m.jpg";
+}
+);
+title = "\U7ecf\U5178\U5267\U7167";
+total = 4;
+};
+startTime = "2015-07-01 00:00:00 000";
+sublanguage = "\U82f1\U8bed";
+trailer =         {
+list =             (
+{
+id = 1179;
+movieUrl = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201512171450338215791_25_11.mp4";
+name = "A_Beautiful_Mind_pmt_trailer_178_20.mpg";
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292914883192_15_2m.jpg";
+}
+);
+title = "\U9884\U544a\U7247";
+total = 1;
+};
+updateTime = "2015-12-30 12:45:55 000";
+usaDvdOnTime = "2002-07-25 00:00:00 000";
+usaOnTime = "2001-12-21 00:00:00 000";
+wallpapers =         {
+list =             (
+{
+id = 127007;
+posterImg = "http://fastwebcache.yod.cn/a00E0000003pYMHIA2/201012211292917073347_15_s.jpg";
+}
+);
+title = "\U5b98\U65b9\U58c1\U7eb8";
+total = 4;
+};
+years = 2001;
+yodCopyright = 1;
+yodMvForm = "\U9ad8\U6e05";
+yodProduct = SVOD;
+};
+myScore = "";
+seen = 1;
+showmvs =     {
+list =         (
+{
+agreenum = 0;
+cnTitle = "\U9e3d\U4e4b\U7ffc";
+comNum = 0;
+id = 0;
+mvId = 6162;
+myScore = 0;
+posterImg = "http://fastwebcache.yod.cn/a00E000000D6PfnIAF/201510201445331141236_16_2m.jpg";
+seen = 0;
+sotre = 0;
+want = 0;
+},
+{
+agreenum = 0;
+cnTitle = "\U4e16\U8d38\U4e2d\U5fc3";
+comNum = 0;
+id = 0;
+mvId = 5851;
+myScore = 0;
+posterImg = "http://fastwebcache.yod.cn/a00E00000039iL5IAI/201510291446097479251_24_2m.jpg";
+seen = 0;
+sotre = 0;
+want = 0;
+},
+{
+agreenum = 0;
+cnTitle = "\U8ddf\U4e0a\U65af\U5766\U4e00\U5bb6";
+comNum = 0;
+id = 0;
+mvId = 3201;
+myScore = 0;
+posterImg = "http://fastwebcache.yod.cn/a00E000000D6CUyIAN/201510201445329456044_24_2m.jpg";
+seen = 0;
+sotre = 0;
+want = 0;
+},
+{
+agreenum = 0;
+cnTitle = "\U62ef\U6551\U5927\U5175\U745e\U6069";
+comNum = 0;
+id = 0;
+mvId = 1893;
+myScore = 0;
+posterImg = "http://fastwebcache.yod.cn/a00E00000038DLuIAM/20151221449038835397_19_2m.jpg";
+seen = 0;
+sotre = 0;
+want = 0;
+},
+{
+agreenum = 0;
+cnTitle = "\U732b\U9f20\U6e38\U620f";
+comNum = 0;
+id = 0;
+mvId = 2652;
+myScore = 0;
+posterImg = "http://fastwebcache.yod.cn/a00E0000007KBWPIA4/20151151446705199039_15_2m.jpg";
+seen = 0;
+sotre = 0;
+want = 0;
+},
+{
+agreenum = 0;
+cnTitle = "\U62d2\U7edd\U518d\U6218";
+comNum = 0;
+id = 0;
+mvId = 3851;
+myScore = 0;
+posterImg = "http://fastwebcache.yod.cn/a00E0000008m2m0IAA/201512111449811593259_19_2m.jpg";
+seen = 0;
+sotre = 0;
+want = 0;
+}
+);
+title = "\U76f8\U5173\U63a8\U8350";
+total = 0;
+};
+store = 0;
+timescomments =     {
+actorlinesComments =         (
+{
+comments = 0;
+id = 989;
+}
+);
+highlightComments =         (
+{
+comments = 0;
+id = 4931;
+}
+);
+interestComments =         (
+{
+comments = 0;
+id = 4927;
+},
+{
+comments = 0;
+id = 4929;
+}
+);
+};
+usercom =     {
+list =         (
+{
+agreenum = 0;
+comment = "\U70ed\U6cea\U76c8\U7736";
+comtime = 1988465347;
+id = 5660;
+score = "";
+userface = "http://fastwebcache.yod.cn/uploadfiles/faceImg/1456727977152376634.png";
+userid = 376634;
+username = "16.7";
+},
+{
+agreenum = 0;
+comment = "\U521a\U5f00\U59cb\U770b\Uff0c";
+comtime = 5719733353;
+id = 5612;
+score = "";
+userface = "http://fastwebcache.yod.cn/uploadfiles/faceImg/1443421935621181007.jpeg";
+userid = 181007;
+username = "\U732b\U54aa";
+},
+{
+agreenum = 0;
+comment = "\U597d\U770b";
+comtime = 6518285359;
+id = 4982;
+score = "";
+userface = "http://fastwebcache.yod.cn/uploadfiles/faceImg/1449845791490320298.gif";
+userid = 320298;
+username = "\U7070\U673a\U7070\U8fc7";
+}
+);
+page =         {
+curPage = 1;
+pageCount = 10;
+totalCount = 0;
+totalPage = 1;
+};
+title = "\U7528\U6237\U5f71\U8bc4";
+total = 3;
+};
+want = 0;
 }

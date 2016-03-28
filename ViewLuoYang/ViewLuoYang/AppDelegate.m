@@ -146,6 +146,9 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     [[NIMKit sharedKit] setProvider:[NTESDataManager sharedInstance]];
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    [BmobPaySDK registerWithAppKey:@"d3724e0a7645893c4e347bd37949d7ad"];
+    
+    
     
     
     
@@ -331,7 +334,13 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
                 }];
                 return YES;
             }
-
+    if([url.host isEqualToString:@"safepay"]){
+        
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"回到全景洛阳");
+            
+        }];
+    }
     
     BOOL isSuc = [WXApi handleOpenURL:url delegate:self];
     NSLog(@"url %@ isSuc %d",url,isSuc == YES ? 1 : 0);

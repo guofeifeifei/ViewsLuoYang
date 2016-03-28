@@ -32,6 +32,8 @@
     
     [super viewDidLoad];
     i = 0;
+   
+
     [self showBarButtonWithcode];
     [self showMeButton];
     self.title = @"服务";
@@ -55,8 +57,7 @@
         _refresh = YES;
     } ];
    // [self loadData2];
-    
-}
+    }
 - (void)loadData{
     if (![ZMYNetManager shareZMYNetManager].isZMYNetWorkRunning) {
         
@@ -97,6 +98,10 @@
                     [self.serviceArray removeAllObjects];
                 }
             }
+            [array removeObjectAtIndex:4];
+            [array removeObjectAtIndex:5];
+            [array removeObjectAtIndex:6];
+
             for (NSString *key in array) {
                 NSDictionary *dict =  appListDic[key];
                 serviceModel *model = [[serviceModel alloc] init];
@@ -130,10 +135,10 @@
     ServiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"itemIdentifier" forIndexPath:indexPath];
         if (indexPath.row < self.serviceArray.count + 2 ) {
         
-            if (indexPath.row == self.serviceArray.count) {
+            if (indexPath.row == self.serviceArray.count ) {
                 cell.serviceImage.image = [UIImage imageNamed:@"map"];
                 cell.serviceLable.text = @"地图定位";
-            }else if (indexPath.row == self.serviceArray.count + 1) {
+            }else if (indexPath.row == self.serviceArray.count + 1 ) {
                 cell.serviceImage.image = [UIImage imageNamed:@"Money.jpg"];
                 cell.serviceLable.text = @"万紫千红";
             }else{
@@ -146,13 +151,13 @@
     
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.serviceArray.count + 2 ;
+    return self.serviceArray.count + 2;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
    
    
     if (indexPath.row < self.serviceArray.count + 2 ) {
-        if (indexPath.row == self.serviceArray.count) {
+        if (indexPath.row == self.serviceArray.count ) {
             LocationViewController *loctionVC = [[LocationViewController alloc] init];
             [self.navigationController pushViewController:loctionVC animated:YES];
             
@@ -231,6 +236,11 @@
     return _ipathArray;
     
     
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    
+    self.tabBarController.tabBar.hidden = NO;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
