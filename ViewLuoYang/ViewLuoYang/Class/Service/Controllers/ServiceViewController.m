@@ -98,11 +98,15 @@
                     [self.serviceArray removeAllObjects];
                 }
             }
-            [array removeObjectAtIndex:4];
-            [array removeObjectAtIndex:5];
-            [array removeObjectAtIndex:6];
-
-            for (NSString *key in array) {
+            
+//            [array removeObjectAtIndex:4];
+//            [array removeObjectAtIndex:5];
+//            [array removeObjectAtIndex:6];
+//            [array removeObjectAtIndex:7];
+//            [array removeObjectAtIndex:0];
+          
+            NSArray *array1 = [[NSArray alloc] initWithObjects:array[1], array[2], array[3],array[6],array[11], nil];
+            for (NSString *key in array1) {
                 NSDictionary *dict =  appListDic[key];
                 serviceModel *model = [[serviceModel alloc] init];
                 [model setValuesForKeysWithDictionary:dict];

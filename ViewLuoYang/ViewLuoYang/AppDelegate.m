@@ -358,13 +358,13 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     
     BOOL isSuc = [WXApi handleOpenURL:url delegate:self];
     NSLog(@"url %@ isSuc %d",url,isSuc == YES ? 1 : 0);
-    return  isSuc;
+
     
     
-    return [WeiboSDK handleOpenURL:url delegate:self];
+  
     
     
-    return [WeiboSDK handleOpenURL:url delegate:self] && [WXApi handleOpenURL:url delegate:self];
+    return [WeiboSDK handleOpenURL:url delegate:self] && [WXApi handleOpenURL:url delegate:self]&& isSuc;
 
     
 }
