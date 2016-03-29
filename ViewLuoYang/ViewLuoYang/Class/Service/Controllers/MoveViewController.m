@@ -30,7 +30,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self loadData];
     self.view.backgroundColor = [UIColor blackColor];
-    
+   
     self.navigationController.navigationBar.translucent = NO;
     self.swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(imageActionse)];
     self.swipe.direction = UISwipeGestureRecognizerDirectionUp;
@@ -125,7 +125,7 @@
         lable6.text = mvobj[@"shortSummary"];
         lable6.textColor = [UIColor whiteColor];
         [self.scrollView addSubview:lable6];
-        [self.avAudiopleayer prepareToPlay];
+      
         
         NSDictionary *dicbackReport = mvobj[@"backReport"];
         NSArray *list = dicbackReport[@"list"];
@@ -140,6 +140,7 @@
          NSLog(@"error = %@", error);
     }];
     }
+    
 }
 - (AVAudioPlayer *)avAudiopleayer{
     if (_avAudiopleayer == nil) {

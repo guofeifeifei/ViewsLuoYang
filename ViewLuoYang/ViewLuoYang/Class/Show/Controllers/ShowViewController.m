@@ -11,7 +11,7 @@
 #import "LuoyangNewsTableViewCell.h"
 #import "NewsDetailViewController.h"
 #import <MJRefresh/MJRefresh.h>
-
+#import "ZMYNetManager.h"
 //左边菜单
 #import "leftView.h"
 
@@ -285,7 +285,7 @@ static NSString *str=@"cell";
         self.tableView.delegate=self;
         self.tableView.dataSource=self;
         self.tableView.rowHeight=80;
-        
+         self.tableView.separatorColor = [UIColor clearColor];
         [self.tableView registerNib:[UINib nibWithNibName:@"LuoyangNewsTableViewCell" bundle:nil] forCellReuseIdentifier:str];
         
         
@@ -353,7 +353,21 @@ static NSString *str=@"cell";
 
 #pragma mark ---网络请求
 -(void)getNetData{
-    
+    if (![ZMYNetManager shareZMYNetManager].isZMYNetWorkRunning) {
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您的网络有问题，请检查网络" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        UIAlertAction *quxiao = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alert addAction:action];
+        [alert addAction:quxiao];
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }else{
+
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
     
     
@@ -401,7 +415,7 @@ static NSString *str=@"cell";
     }];
     
     
-    
+    }
     
     
 }

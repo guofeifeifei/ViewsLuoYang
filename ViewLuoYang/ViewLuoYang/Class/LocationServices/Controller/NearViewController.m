@@ -140,7 +140,7 @@
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response{
     NSLog(@"request%@", request);
     
-       NSLog(@"response%ld", (unsigned long)response.pois.count)
+    NSLog(@"response%ld", (unsigned long)response.pois.count);
   
     if(response.pois.count > 0)
     {

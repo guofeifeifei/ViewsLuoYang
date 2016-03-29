@@ -45,6 +45,10 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+   
+    
+    
     [[NIMSDK sharedSDK].loginManager addDelegate:self];
     self.header = [[NTESListHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 0)];
     self.header.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -59,7 +63,9 @@
     
     NSString *userID = [[[NIMSDK sharedSDK] loginManager] currentAccount];
     self.navigationItem.titleView  = [self titleView:userID];
-}
+    
+    }
+
 
 - (void)reload{
     [super reload];
@@ -68,7 +74,8 @@
 
 - (void)onSelectedRecent:(NIMRecentSession *)recent atIndexPath:(NSIndexPath *)indexPath{
     NTESSessionViewController *vc = [[NTESSessionViewController alloc] initWithSession:recent.session];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES
+                     completion:nil];
 }
 
 - (void)onSelectedAvatar:(NIMRecentSession *)recent

@@ -18,8 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+   
+
     self.title = @"已经收藏";
+    [self showBarButtonWithImage:@"back_arrow"];
    
     
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
@@ -47,6 +49,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    self.tabBarController.tabBar.hidden = NO;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 /*

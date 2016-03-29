@@ -25,6 +25,8 @@
 #import "NTESLogManager.h"
 #import "NTESRegisterViewController.h"
 #import "UIViewController+NTES.h"
+#import "AppDelegate.h"
+
 
 #import "RegisterViewController.h"
 
@@ -45,6 +47,7 @@
     // Do any additional setup after loading the view.
     [self showBarButtonWithImage:@"back_arrow"];
     self.passwordTF.secureTextEntry = YES;
+    
 }
 
 
@@ -89,8 +92,19 @@
         [[NTESLoginManager sharedManager] setCurrentLoginData:sdkData];
         
         [[NTESServiceManager sharedManager] start];
+        
+        
         NTESMainTabController * mainTab = [[NTESMainTabController alloc] initWithNibName:nil bundle:nil];
-        [UIApplication sharedApplication].keyWindow.rootViewController = mainTab;
+        AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        UIViewController *vc = delegate.tabbar.viewControllers[2];
+        vc = mainTab;
+       [self.navigationController popToRootViewControllerAnimated:YES];
+//        [self.navigationController popViewControllerAnimated:YES];
+//        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//        button.frame = CGRectMake(0, 0, 44, 44);
+//        UIBarButtonItem *barBtn = [[UIBarButtonItem alloc] initWithCustomView:button];
+//        self.navigationItem.leftBarButtonItem = barBtn;
+        
     }
     else
     {   //存在错误

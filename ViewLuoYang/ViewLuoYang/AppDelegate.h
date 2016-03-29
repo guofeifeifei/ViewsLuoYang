@@ -21,6 +21,9 @@ static BOOL isProduction = FALSE;
     
     NSString *wbtoken;
 }
+@property(nonatomic, strong)RESideMenu *sideMenuViewConttroller;
+
+@property(nonatomic, strong)UITabBarController *tabbar;
 
 @property (strong, nonatomic) UIWindow *window;
 

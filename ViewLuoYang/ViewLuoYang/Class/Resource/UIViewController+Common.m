@@ -18,7 +18,7 @@
     
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame=CGRectMake(0, 0, 44, 44);
-    [btn setImageEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(0, - 50, 0, 0)];
     [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(backButtonAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *legtbtn=[[UIBarButtonItem alloc]initWithCustomView:btn];
@@ -31,9 +31,9 @@
 
 -(void)backButtonAction{
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
     
-    
+
 }
 
 - (void)showRightBarButtonWithTitle:(NSString *)title{
@@ -42,6 +42,7 @@
     
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame=CGRectMake(0, 0, 44, 44);
+   
     [btn setTitle:title forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(backButtonAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *legtbtn=[[UIBarButtonItem alloc]initWithCustomView:btn];
@@ -53,8 +54,6 @@
     
     
 }
-
-
 
 - (void)showalertView:(NSString *)alertTitle andMessage:(NSString *)message andstyle:(UIAlertControllerStyle)style addAction:(NSString *)actionTitle andActionStyle:(UIAlertActionStyle)actionStyle and:(NSString *)info{
     
@@ -139,6 +138,7 @@
     leftBtn.frame = CGRectMake(0, 0, 25, 25);
     [leftBtn setImage:[UIImage imageNamed:@"ic_select_phost_lz_on"] forState:UIControlStateNormal];
     [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
+    [leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0, - 10, 0, 0)];
     UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = leftBar;
 

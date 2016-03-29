@@ -31,6 +31,7 @@
     self.title = @"我的收藏";
    
     
+
     DataBaseManger *manager=[DataBaseManger shareInstance];
     [manager openDataBase];
     
@@ -66,7 +67,14 @@
     return self.urlArray.count;
     
 }
-
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    self.tabBarController.tabBar.hidden = NO;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.tabBarController.tabBar.hidden = YES;
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -75,14 +83,17 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifiter];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIndentifiter];
-        Collect *collect = self.urlArray[indexPath.row];
-        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:collect.image] placeholderImage:nil];
-        cell.detailTextLabel.text = collect.url;
-        cell.detailTextLabel.textColor = barColor;
-        cell.detailTextLabel.font = [UIFont systemFontOfSize:15.0f];
+       
         
         
     }
+    Collect *collect = self.urlArray[indexPath.row];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:collect.image] placeholderImage:nil];
+    cell.detailTextLabel.text = collect.url;
+    cell.detailTextLabel.textColor = barColor;
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:15.0f];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 
@@ -105,7 +116,7 @@
 - (UITableView *)tableView{
     if (_tableView == nil) {
         self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - 64)];
-
+        self.tableView.separatorColor = [UIColor clearColor];
         self.tableView.rowHeight = 140;
         self.tableView.delegate = self;
         self.tableView.dataSource = self;

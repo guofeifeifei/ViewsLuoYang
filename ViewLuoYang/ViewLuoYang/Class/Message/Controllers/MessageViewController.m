@@ -78,16 +78,16 @@
         NTESMainTabController *mainTab = [[NTESMainTabController alloc] initWithNibName:nil bundle:nil];
         
         [self.navigationController pushViewController:mainTab animated:YES];
-        
+
     }else{
-        
+
         [self.view addSubview:self.imageView];
         [self.view addSubview:self.lable];
         [self.view addSubview:self.loginBtn];
         
         
-    }
-  
+   }
+
 }
 
 #pragma mark ------- lazyLoading

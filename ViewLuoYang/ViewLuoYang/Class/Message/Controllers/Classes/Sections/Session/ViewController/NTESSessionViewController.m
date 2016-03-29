@@ -74,11 +74,31 @@ NIMContactSelectDelegate>
 @implementation NTESSessionViewController
 
 
+- (void)back{
+    
+    [self  dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 64)];
+    view.backgroundColor=barColor;
+    [self.view addSubview:view];
+    
+    
+    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame=CGRectMake(20, 10, 60, 44);
+    [btn setImage:[UIImage imageNamed:@"back_arrow"] forState:UIControlStateNormal];
+[btn setImageEdgeInsets:UIEdgeInsetsMake(0, - 50, 0, 0)];
+    [btn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:btn];
+    
+    
     
     
     
@@ -86,7 +106,7 @@ NIMContactSelectDelegate>
     
     //返回到NTESSessionListViewController回话列表，否则通话容易返回到空白，出先bug
     
-//    [self showBarButtonWithImage:@"back"];
+//   [self showBarButtonWithImage:@"back"];
     
     
     

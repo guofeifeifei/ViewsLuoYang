@@ -7,6 +7,6 @@
 	<key>APP_KEY</key>
 	<string>da56b927d79da978d06d0fe0</string>
 	<key>APS_FOR_PRODUCTION</key>
-	<string>0</string>
+	<string>1</string>
 </dict>
 </plist>

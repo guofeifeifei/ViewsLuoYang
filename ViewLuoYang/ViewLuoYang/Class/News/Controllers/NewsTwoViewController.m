@@ -113,7 +113,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
         //设置每个item的大小
         layout.itemSize = CGSizeMake(KScreenWidth,KScreenHeight);
         //通过一个layout布局来创建一个collectionView
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight-64) collectionViewLayout:layout];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth , KScreenHeight - 64) collectionViewLayout:layout];
         self.collectionView.backgroundColor = [UIColor lightGrayColor];
         //设置代理
         self.collectionView.delegate = self;

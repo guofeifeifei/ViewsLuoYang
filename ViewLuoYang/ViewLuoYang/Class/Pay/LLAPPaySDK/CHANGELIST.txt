@@ -1,0 +1,8 @@
+CHANGELIST
+
+v2.4.6 build 20160224
+1、增加设备支持判断
+2、增加wallet跳转支持
+
+v2.4.6 build 20160218
+第一版，支持ApplePay

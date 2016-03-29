@@ -13,6 +13,7 @@
 @property(nonatomic, strong) UIActivityIndicatorView *activity;
 @property(nonatomic, strong) UILabel *lable;
 @property(nonatomic, strong) UILabel *appearlabel;
+
 @end
 
 @implementation NewsDetailViewController
@@ -36,6 +37,7 @@
         NSURLRequest *request=[[NSURLRequest alloc]initWithURL:[NSURL URLWithString:self.detailUrl]];
         self.webView.scrollView.showsVerticalScrollIndicator = NO;
         self.webView.scrollView.bounces = NO;
+        self.webView.delegate = self;
         [self.webView loadRequest:request];
     }
     
@@ -48,7 +50,7 @@
 - (UILabel *)appearlabel{
     
     if (_appearlabel==nil) {
-        _appearlabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 150, KScreenWidth, 120)];
+        _appearlabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 150, KScreenWidth, 130)];
         _appearlabel.backgroundColor=[UIColor whiteColor];
     }
     
@@ -58,24 +60,14 @@
 
 
 
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-
-}
-
-
-
-
-
-
 - (UIActivityIndicatorView *)activity{
     if (_activity == nil) {
         self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         self.activity.backgroundColor = barColor;
+       
+        
         //显示位置
         self.activity.center = self.view.center;
-        //
-        // [self.activity startAnimating];
 
     }
 
@@ -85,8 +77,13 @@
 
 
 
+//刷新方法：
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     [self.activity startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [self.activity stopAnimating];
 }
 
 - (UILabel *)lable{

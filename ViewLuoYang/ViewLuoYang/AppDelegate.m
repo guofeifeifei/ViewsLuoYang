@@ -35,14 +35,15 @@
 #import "NTESClientUtil.h"
 #import "NTESNotificationCenter.h"
 #import "NTESDataManager.h"
+//Slide
+#import "SlideViewController.h"
 NSString *NTESNotificationLogout = @"NTESNotificationLogout";
 
 
 
 @interface AppDelegate ()<NIMLoginManagerDelegate>//登陆协议
-@property(nonatomic, strong)UITabBarController *tabbar;
 
-@property(nonatomic, strong)RESideMenu *sideMenuViewConttroller;
+
 
 #import "JPUSHService.h"
 #import <BmobPay/BmobPay.h>
@@ -187,11 +188,6 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     [JPUSHService setupWithOption:launchOptions appKey:appKey  channel:channel apsForProduction:isProduction
      ];
     
-//    NSLog(@"kJPFNetworkDidSetupNotification = %@", kJPFNetworkDidSetupNotification);
-//    
-//     NSLog(@"kJPFNetworkDidCloseNotification = %@", kJPFNetworkDidCloseNotification);
-//     NSLog(@"kJPFNetworkDidRegisterNotification = %@", kJPFNetworkDidRegisterNotification);
-//     NSLog(@"kJPFNetworkDidLoginNotification = %@", kJPFNetworkDidLoginNotification);
     
     UILocalNotification *localNotification =  [JPUSHService setLocalNotification:[NSDate dateWithTimeIntervalSinceNow:100]
                           alertBody:@"全景洛阳有新消息"
@@ -300,8 +296,26 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     self.sideMenuViewConttroller.contentViewShadowRadius = 12;
     self.sideMenuViewConttroller.contentViewShadowEnabled = YES;
 
-    self.window.rootViewController=self.sideMenuViewConttroller;
-
+    
+    
+//    self.window.rootViewController=self.sideMenuViewConttroller;
+    //    ---------- Slide -------------
+    //判断是不是第一次使用
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+        ZPFLog(@"第一次启动");
+        
+        SlideViewController *userGuideVC = [[SlideViewController alloc] init];
+        self.window.rootViewController = userGuideVC;
+        
+        
+    }else{
+        ZPFLog(@"不是第一次启动");
+        
+        self.window.rootViewController=self.sideMenuViewConttroller;
+        
+        
+    }
     
     
     
@@ -427,15 +441,8 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
 
 
 
-//- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-//  
-//    // Required
-//    [JPUSHService registerDeviceToken:deviceToken];
-//    
-//    
-//    
-//}
-//
+
+
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     

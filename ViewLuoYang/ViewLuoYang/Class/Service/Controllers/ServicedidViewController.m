@@ -12,6 +12,7 @@
 @property(nonatomic, strong) UIWebView *webView;
 @property(nonatomic, strong) UIActivityIndicatorView *activity;
 @property(nonatomic, strong) UILabel *lable;
+@property (nonatomic, strong) UIImageView *imageView;
 @end
 
 @implementation ServicedidViewController
@@ -27,8 +28,22 @@
     
     [self.view addSubview:self.activity];
     [self showBarButtonWithImage:@"back_arrow"];
-        [self.view addSubview:self.lable];
+    
+//    [self.webView addSubview:self.imageView];
+    [self.view addSubview:self.lable];
 }
+
+//- (UIImageView *)imageView{
+//    if (_imageView == nil) {
+//        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(KScreenWidth/6*5+10+10, 0, KScreenWidth/6, KScreenHeight)];
+//        
+////        self.imageView.image=[UIImage imageNamed:@"cloth"];
+//        self.imageView.backgroundColor = barColor;
+//        
+//    }
+//    return _imageView;
+//}
+
 - (UIWebView *)webView{
     if (_webView == nil) {
         self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
@@ -43,6 +58,12 @@
     }
     return _webView;
 }
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    NSLog(@"%@", request);
+    return YES;
+}
+
 - (UIActivityIndicatorView *)activity{
     if (_activity == nil) {
         self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];

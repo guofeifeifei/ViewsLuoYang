@@ -13,6 +13,7 @@
 @interface DiscussViewController ()<UITextViewDelegate>
 @property (nonatomic, strong) UITextView *discussView;
 @property (nonatomic, strong) UIButton *sendBtn;//发送按钮
+@property (nonatomic, strong) UILabel *lable;
 @end
 
 @implementation DiscussViewController
@@ -25,6 +26,7 @@
    
     self.view.backgroundColor = [UIColor colorWithRed:232/255.0 green:233/255.0 blue:232/255.0 alpha:1.0];
     [self.view addSubview:self.discussView];
+    [self.view addSubview:self.lable];
     
 
     self.sendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -44,11 +46,36 @@
     if (_discussView == nil) {
         self.discussView = [[UITextView alloc] initWithFrame:CGRectMake(20, KScreenWidth/10, KScreenWidth-40, KScreenWidth/2)];
         self.discussView.backgroundColor = [UIColor whiteColor];
-        self.discussView.text = @"_说点什么吧";
+        self.discussView.hidden = NO;
+        self.discussView.delegate = self;
+        //        self.discussView.text = @"_说点什么吧";
         self.discussView.textColor = [UIColor lightGrayColor];
         self.discussView.font = [UIFont systemFontOfSize:15.0f];
     }
     return _discussView;
+}
+
+- (UILabel *)lable{
+    if (_lable == nil) {
+        self.lable = [[UILabel alloc] initWithFrame:CGRectMake(20, KScreenWidth/10, KScreenWidth-40, KScreenWidth/2)];
+        self.lable.text = @"_说点什么吧";
+        self.lable.enabled = NO;
+        self.lable.backgroundColor = [UIColor clearColor];
+        
+    }
+    return _lable;
+}
+
+//实现UITextView的代理
+
+-(void)textViewDidChange:(UITextView *)textView
+{
+    self.discussView.text = textView.text;
+    if (textView.text.length == 0) {
+        self.lable.text = @"_说点什么吧";
+    }else{
+        self.lable.text = @"";
+    }
 }
 
 
