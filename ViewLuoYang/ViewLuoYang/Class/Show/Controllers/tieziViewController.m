@@ -14,9 +14,19 @@
 
 @implementation tieziViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+     [self alertViewTitile:@"当前尚无贴子"];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self alertViewTitile:@"当前尚无贴子"];
+    
 }
 - (IBAction)backAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -421,6 +421,9 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
         [manager closeDateBase];
        
         
+        //2发送通知
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"zhang" object:nil userInfo:nil];
+        
         
         [self.sideMenuViewConttroller presentLeftMenuViewController];
         

@@ -10,6 +10,7 @@
 #import "WeiboSDK.h"
 #import "WXApi.h"
 #import "RESideMenu.h"
+
 static NSString *appKey = @"da56b927d79da978d06d0fe0";
 
 static NSString *channel = @"Publish channel";

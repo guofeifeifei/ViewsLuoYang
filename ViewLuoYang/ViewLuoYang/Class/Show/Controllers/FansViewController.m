@@ -14,9 +14,22 @@
 
 @implementation FansViewController
 
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    [self alertViewTitile:@"当前无粉丝"];
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self alertViewTitile:@"当前无粉丝"];
+    
+    
 }
 - (IBAction)backAction:(id)sender {
     

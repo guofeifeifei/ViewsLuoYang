@@ -37,20 +37,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
-
-    
+   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selecData) name:@"zhang" object:nil];
  
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    [self a];
+   
     
 }
 
 
--(void)a{
+
+
+
+
+-(void)selecData{
     
     DateBaseUserManager *manager=[DateBaseUserManager sharedInstance];
     
@@ -70,6 +72,27 @@
 
 
 }
+
+
+
+//凑热闹
+- (IBAction)hotTalk:(id)sender {
+    
+  
+
+    
+    
+    
+    
+}
+//贴子
+- (IBAction)tiezi:(id)sender {
+}
+
+
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

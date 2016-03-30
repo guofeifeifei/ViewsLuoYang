@@ -55,23 +55,30 @@
     
 }
 
-- (void)showalertView:(NSString *)alertTitle andMessage:(NSString *)message andstyle:(UIAlertControllerStyle)style addAction:(NSString *)actionTitle andActionStyle:(UIAlertActionStyle)actionStyle and:(NSString *)info{
+
+// 提示框
+
+- (void)alertViewTitile:(NSString *)title{
     
-    UIAlertController *alert=[UIAlertController alertControllerWithTitle:alertTitle message:message preferredStyle:style];
+    UIAlertController *alert=[UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *action=[UIAlertAction actionWithTitle:actionTitle style:actionStyle handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        [ProgressHUD show:info];
+    }];
+    
+    UIAlertAction *action1=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
     }];
     
     [alert addAction:action];
-    
+    [alert addAction:action1];
     
     [self presentViewController:alert animated:YES completion:nil];
     
     
 }
+    
+
 
 - (void)showBarButtonWithcode{
 
@@ -111,6 +118,7 @@
     
 }
 
+//二维码
 - (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result{
     
         QRCodeViewController *qrCodeVC = [[QRCodeViewController alloc] init];

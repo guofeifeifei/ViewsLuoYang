@@ -14,9 +14,19 @@
 
 @implementation guanzhuViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+     [self alertViewTitile:@"当前无关注"];    
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self alertViewTitile:@"当前无关注"];
+    
 }
 - (IBAction)backAction:(id)sender {
     

@@ -14,9 +14,21 @@
 
 @implementation courenaoViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    [self alertViewTitile:@"当前无热闹可凑"];
+
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self alertViewTitile:@"当前无热闹可凑"];
+    
+    
 }
 - (IBAction)backAction:(id)sender {
     

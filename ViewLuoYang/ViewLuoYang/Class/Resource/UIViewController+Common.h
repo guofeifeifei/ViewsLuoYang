@@ -16,7 +16,8 @@
 - (void)showRightBarButtonWithTitle:(NSString *)title;
 
 
-- (void)showalertView:(NSString *)alertTitle andMessage:(NSString *)message andstyle:(UIAlertControllerStyle)style addAction:(NSString *)actionTitle andActionStyle:(UIAlertActionStyle)actionStyle and:(NSString *)info;
+- (void)alertViewTitile:(NSString *)title;
+
 
 
 @end
