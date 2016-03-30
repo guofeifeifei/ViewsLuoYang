@@ -167,7 +167,7 @@
 }
 - (void)imageActionse{
     
-    NSLog(@"向下滑动");
+    //NSLog(@"向下滑动");
     
     
 }

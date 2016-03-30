@@ -44,7 +44,7 @@
 //调用支付宝
     [bPay payInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
         if (isSuccessful) {
-            NSLog(@"支付跳转成功");
+         //   NSLog(@"支付跳转成功");
         }else{
             NSLog(@"%@", [error description]);
         }
@@ -149,7 +149,7 @@
     //在这里将token和地址发送到自己的服务器，有自己的服务器与银行和商家进行接口调用和支付将结果返回到这里
     //我们根据结果生成对应的状态对象，根据状态对象显示不同的支付结构
     //状态对象
-    NSLog(@"%@",payment.token);
+  //  NSLog(@"%@",payment.token);
     
     //在这里了 为了测试方便 设置为支付失败的状态
     //可以选择枚举值PKPaymentAuthorizationStatusSuccess   (支付成功)
@@ -162,7 +162,7 @@
 -(void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller
 {
     [controller dismissViewControllerAnimated:YES completion:nil];
-    NSLog(@"支付完成");
+   // NSLog(@"支付完成");
     UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"支付结果" message:@"支付成功" delegate:nil cancelButtonTitle: @"关闭"otherButtonTitles:nil, nil];
     [alter show];
     MoveStartViewController *moveStartVC = [[MoveStartViewController alloc] init];

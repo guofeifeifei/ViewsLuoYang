@@ -98,7 +98,7 @@
 }
 
 - (void)scanAction{
-    NSLog(@"调用系统相机");
+    //NSLog(@"调用系统相机");
     
     
     static QRCodeReaderViewController *reader = nil;

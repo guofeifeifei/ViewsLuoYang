@@ -351,13 +351,13 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
     if([url.host isEqualToString:@"safepay"]){
         
         [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
-            NSLog(@"回到全景洛阳");
+        //    NSLog(@"回到全景洛阳");
             
         }];
     }
     
     BOOL isSuc = [WXApi handleOpenURL:url delegate:self];
-    NSLog(@"url %@ isSuc %d",url,isSuc == YES ? 1 : 0);
+   // NSLog(@"url %@ isSuc %d",url,isSuc == YES ? 1 : 0);
 
     
     
@@ -449,14 +449,14 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     
-    NSDictionary *aps = [userInfo valueForKey:@"aps"];
-    NSString *content = [aps valueForKey:@"alert"];//推送内容显示
-    NSInteger badge = [[aps valueForKey:@"badge"]integerValue];//bade数量
-    NSString *sound = [aps valueForKey:@"sound"];//播放音乐
+    //NSDictionary *aps = [userInfo valueForKey:@"aps"];
+  //  NSString *content = [aps valueForKey:@"alert"];//推送内容显示
+   // NSInteger badge = [[aps valueForKey:@"badge"]integerValue];//bade数量
+   // NSString *sound = [aps valueForKey:@"sound"];//播放音乐
     
     //取得Extras字段内容
-    NSString *customizeField1 = [userInfo valueForKey:@"customizeExtras"];
-    NSLog(@"content =[%@], badge=[%ld], sound=[%@], customize field  =[%@]",content,badge,sound,customizeField1);
+   // NSString *customizeField1 = [userInfo valueForKey:@"customizeExtras"];
+   // NSLog(@"content =[%@], badge=[%ld], sound=[%@], customize field  =[%@]",content,badge,sound,customizeField1);
     // Required,For systems with less than or equal to iOS6
     [JPUSHService handleRemoteNotification:userInfo];
     
@@ -496,11 +496,11 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
 }
 - (void)networkDidReceiveMessage:(NSNotification *)notification {
     NSDictionary *userInfo = [notification userInfo];
-    NSString *content = [userInfo valueForKey:@"content"];
+  //  NSString *content = [userInfo valueForKey:@"content"];
     NSDictionary *extras = [userInfo valueForKey:@"extras"];
     NSString *customizeField1 = [extras valueForKey:@"customizeField1"]; //自定义参数，key是自己定义的
     
-    UILocalNotification *localNotification =  [JPUSHService setLocalNotification:[NSDate dateWithTimeIntervalSinceNow:100] alertBody:@"家母喊你回洛阳呢？" badge:1 alertAction:customizeField1 identifierKey:@"identifierKey" userInfo:userInfo soundName:nil region:nil regionTriggersOnce:nil category:nil];
+   UILocalNotification *localNotification =  [JPUSHService setLocalNotification:[NSDate dateWithTimeIntervalSinceNow:100] alertBody:@"家母喊你回洛阳呢？" badge:1 alertAction:customizeField1 identifierKey:@"identifierKey" userInfo:userInfo soundName:nil region:nil regionTriggersOnce:nil category:nil];
     
     //前台显示
     [JPUSHService showLocalNotificationAtFront:localNotification  identifierKey:nil];

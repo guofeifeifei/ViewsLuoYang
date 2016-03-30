@@ -87,7 +87,7 @@ static sqlite3 *datebace =nil;
     
     if (result == SQLITE_OK) {
         
-        NSLog(@"数据库打开成功");
+        //NSLog(@"数据库打开成功");
         //数据库打开成功之后创建表
         [self createDateBaseTable];
         
@@ -95,7 +95,7 @@ static sqlite3 *datebace =nil;
     }else{
         
         
-        NSLog(@"数据库打开失败");
+       // NSLog(@"数据库打开失败");
     }
     
     
@@ -160,7 +160,7 @@ static sqlite3 *datebace =nil;
     
     
     if (result ==SQLITE_OK) {
-        NSLog(@"关闭成功");
+      //  NSLog(@"关闭成功");
         
         datebace =nil;
         
@@ -168,7 +168,7 @@ static sqlite3 *datebace =nil;
     }else{
         
         
-        NSLog(@"关闭失败");
+       // NSLog(@"关闭失败");
         
     }
     
@@ -243,7 +243,7 @@ static sqlite3 *datebace =nil;
         
         
     } else {
-        NSLog(@"sql语句有问题");
+      //  NSLog(@"sql语句有问题");
     }
     
     //删除掉
@@ -270,11 +270,11 @@ static sqlite3 *datebace =nil;
     
     
     if (result ==SQLITE_OK) {
-        NSLog(@"删除成功");
+       // NSLog(@"删除成功");
         
     }else{
         
-        NSLog(@"删除失败");
+       // NSLog(@"删除失败");
         
     }
     
@@ -310,7 +310,7 @@ static sqlite3 *datebace =nil;
     int resulet=sqlite3_prepare_v2(datebace, [sql UTF8String], -1, &stmt, NULL);
     
     if (resulet == SQLITE_OK) {
-        NSLog(@"删除ok");
+       // NSLog(@"删除ok");
         //绑定name的值
         
         sqlite3_bind_text(stmt, 1, [name UTF8String], -1, NULL);
@@ -322,7 +322,7 @@ static sqlite3 *datebace =nil;
         
     }else{
         
-        NSLog(@"删除失败");
+     //   NSLog(@"删除失败");
         
     }
     
@@ -360,7 +360,7 @@ static sqlite3 *datebace =nil;
     
     
     if (result == SQLITE_OK) {
-        NSLog(@"更新成功");
+      //  NSLog(@"更新成功");
         //第二个参数数？的位置
         //const char * 是把传进来的参数转换成c
         sqlite3_bind_text(stmt, 1, [phoneNumber UTF8String], -1, NULL);
@@ -374,7 +374,7 @@ static sqlite3 *datebace =nil;
         
     }else{
         
-        NSLog(@"更新失败");
+       // NSLog(@"更新失败");
         
     }
     
@@ -402,7 +402,7 @@ static sqlite3 *datebace =nil;
     
     
     if (result == SQLITE_OK) {
-        NSLog(@"selete ok");
+      //  NSLog(@"selete ok");
         
         
        while (sqlite3_step(stmt)== SQLITE_ROW) {
@@ -432,7 +432,7 @@ static sqlite3 *datebace =nil;
         
     }else {
         
-        NSLog(@"selete fail");
+     //   NSLog(@"selete fail");
         
     }
     

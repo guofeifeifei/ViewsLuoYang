@@ -200,7 +200,7 @@
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation
 {
    
-        NSLog(@"userLocation:%@", userLocation.location)
+   
          //取出当前位置的坐标
         _currentLocation = [userLocation.location copy];
   
@@ -330,7 +330,7 @@
         [polylines addObject:polyline];
         
         free(coordinates), coordinates = NULL;
-        NSLog(@"画出路线问问吾问无为谓");
+       
     }];
     
     return polylines;
@@ -447,8 +447,7 @@
         case 2:{
             ZPFLog(@"路线");
             if (_destinationPoint == nil || _currentLocation == nil||_search == nil) {
-                NSLog(@"规划路线失败");
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"长按屏幕选择目的地" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"长按屏幕选择目的地" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
                 [alert show];
                 return;
             }

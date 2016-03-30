@@ -395,8 +395,7 @@
 }
 
 - (IBAction)onTouchRecordBtnDown:(id)sender {
-    NSLog(@"onTouchRecordBtnDown");
-    // start Recording
+      // start Recording
     self.recordPhase = AudioRecordPhaseStart;
 }
 - (IBAction)onTouchRecordBtnUpInside:(id)sender {

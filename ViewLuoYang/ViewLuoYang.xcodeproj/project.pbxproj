@@ -3408,6 +3408,7 @@
 				TargetAttributes = {
 					7A5CFAC61C97C81C0002AF99 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = CCQ5LLLX4L;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -4021,6 +4022,7 @@
 				CODE_SIGN_ENTITLEMENTS = ViewLuoYang/ViewLuoYang.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",
@@ -4086,6 +4088,7 @@
 				CODE_SIGN_ENTITLEMENTS = ViewLuoYang/ViewLuoYang.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ViewLuoYang/Class/Resource",

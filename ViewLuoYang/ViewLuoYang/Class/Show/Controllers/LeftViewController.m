@@ -60,8 +60,6 @@
     
     LinkMan *link=arr[arr.count-1];
     
-    NSLog(@"%@%@",link.headImage,link.name);
-    
     [self.userImageView sd_setImageWithURL:[NSURL URLWithString:link.headImage] placeholderImage:nil];
     self.nikcLabel.text=link.name;
     if ([link.gender isEqualToString:@"m"]) {

@@ -74,10 +74,10 @@ static sqlite3 *dataBase = nil;
 - (void)closeDataBase{
     int result = sqlite3_close(dataBase);
     if (result == SQLITE_OK) {
-        NSLog(@"数据库关闭成功");
+       
         dataBase = nil;
     }else{
-        NSLog(@"数据库关闭失败");
+      
     }
 }
 
@@ -124,7 +124,7 @@ static sqlite3 *dataBase = nil;
     int result = sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &stmt, NULL);
     if (result == SQLITE_OK) {
         
-        NSLog(@"删除语句通过");
+       // NSLog(@"删除语句通过");
         //绑定name的值
         sqlite3_bind_text(stmt, 1, [url UTF8String], -1, NULL);
         //执行
@@ -132,7 +132,7 @@ static sqlite3 *dataBase = nil;
         
         
     }else{
-        NSLog(@"删除语句break");
+        //NSLog(@"删除语句break");
     }
     
     //删除释放掉
@@ -153,7 +153,7 @@ static sqlite3 *dataBase = nil;
         
         self.allUrlArray = [NSMutableArray new];
         if (result == SQLITE_OK) {
-            NSLog(@"查询所有url成功");
+          //  NSLog(@"查询所有url成功");
             //while循环添加查询出来的数据
             while (sqlite3_step(stmt) == SQLITE_ROW) {
                 NSString *url = [NSString stringWithUTF8String:(const char *) sqlite3_column_text(stmt, 0)];

@@ -37,17 +37,23 @@
     // Do any additional setup after loading the view.
     [self showBarButtonWithImage:@"back_arrow"];
     self.passwordTF.secureTextEntry = YES;
+    
+    
 }
-
-
-
-
 
 
 
 //点击下一步
 - (IBAction)nextBtnAction:(id)sender {
    
+    
+    
+    
+    
+    
+    
+    
+    
     NTESRegisterData *data = [[NTESRegisterData alloc] init];
     data.account = self.nameTF.text;
     data.nickname= self.nickNameTF.text;

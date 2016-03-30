@@ -29,17 +29,13 @@
 {
     if (self = [super init])
     {
-        //d4bac0478e742f97a78cbabeb128a7a3
-        //8e4b57ca829f
-       _appKey = @"45c6af3c98409b18a84451215d0bdd6e";
-        _apiURL = @"https://app.netease.im/api";
-        _cerName= @"ENTERPRISE";
+        
+//       _appKey = @"45c6af3c98409b18a84451215d0bdd6e";
+//        _apiURL = @"https://app.netease.im/api";
+//        _cerName= @"ENTERPRISE";
         
         
-//        _appKey = @"d4bac0478e742f97a78cbabeb128a7a3";
-//
-//        _apiURL=@"https://api.netease.im/nimserver/user/create.action";
-//        _cerName= @"8e4b57ca829f";
+        _appKey = @"d4bac0478e742f97a78cbabeb128a7a3";
 
         
         
