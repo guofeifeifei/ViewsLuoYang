@@ -189,23 +189,23 @@ NSString *NTESNotificationLogout = @"NTESNotificationLogout";
      ];
     
     
-    UILocalNotification *localNotification =  [JPUSHService setLocalNotification:[NSDate dateWithTimeIntervalSinceNow:100]
-                          alertBody:@"全景洛阳有新消息"
-                              badge:1
-                        alertAction:nil
-                      identifierKey:@"identifierKey"
-                           userInfo:nil
-                          soundName:nil];
-   
-    //前台显示
-    [JPUSHService showLocalNotificationAtFront:localNotification  identifierKey:nil];
-    
-    NSDictionary *remoteNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-    
-    
-    NSLog(@"remoteNotification = %@", remoteNotification);
-    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
+//    UILocalNotification *localNotification =  [JPUSHService setLocalNotification:[NSDate dateWithTimeIntervalSinceNow:100]
+//                          alertBody:@"全景洛阳有新消息"
+//                              badge:1
+//                        alertAction:nil
+//                      identifierKey:@"identifierKey"
+//                           userInfo:nil
+//                          soundName:nil];
+//   
+//    //前台显示
+//    [JPUSHService showLocalNotificationAtFront:localNotification  identifierKey:nil];
+//    
+//    NSDictionary *remoteNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+//    
+//    
+//    NSLog(@"remoteNotification = %@", remoteNotification);
+//    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+//    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
     
     
   

@@ -30,12 +30,12 @@
     if (self = [super init])
     {
         
-//       _appKey = @"45c6af3c98409b18a84451215d0bdd6e";
-//        _apiURL = @"https://app.netease.im/api";
-//        _cerName= @"ENTERPRISE";
+       _appKey = @"45c6af3c98409b18a84451215d0bdd6e";
+        _apiURL = @"https://app.netease.im/api";
+        _cerName= @"ENTERPRISE";
         
         
-        _appKey = @"d4bac0478e742f97a78cbabeb128a7a3";
+//        _appKey = @"d4bac0478e742f97a78cbabeb128a7a3";
 
         
         

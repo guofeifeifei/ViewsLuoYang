@@ -56,7 +56,6 @@
                                 <rect key="frame" x="120" y="561" width="259" height="42"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="259" id="GS3-Lw-dsr"/>
                                     <constraint firstAttribute="height" constant="42" id="Tni-g3-ncp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -76,6 +75,7 @@
                             <constraint firstItem="1cM-Bj-4pJ" firstAttribute="leading" secondItem="P9S-On-MFo" secondAttribute="leadingMargin" constant="-24" id="33p-y5-lMa"/>
                             <constraint firstItem="1cM-Bj-4pJ" firstAttribute="top" secondItem="SDX-sU-nT9" secondAttribute="bottom" id="67O-d2-YIB"/>
                             <constraint firstItem="Ita-4k-GeW" firstAttribute="leading" secondItem="P9S-On-MFo" secondAttribute="leading" id="Ddq-OH-hgh"/>
+                            <constraint firstItem="zmX-3P-vc6" firstAttribute="leading" secondItem="ojE-s2-R5d" secondAttribute="trailing" constant="12" id="KDv-7b-wil"/>
                             <constraint firstItem="ojE-s2-R5d" firstAttribute="leading" secondItem="P9S-On-MFo" secondAttribute="leadingMargin" constant="-24" id="LjK-TS-OdS"/>
                             <constraint firstItem="Mgp-TF-Yhq" firstAttribute="top" secondItem="zmX-3P-vc6" secondAttribute="bottom" id="P1d-f6-aBe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1cM-Bj-4pJ" secondAttribute="trailing" constant="-24" id="PJP-px-AMq"/>

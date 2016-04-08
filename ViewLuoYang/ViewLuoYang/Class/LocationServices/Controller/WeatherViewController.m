@@ -97,7 +97,7 @@
            
             self.wenduLable.text = [NSString stringWithFormat:@"%@°", live.temperature];
          
-            self.shiLable.text = [NSString stringWithFormat:@"%@风 %@级  %@", live.windDirection, live.windPower , live.humidity];
+            self.shiLable.text = [NSString stringWithFormat:@"%@风 %@级  湿度%@", live.windDirection, live.windPower , live.humidity];
             
 //            self.timeLable.text = live.reportTime;
             NSLog(@"%@当前时间字符串", live.reportTime);
@@ -215,35 +215,35 @@
                 
                 
              AMapLocalDayWeatherForecast *three = forecasts.casts[2];
-//                switch ([three.week integerValue]) {
-//                    case 0:
-//                         self.ThreeDay.text = @"周一";
-//                        break;
-//                    case 1:
-//                       self.ThreeDay.text = @"周二";
-//                        break;
-//                    case 2:
-//                        self.ThreeDay.text= @"周三";
-//                        break;
-//                    case 3:
-//                         self.ThreeDay.text= @"周四";
-//                        break;
-//                    case 4:
-//                      self.ThreeDay.text= @"周五";
-//                        break;
-//                        
-//                    case 5:
-//                        self.ThreeDay.text = @"周六";
-//                        break;
-//                    case 6:
-//                        self.ThreeDay.text = @"周天";
-//                        break;
-//                        
-//                    default:
-//                        break;
-//                }
+                switch ([three.week integerValue]) {
+                    case 0:
+                         self.ThreeDay.text = @"周一";
+                        break;
+                    case 1:
+                       self.ThreeDay.text = @"周二";
+                        break;
+                    case 2:
+                        self.ThreeDay.text= @"周三";
+                        break;
+                    case 3:
+                         self.ThreeDay.text= @"周四";
+                        break;
+                    case 4:
+                      self.ThreeDay.text= @"周五";
+                        break;
+                        
+                    case 5:
+                        self.ThreeDay.text = @"周六";
+                        break;
+                    case 6:
+                        self.ThreeDay.text = @"周天";
+                        break;
+                        
+                    default:
+                        break;
+                }
 
-                self.ThreeDay.text = [NSString stringWithFormat:@"%@", [self initDay:three.week]];
+             //   self.ThreeDay.text = [NSString stringWithFormat:@"%@", [self initDay:three.week]];
                 self.ThreeWearth.text = [NSString stringWithFormat:@"%@ ", three.dayWeather];
                 self.ThreeWen.text =[NSString stringWithFormat:@"%@/%@", one.dayTemp, three.nightTemp];
             }

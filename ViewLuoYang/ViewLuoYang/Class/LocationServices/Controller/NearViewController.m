@@ -43,8 +43,9 @@
     NSLog(@"%@", poi);
     cell.textLabel.text = poi.name;
     cell.detailTextLabel.text = poi.name;
-    cell.backgroundColor = barColor;
-    cell.backgroundColor = [UIColor cyanColor];
+   // cell.backgroundColor = barColor;
+//    cell.textLabel.textColor = [UIColor whiteColor];
+//     cell.detailTextLabel.textColor = [UIColor whiteColor];
     return cell;
     
     

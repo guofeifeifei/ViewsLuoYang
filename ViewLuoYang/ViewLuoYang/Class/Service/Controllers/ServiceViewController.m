@@ -57,6 +57,9 @@
         _refresh = YES;
     } ];
    // [self loadData2];
+    
+    [self.collectionView.mj_header beginRefreshing];
+    
     }
 - (void)loadData{
     if (![ZMYNetManager shareZMYNetManager].isZMYNetWorkRunning) {
@@ -81,7 +84,7 @@
             NSLog(@"%@", downloadProgress);
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            NSLog(@"%@", responseObject);
+            //NSLog(@"是事实上事实上事实上%@", responseObject);
             NSDictionary *dic = responseObject;
             NSDictionary *appListDic = dic[@"appList"];
             NSArray *keyArray = appListDic.allKeys;
@@ -144,7 +147,7 @@
                 cell.serviceLable.text = @"地图定位";
             }else if (indexPath.row == self.serviceArray.count + 1 ) {
                 cell.serviceImage.image = [UIImage imageNamed:@"Money.jpg"];
-                cell.serviceLable.text = @"万紫千红";
+                cell.serviceLable.text = @"支付电影";
             }else{
                 
                 cell.model = self.serviceArray[indexPath.row];

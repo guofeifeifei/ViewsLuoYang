@@ -87,7 +87,7 @@ static NSString *str=@"cell";
     //加载刷新
     [self setupRefresh];
     
-
+[self.tableView.mj_header beginRefreshing];
 }
 
 
@@ -230,7 +230,8 @@ static NSString *str=@"cell";
             [self getNetData];
             [self getPhotoData];
             [self.tableView reloadData];
-            
+           
+            [self.tableView.mj_header beginRefreshing];
             break;
         case 2:
             //
@@ -241,6 +242,10 @@ static NSString *str=@"cell";
             
             [self getNetData];
             [self.tableView reloadData];
+            
+            
+            [self.tableView.mj_header beginRefreshing];
+            
             break;
         case 3:
             //
@@ -249,6 +254,8 @@ static NSString *str=@"cell";
             
             [self getNetData];
             [self.tableView reloadData];
+            
+             [self.tableView.mj_header beginRefreshing];
             break;
             
         default:
@@ -449,7 +456,7 @@ static NSString *str=@"cell";
             
         }
         
-        
+          [self.tableView reloadData];
         self.tableView.tableHeaderView=self.headImage;
         
         

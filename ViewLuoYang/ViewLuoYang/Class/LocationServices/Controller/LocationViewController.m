@@ -12,29 +12,29 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "NearViewController.h"
 #import "UIView+YSTextInputKeyboard.h"
-#import "CustomAnnotationView.h"
+
 #import "WeatherViewController.h"
-#import "RoadViewController.h"
+
 @interface LocationViewController ()<AMapSearchDelegate, MAMapViewDelegate, UISearchBarDelegate, AnnotationValeDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
 {
     MAMapView *_mapView;
     AMapSearchAPI *_search;
     CLLocation *_currentLocation;
     
-    UILongPressGestureRecognizer *_longPressGesture;
+    
     
 }
 @property(nonatomic, copy)  NSString *titles;
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *pois;
-
+@property(nonatomic, strong)UILongPressGestureRecognizer *longPressGesture;
 @property(nonatomic, strong) UISearchBar *searchBar;
 @property(nonatomic, strong) MAPointAnnotation *destinationPoint;//目的地图标
 @property(nonatomic, strong) NSArray *array;
 @property(nonatomic, strong) MAPointAnnotation *annotation;
 @property(nonatomic, strong) MAPolylineView *polylineView;
 @property(nonatomic, strong) NSArray *pathPolylines;
-
+@property(nonatomic, strong) MAPolylineRenderer *polylineViewOver;
 @property(nonatomic, strong) NSMutableArray *annotations;
 @end
 
@@ -65,9 +65,7 @@
     [self showBarButtonWithImage:@"back_arrow"];
     [self initMapView];
     [self initBtn];
-    _longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    _longPressGesture.delegate = self;
-    [_mapView addGestureRecognizer:_longPressGesture];
+       [_mapView addGestureRecognizer:self.longPressGesture];
     
    [self initSearch];
     [self.view addSubview:self.searchBar];
@@ -76,7 +74,7 @@
     
 }//实现输入提示的回调函数
 - (void)initBtn{
-//    NSArray *imageArray = @[@"bus_details_location_icon", @"fengchao_shuidi", @"ic_home_launcher", @"btn_day_press"];
+
     if (self.array.count > 0) {
         
     
@@ -85,8 +83,7 @@
         btn.frame = CGRectMake(i * KScreenWidth / 4, KScreenHeight - KScreenHeight / 4, KScreenWidth / 4, 30);
         
         [btn setTitle:self.array[i] forState:UIControlStateNormal];
-//        [btn setImage:[UIImage imageNamed:imageArray[i]] forState:UIControlStateNormal];
-//        [btn setImageEdgeInsets:UIEdgeInsetsMake(0, i * KScreenWidth / 4- 100, 0, 0)];
+
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         btn.tag = i + 100;
@@ -112,17 +109,30 @@
     ZPFLog(@"self.pois  ******************    %@", self.pois);
     
    
+        if (self.annotations != nil) {
+            [_mapView removeAnnotations:self.annotations];
+            self.annotations = nil;
+        }
+    
+   
     for (NSInteger i = 0; i < self.pois.count; i++) {
       
     AMapTip *tip = self.pois[i];
-    self.annotation = [[MAPointAnnotation alloc] init];
+   self.annotation = [[MAPointAnnotation alloc] init];
      self.annotation.coordinate = CLLocationCoordinate2DMake(tip.location.latitude, tip.location.longitude);
      self.annotation.title = tip.name;
-    //annotation.subtitle = tip.address;
-    [_mapView addAnnotation: self.annotation];
-      
+   
+
+       [self.annotations addObject:self.annotation];
        
     }
+        [_mapView addAnnotations:self.annotations];
+
+   
+    
+    
+     NSLog(@"self.annotations = %@", self.annotations);
+    
     
       }
 
@@ -141,7 +151,8 @@
         
         annotationView.canShowCallout = YES;
         annotationView.animatesDrop = YES;
-        
+        annotationView.draggable = YES;
+        annotationView.frame = CGRectMake(180, 200, 50, 50);
         return annotationView;
     }
 
@@ -151,16 +162,17 @@
         if (annotationView == nil) {
             annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
         }
-        
+        annotationView.draggable = YES;
+        annotationView.frame = CGRectMake(180, 200, 50, 50);
+         annotationView.animatesDrop = YES;
         annotationView.canShowCallout = YES;
         return annotationView;
-        
-        
     }
+        
+    
     
     return nil;
-    
-    
+  
     
 }
 
@@ -168,13 +180,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
    
            
-            for (NSInteger i = 0; i < self.pois.count; i++) {
-                
-                [_mapView removeAnnotation:self.annotation];
-                self.annotation = nil;
-               
 
-            }
   
             ZPFLog(@"点击方法");
    
@@ -182,7 +188,8 @@
             AMapInputTipsSearchRequest *tipsRequest = [[AMapInputTipsSearchRequest alloc] init];
             tipsRequest.keywords = self.searchBar.text;
             NSLog(@"00000000000000000%@", self.searchBar.text);
-            tipsRequest.city = self.titles;NSLog(@"%@", self.titles);
+            tipsRequest.city = self.titles;
+    NSLog(@"%@", self.titles);
             NSLog(@"%@", tipsRequest.city);
             //发起输入提示搜索
             [_search AMapInputTipsSearch: tipsRequest];
@@ -235,44 +242,6 @@
     
     
 }
-//选中地点
-- (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
-    
-    if ([view.annotation isKindOfClass:[MAUserLocation class]]) {
-        [self reGeoAction];
-    }
-    // 调整自定义callout的位置，使其可以完全显示
-    if ([view isKindOfClass:[CustomAnnotationView class]]) {
-        CustomAnnotationView *cusView = (CustomAnnotationView *)view;
-        CGRect frame = [cusView convertRect:cusView.calloutView.frame toView:_mapView];
-        
-        frame = UIEdgeInsetsInsetRect(frame, UIEdgeInsetsMake(kDefaultCalloutViewMargin, kDefaultCalloutViewMargin, kDefaultCalloutViewMargin, kDefaultCalloutViewMargin));
-        
-        if (!CGRectContainsRect(_mapView.frame, frame))
-        {
-            CGSize offset = [self offsetToContainRect:frame inRect:_mapView.frame];
-            
-            CGPoint theCenter = _mapView.center;
-            theCenter = CGPointMake(theCenter.x - offset.width, theCenter.y - offset.height);
-            
-            CLLocationCoordinate2D coordinate = [_mapView convertPoint:theCenter toCoordinateFromView:_mapView];
-            
-            [_mapView setCenterCoordinate:coordinate animated:YES];
-        }
-        
-    }
-
-}
-#pragma mark - Helpers
-
-- (CGSize)offsetToContainRect:(CGRect)innerRect inRect:(CGRect)outerRect
-{
-    CGFloat nudgeRight = fmaxf(0, CGRectGetMinX(outerRect) - (CGRectGetMinX(innerRect)));
-    CGFloat nudgeLeft = fminf(0, CGRectGetMaxX(outerRect) - (CGRectGetMaxX(innerRect)));
-    CGFloat nudgeTop = fmaxf(0, CGRectGetMinY(outerRect) - (CGRectGetMinY(innerRect)));
-    CGFloat nudgeBottom = fminf(0, CGRectGetMaxY(outerRect) - (CGRectGetMaxY(innerRect)));
-    return CGSizeMake(nudgeLeft ?: nudgeRight, nudgeTop ?: nudgeBottom);
-}
 
 #pragma mark ------------ 路线规划
 //手指协议
@@ -280,12 +249,19 @@
     return YES;
 }
 
-- (void)handleLongPress:(UILongPressGestureRecognizer *)gesture{
+- (void)hanleLongPress:(UILongPressGestureRecognizer *)gesture{
+//    if (_destinationPoint != nil) {
+//        [_mapView removeAnnotation:_destinationPoint];
+//        _destinationPoint = nil;
+//    }
+    // [_mapView removeOverlays:_pathPolylines];
     if (gesture.state == UIGestureRecognizerStateBegan) {
         CLLocationCoordinate2D coordinate = [_mapView convertPoint:[gesture locationInView:_mapView] toCoordinateFromView:_mapView];
-        if (_destinationPoint != nil) {
+        if (_destinationPoint != nil || _annotation != nil) {
             [_mapView removeAnnotation:_destinationPoint];
+            [_mapView removeAnnotation:_annotation];
             _destinationPoint = nil;
+            _annotation = nil;
         }
         _destinationPoint = [[MAPointAnnotation alloc] init];
         _destinationPoint.coordinate = coordinate;
@@ -307,7 +283,13 @@
     [_mapView removeOverlays:_pathPolylines];
     _pathPolylines = nil;
     _pathPolylines = [self polylinesForPath:response.route.paths[0]];
-    [_mapView showAnnotations:@[_destinationPoint, _mapView.userLocation] animated:YES];
+    if(_destinationPoint == nil){
+   
+          [_mapView showAnnotations:@[_annotation, _mapView.userLocation] animated:YES];
+        
+    }else{
+         [_mapView showAnnotations:@[_destinationPoint, _mapView.userLocation] animated:YES];
+    }
     [_mapView addOverlays:_pathPolylines];
     
 }
@@ -339,12 +321,12 @@
 - (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id<MAOverlay>)overlay{
     if ([overlay isKindOfClass:[MAPolyline class]]) {
       
-        MAPolylineRenderer *polylineView = [[MAPolylineRenderer alloc] initWithPolyline:overlay];
+        self.polylineViewOver = [[MAPolylineRenderer alloc] initWithPolyline:overlay];
         
-        polylineView.lineWidth = 10;
-        polylineView.strokeColor = barColor;
+        self.polylineViewOver.lineWidth = 10;
+        self.polylineViewOver.strokeColor = barColor;
        
-        return polylineView;
+        return self.polylineViewOver;
     }
     return nil;
 }
@@ -401,20 +383,20 @@
     return _pathPolylines;
     
 }
-//- (UILongPressGestureRecognizer *)longPressGesture{
-//    if (_longPressGesture == nil) {
-//        NSLog(@"长按手势");
-//        self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(hanleLongPress:)];
-//        self.longPressGesture.delegate = self;
-//        self.longPressGesture.minimumPressDuration = 1;
-//        self.longPressGesture.numberOfTouchesRequired = 1;
-//      
-//      //  _mapView.userInteractionEnabled = YES;
-//    }
-//    return _longPressGesture;
-//    
-//    
-//}
+- (UILongPressGestureRecognizer *)longPressGesture{
+    if (_longPressGesture == nil) {
+        NSLog(@"长按手势");
+        self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(hanleLongPress:)];
+        self.longPressGesture.delegate = self;
+        self.longPressGesture.minimumPressDuration = 1;
+        self.longPressGesture.numberOfTouchesRequired = 1;
+      
+      //  _mapView.userInteractionEnabled = YES;
+    }
+    return _longPressGesture;
+    
+    
+}
 - (UISearchBar *)searchBar{
 
     if (_searchBar == nil) {
@@ -433,10 +415,13 @@
    
     switch (btn.tag - 100) {
         case 1:{
+            if (_destinationPoint != nil) {
+                [_mapView removeAnnotation:_destinationPoint];
+                _destinationPoint = nil;
+            }
+           
             
-            
-            
-            
+             [_mapView removeOverlays:_pathPolylines];
             ZPFLog(@"附近");
             NearViewController *nearVC = [[NearViewController alloc] init];
             nearVC.currentLocation = _currentLocation;
@@ -446,19 +431,31 @@
             break;
         case 2:{
             ZPFLog(@"路线");
-            if (_destinationPoint == nil || _currentLocation == nil||_search == nil) {
+            if ( _currentLocation == nil||_search == nil) {
                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"长按屏幕选择目的地" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
                 [alert show];
                 return;
             }
             AMapWalkingRouteSearchRequest  *request = [[AMapWalkingRouteSearchRequest alloc] init];
             request.origin = [AMapGeoPoint locationWithLatitude:_currentLocation.coordinate.latitude longitude:_currentLocation.coordinate.longitude];
-            request.destination = [AMapGeoPoint locationWithLatitude:_destinationPoint.coordinate.latitude longitude:_destinationPoint.coordinate.longitude];
+//            request.destination = [AMapGeoPoint locationWithLatitude:_destinationPoint.coordinate.latitude longitude:_destinationPoint.coordinate.longitude];
+            
+            if(_destinationPoint == 0){
+                
+                request.destination = [AMapGeoPoint locationWithLatitude:_annotation.coordinate.latitude longitude:_annotation.coordinate.longitude];
+                
+                
+                
+            }else{
+                
+        request.destination = [AMapGeoPoint locationWithLatitude:_destinationPoint.coordinate.latitude longitude:_destinationPoint.coordinate.longitude];
+
+            }
+            
             
             [_search AMapWalkingRouteSearch:request];
         
-//            RoadViewController *roadVC = [[RoadViewController alloc] init];
-//            [self.navigationController pushViewController:roadVC animated:YES];
+
             break;
         }
         case 0:{
@@ -492,18 +489,30 @@
 
 #pragma mark ----delegate 
 - (void)AMapPOIValeDelegate:(AMapPOI *)poi{
-
-    MAPointAnnotation *annotation = [[MAPointAnnotation alloc] init];
-    annotation.coordinate = CLLocationCoordinate2DMake(poi.location.latitude, poi.location.longitude);
-    annotation.title = poi.name;
-    annotation.subtitle = poi.address;
-    [_mapView addAnnotation:annotation];
+    if (self.annotation != nil) {
+        [_mapView removeAnnotation:self.annotation];
+        self.annotation = nil;
+    }
+    if (self.annotations != nil) {
+        [_mapView removeAnnotations:self.annotations];
+        self.annotations = nil;
+    }
+   // self.annotation = [[MAPointAnnotation alloc] init];
+    self.annotation.coordinate = CLLocationCoordinate2DMake(poi.location.latitude, poi.location.longitude);
+    self.annotation.title = poi.name;
+    self.annotation.subtitle = poi.address;
+    [_mapView addAnnotation:self.annotation];
     
     
     
     
 }
-
+- (MAPointAnnotation *)annotation{
+    if (_annotation == nil) {
+        self.annotation = [[MAPointAnnotation alloc] init];
+    }
+    return _annotation;
+}
 - (NSArray *)array{
     if (_array == nil) {
         self.array = @[@"定位", @"附近", @"路线", @"天气"];

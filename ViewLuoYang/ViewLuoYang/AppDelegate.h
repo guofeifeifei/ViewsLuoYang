@@ -11,10 +11,10 @@
 #import "WXApi.h"
 #import "RESideMenu.h"
 
-static NSString *appKey = @"da56b927d79da978d06d0fe0";
+static NSString *appKey = @"178fe8164fdf68ad9e32ae28";
 
 static NSString *channel = @"App Store";
-static BOOL isProduction = TRUE;
+static BOOL isProduction = false;
 @interface AppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate,WXApiDelegate, RESideMenuDelegate>
 
 {

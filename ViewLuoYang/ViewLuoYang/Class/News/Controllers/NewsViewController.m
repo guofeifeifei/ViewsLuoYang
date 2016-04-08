@@ -164,6 +164,7 @@ static NSString *itemIntentfier = @"itemIdentifier";
         [alert addAction:action];
         [alert addAction:quxiao];
         [self presentViewController:alert animated:YES completion:nil];
+        return;
     }
     
     

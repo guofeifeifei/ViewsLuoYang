@@ -49,7 +49,8 @@
 #define kLocationApk @"915e846f3b554a833db84b2cc492d5eb"
 #define kYouMengAppkey @"56efd66ce0f55acc290023d2"
 
-
+//洛阳文化
+#define kCulture @"http://www.lyggwhy.com/index.php/tools/service/getNewsList/NewsMsg/1/0/"
 
 #define kDefaultLocationZoomLevel       16.1
 #define kDefaultControlMargin           22

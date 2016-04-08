@@ -257,7 +257,7 @@
     CGFloat duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     UIViewAnimationCurve curve = (UIViewAnimationCurve)[userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
     void(^animations)() = ^{
-        [self willShowKeyboardFromFrame:beginFrame toFrame:endFrame];
+        [self willShowKeyboardFromFrame:beginFrame  toFrame:endFrame];
     };
     NSLog(@"------> end frame height %.2f",endFrame.origin.y);
     [UIView animateWithDuration:duration delay:0.0f options:(curve << 16 | UIViewAnimationOptionBeginFromCurrentState) animations:animations completion:nil];

@@ -99,14 +99,13 @@
         UIViewController *vc = delegate.tabbar.viewControllers[2];
         vc = mainTab;
        [self.navigationController popToRootViewControllerAnimated:YES];
-//        [self.navigationController popViewControllerAnimated:YES];
-//        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//        button.frame = CGRectMake(0, 0, 44, 44);
-//        UIBarButtonItem *barBtn = [[UIBarButtonItem alloc] initWithCustomView:button];
-//        self.navigationItem.leftBarButtonItem = barBtn;
+        [self.navigationController popViewControllerAnimated:YES];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(0, 0, 44, 44);
+        UIBarButtonItem *barBtn = [[UIBarButtonItem alloc] initWithCustomView:button];
+        self.navigationItem.leftBarButtonItem = barBtn;
         
-    }
-    else
+    }else
     {   //存在错误
         NSString *toast = [NSString stringWithFormat:@"登录失败 code: %zd",error.code];
         [self.view makeToast:toast duration:2.0 position:CSToastPositionCenter];

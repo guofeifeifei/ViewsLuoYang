@@ -83,7 +83,7 @@
                 <outlet property="titleLabel" destination="Rc3-Hd-lc0" id="h1m-cr-Xnd"/>
                 <outlet property="wantchLabel" destination="Jew-Lb-XWC" id="rmY-gh-gEo"/>
             </connections>
-            <point key="canvasLocation" x="500.5" y="569.5"/>
+            <point key="canvasLocation" x="474.5" y="230.5"/>
         </tableViewCell>
     </objects>
 </document>

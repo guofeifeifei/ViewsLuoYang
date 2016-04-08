@@ -5,8 +5,8 @@
 	<key>CHANNEL</key>
 	<string>App Store</string>
 	<key>APP_KEY</key>
-	<string>da56b927d79da978d06d0fe0</string>
+	<string>178fe8164fdf68ad9e32ae28</string>
 	<key>APS_FOR_PRODUCTION</key>
-	<string>1</string>
+	<string>0</string>
 </dict>
 </plist>
